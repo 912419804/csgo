@@ -4007,13 +4007,11 @@ public class IgxeGuns {
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe3(response, 10, 0.01, 2);
                         mService.igxeGloves.connect1100();
-//                        mService.buffGuns.connect271();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
                         mService.igxeGloves.connect1100();
-//                        mService.buffGuns.connect271();
                     }
                 });
     }

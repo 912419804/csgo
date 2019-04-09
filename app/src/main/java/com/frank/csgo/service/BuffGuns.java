@@ -21,9 +21,9 @@ import java.util.List;
  */
 public class BuffGuns {
 
-    private CatchService mService;
+    private BuffService mService;
 
-    public BuffGuns(CatchService service) {
+    public BuffGuns(BuffService service) {
         this.mService = service;
     }
 
@@ -91,25 +91,34 @@ public class BuffGuns {
 
     //火灵（崭新出厂）
     public void connect201() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35914&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543411868124")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "P2000 | 火灵 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 45, 0.03);
-                        connect202();
-                    }
+         mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35914&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543411868124")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "P2000 | 火灵 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 60, 0.03);
+                                connect202();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect202();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect202();
+                            }
+                        });
+            }
+        });
+
     }
 
     //USP 消音版 | 次时代 (崭新出厂)
     private void connect202() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42166&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543454332986")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42166&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543454332986")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -123,10 +132,16 @@ public class BuffGuns {
                         connect204();
                     }
                 });
+            }
+        });
+
     }
 
     private void connect203() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42166&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543454332986")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42166&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543454332986")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -140,11 +155,17 @@ public class BuffGuns {
                         connect204();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 枪响人亡 (崭新出厂)
     private void connect204() {
-        OkGo.<Buff>get("https://buff.163.com/market/item_detail?appid=730&game=csgo&classid=1312321419&instanceid=480085569&assetid=14928331584&contextid=2&_=1543454585575")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/market/item_detail?appid=730&game=csgo&classid=1312321419&instanceid=480085569&assetid=14928331584&contextid=2&_=1543454585575")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -158,11 +179,17 @@ public class BuffGuns {
                         connect205();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 枪响人亡 (略有磨损)
     private void connect205() {
-        OkGo.<Buff>get("https://buff.163.com/market/item_detail?appid=730&game=csgo&classid=1312321419&instanceid=480085569&assetid=14928331584&contextid=2&_=1543454585575")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/market/item_detail?appid=730&game=csgo&classid=1312321419&instanceid=480085569&assetid=14928331584&contextid=2&_=1543454585575")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -176,11 +203,17 @@ public class BuffGuns {
                         connect206();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 枪响人亡 (久经沙场)
     private void connect206() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42182&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543454816828")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42182&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543454816828")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -194,11 +227,17 @@ public class BuffGuns {
                         connect207();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 黑色魅影 (崭新出厂)
     private void connect207() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42191&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543455069431")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42191&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543455069431")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -212,11 +251,17 @@ public class BuffGuns {
                         connect208();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 黑色魅影 (略有磨损)
     private void connect208() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42193&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543456376846")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42193&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543456376846")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -230,11 +275,17 @@ public class BuffGuns {
                         connect209();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 黑色魅影 (久经沙场)
     private void connect209() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42192&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543456903616")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42192&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543456903616")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -248,11 +299,17 @@ public class BuffGuns {
                         connect211();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 黑色魅影 (久经沙场)
     private void connect210() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42192&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543456903616")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42192&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543456903616")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -266,11 +323,17 @@ public class BuffGuns {
                         connect211();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 脑洞大开 (崭新出厂)
     private void connect211() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45369&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457130726")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45369&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457130726")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -284,11 +347,17 @@ public class BuffGuns {
                         connect212();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 脑洞大开 (略有磨损)
     private void connect212() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45371&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457306693")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45371&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457306693")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -302,11 +371,17 @@ public class BuffGuns {
                         connect213();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 不锈钢 (崭新出厂)
     private void connect213() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42229&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457511281")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42229&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457511281")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -320,11 +395,17 @@ public class BuffGuns {
                         connect214();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 猎户 (崭新出厂)
     private void connect214() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42201&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457789142")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42201&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457789142")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -338,11 +419,17 @@ public class BuffGuns {
                         connect215();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 蓝图 (崭新出厂)
     private void connect215() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42153&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543458328635")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42153&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543458328635")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -356,11 +443,17 @@ public class BuffGuns {
                         connect217();
                     }
                 });
+            }
+        });
+
     }
 
     //USP 消音版 | 蓝图 (崭新出厂)
     private void connect216() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42153&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543458328635")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42153&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543458328635")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -374,11 +467,17 @@ public class BuffGuns {
                         connect217();
                     }
                 });
+            }
+        });
+
     }
 
     //格洛克 18 型 | 水灵 (崭新出厂)
     private void connect217() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35072&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543458768570")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35072&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543458768570")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -392,11 +491,17 @@ public class BuffGuns {
                         connect218();
                     }
                 });
+            }
+        });
+
     }
 
     //格洛克 18 型 | 荒野反叛 (崭新出厂)
     private void connect218() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35067&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460061670")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35067&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460061670")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -410,11 +515,17 @@ public class BuffGuns {
                         connect219();
                     }
                 });
+            }
+        });
+
     }
 
     //格洛克 18 型 | 暮光星系 (崭新出厂)
     private void connect219() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35063&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460281254")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35063&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460281254")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -428,11 +539,17 @@ public class BuffGuns {
                         connect221();
                     }
                 });
+            }
+        });
+
     }
 
     //格洛克 18 型 | 暮光星系 (崭新出厂)
     private void connect220() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35063&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460281254")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35063&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460281254")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -446,11 +563,17 @@ public class BuffGuns {
                         connect221();
                     }
                 });
+            }
+        });
+
     }
 
     //格洛克 18 型 | 核子反应 (崭新出厂)
     private void connect221() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35046&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460427097")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35046&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460427097")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -464,11 +587,17 @@ public class BuffGuns {
                         connect222();
                     }
                 });
+            }
+        });
+
     }
 
     //格洛克 18 型 | Nuclear Garden (崭新出厂)
     private void connect222() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=762185&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460579683")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=762185&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460579683")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -482,11 +611,17 @@ public class BuffGuns {
                         connect223();
                     }
                 });
+            }
+        });
+
     }
 
     //P250 | 生化短吻鳄 (崭新出厂)
     private void connect223() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36077&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460863761")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36077&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460863761")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -500,11 +635,17 @@ public class BuffGuns {
                         connect224();
                     }
                 });
+            }
+        });
+
     }
 
     //P250 | 生化短吻鳄 (略有磨损)
     private void connect224() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36079&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460963028")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36079&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460963028")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -518,11 +659,17 @@ public class BuffGuns {
                         connect225();
                     }
                 });
+            }
+        });
+
     }
 
     //P250 | 二西莫夫 (略有磨损)
     private void connect225() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35986&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461080142")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35986&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461080142")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -536,11 +683,17 @@ public class BuffGuns {
                         connect226();
                     }
                 });
+            }
+        });
+
     }
 
     //P250 | 二西莫夫 (久经沙场)
     private void connect226() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35985&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461213725")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35985&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461213725")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -554,11 +707,17 @@ public class BuffGuns {
                         connect227();
                     }
                 });
+            }
+        });
+
     }
 
     //P250 | 银装素裹 (略有磨损)
     private void connect227() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36102&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461418178")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36102&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461418178")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -572,11 +731,17 @@ public class BuffGuns {
                         connect228();
                     }
                 });
+            }
+        });
+
     }
 
     //P250 | 暗潮 (崭新出厂)
     private void connect228() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36091&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461600295")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36091&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461600295")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -590,11 +755,17 @@ public class BuffGuns {
                         connect229();
                     }
                 });
+            }
+        });
+
     }
 
     //FN57 | 暴怒野兽 (崭新出厂)
     private void connect229() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34743&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461949263")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34743&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461949263")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -608,11 +779,17 @@ public class BuffGuns {
                         connect230();
                     }
                 });
+            }
+        });
+
     }
 
     //FN57 | 暴怒野兽 (略有磨损)
     private void connect230() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34745&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543462039139")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34745&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543462039139")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -626,11 +803,17 @@ public class BuffGuns {
                         connect231();
                     }
                 });
+            }
+        });
+
     }
 
     //FN57 | 暴怒野兽 (久经沙场)
     private void connect231() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34744&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543462149710")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34744&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543462149710")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -644,11 +827,17 @@ public class BuffGuns {
                         connect232();
                     }
                 });
+            }
+        });
+
     }
 
     //FN57 | 耍猴把戏 (略有磨损)
     private void connect232() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34757&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474164592")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34757&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474164592")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -662,11 +851,17 @@ public class BuffGuns {
                         connect233();
                     }
                 });
+            }
+        });
+
     }
 
     //FCZ75 自动手枪 | 相柳 (崭新出厂)
     private void connect233() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34359&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474549446")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34359&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474549446")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -680,11 +875,17 @@ public class BuffGuns {
                         connect234();
                     }
                 });
+            }
+        });
+
     }
 
     //CZ75 自动手枪 | 黄夹克 (崭新出厂)
     private void connect234() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34364&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474688036")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34364&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474688036")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -698,11 +899,17 @@ public class BuffGuns {
                         connect235();
                     }
                 });
+            }
+        });
+
     }
 
     //Tec-9 | 燃料喷射器 (崭新出厂)
     private void connect235() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=41992&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474804200")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=41992&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474804200")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -716,11 +923,17 @@ public class BuffGuns {
                         connect236();
                     }
                 });
+            }
+        });
+
     }
 
     //沙漠之鹰 | 红色代号 (崭新出厂)
     private void connect236() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759243&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475040856")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759243&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475040856")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -734,11 +947,17 @@ public class BuffGuns {
                         connect237();
                     }
                 });
+            }
+        });
+
     }
 
     //沙漠之鹰 | 红色代号 (略有磨损)
     private void connect237() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759245&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475211688")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759245&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475211688")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -752,11 +971,17 @@ public class BuffGuns {
                         connect238();
                     }
                 });
+            }
+        });
+
     }
 
     //沙漠之鹰 | 红色代号 (久经沙场)
     private void connect238() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759244&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475318621")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759244&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475318621")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -770,11 +995,17 @@ public class BuffGuns {
                         connect239();
                     }
                 });
+            }
+        });
+
     }
 
     //沙漠之鹰 | 炽烈之炎 (崭新出厂)
     private void connect239() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34389&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475470973")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34389&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475470973")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -788,11 +1019,17 @@ public class BuffGuns {
                         connect240();
                     }
                 });
+            }
+        });
+
     }
 
     //沙漠之鹰 | 大佬龙 (崭新出厂)
     private void connect240() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34431&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475586496")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34431&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475586496")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -806,11 +1043,17 @@ public class BuffGuns {
                         connect242();
                     }
                 });
+            }
+        });
+
     }
 
     //沙漠之鹰 | 大佬龙 (略有磨损)
     private void connect241() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34433&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475710609")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34433&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475710609")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -824,11 +1067,17 @@ public class BuffGuns {
                         connect242();
                     }
                 });
+            }
+        });
+
     }
 
     //沙沙漠之鹰 | 飞行员 (崭新出厂)
     private void connect242() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34461&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475939163")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34461&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475939163")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -842,11 +1091,17 @@ public class BuffGuns {
                         connect243();
                     }
                 });
+            }
+        });
+
     }
 
     //沙沙漠之鹰 | 飞行员 (略有磨损)
     private void connect243() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34463&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543476147565")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34463&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543476147565")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -860,11 +1115,17 @@ public class BuffGuns {
                         connect245();
                     }
                 });
+            }
+        });
+
     }
 
     //沙漠之鹰 | 飞行员 (略有磨损)
     private void connect244() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34463&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543476147565")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34463&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543476147565")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -878,11 +1139,17 @@ public class BuffGuns {
                         connect245();
                     }
                 });
+            }
+        });
+
     }
 
     //加利尔 AR | 地狱看门犬 (崭新出厂)
     private void connect245() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34902&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477324839")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34902&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477324839")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -896,11 +1163,17 @@ public class BuffGuns {
                         connect246();
                     }
                 });
+            }
+        });
+
     }
 
     //加利尔 AR | ~甜甜的~ (崭新出厂)
     private void connect246() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34963&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477464971")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34963&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477464971")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -914,11 +1187,17 @@ public class BuffGuns {
                         connect247();
                     }
                 });
+            }
+        });
+
     }
 
     //加利尔 AR | 「经济」克鲁尔 (略有磨损)
     private void connect247() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34916&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477672911")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34916&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477672911")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -932,11 +1211,17 @@ public class BuffGuns {
                         connect248();
                     }
                 });
+            }
+        });
+
     }
 
     //加利尔 AR | 「经济」克鲁尔 (久经沙场)
     private void connect248() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34915&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477829307")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34915&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477829307")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -950,11 +1235,17 @@ public class BuffGuns {
                         connect249();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 二西莫夫 (久经沙场)
     private void connect249() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34066&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477983488")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34066&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477983488")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -968,11 +1259,17 @@ public class BuffGuns {
                         connect250();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 死神 (崭新出厂)
     private void connect250() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45247&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479183613")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45247&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479183613")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -986,11 +1283,17 @@ public class BuffGuns {
                         connect252();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 死神 (崭新出厂)
     private void connect251() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45247&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479556659")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45247&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479556659")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1004,11 +1307,17 @@ public class BuffGuns {
                         connect252();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 暴怒野兽 (崭新出厂)
     private void connect252() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34095&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479632564")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34095&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479632564")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1022,11 +1331,17 @@ public class BuffGuns {
                         connect253();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 暴怒野兽 (略有磨损)
     private void connect253() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34097&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479770945")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34097&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479770945")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1040,11 +1355,17 @@ public class BuffGuns {
                         connect255();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 暴怒野兽 (久经沙场)
     private void connect254() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34096&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479870551")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34096&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479870551")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1058,11 +1379,17 @@ public class BuffGuns {
                         connect255();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 浮生如梦 (崭新出厂)
     private void connect255() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34088&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480354611")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34088&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480354611")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1076,11 +1403,17 @@ public class BuffGuns {
                         connect256();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 鬼退治 (崭新出厂)
     private void connect256() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34108&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480466460")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34108&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480466460")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1094,11 +1427,17 @@ public class BuffGuns {
                         connect257();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 鬼退治 (略有磨损)
     private void connect257() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34110&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480535184")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34110&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480535184")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1112,11 +1451,17 @@ public class BuffGuns {
                         connect258();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 鬼退治 (久经沙场)
     private void connect258() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34109&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480608246")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34109&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480608246")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1130,11 +1475,17 @@ public class BuffGuns {
                         connect260();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 鬼退治 (久经沙场)
     private void connect259() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34109&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480608246")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34109&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480608246")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1148,11 +1499,17 @@ public class BuffGuns {
                         connect260();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 电子蜂巢 (崭新出厂)
     private void connect260() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34078&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480737879")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34078&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480737879")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1166,11 +1523,17 @@ public class BuffGuns {
                         connect261();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 巨龙传说 (崭新出厂)
     private void connect261() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=44060&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481004692")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=44060&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481004692")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1184,11 +1547,17 @@ public class BuffGuns {
                         connect263();
                     }
                 });
+            }
+        });
+
     }
 
     //AWP | 巨龙传说 (崭新出厂)
     private void connect262() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=44060&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481004692")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=44060&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481004692")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1202,11 +1571,17 @@ public class BuffGuns {
                         connect263();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 火神 (崭新出厂)
     private void connect263() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33974&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481445591")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33974&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481445591")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1220,11 +1595,17 @@ public class BuffGuns {
                         connect264();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 火神 (略有磨损)
     private void connect264() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33976&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481571960")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33976&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481571960")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1238,11 +1619,17 @@ public class BuffGuns {
                         connect265();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 火神 (久经沙场)
     private void connect265() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33975&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543482929338")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33975&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543482929338")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1256,11 +1643,17 @@ public class BuffGuns {
                         connect266();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 霓虹革命 (崭新出厂)
     private void connect266() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33935&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543483083123")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33935&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543483083123")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1274,11 +1667,17 @@ public class BuffGuns {
                         connect267();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 霓虹革命 (略有磨损)
     private void connect267() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33937&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543483283552")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33937&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543483283552")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1292,11 +1691,17 @@ public class BuffGuns {
                         connect268();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 皇后 (崭新出厂)
     public void connect268() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33969&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543483449650")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33969&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543483449650")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1310,11 +1715,17 @@ public class BuffGuns {
 //                        connect269();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 皇后 (略有磨损)
     private void connect269() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33971&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543545419527")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33971&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543545419527")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1328,11 +1739,17 @@ public class BuffGuns {
                         connect270();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 皇后 (久经沙场)
     private void connect270() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33970&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543545564032")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33970&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543545564032")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1346,11 +1763,17 @@ public class BuffGuns {
                         connect271();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 燃料喷射器 (崭新出厂)
     public void connect271() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33910&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546134659")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33910&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546134659")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1364,11 +1787,17 @@ public class BuffGuns {
 //                        connect272();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 燃料喷射器 (略有磨损)
     private void connect272() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33912&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546244620")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33912&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546244620")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1382,11 +1811,17 @@ public class BuffGuns {
                         connect273();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 燃料喷射器 (久经沙场)
     private void connect273() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33911&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546332653")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33911&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546332653")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1400,11 +1835,17 @@ public class BuffGuns {
                         connect274();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 深海复仇 (崭新出厂)
     private void connect274() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33859&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546576633")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33859&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546576633")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1418,11 +1859,17 @@ public class BuffGuns {
                         connect275();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 深海复仇 (略有磨损)
     private void connect275() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33861&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546652958")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33861&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546652958")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1436,11 +1883,17 @@ public class BuffGuns {
                         connect276();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 血腥运动 (崭新出厂)
     public void connect276() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33868&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546743907")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33868&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546743907")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1454,11 +1907,17 @@ public class BuffGuns {
 //                        connect278();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 血腥运动 (略有磨损)
     private void connect277() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33870&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546991926")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33870&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546991926")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1472,11 +1931,17 @@ public class BuffGuns {
                         connect278();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 前线迷雾 (崭新出厂)
     private void connect278() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33905&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543547429327")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33905&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543547429327")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1490,11 +1955,17 @@ public class BuffGuns {
                         connect279();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 前线迷雾 (略有磨损)
     private void connect279() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33907&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543547577596")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33907&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543547577596")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1508,11 +1979,17 @@ public class BuffGuns {
                         connect280();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 表面淬火 (崭新出厂)
     private void connect280() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33881&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543547983188")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33881&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543547983188")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1526,11 +2003,17 @@ public class BuffGuns {
                         connect281();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 表面淬火 (略有磨损)
     private void connect281() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33883&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548073573")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33883&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548073573")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1544,11 +2027,17 @@ public class BuffGuns {
                         connect282();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 霓虹骑士 (崭新出厂)
     public void connect282() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759363&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548232525")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759363&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548232525")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1562,11 +2051,17 @@ public class BuffGuns {
 //                        connect283();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 霓虹骑士 (略有磨损)
     private void connect283() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759234&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548319962")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759234&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548319962")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1580,11 +2075,17 @@ public class BuffGuns {
                         connect284();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 霓虹骑士 (久经沙场)
     private void connect284() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759341&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548423057")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759341&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548423057")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1598,11 +2099,17 @@ public class BuffGuns {
                         connect285();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 混沌点阵 (崭新出厂)
     private void connect285() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33945&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548568689")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33945&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548568689")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1616,11 +2123,17 @@ public class BuffGuns {
                         connect286();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 混沌点阵 (略有磨损)
     private void connect286() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33947&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548924345")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33947&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548924345")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1634,11 +2147,17 @@ public class BuffGuns {
                         connect287();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | Safety Net (崭新出厂)
     private void connect287() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=762172&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543549729645")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=762172&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543549729645")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1652,11 +2171,17 @@ public class BuffGuns {
                         connect288();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 轨道 Mk01 (崭新出厂)
     private void connect288() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33940&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543559027631")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33940&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543559027631")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1670,11 +2195,17 @@ public class BuffGuns {
                         connect289();
                     }
                 });
+            }
+        });
+
     }
 
     //AK-47 | 水栽竹 (久经沙场)
     private void connect289() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33916&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543559328914")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33916&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543559328914")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1688,10 +2219,16 @@ public class BuffGuns {
                         connect289_1();
                     }
                 });
+            }
+        });
+
     }
     //AK-47 | 水栽竹 (略有磨损)
     private void connect289_1() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33917&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551800287883")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33917&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551800287883")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1705,10 +2242,16 @@ public class BuffGuns {
                         connect289_2();
                     }
                 });
+            }
+        });
+
     }
     //AK-47 | 水栽竹 (崭新出厂)
     private void connect289_2() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33915&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551800377431")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33915&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551800377431")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1722,11 +2265,17 @@ public class BuffGuns {
                         connect290();
                     }
                 });
+            }
+        });
+
     }
 
     //法玛斯 | 防滚架 (崭新出厂)
     private void connect290() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34670&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560178466")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34670&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560178466")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1740,11 +2289,17 @@ public class BuffGuns {
                         connect291();
                     }
                 });
+            }
+        });
+
     }
 
     //法玛斯 | 防滚架 (略有磨损)
     private void connect291() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34672&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560336622")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34672&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560336622")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1758,11 +2313,17 @@ public class BuffGuns {
                         connect292();
                     }
                 });
+            }
+        });
+
     }
 
     //法玛斯 | 机械工业 (崭新出厂)
     private void connect292() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34656&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560450205")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34656&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560450205")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1776,11 +2337,17 @@ public class BuffGuns {
                         connect293();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 龙王 (崭新出厂)
     private void connect293() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35353&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560639899")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35353&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560639899")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1794,11 +2361,17 @@ public class BuffGuns {
                         connect295();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 龙王 (略有磨损)
     private void connect294() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35355&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560755035")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35355&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560755035")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1812,11 +2385,17 @@ public class BuffGuns {
                         connect295();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 杀意大名 (崭新出厂)
     private void connect295() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35286&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561039641")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35286&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561039641")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1830,11 +2409,17 @@ public class BuffGuns {
                         connect297();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 杀意大名 (崭新出厂)
     private void connect296() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35286&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561039641")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35286&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561039641")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1848,11 +2433,17 @@ public class BuffGuns {
                         connect297();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 黑色魅影 (略有磨损)
     private void connect297() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45385&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561971452")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45385&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561971452")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1866,11 +2457,17 @@ public class BuffGuns {
                         connect298();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 黑色魅影 (久经沙场)
     private void connect298() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45385&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561971452")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45385&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561971452")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1884,11 +2481,17 @@ public class BuffGuns {
                         connect299();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 二西莫夫 (久经沙场)
     private void connect299() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35253&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562226052")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35253&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562226052")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1902,11 +2505,17 @@ public class BuffGuns {
                         connect300();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 二西莫夫 (破损不堪)
     private void connect300() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35254&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562381309")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35254&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562381309")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1920,11 +2529,17 @@ public class BuffGuns {
                         connect301();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 二西莫夫 (战痕累累)
     private void connect301() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35252&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562500561")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35252&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562500561")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1938,11 +2553,17 @@ public class BuffGuns {
                         connect302();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4（StatTrak™） | 二西莫夫 (战痕累累)
     private void connect302() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=38843&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562568149")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=38843&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562568149")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1956,11 +2577,17 @@ public class BuffGuns {
                         connect303();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | X 光 (崭新出厂)
     private void connect303() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35345&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562812410")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35345&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562812410")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1974,11 +2601,17 @@ public class BuffGuns {
                         connect304();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 皇家圣骑士 (略有磨损)
     private void connect304() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35328&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563005412")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35328&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563005412")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -1992,11 +2625,17 @@ public class BuffGuns {
                         connect305();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 皇家圣骑士 (久经沙场)
     private void connect305() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35327&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563106073")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35327&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563106073")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2010,11 +2649,17 @@ public class BuffGuns {
                         connect306();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 死寂空间 (崭新出厂)
     private void connect306() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35281&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563282154")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35281&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563282154")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2028,11 +2673,17 @@ public class BuffGuns {
                         connect307();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 死寂空间 (略有磨损)
     private void connect307() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35283&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563902110")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35283&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563902110")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2046,11 +2697,17 @@ public class BuffGuns {
                         connect308();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 喧嚣杀戮 (崭新出厂)
     private void connect308() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35261&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564075953")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35261&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564075953")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2064,11 +2721,17 @@ public class BuffGuns {
                         connect309();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 喧嚣杀戮 (略有磨损)
     private void connect309() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35263&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564253193")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35263&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564253193")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2082,11 +2745,17 @@ public class BuffGuns {
                         connect310();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 喧嚣杀戮 (久经沙场)
     private void connect310() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35263&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564253193")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35263&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564253193")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2100,11 +2769,17 @@ public class BuffGuns {
                         connect311();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 弹雨 (崭新出厂)
     private void connect311() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35256&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564386488")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35256&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564386488")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2118,11 +2793,17 @@ public class BuffGuns {
                         connect313();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 弹雨 (略有磨损)
     private void connect312() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35258&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564469264")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35258&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564469264")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2135,11 +2816,17 @@ public class BuffGuns {
 
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 弹雨 (略有磨损)
     private void connect313() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35258&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564469264")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35258&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564469264")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2153,11 +2840,17 @@ public class BuffGuns {
                         connect314();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 地狱烈焰 (崭新出厂)
     private void connect314() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35300&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564569337")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35300&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564569337")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2171,11 +2864,17 @@ public class BuffGuns {
                         connect315();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 地狱烈焰 (略有磨损)
     private void connect315() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35302&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564630936")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35302&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564630936")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2189,11 +2888,17 @@ public class BuffGuns {
                         connect316();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 战场之星 (崭新出厂)
     private void connect316() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35331&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564738791")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35331&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564738791")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2207,11 +2912,17 @@ public class BuffGuns {
                         connect317();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 都市 DDPAT (崭新出厂)
     private void connect317() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35341&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564893530")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35341&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564893530")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2225,11 +2936,17 @@ public class BuffGuns {
                         connect318();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 狮鹫 (崭新出厂)
     private void connect318() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35295&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564979058")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35295&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564979058")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2243,11 +2960,17 @@ public class BuffGuns {
                         connect319();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 辐射危机 (略有磨损)
     private void connect319() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35323&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543565131445")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35323&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543565131445")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2261,11 +2984,17 @@ public class BuffGuns {
                         connect320();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 辐射危机 (久经沙场)
     private void connect320() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35322&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543565231394")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35322&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543565231394")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2279,11 +3008,17 @@ public class BuffGuns {
                         connect321();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 星级 (崭新出厂)
     private void connect321() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35348&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566083122")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35348&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566083122")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2297,11 +3032,17 @@ public class BuffGuns {
                         connect322();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 星级 (略有磨损)
     private void connect322() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35350&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566182437")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35350&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566182437")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2315,11 +3056,17 @@ public class BuffGuns {
                         connect323();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A4 | 破晓 (崭新出厂)
     private void connect323() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35266&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566259983")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35266&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566259983")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2333,11 +3080,17 @@ public class BuffGuns {
                         connect324();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 闪回 (崭新出厂)
     private void connect324() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35202&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566476459")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35202&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566476459")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2351,11 +3104,17 @@ public class BuffGuns {
                         connect325();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 梦魇 (崭新出厂)
     private void connect325() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759260&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566672108")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759260&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566672108")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2369,11 +3128,17 @@ public class BuffGuns {
                         connect326();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 梦魇 (略有磨损)
     private void connect326() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759261&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566747749")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759261&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566747749")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2387,11 +3152,17 @@ public class BuffGuns {
                         connect327();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 梦魇 (久经沙场)
     private void connect327() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759220&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566842068")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759220&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566842068")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2405,11 +3176,17 @@ public class BuffGuns {
                         connect328();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 金蛇缠绕 (崭新出厂)
     private void connect328() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35207&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566954644")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35207&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566954644")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2423,11 +3200,17 @@ public class BuffGuns {
                         connect329();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 金蛇缠绕 (略有磨损)
     private void connect329() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35209&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568535166")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35209&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568535166")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2441,11 +3224,17 @@ public class BuffGuns {
                         connect330();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 机械工业 (崭新出厂)
     private void connect330() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35238&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568629163")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35238&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568629163")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2459,11 +3248,17 @@ public class BuffGuns {
                         connect331();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 机械工业 (略有磨损)
     private void connect331() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35240&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568712731")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35240&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568712731")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2477,11 +3272,17 @@ public class BuffGuns {
                         connect332();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 暴怒野兽 (崭新出厂)
     private void connect332() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35219&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568836031")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35219&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568836031")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2495,11 +3296,17 @@ public class BuffGuns {
                         connect333();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 暴怒野兽 (略有磨损)
     private void connect333() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35221&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568943778")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35221&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568943778")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2513,11 +3320,17 @@ public class BuffGuns {
                         connect334();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 守护者 (崭新出厂)
     private void connect334() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35212&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569069988")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35212&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569069988")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2531,11 +3344,17 @@ public class BuffGuns {
                         connect335();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 次时代 (崭新出厂)
     private void connect335() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35190&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569155833")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35190&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569155833")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2549,11 +3368,17 @@ public class BuffGuns {
                         connect336();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 女火神之炽焰 (略有磨损)
     private void connect336() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35187&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569294510")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35187&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569294510")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2567,10 +3392,16 @@ public class BuffGuns {
                         connect336_1();
                     }
                 });
+            }
+        });
+
     }
     //M4A1 消音型 | 女火神之炽焰 (崭新出厂)
     private void connect336_1() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35185&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551795193477")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35185&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551795193477")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2584,11 +3415,17 @@ public class BuffGuns {
                         connect337();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 毁灭者 2000 (崭新出厂)
     private void connect337() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35197&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569555722")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35197&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569555722")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2602,11 +3439,17 @@ public class BuffGuns {
                         connect338();
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 原子合金 (崭新出厂)
     private void connect338() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35160&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569833149")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35160&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569833149")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2621,11 +3464,17 @@ public class BuffGuns {
 
                     }
                 });
+            }
+        });
+
     }
 
     //M4A1 消音型 | 赤红新星 (崭新出厂)
     private void connect339() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35216&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569939640")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35216&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569939640")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2639,11 +3488,17 @@ public class BuffGuns {
                         connect340();
                     }
                 });
+            }
+        });
+
     }
 
     //SG 553 | 次时代 (崭新出厂)
     private void connect340() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36458&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570124283")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36458&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570124283")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2657,11 +3512,17 @@ public class BuffGuns {
                         connect341();
                     }
                 });
+            }
+        });
+
     }
 
     //SG 553 | 次时代 (略有磨损)
     private void connect341() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36460&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570245437")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36460&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570245437")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2675,11 +3536,17 @@ public class BuffGuns {
                         connect342();
                     }
                 });
+            }
+        });
+
     }
 
     //SG 553 | 豹灯蛾 (崭新出厂)
     private void connect342() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36487&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570387623")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36487&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570387623")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2693,11 +3560,17 @@ public class BuffGuns {
                         connect343();
                     }
                 });
+            }
+        });
+
     }
 
     //SSG 08 | 炎龙之焰 (崭新出厂)
     private void connect343() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36552&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570573301")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36552&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570573301")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2711,11 +3584,17 @@ public class BuffGuns {
                         connect344();
                     }
                 });
+            }
+        });
+
     }
 
     //AUG | 变色龙 (崭新出厂)
     private void connect344() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34001&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570687418")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34001&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570687418")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2729,11 +3608,17 @@ public class BuffGuns {
                         connect345();
                     }
                 });
+            }
+        });
+
     }
 
     //AUG | 湖怪鸟 (崭新出厂)
     private void connect345() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45245&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570798702")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45245&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570798702")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2747,11 +3632,17 @@ public class BuffGuns {
                         connect346();
                     }
                 });
+            }
+        });
+
     }
 
     //AUG | 席德.米德 (崭新出厂)
     private void connect346() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34049&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570871320")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34049&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570871320")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2765,11 +3656,17 @@ public class BuffGuns {
                         connect347();
                     }
                 });
+            }
+        });
+
     }
 
     //AUG | 燕群 (崭新出厂)
     private void connect347() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34027&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570959377")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34027&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570959377")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2783,11 +3680,17 @@ public class BuffGuns {
                         connect348();
                     }
                 });
+            }
+        });
+
     }
 
     //AUG | 燕群 (略有磨损)
     private void connect348() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34029&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543571039414")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34029&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543571039414")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2801,11 +3704,17 @@ public class BuffGuns {
                         connect349();
                     }
                 });
+            }
+        });
+
     }
 
     //AUG | 孟加拉猛虎 (略有磨损)
     private void connect349() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33998&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543571239234")
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33998&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543571239234")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -2819,6 +3728,9 @@ public class BuffGuns {
                         mService.buffKnifes.connect3200();
                     }
                 });
+            }
+        });
+
     }
 
 

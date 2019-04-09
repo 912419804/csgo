@@ -11,13 +11,27 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.frank.csgo.bean.Buff;
+import com.frank.csgo.https.JsonCallback;
+import com.frank.csgo.service.BuffService;
 import com.frank.csgo.service.CatchService;
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.model.Response;
+import com.lzy.okrx2.adapter.ObservableResponse;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+import io.reactivex.Observable;
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -26,6 +40,7 @@ public class Main2Activity extends AppCompatActivity {
     private ViewPager mViewPager;
     private ArrayList<Fragment> fragments = new ArrayList<>();
     private Intent service;
+    private Intent service2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +96,8 @@ public class Main2Activity extends AppCompatActivity {
                         case 0:
                             service = new Intent(Main2Activity.this, CatchService.class);
                             startService(service);
+                            service2 = new Intent(Main2Activity.this, BuffService.class);
+                            startService(service2);
                             break;
                         case 1:
                             Toast.makeText(Main2Activity.this, "结束服务", Toast.LENGTH_SHORT).show();

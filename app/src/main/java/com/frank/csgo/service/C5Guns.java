@@ -4009,13 +4009,11 @@ public class C5Guns {
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 5, 0.01, 2);
                         mService.c5Knifes.connect1200();
-//                        mService.buffGuns.connect276();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
                         mService.c5Knifes.connect1200();
-//                        mService.buffGuns.connect276();
                     }
                 });
     }

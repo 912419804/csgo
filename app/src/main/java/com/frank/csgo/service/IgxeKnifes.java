@@ -1338,7 +1338,6 @@ public class IgxeKnifes {
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe3(response, 1600, 0.10, 1380);
                         if (Constant.BUFF == 1) {
-                            mService.buffGuns.connect201();
                         }else {
                             mService.c5Guns.connect();
                         }
@@ -1348,7 +1347,6 @@ public class IgxeKnifes {
                     public void onError(Response<Igxe> response) {
                         super.onError(response);
                         if (Constant.BUFF == 1) {
-                            mService.buffGuns.connect201();
                         }else {
                             mService.c5Guns.connect();
                         }

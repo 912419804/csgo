@@ -33,6 +33,7 @@
         </activity>
 
         <service android:name=".service.CatchService" />
+        <service android:name=".service.BuffService" />
 
         <!--<activity-->
             <!--android:name=".Main2Activity"-->

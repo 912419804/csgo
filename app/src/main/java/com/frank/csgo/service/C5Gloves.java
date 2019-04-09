@@ -1253,12 +1253,10 @@ public class C5Gloves {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 700, 0.16, 600);
-                        mService.buffGuns.connect268();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        mService.buffGuns.connect268();
                     }
                 });
     }

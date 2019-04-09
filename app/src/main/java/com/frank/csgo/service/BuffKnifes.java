@@ -1,9 +1,11 @@
 package com.frank.csgo.service;
 
+import android.app.Service;
 import android.content.Intent;
 import android.text.TextUtils;
 
 import com.frank.csgo.Constant;
+import com.frank.csgo.Main2Activity;
 import com.frank.csgo.bean.Buff;
 import com.frank.csgo.bean.BuffWeapon;
 import com.frank.csgo.https.JsonCallback;
@@ -21,9 +23,9 @@ import java.util.List;
  */
 public class BuffKnifes {
 
-    private CatchService mService;
+    private BuffService mService;
 
-    public BuffKnifes(CatchService service) {
+    public BuffKnifes(BuffService service) {
         this.mService = service;
     }
 
@@ -106,7 +108,10 @@ public class BuffKnifes {
 
     // 折叠刀（★） | 深红之网 (略有磨损)
     public void connect3200() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42713&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551061110945")
+         mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42713&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551061110945")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -120,11 +125,16 @@ public class BuffKnifes {
                         connect3201();
                     }
                 });
+            }
+         });
     }
 
     // 折叠刀（★） | 深红之网 (久经沙场)
     private void connect3201() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42712&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551061367817")
+         mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42712&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551061367817")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -138,8 +148,9 @@ public class BuffKnifes {
                         connect3204();
                     }
                 });
+            }
+         });
     }
-
     // 折叠刀（★） | 致命紫罗兰 (略有磨损)
     private void connect3202() {
     }
@@ -151,7 +162,10 @@ public class BuffKnifes {
 
     // 折叠刀（★） | 传说 (久经沙场)
     private void connect3204() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42738&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551061756758")
+         mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42738&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551061756758")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -165,11 +179,16 @@ public class BuffKnifes {
                         connect3205();
                     }
                 });
+            }
+         });
     }
 
     //   折叠刀（★） | 自动化 (略有磨损)
     private void connect3205() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42686&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062070434")
+         mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42686&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062070434")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -183,11 +202,15 @@ public class BuffKnifes {
                         connect3206();
                     }
                 });
+            }
+         });
     }
-
     //   折叠刀（★） | 自动化 (久经沙场)
     private void connect3206() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42685&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062111330")
+         mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42685&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062111330")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -201,11 +224,16 @@ public class BuffKnifes {
                         connect3207();
                     }
                 });
+            }
+         });
     }
 
     //   折叠刀（★） | 虎牙 (崭新出厂)
     private void connect3207() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42768&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062480681")
+         mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42768&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062480681")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -219,11 +247,16 @@ public class BuffKnifes {
                         connect3211();
                     }
                 });
+            }
+         });
     }
 
     //   刺刀（★） | 传说 (久经沙场)
     private void connect3211() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42406&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062594118")
+         mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42406&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062594118")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -237,29 +270,39 @@ public class BuffKnifes {
                         connect3212();
                     }
                 });
+            }
+         });
     }
 
     //   刺刀（★） | 自动化 (久经沙场)
     private void connect3212() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42352&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062754150")
+         mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42352&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062754150")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "刺刀（★） | 自动化 (久经沙场)", Constant.JJSC);
                         handleDataForBuff(response, 1250, 0.17);
-                        connect3213();
+                        mService.startScann();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect3213();
+                        mService.startScann();
                     }
                 });
+            }
+         });
     }
 
     //   刺刀（★） | 自动化 (略有磨损)
     private void connect3213() {
-        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42353&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062886130")
+         mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42353&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062886130")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
@@ -273,6 +316,8 @@ public class BuffKnifes {
                         connect3213();
                     }
                 });
+            }
+         });
     }
 
     //   刺刀（★） | 深红之网 (略有磨损)

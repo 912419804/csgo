@@ -13,36 +13,27 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.IBinder;
-import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
-import com.frank.csgo.Constant;
 import com.frank.csgo.Main2Activity;
 import com.frank.csgo.R;
+import com.frank.csgo.utils.NumUtils;
+import com.frank.csgo.utils.ThreadUtils;
 import com.frank.csgo.utils.TimeUtil;
 
-public class CatchService extends Service {
+public class BuffService extends Service {
 
     private int count = 1;
-    private int interval = 1000 * 180;
-    private BroadcastReceiver startActionReceiver;
-    private AlarmManager am;
-    private PendingIntent sender;
 
     NotificationManager notifyManager;
 
-    public IgxeGloves igxeGloves;
-    public IgxeKnifes igxeKnifes;
-    public IgxeGuns igxeGuns;
-    public C5Guns c5Guns;
-    public C5Knifes c5Knifes;
-    public C5Gloves c5Gloves;
     public BuffGuns buffGuns;
     public BuffKnifes buffKnifes;
 
     public Handler handler = new Handler();
+
 
     @Nullable
     @Override
@@ -50,61 +41,39 @@ public class CatchService extends Service {
         return null;
     }
 
+
     @Override
     public void onCreate() {
-        Toast.makeText(this, "服务启动...", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "buff服务启动...", Toast.LENGTH_LONG).show();
         createScanner();
-        //闹钟定时服务
-        if (startActionReceiver == null) {
-            startActionReceiver = new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-                    updateNotification();
-                    count++;
-                    igxeGuns.connect();
-                }
-            };
-        }
-        registerReceiver(startActionReceiver, new IntentFilter(Constant.START));
-        //启动闹钟服务
-        try {
-            Intent intent = new Intent(Constant.START);
-            sender = PendingIntent
-                    .getBroadcast(this, 1000, intent, 0);
-            //开始时间
-            long firsTime = SystemClock.elapsedRealtime();
-            am = (AlarmManager) getSystemService(ALARM_SERVICE);
-            am.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, 0, interval, sender);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         super.onCreate();
     }
 
     private void createScanner() {
-        if (this.igxeGloves == null) {
-            this.igxeGloves = new IgxeGloves(CatchService.this);
+        if (this.buffGuns == null) {
+            this.buffGuns = new BuffGuns(BuffService.this);
         }
-        if (this.igxeKnifes == null) {
-            this.igxeKnifes = new IgxeKnifes(CatchService.this);
-        }
-        if (this.igxeGuns == null) {
-            this.igxeGuns = new IgxeGuns(CatchService.this);
-        }
-        if (this.c5Guns == null) {
-            this.c5Guns = new C5Guns(CatchService.this);
-        }
-        if (this.c5Gloves == null) {
-            this.c5Gloves = new C5Gloves(CatchService.this);
-        }
-        if (this.c5Knifes == null) {
-            this.c5Knifes = new C5Knifes(CatchService.this);
+        if (this.buffKnifes == null) {
+            this.buffKnifes = new BuffKnifes(BuffService.this);
         }
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        startScann();
         return super.onStartCommand(intent, flags, startId);
+    }
+
+    public void startScann(){
+        ThreadUtils.THREAD.execute(new Runnable() {
+            @Override
+            public void run() {
+                updateNotification();
+                count++;
+                buffGuns.connect201();
+            }
+        });
+
     }
 
     private void updateNotification() {
@@ -114,8 +83,8 @@ public class CatchService extends Service {
         Uri mUri = Settings.System.DEFAULT_NOTIFICATION_URI;
         NotificationChannel mChannel = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            mChannel = new NotificationChannel("999", "999", NotificationManager.IMPORTANCE_LOW);
-            mChannel.setDescription("csgo");
+            mChannel = new NotificationChannel("9999", "9999", NotificationManager.IMPORTANCE_LOW);
+            mChannel.setDescription("buff");
             mChannel.setSound(mUri, Notification.AUDIO_ATTRIBUTES_DEFAULT);
             notifyManager.createNotificationChannel(mChannel);
         }
@@ -124,7 +93,7 @@ public class CatchService extends Service {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             Intent mainIntent = new Intent(this, Main2Activity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mainIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-            notification = new Notification.Builder(this, "999")
+            notification = new Notification.Builder(this, "9999")
 //                    .setSmallIcon(R.mipmap.ic_launcher)
                     .setSmallIcon(R.mipmap.cs)
                     .setContentText("扫描第" + count + "次                     " + TimeUtil.timeString(System.currentTimeMillis()))
@@ -132,7 +101,7 @@ public class CatchService extends Service {
                     .build();
             //设置通知默认效果
             notification.flags = Notification.FLAG_NO_CLEAR;
-            startForeground(1, notification);
+            startForeground(2, notification);
         }
 
 
@@ -146,14 +115,13 @@ public class CatchService extends Service {
 
     void stopDataService() {
         Toast.makeText(this, "服务停止...", Toast.LENGTH_LONG).show();
-        notifyManager.cancel(1);
-        if (sender != null) {
-            am.cancel(sender);
-        }
-        if (startActionReceiver != null) {
-            unregisterReceiver(startActionReceiver);
-        }
+        notifyManager.cancel(2);
     }
 
+    private static int MIN_DELAY = 2000;
+    private static int MAX_DELAY = 5000;
+    public void post(Runnable r){
+        handler.postDelayed(r, Long.parseLong(NumUtils.getRandom(MIN_DELAY,MAX_DELAY)));
+    }
 
 }
