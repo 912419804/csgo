@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">cs:go</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="btn_start_service">启动服务</string>
+    <string name="btn_stop_service">停止服务</string>
+    <string name="item_weapon_price">武器价格</string>
+    <string name="item_weapon_name">武器名称</string>
+    <string name="item_weapon_degree">磨损度</string>
+    <string name="item_weapon_date">时间</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="tab_text_1">IGXE</string>
+    <string name="tab_text_2">C5</string>
+    <string name="tab_text_3">BUFF</string>
+    <string name="action_settings">功能</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
