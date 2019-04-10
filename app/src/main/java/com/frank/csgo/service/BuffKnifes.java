@@ -283,14 +283,14 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "刺刀（★） | 自动化 (久经沙场)", Constant.JJSC);
+                        fillBuff(response, "刺刀（★） | 自动化 (久经沙场)");
                         handleDataForBuff(response, 1250, 0.17);
-                        mService.startScann();
+                        connect3213();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        mService.startScann();
+                        connect3213();
                     }
                 });
             }
@@ -302,58 +302,72 @@ public class BuffKnifes {
          mService.post(new Runnable() {
             @Override
             public void run() {
-                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42353&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551062886130")
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42353&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554886698933")
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "刺刀（★） | 自动化 (略有磨损)", Constant.LVMS);
+                        fillBuff(response, "刺刀（★） | 自动化 (略有磨损)");
                         handleDataForBuff(response, 1600, 0.08);
-                        connect3213();
+                        connect3214();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect3213();
+                        connect3214();
                     }
                 });
             }
          });
     }
 
-    //   刺刀（★） | 深红之网 (略有磨损)
-//    private void connect3214() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/16835")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1400, 0.09, 1100);
-//                        connect3215();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3215();
-//                    }
-//                });
-//    }
+//       刺刀（★） | 深红之网 (略有磨损)
+    private void connect3214() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42382&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554886956228")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "刺刀（★） | 深红之网 (略有磨损)");
+                                handleDataForBuff(response, 1500, 0.11);
+                                connect3215();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3215();
+                            }
+                        });
+            }
+        });
+
+    }
 //
 //    //   刺刀（★） | 深红之网 (久经沙场)
-//    private void connect3215() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/11557")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 720, 0.19, 600);
-//                        connect3216();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3216();
-//                    }
-//                });
-//    }
-//
+    private void connect3215() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42381&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887089740")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "刺刀（★） | 深红之网 (久经沙场)");
+                                handleDataForBuff(response, 710, 0.23);
+                                connect3217();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3217();
+                            }
+                        });
+            }
+        });
+
+    }
+
 //    //   刺刀（★） | 多普勒 (崭新出厂)
 //    private void connect3216() {
 //        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5563")
@@ -372,124 +386,168 @@ public class BuffKnifes {
 //    }
 //
 //    //   刺刀（★） | 虎牙 (崭新出厂)
-//    private void connect3217() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6440")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1250, 0.01, 1100);
-//                        connect3221();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3221();
-//                    }
-//                });
-//    }
+    private void connect3217() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42434&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887393940")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "刺刀（★） | 虎牙 (崭新出厂)");
+                                handleDataForBuff(response, 1220, 0.005);
+                                connect3221();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3221();
+                            }
+                        });
+            }
+        });
+
+    }
 //
 //    //    "M9 刺刀（★） | 虎牙 (崭新出厂)",
-//    private void connect3221() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/8084")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1400, 0.01, 1300);
-//                        connect3222();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3222();
-//                    }
-//                });
-//    }
+    private void connect3221() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43136&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887562915")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M9 刺刀（★） | 虎牙 (崭新出厂)");
+                                handleDataForBuff(response, 1500, 0.01);
+                                connect3222();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3222();
+                            }
+                        });
+            }
+        });
+
+    }
 //
 //    //   M9 刺刀（★） | 自动化 (久经沙场)
-//    private void connect3222() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555282")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1600, 0.17, 1400);
-//                        connect3223();
-//                    }
+    private void connect3222() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43055&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887726414")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M9 刺刀（★） | 自动化 (久经沙场)");
+                                handleDataForBuff(response, 1500, 0.25);
+                                connect3224();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3224();
+                            }
+                        });
+            }
+        });
+    }
 //
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3223();
-//                    }
-//                });
-//    }
 //
-//
-//    //   M9 刺刀（★） | 多普勒 (崭新出厂)
+//    M9 刺刀（★） | 多普勒 (崭新出厂)
 //    private void connect3223() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5562")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1450, 0.01, 1300);
-//                        connect3224();
-//                    }
+//        mService.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43055&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887726414")
+//                        .execute(new JsonCallback<Buff>(Buff.class) {
+//                            @Override
+//                            public void onSuccess(Response<Buff> response) {
+//                                fillBuff(response, "M9 刺刀（★） | 自动化 (久经沙场)");
+//                                handleDataForBuff(response, 1500, 0.25);
+//                                connect3223();
+//                            }
 //
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3224();
-//                    }
-//                });
+//                            @Override
+//                            public void onError(Response<Buff> response) {
+//                                connect3223();
+//                            }
+//                        });
+//            }
+//        });
 //    }
 //
 //    //   M9 刺刀（★） | 传说 (久经沙场)
-//    private void connect3224() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555575")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 2000, 0.02, 1600);
-//                        connect3225();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3225();
-//                    }
-//                });
-//    }
+    private void connect3224() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43107&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887901126")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M9 刺刀（★） | 传说 (久经沙场)");
+                                handleDataForBuff(response, 1750, 0.25);
+                                connect3225();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3225();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //   M9 刺刀（★） | 深红之网 (略有磨损)
-//    private void connect3225() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5319")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 2600, 0.12, 2300);
-//                        connect3226();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3226();
-//                    }
-//                });
-//    }
+    private void connect3225() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43084&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554888007063")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M9 刺刀（★） | 深红之网 (略有磨损)");
+                                handleDataForBuff(response, 2700, 0.13);
+                                connect3226();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3226();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //   M9 刺刀（★） | 深红之网 (久经沙场)
-//    private void connect3226() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5034")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1100, 0.22, 900);
-//                        connect3227();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3227();
-//                    }
-//                });
-//    }
+    private void connect3226() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43083&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554888258479")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M9 刺刀（★） | 深红之网 (久经沙场)");
+                                handleDataForBuff(response, 1000, 0.25);
+                                connect3232();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3232();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //   M9 刺刀（★） | 北方森林 (久经沙场)
 //    private void connect3227() {
@@ -526,38 +584,50 @@ public class BuffKnifes {
 //    }
 //
 //    //   蝴蝶刀（★） | 深红之网 (久经沙场)
-//    private void connect3232() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6285")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1500, 0.18, 1300);
-//                        connect3233();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3233();
-//                    }
-//                });
-//    }
+    private void connect3232() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42547&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554888415762")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "蝴蝶刀（★） | 深红之网 (久经沙场)");
+                                handleDataForBuff(response, 1500, 0.25);
+                                connect3233();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3233();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //   蝴蝶刀（★） | 北方森林 (略有磨损)
-//    private void connect3233() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/37226")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1000, 0.10, 800);
-//                        connect3234();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        connect3234();
-//                    }
-//                });
-//    }
+    private void connect3233() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42539&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554888538319")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "蝴蝶刀（★） | 北方森林 (略有磨损)");
+                                handleDataForBuff(response, 1000, 0.08);
+                                connect3241();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3241();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //   蝴蝶刀（★） | 北方森林 (久经沙场)
 //    private void connect3234() {
@@ -646,22 +716,27 @@ public class BuffKnifes {
 //    }
 //
 //    //爪子刀（★） | 自动化 (久经沙场)
-//    private void connect3241() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555358")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 2150, 0.19, 1900);
-//                        connect3242();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        connect3242();
-//                    }
-//                });
-//    }
+    private void connect3241() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42964&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554888716058")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "爪子刀（★） | 自动化 (久经沙场)");
+                                handleDataForBuff(response, 2100, 0.25);
+                                connect3243();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3243();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //爪子刀（★） | 虎牙 (崭新出厂)
 //    private void connect3242() {
@@ -682,58 +757,73 @@ public class BuffKnifes {
 //    }
 //
 //    //爪子刀（★） | 传说 (久经沙场)
-//    private void connect3243() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555242")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 2000, 0.19, 1800);
-//                        connect3244();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        connect3244();
-//                    }
-//                });
-//    }
+    private void connect3243() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42964&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554888716058")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "爪子刀（★） | 传说 (久经沙场)");
+                                handleDataForBuff(response, 2000, 0.20);
+                                connect3244();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3244();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //爪子刀（★） | 深红之网 (久经沙场)
-//    private void connect3244() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6285")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1480, 0.19, 1300);
-//                        connect3245();
-//                    }
+    private void connect3244() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42990&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554888998839")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "爪子刀（★） | 深红之网 (久经沙场)");
+                                handleDataForBuff(response, 1400, 0.20);
+                                connect3245();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3245();
+                            }
+                        });
+            }
+        });
+    }
 //
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        connect3245();
-//                    }
-//                });
-//    }
-//
-//    //爪子刀（★） | 森林 DDPAT (略有磨损)
-//    private void connect3245() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/87634")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 900, 0.09, 700);
-//                        connect3246();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        connect3246();
-//                    }
-//                });
-//    }
+    //爪子刀（★） | 森林 DDPAT (略有磨损)
+    private void connect3245() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43004&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889133184")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "爪子刀（★） | 森林 DDPAT (略有磨损)");
+                                handleDataForBuff(response, 1000, 0.08);
+                                connect3247();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3247();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //爪子刀（★） | 森林 DDPAT (久经沙场)
 //    private void connect3246() {
@@ -753,23 +843,28 @@ public class BuffKnifes {
 //                });
 //    }
 //
-//    //爪子刀（★） | 北方森林 (略有磨损)
-//    private void connect3247() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/87634")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 900, 0.09, 700);
-//                        connect3248();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        connect3248();
-//                    }
-//                });
-//    }
+    //爪子刀（★） | 北方森林 (略有磨损)
+    private void connect3247() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42978&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889247843")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "爪子刀（★） | 北方森林 (略有磨损)");
+                                handleDataForBuff(response, 1000, 0.08);
+                                connect3253();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3253();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //爪子刀（★） | 北方森林 (久经沙场)
 //    private void connect3248() {
@@ -843,41 +938,51 @@ public class BuffKnifes {
 //                });
 //    }
 //
-//    //猎杀者匕首（★） | 深红之网 (略有磨损)
-//    private void connect3253() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/87786")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1000, 0.11, 850);
-//                        connect3254();
-//                    }
+    //猎杀者匕首（★） | 深红之网 (略有磨损)
+    private void connect3253() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42910&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889348366")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "猎杀者匕首（★） | 深红之网 (略有磨损)");
+                                handleDataForBuff(response, 1300, 0.09);
+                                connect3254();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3254();
+                            }
+                        });
+            }
+        });
+    }
 //
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        connect3254();
-//                    }
-//                });
-//    }
-//
-//    //猎杀者匕首（★） | 深红之网 (久经沙场)
-//    private void connect3254() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15680")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 620, 0.20, 500);
-//                        connect3255();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        connect3255();
-//                    }
-//                });
-//    }
+    //猎杀者匕首（★） | 深红之网 (久经沙场)
+    private void connect3254() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42909&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889412405")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "猎杀者匕首（★） | 深红之网 (久经沙场)");
+                                handleDataForBuff(response, 650, 0.17);
+                                connect3260();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3260();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //猎杀者匕首（★） | 渐变之色 (崭新出厂)
 //    private void connect3255() {
@@ -933,41 +1038,51 @@ public class BuffKnifes {
 //                });
 //    }
 //
-//    //熊刀（★） | 深红之网 (久经沙场)
-//    private void connect3260() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/615773")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1550, 0.20, 1300);
-//                        connect3261();
-//                    }
+    //熊刀（★） | 深红之网 (久经沙场)
+    private void connect3260() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759405&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889684277")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "猎杀者匕首（★） | 深红之网 (久经沙场)");
+                                handleDataForBuff(response, 1600, 0.25);
+                                connect3261();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3261();
+                            }
+                        });
+            }
+        });
+    }
 //
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        connect3261();
-//                    }
-//                });
-//    }
-//
-//    //熊刀（★）
-//    private void connect3261() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/614794")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1250, 0.16, 1100);
-//                        connect3271();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        connect3271();
-//                    }
-//                });
-//    }
+    //熊刀（★）
+    private void connect3261() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759460&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889773265")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "熊刀（★）");
+                                handleDataForBuff(response, 1200, 0.15);
+                                connect3293();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3293();
+                            }
+                        });
+            }
+        });
+    }
 //
 //    //鲍伊猎刀（★） | 多普勒 (崭新出厂)
 //    private void connect3271() {
@@ -1355,23 +1470,28 @@ public class BuffKnifes {
 //                    }
 //                });
 //    }
-//    //短剑（★） | 深红之网 (久经沙场)
-//    private void connect3293() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/615688")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1000, 0.18, 800);
-//                        connect3294();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        connect3294();
-//                    }
-//                });
-//    }
+    //短剑（★） | 深红之网 (久经沙场)
+    private void connect3293() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759454&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889919282")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "短剑（★） | 深红之网 (久经沙场)");
+                                handleDataForBuff(response, 800, 0.20);
+                                connect3295();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect3295();
+                            }
+                        });
+            }
+        });
+    }
 //    //锯齿爪刀（★）
 //    private void connect3294() {
 //        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/615682")
@@ -1389,23 +1509,28 @@ public class BuffKnifes {
 //                    }
 //                });
 //    }
-//    //锯齿爪刀（★）|深红之网 (久经沙场)
-//    private void connect3295() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/615682")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
-//                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1600, 0.10, 1380);
-//                        mService.buffGuns.connect201();
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<Igxe> response) {
-//                        super.onError(response);
-//                        mService.buffGuns.connect201();
-//                    }
-//                });
-//    }
+    //锯齿爪刀（★）|深红之网 (久经沙场)
+    private void connect3295() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759327&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554890113928")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "锯齿爪刀（★）|深红之网 (久经沙场)");
+                                handleDataForBuff(response, 1700, 0.18);
+                                mService.startScann();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                mService.startScann();
+                            }
+                        });
+            }
+        });
+    }
 
 
 }
