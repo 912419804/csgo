@@ -16,4 +16,5 @@ public class Constant {
 
     public static int TYPE = 1;
     public static int BUFF = 0;
+
 }
