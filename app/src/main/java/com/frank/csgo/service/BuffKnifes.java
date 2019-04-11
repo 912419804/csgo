@@ -1520,12 +1520,12 @@ public class BuffKnifes {
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "锯齿爪刀（★）|深红之网 (久经沙场)");
                                 handleDataForBuff(response, 1700, 0.18);
-                                mService.startScann();
+                                mService.buffGloves.connect1100();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                mService.startScann();
+                                mService.buffGloves.connect1100();
                             }
                         });
             }

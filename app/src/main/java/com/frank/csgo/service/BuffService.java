@@ -31,6 +31,7 @@ public class BuffService extends Service {
 
     public BuffGuns buffGuns;
     public BuffKnifes buffKnifes;
+    public BuffGloves buffGloves;
 
     public Handler handler = new Handler();
 
@@ -55,6 +56,9 @@ public class BuffService extends Service {
         }
         if (this.buffKnifes == null) {
             this.buffKnifes = new BuffKnifes(BuffService.this);
+        }
+        if (this.buffGloves == null) {
+            this.buffGloves = new BuffGloves(BuffService.this);
         }
     }
 

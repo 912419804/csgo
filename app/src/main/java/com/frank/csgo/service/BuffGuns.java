@@ -2903,7 +2903,7 @@ public class BuffGuns {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "M4A4 | 战场之星 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 70, 0.03);
+                        handleDataForBuff(response, 70, 0.02);
                         connect317();
                     }
 
@@ -3527,7 +3527,7 @@ public class BuffGuns {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "SG 553 | 次时代 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 38, 0.09);
+                        handleDataForBuff(response, 38, 0.08);
                         connect342();
                     }
 
