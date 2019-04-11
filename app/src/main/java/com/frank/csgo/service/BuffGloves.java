@@ -232,7 +232,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 染铜 (久经沙场)");
-                                handleDataForBuff(response, 820, 0.25);
+                                handleDataForBuff(response, 820, 0.18);
                                 connect1106();
                             }
 
