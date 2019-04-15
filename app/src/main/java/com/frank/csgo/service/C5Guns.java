@@ -21,9 +21,9 @@ import java.util.List;
  */
 public class C5Guns {
 
-    private CatchService mService;
+    private C5Service mService;
 
-    public C5Guns(CatchService service) {
+    public C5Guns(C5Service service) {
         this.mService = service;
     }
 
@@ -402,7 +402,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 210, 0.12, 150);
+                        handleDataC53(response, 210, 0.11, 150);
                         connect28();
                     }
 
@@ -436,7 +436,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 360, 0.02, 300);
+                        handleDataC53(response, 360, 0.02, 290);
                         connect31();
                     }
 
@@ -606,7 +606,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 65, 0.02, 40);
+                        handleDataC53(response, 65, 0.01, 40);
                         connect40();
                     }
 
@@ -675,12 +675,12 @@ public class C5Guns {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 70, 0.02, 55);
-                        connect44();
+                        connect46();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect44();
+                        connect46();
                     }
                 });
     }

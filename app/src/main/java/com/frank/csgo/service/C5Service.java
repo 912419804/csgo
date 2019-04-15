@@ -13,28 +13,28 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
+import com.frank.csgo.Constant;
 import com.frank.csgo.Main2Activity;
 import com.frank.csgo.R;
-import com.frank.csgo.utils.NumUtils;
 import com.frank.csgo.utils.ThreadUtils;
 import com.frank.csgo.utils.TimeUtil;
 
-public class BuffService extends Service {
-    private int noteId = 2;
+public class C5Service extends Service {
+    private int noteId = 3;
     private int count = 1;
 
     NotificationManager notifyManager;
 
-    public BuffGuns buffGuns;
-    public BuffKnifes buffKnifes;
-    public BuffGloves buffGloves;
+    public C5Guns c5Guns;
+    public C5Knifes c5Knifes;
+    public C5Gloves c5Gloves;
 
     public Handler handler = new Handler();
-
 
     @Nullable
     @Override
@@ -42,23 +42,22 @@ public class BuffService extends Service {
         return null;
     }
 
-
     @Override
     public void onCreate() {
-        Toast.makeText(this, "buff服务启动...", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "C5服务启动...", Toast.LENGTH_LONG).show();
         createScanner();
         super.onCreate();
     }
 
     private void createScanner() {
-        if (this.buffGuns == null) {
-            this.buffGuns = new BuffGuns(BuffService.this);
+        if (this.c5Guns == null) {
+            this.c5Guns = new C5Guns(C5Service.this);
         }
-        if (this.buffKnifes == null) {
-            this.buffKnifes = new BuffKnifes(BuffService.this);
+        if (this.c5Gloves == null) {
+            this.c5Gloves = new C5Gloves(C5Service.this);
         }
-        if (this.buffGloves == null) {
-            this.buffGloves = new BuffGloves(BuffService.this);
+        if (this.c5Knifes == null) {
+            this.c5Knifes = new C5Knifes(C5Service.this);
         }
     }
 
@@ -73,7 +72,7 @@ public class BuffService extends Service {
         public void run() {
             updateNotification();
             count++;
-            buffGuns.connect201();
+            c5Guns.connect();
         }
     };
 
@@ -88,8 +87,8 @@ public class BuffService extends Service {
         Uri mUri = Settings.System.DEFAULT_NOTIFICATION_URI;
         NotificationChannel mChannel = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            mChannel = new NotificationChannel("9999", "9999", NotificationManager.IMPORTANCE_LOW);
-            mChannel.setDescription("buff");
+            mChannel = new NotificationChannel("9", "9", NotificationManager.IMPORTANCE_LOW);
+            mChannel.setDescription("c5");
             mChannel.setSound(mUri, Notification.AUDIO_ATTRIBUTES_DEFAULT);
             notifyManager.createNotificationChannel(mChannel);
         }
@@ -98,11 +97,11 @@ public class BuffService extends Service {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             Intent mainIntent = new Intent(this, Main2Activity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mainIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-            notification = new Notification.Builder(this, "9999")
+            notification = new Notification.Builder(this, "999")
 //                    .setSmallIcon(R.mipmap.ic_launcher)
                     .setSmallIcon(R.mipmap.cs)
+                    .setSubText("c5")
                     .setContentText("扫描第" + count + "次                     " + TimeUtil.timeString(System.currentTimeMillis()))
-                    .setSubText("buff")
                     .setContentIntent(pendingIntent)
                     .build();
             //设置通知默认效果
@@ -122,12 +121,6 @@ public class BuffService extends Service {
     void stopDataService() {
         Toast.makeText(this, "服务停止...", Toast.LENGTH_LONG).show();
         notifyManager.cancel(noteId);
-    }
-
-    private static int MIN_DELAY = 2000;
-    private static int MAX_DELAY = 5000;
-    public void post(Runnable r){
-        handler.postDelayed(r, Long.parseLong(NumUtils.getRandom(MIN_DELAY,MAX_DELAY)));
     }
 
 }

@@ -32,8 +32,9 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".service.CatchService" />
+        <service android:name=".service.C5Service" />
         <service android:name=".service.BuffService" />
+        <service android:name=".service.IgxeService" />
 
         <!--<activity-->
             <!--android:name=".Main2Activity"-->

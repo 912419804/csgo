@@ -21,26 +21,19 @@ import android.widget.Toast;
 import com.frank.csgo.Constant;
 import com.frank.csgo.Main2Activity;
 import com.frank.csgo.R;
+import com.frank.csgo.utils.ThreadUtils;
 import com.frank.csgo.utils.TimeUtil;
 
-public class CatchService extends Service {
+public class IgxeService extends Service {
 
+    private int noteId = 1;
     private int count = 1;
-    private int interval = 1000 * 180;
-    private BroadcastReceiver startActionReceiver;
-    private AlarmManager am;
-    private PendingIntent sender;
 
     NotificationManager notifyManager;
 
     public IgxeGloves igxeGloves;
     public IgxeKnifes igxeKnifes;
     public IgxeGuns igxeGuns;
-    public C5Guns c5Guns;
-    public C5Knifes c5Knifes;
-    public C5Gloves c5Gloves;
-    public BuffGuns buffGuns;
-    public BuffKnifes buffKnifes;
 
     public Handler handler = new Handler();
 
@@ -52,59 +45,40 @@ public class CatchService extends Service {
 
     @Override
     public void onCreate() {
-        Toast.makeText(this, "服务启动...", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "igxe服务启动...", Toast.LENGTH_LONG).show();
         createScanner();
-        //闹钟定时服务
-        if (startActionReceiver == null) {
-            startActionReceiver = new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-                    updateNotification();
-                    count++;
-                    igxeGuns.connect();
-                }
-            };
-        }
-        registerReceiver(startActionReceiver, new IntentFilter(Constant.START));
-        //启动闹钟服务
-        try {
-            Intent intent = new Intent(Constant.START);
-            sender = PendingIntent
-                    .getBroadcast(this, 1000, intent, 0);
-            //开始时间
-            long firsTime = SystemClock.elapsedRealtime();
-            am = (AlarmManager) getSystemService(ALARM_SERVICE);
-            am.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, 0, interval, sender);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         super.onCreate();
     }
 
     private void createScanner() {
         if (this.igxeGloves == null) {
-            this.igxeGloves = new IgxeGloves(CatchService.this);
+            this.igxeGloves = new IgxeGloves(IgxeService.this);
         }
         if (this.igxeKnifes == null) {
-            this.igxeKnifes = new IgxeKnifes(CatchService.this);
+            this.igxeKnifes = new IgxeKnifes(IgxeService.this);
         }
         if (this.igxeGuns == null) {
-            this.igxeGuns = new IgxeGuns(CatchService.this);
-        }
-        if (this.c5Guns == null) {
-            this.c5Guns = new C5Guns(CatchService.this);
-        }
-        if (this.c5Gloves == null) {
-            this.c5Gloves = new C5Gloves(CatchService.this);
-        }
-        if (this.c5Knifes == null) {
-            this.c5Knifes = new C5Knifes(CatchService.this);
+            this.igxeGuns = new IgxeGuns(IgxeService.this);
         }
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        startScan();
         return super.onStartCommand(intent, flags, startId);
+    }
+
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            updateNotification();
+            count++;
+            igxeGuns.connect();
+        }
+    };
+
+    public void startScan(){
+        ThreadUtils.THREAD.execute(runnable);
     }
 
     private void updateNotification() {
@@ -115,7 +89,7 @@ public class CatchService extends Service {
         NotificationChannel mChannel = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             mChannel = new NotificationChannel("999", "999", NotificationManager.IMPORTANCE_LOW);
-            mChannel.setDescription("csgo");
+            mChannel.setDescription("igxe");
             mChannel.setSound(mUri, Notification.AUDIO_ATTRIBUTES_DEFAULT);
             notifyManager.createNotificationChannel(mChannel);
         }
@@ -127,12 +101,13 @@ public class CatchService extends Service {
             notification = new Notification.Builder(this, "999")
 //                    .setSmallIcon(R.mipmap.ic_launcher)
                     .setSmallIcon(R.mipmap.cs)
+                    .setSubText("igxe")
                     .setContentText("扫描第" + count + "次                     " + TimeUtil.timeString(System.currentTimeMillis()))
                     .setContentIntent(pendingIntent)
                     .build();
             //设置通知默认效果
             notification.flags = Notification.FLAG_NO_CLEAR;
-            startForeground(1, notification);
+            startForeground(noteId, notification);
         }
 
 
@@ -146,14 +121,7 @@ public class CatchService extends Service {
 
     void stopDataService() {
         Toast.makeText(this, "服务停止...", Toast.LENGTH_LONG).show();
-        notifyManager.cancel(1);
-        if (sender != null) {
-            am.cancel(sender);
-        }
-        if (startActionReceiver != null) {
-            unregisterReceiver(startActionReceiver);
-        }
+        notifyManager.cancel(noteId);
     }
-
 
 }

@@ -6,8 +6,6 @@ import android.text.TextUtils;
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.C5;
 import com.frank.csgo.bean.C5Weapon;
-import com.frank.csgo.bean.C5;
-import com.frank.csgo.bean.C5Weapon;
 import com.frank.csgo.https.JsonCallback;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
@@ -23,9 +21,9 @@ import java.util.List;
  */
 public class C5Knifes {
 
-    private CatchService mService;
+    private C5Service mService;
 
-    public C5Knifes(CatchService service) {
+    public C5Knifes(C5Service service) {
         this.mService = service;
     }
 
@@ -567,7 +565,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 800, 0.17, 700);
+                        handleDataC53(response, 770, 0.17, 700);
                         connect1235();
                     }
 
@@ -584,7 +582,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1500, 0.10, 1200);
+                        handleDataC53(response, 1500, 0.09, 1200);
                         connect1236();
                     }
 
@@ -905,7 +903,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 830, 0.01, 740);
+                        handleDataC53(response, 820, 0.004, 740);
                         connect1257();
                     }
 
@@ -1210,7 +1208,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1200, 0.03, 1020);
+                        handleDataC53(response, 1200, 0.02, 1020);
                         connect1285();
                     }
 
@@ -1228,7 +1226,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 870, 0.08, 760);
+                        handleDataC53(response, 830, 0.08, 760);
                         connect1286();
                     }
 
@@ -1372,7 +1370,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1000, 0.18, 640);
+                        handleDataC53(response, 950, 0.18, 640);
                         connect1295();
                     }
 

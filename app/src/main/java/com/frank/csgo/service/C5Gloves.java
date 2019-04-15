@@ -6,8 +6,6 @@ import android.text.TextUtils;
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.C5;
 import com.frank.csgo.bean.C5Weapon;
-import com.frank.csgo.bean.C5;
-import com.frank.csgo.bean.C5Weapon;
 import com.frank.csgo.https.JsonCallback;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
@@ -23,9 +21,9 @@ import java.util.List;
  */
 public class C5Gloves {
 
-    private CatchService mService;
+    private C5Service mService;
 
-    public C5Gloves(CatchService service) {
+    public C5Gloves(C5Service service) {
         this.mService = service;
     }
 
@@ -788,7 +786,7 @@ public class C5Gloves {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1900, 0.11, 1500);
+                        handleDataC53(response, 1900, 0.10, 1500);
                         connect1139();
                     }
 
@@ -1013,7 +1011,7 @@ public class C5Gloves {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1000, 0.10, 750);
+                        handleDataC53(response, 910, 0.10, 750);
                         connect1153();
                     }
 
@@ -1221,7 +1219,7 @@ public class C5Gloves {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 800, 0.17, 650);
+                        handleDataC53(response, 770, 0.17, 650);
                         connect1166();
                     }
 
@@ -1238,11 +1236,12 @@ public class C5Gloves {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 900, 0.09, 700);
+                        mService.startScan();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-
+                        mService.startScan();
                     }
                 });
     }

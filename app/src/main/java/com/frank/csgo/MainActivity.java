@@ -19,7 +19,7 @@ import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.frank.csgo.bean.IgxeWeapon;
-import com.frank.csgo.service.CatchService;
+import com.frank.csgo.service.C5Service;
 import com.frank.csgo.utils.MediaUtils;
 
 import java.util.ArrayList;
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                service = new Intent(MainActivity.this, CatchService.class);
+                service = new Intent(MainActivity.this, C5Service.class);
                 startService(service);
             }
         });

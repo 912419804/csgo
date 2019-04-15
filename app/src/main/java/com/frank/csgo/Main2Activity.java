@@ -11,27 +11,15 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.frank.csgo.bean.Buff;
-import com.frank.csgo.https.JsonCallback;
 import com.frank.csgo.service.BuffService;
-import com.frank.csgo.service.CatchService;
-import com.lzy.okgo.OkGo;
-import com.lzy.okgo.model.Response;
-import com.lzy.okrx2.adapter.ObservableResponse;
+import com.frank.csgo.service.C5Service;
+import com.frank.csgo.service.IgxeService;
 
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
-
-import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -39,8 +27,9 @@ public class Main2Activity extends AppCompatActivity {
 
     private ViewPager mViewPager;
     private ArrayList<Fragment> fragments = new ArrayList<>();
-    private Intent service;
-    private Intent service2;
+    private Intent igxeService;
+    private Intent c5Service;
+    private Intent buffService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,15 +83,17 @@ public class Main2Activity extends AppCompatActivity {
                 public void onClick(DialogInterface dialog, int which) {
                     switch (which) {
                         case 0:
-                            service = new Intent(Main2Activity.this, CatchService.class);
-                            startService(service);
-                            service2 = new Intent(Main2Activity.this, BuffService.class);
-                            startService(service2);
+                            igxeService = new Intent(Main2Activity.this, IgxeService.class);
+                            startService(igxeService);
+                            c5Service = new Intent(Main2Activity.this, C5Service.class);
+                            startService(c5Service);
+                            buffService = new Intent(Main2Activity.this, BuffService.class);
+                            startService(buffService);
                             break;
                         case 1:
                             Toast.makeText(Main2Activity.this, "结束服务", Toast.LENGTH_SHORT).show();
-                            if (service != null) {
-                                stopService(service);
+                            if (c5Service != null) {
+                                stopService(c5Service);
                                 for (int i = 0; i < fragments.size(); i++) {
                                     if (i == 0) {
                                         ((IgxeFragment) fragments.get(i)).clear();

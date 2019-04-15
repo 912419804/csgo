@@ -1609,12 +1609,12 @@ public class BuffGloves {
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 红树林(略有磨损)");
                                 handleDataForBuff(response, 950, 0.08);
-                                mService.startScann();
+                                mService.startScan();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                mService.startScann();
+                                mService.startScan();
                             }
                         });
             }
