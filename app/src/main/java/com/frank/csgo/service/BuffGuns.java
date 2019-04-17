@@ -1419,12 +1419,12 @@ public class BuffGuns {
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "AWP | 鬼退治 (崭新出厂)", Constant.ZXCC);
                         handleDataForBuff(response, 355, 0.03);
-                        connect257();
+                        connect260();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect257();
+                        connect260();
                     }
                 });
             }
@@ -1538,7 +1538,7 @@ public class BuffGuns {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "AWP | 巨龙传说 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 10000, 0.035);
+                        handleDataForBuff(response, 10000, 0.04);
                         connect263();
                     }
 
@@ -1826,7 +1826,7 @@ public class BuffGuns {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "AK-47 | 燃料喷射器 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 185, 0.22);
+                        handleDataForBuff(response, 185, 0.17);
                         connect274();
                     }
 
