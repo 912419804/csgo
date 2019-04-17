@@ -1299,13 +1299,13 @@ public class C5Knifes {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 605, 0.01, 500);
-                        connect1291();
+                        connect1292();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
                         super.onError(response);
-                        connect1291();
+                        connect1292();
                     }
                 });
     }

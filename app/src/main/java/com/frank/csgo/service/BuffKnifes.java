@@ -1071,7 +1071,7 @@ public class BuffKnifes {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "熊刀（★）");
-                                handleDataForBuff(response, 1200, 0.15);
+                                handleDataForBuff(response, 1200, 0.13);
                                 connect3293();
                             }
 

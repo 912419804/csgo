@@ -2664,7 +2664,7 @@ public class BuffGuns {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "M4A4 | 死寂空间 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 165, 0.03);
+                        handleDataForBuff(response, 165, 0.02);
                         connect307();
                     }
 
@@ -2688,7 +2688,7 @@ public class BuffGuns {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "M4A4 | 死寂空间 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 80, 0.09);
+                        handleDataForBuff(response, 80, 0.08);
                         connect308();
                     }
 
@@ -2928,12 +2928,12 @@ public class BuffGuns {
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "M4A4 | 都市 DDPAT (崭新出厂)", Constant.ZXCC);
                         handleDataForBuff(response, 25, 0.03);
-                        connect318();
+                        connect319();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect318();
+                        connect319();
                     }
                 });
             }
@@ -2976,12 +2976,12 @@ public class BuffGuns {
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "M4A4 | 辐射危机 (略有磨损)", Constant.LVMS);
                         handleDataForBuff(response, 155, 0.11);
-                        connect320();
+                        connect321();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect320();
+                        connect321();
                     }
                 });
             }
@@ -3024,12 +3024,12 @@ public class BuffGuns {
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "M4A4 | 星级 (崭新出厂)", Constant.ZXCC);
                         handleDataForBuff(response, 85, 0.03);
-                        connect324();
+                        connect325();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect324();
+                        connect325();
                     }
                 });
             }
@@ -3263,7 +3263,7 @@ public class BuffGuns {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "M4A1 消音型 | 机械工业 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 90, 0.08);
+                        handleDataForBuff(response, 90, 0.072);
                         connect332();
                     }
 
@@ -3528,12 +3528,12 @@ public class BuffGuns {
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "SG 553 | 次时代 (略有磨损)", Constant.LVMS);
                         handleDataForBuff(response, 38, 0.08);
-                        connect342();
+                        connect343();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect342();
+                        connect343();
                     }
                 });
             }
@@ -3696,12 +3696,12 @@ public class BuffGuns {
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "AUG | 燕群 (略有磨损)", Constant.LVMS);
                         handleDataForBuff(response, 50, 0.08);
-                        connect349();
+                        mService.buffKnifes.connect3200();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect349();
+                        mService.buffKnifes.connect3200();
                     }
                 });
             }
