@@ -1564,7 +1564,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 响尾蛇(略有磨损)");
-                                handleDataForBuff(response, 1150, 0.10);
+                                handleDataForBuff(response, 1150, 0.09);
                                 connect1165();
                             }
 

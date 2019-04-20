@@ -513,7 +513,7 @@ public class BuffKnifes {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M9 刺刀（★） | 深红之网 (略有磨损)");
-                                handleDataForBuff(response, 2700, 0.13);
+                                handleDataForBuff(response, 2700, 0.12);
                                 connect3226();
                             }
 

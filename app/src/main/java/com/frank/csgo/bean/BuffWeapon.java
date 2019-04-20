@@ -1,5 +1,7 @@
 package com.frank.csgo.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -336,6 +338,63 @@ public class BuffWeapon implements Serializable {
             this.tradable_cooldown_text = tradable_cooldown_text;
         }
 
+        public static class StickersBean implements Serializable{
+            /**
+             * img_url : https://g.fp.ps.netease.com/market/file/5c9e26d3a7f252d549387ee9VGwmSMUT02
+             * name : One Sting (Holo)
+             * slot : 3
+             * sticker_id : 3960
+             * wear : 0
+             */
+
+            private String img_url;
+            @SerializedName("name")
+            private String nameX;
+            private int slot;
+            private int sticker_id;
+            private int wear;
+
+            public String getImg_url() {
+                return img_url;
+            }
+
+            public void setImg_url(String img_url) {
+                this.img_url = img_url;
+            }
+
+            public String getNameX() {
+                return nameX;
+            }
+
+            public void setNameX(String nameX) {
+                this.nameX = nameX;
+            }
+
+            public int getSlot() {
+                return slot;
+            }
+
+            public void setSlot(int slot) {
+                this.slot = slot;
+            }
+
+            public int getSticker_id() {
+                return sticker_id;
+            }
+
+            public void setSticker_id(int sticker_id) {
+                this.sticker_id = sticker_id;
+            }
+
+            public int getWear() {
+                return wear;
+            }
+
+            public void setWear(int wear) {
+                this.wear = wear;
+            }
+        }
+
         public static class InfoBean implements Serializable{
             /**
              * icon_url : https://g.fp.ps.netease.com/market/file/5aa0c349adce5f63e5cc65faqTD8OBOU
@@ -367,7 +426,7 @@ public class BuffWeapon implements Serializable {
             private String inspected_at;
             private int paintindex;
             private int paintseed;
-            private ArrayList<?> stickers;
+            private ArrayList<StickersBean> stickers;
 
             public String getIcon_url() {
                 return icon_url;
@@ -473,11 +532,11 @@ public class BuffWeapon implements Serializable {
                 this.paintseed = paintseed;
             }
 
-            public ArrayList<?> getStickers() {
+            public ArrayList<StickersBean> getStickers() {
                 return stickers;
             }
 
-            public void setStickers(ArrayList<?> stickers) {
+            public void setStickers(ArrayList<StickersBean> stickers) {
                 this.stickers = stickers;
             }
         }

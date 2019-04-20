@@ -138,6 +138,39 @@ public class BuffFragment extends Fragment {
                 }
                 helper.setText(R.id.tv_date, item.getTime());
                 Glide.with(mContex).load(item.getAsset_info().getInfo().getIcon_url()).into((ImageView) helper.getView(R.id.iv_weapon));
+                ArrayList<BuffWeapon.AssetInfoBean.StickersBean> list = item.getAsset_info().getInfo().getStickers();
+                if (list!=null && list.size()>0){
+                    int size = list.size();
+                    if (size == 1){
+                        Glide.with(mContex).load(list.get(0).getImg_url()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 2){
+                        Glide.with(mContex).load(list.get(0).getImg_url()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1).getImg_url()).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 3){
+                        Glide.with(mContex).load(list.get(0).getImg_url()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1).getImg_url()).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(list.get(2).getImg_url()).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 4){
+                        Glide.with(mContex).load(list.get(0).getImg_url()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1).getImg_url()).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(list.get(2).getImg_url()).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(list.get(3).getImg_url()).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                }else {
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_1));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_2));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                }
             }
         };
         recyclerView.setAdapter(adapter);

@@ -12,6 +12,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -140,6 +141,40 @@ public class C5Fragment extends Fragment {
                 }
                 helper.setText(R.id.tv_date, item.getTime());
                 Glide.with(mContex).load(item.getImage()).into((ImageView) helper.getView(R.id.iv_weapon));
+                C5Weapon.GemBean gem = item.getGem();
+                List<String> list = gem.getImage();
+                if (list!=null && list.size()>0){
+                    int size = list.size();
+                    if (size == 1){
+                        Glide.with(mContex).load(list.get(0)).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 2){
+                        Glide.with(mContex).load(list.get(0)).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1)).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 3){
+                        Glide.with(mContex).load(list.get(0)).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1)).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(list.get(2)).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 4){
+                        Glide.with(mContex).load(list.get(0)).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1)).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(list.get(2)).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(list.get(3)).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                }else {
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_1));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_2));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                }
             }
         };
         recyclerView.setAdapter(adapter);

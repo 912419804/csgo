@@ -140,6 +140,39 @@ public class IgxeFragment extends Fragment {
                 }
                 helper.setText(R.id.tv_date, item.getTime());
                 Glide.with(mContex).load("http:" + item.getIcon_url()).into((ImageView) helper.getView(R.id.iv_weapon));
+                List<IgxeWeapon.StickerBean> list = item.getSticker();
+                if (list!=null && list.size()>0){
+                    int size = list.size();
+                    if (size == 1){
+                        Glide.with(mContex).load(list.get(0).getSticker_img()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 2){
+                        Glide.with(mContex).load(list.get(0).getSticker_img()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1).getSticker_img()).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 3){
+                        Glide.with(mContex).load(list.get(0).getSticker_img()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1).getSticker_img()).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(list.get(2).getSticker_img()).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 4){
+                        Glide.with(mContex).load(list.get(0).getSticker_img()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1).getSticker_img()).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(list.get(2).getSticker_img()).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(list.get(3).getSticker_img()).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                }else {
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_1));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_2));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                }
             }
         };
         recyclerView.setAdapter(adapter);

@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.Buff;
 import com.frank.csgo.bean.BuffWeapon;
+import com.frank.csgo.bean.C5;
 import com.frank.csgo.https.JsonCallback;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
@@ -91,7 +92,7 @@ public class BuffGuns {
 
     //火灵（崭新出厂）
     public void connect201() {
-         mService.post(new Runnable() {
+        mService.post(new Runnable() {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35914&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543411868124")
@@ -99,7 +100,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "P2000 | 火灵 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 60, 0.03);
+                                handleDataForBuff(response, 60, 0.02);
                                 connect202();
                             }
 
@@ -119,19 +120,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42166&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543454332986")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 次时代 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 25, 0.01);
-                        connect204();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 次时代 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 25, 0.01);
+                                connect204();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect204();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect204();
+                            }
+                        });
             }
         });
 
@@ -142,19 +143,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42166&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543454332986")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 次时代 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 25, 0.01);
-                        connect204();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 次时代 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 25, 0.01);
+                                connect204();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect204();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect204();
+                            }
+                        });
             }
         });
 
@@ -166,19 +167,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/market/item_detail?appid=730&game=csgo&classid=1312321419&instanceid=480085569&assetid=14928331584&contextid=2&_=1543454585575")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 枪响人亡 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 450, 0.03);
-                        connect205();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 枪响人亡 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 450, 0.03);
+                                connect205();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect205();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect205();
+                            }
+                        });
             }
         });
 
@@ -190,19 +191,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/market/item_detail?appid=730&game=csgo&classid=1312321419&instanceid=480085569&assetid=14928331584&contextid=2&_=1543454585575")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 枪响人亡 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 230, 0.08);
-                        connect206();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 枪响人亡 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 230, 0.08);
+                                connect206();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect206();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect206();
+                            }
+                        });
             }
         });
 
@@ -214,19 +215,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42182&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543454816828")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 枪响人亡 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 160, 0.17);
-                        connect207();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 枪响人亡 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 160, 0.17);
+                                connect207();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect207();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect207();
+                            }
+                        });
             }
         });
 
@@ -238,19 +239,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42191&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543455069431")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 黑色魅影 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 270, 0.03);
-                        connect208();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 黑色魅影 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 270, 0.03);
+                                connect211();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect208();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect211();
+                            }
+                        });
             }
         });
 
@@ -262,19 +263,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42193&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543456376846")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 黑色魅影 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 160, 0.08);
-                        connect209();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 黑色魅影 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 160, 0.08);
+                                connect211();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect209();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect211();
+                            }
+                        });
             }
         });
 
@@ -286,19 +287,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42192&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543456903616")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 黑色魅影 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 105, 0.17);
-                        connect211();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 黑色魅影 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 105, 0.17);
+                                connect211();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect211();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect211();
+                            }
+                        });
             }
         });
 
@@ -310,19 +311,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42192&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543456903616")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 黑色魅影 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 90, 0.17);
-                        connect211();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 黑色魅影 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 90, 0.17);
+                                connect211();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect211();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect211();
+                            }
+                        });
             }
         });
 
@@ -334,19 +335,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45369&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457130726")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 脑洞大开 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 115, 0.02);
-                        connect213();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 脑洞大开 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 115, 0.02);
+                                connect213();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect213();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect213();
+                            }
+                        });
             }
         });
 
@@ -358,19 +359,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45371&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457306693")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 脑洞大开 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 56, 0.08);
-                        connect213();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 脑洞大开 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 56, 0.08);
+                                connect213();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect213();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect213();
+                            }
+                        });
             }
         });
 
@@ -382,19 +383,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42229&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457511281")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 不锈钢 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 55, 0.01);
-                        connect214();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 不锈钢 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 55, 0.01);
+                                connect214();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect214();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect214();
+                            }
+                        });
             }
         });
 
@@ -406,19 +407,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42201&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543457789142")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 猎户 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 70, 0.03);
-                        connect215();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 猎户 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 70, 0.03);
+                                connect215();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect215();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect215();
+                            }
+                        });
             }
         });
 
@@ -430,19 +431,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42153&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543458328635")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 蓝图 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 45, 0.01);
-                        connect217();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 蓝图 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 45, 0.01);
+                                connect217();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect217();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect217();
+                            }
+                        });
             }
         });
 
@@ -454,19 +455,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42153&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543458328635")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "USP 消音版 | 蓝图 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 35, 0.01);
-                        connect217();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "USP 消音版 | 蓝图 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 35, 0.01);
+                                connect217();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect217();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect217();
+                            }
+                        });
             }
         });
 
@@ -478,19 +479,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35072&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543458768570")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "格洛克 18 型 | 水灵 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 48, 0.03);
-                        connect218();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "格洛克 18 型 | 水灵 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 48, 0.02);
+                                connect218();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect218();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect218();
+                            }
+                        });
             }
         });
 
@@ -502,19 +503,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35067&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460061670")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "格洛克 18 型 | 荒野反叛 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 65, 0.02);
-                        connect219();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "格洛克 18 型 | 荒野反叛 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 65, 0.02);
+                                connect219();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect219();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect219();
+                            }
+                        });
             }
         });
 
@@ -526,19 +527,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35063&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460281254")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "格洛克 18 型 | 暮光星系 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 80, 0.02);
-                        connect221();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "格洛克 18 型 | 暮光星系 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 80, 0.02);
+                                connect222();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect221();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect222();
+                            }
+                        });
             }
         });
 
@@ -550,19 +551,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35063&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460281254")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "格洛克 18 型 | 暮光星系 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 65, 0.03);
-                        connect221();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "格洛克 18 型 | 暮光星系 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 65, 0.03);
+                                connect221();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect221();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect221();
+                            }
+                        });
             }
         });
 
@@ -574,19 +575,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35046&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460427097")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "格洛克 18 型 | 核子反应 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 35, 0.02);
-                        connect222();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "格洛克 18 型 | 核子反应 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 35, 0.02);
+                                connect222();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect222();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect222();
+                            }
+                        });
             }
         });
 
@@ -598,19 +599,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=762185&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460579683")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "格洛克 18 型 | Nuclear Garden (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 85, 0.02);
-                        connect223();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "格洛克 18 型 | Nuclear Garden (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 85, 0.02);
+                                connect223();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect223();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect223();
+                            }
+                        });
             }
         });
 
@@ -622,19 +623,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36077&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460863761")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "P250 | 生化短吻鳄 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 95, 0.02);
-                        connect224();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "P250 | 生化短吻鳄 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 95, 0.02);
+                                connect225();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect224();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect225();
+                            }
+                        });
             }
         });
 
@@ -646,19 +647,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36079&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543460963028")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "P250 | 生化短吻鳄 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 55, 0.08);
-                        connect225();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "P250 | 生化短吻鳄 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 55, 0.08);
+                                connect225();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect225();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect225();
+                            }
+                        });
             }
         });
 
@@ -670,19 +671,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35986&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461080142")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "P250 | 二西莫夫 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 100, 0.11);
-                        connect226();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "P250 | 二西莫夫 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 100, 0.11);
+                                connect226();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect226();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect226();
+                            }
+                        });
             }
         });
 
@@ -694,19 +695,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35985&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461213725")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "P250 | 二西莫夫 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 25, 0.17);
-                        connect227();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "P250 | 二西莫夫 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 25, 0.17);
+                                connect227();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect227();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect227();
+                            }
+                        });
             }
         });
 
@@ -718,19 +719,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36102&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461418178")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "P250 | 银装素裹 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 35, 0.11);
-                        connect228();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "P250 | 银装素裹 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 35, 0.09);
+                                connect236();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect228();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect236();
+                            }
+                        });
             }
         });
 
@@ -742,19 +743,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36091&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461600295")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "P250 | 暗潮 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 39, 0.01);
-                        connect229();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "P250 | 暗潮 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 39, 0.01);
+                                connect229();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect229();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect229();
+                            }
+                        });
             }
         });
 
@@ -766,19 +767,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34743&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543461949263")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "FN57 | 暴怒野兽 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 300, 0.03);
-                        connect230();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "FN57 | 暴怒野兽 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 300, 0.03);
+                                connect230();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect230();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect230();
+                            }
+                        });
             }
         });
 
@@ -790,19 +791,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34745&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543462039139")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "FN57 | 暴怒野兽 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 140, 0.10);
-                        connect232();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "FN57 | 暴怒野兽 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 140, 0.10);
+                                connect232();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect232();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect232();
+                            }
+                        });
             }
         });
 
@@ -814,19 +815,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34744&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543462149710")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "FN57 | 暴怒野兽 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 85, 0.20);
-                        connect232();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "FN57 | 暴怒野兽 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 85, 0.20);
+                                connect232();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect232();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect232();
+                            }
+                        });
             }
         });
 
@@ -838,19 +839,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34757&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474164592")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "FN57 | 耍猴把戏 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 45, 0.11);
-                        connect233();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "FN57 | 耍猴把戏 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 45, 0.11);
+                                connect233();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect233();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect233();
+                            }
+                        });
             }
         });
 
@@ -862,19 +863,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34359&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474549446")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "CZ75 自动手枪 | 相柳 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 35, 0.02);
-                        connect234();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "CZ75 自动手枪 | 相柳 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 35, 0.02);
+                                connect234();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect234();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect234();
+                            }
+                        });
             }
         });
 
@@ -886,19 +887,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34364&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474688036")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "CZ75 自动手枪 | 黄夹克 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 50, 0.01);
-                        connect235();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "CZ75 自动手枪 | 黄夹克 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 50, 0.01);
+                                connect235();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect235();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect235();
+                            }
+                        });
             }
         });
 
@@ -910,19 +911,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=41992&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543474804200")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "Tec-9 | 燃料喷射器 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 35, 0.02);
-                        connect236();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "Tec-9 | 燃料喷射器 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 35, 0.02);
+                                connect236();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect236();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect236();
+                            }
+                        });
             }
         });
 
@@ -934,19 +935,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759243&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475040856")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "沙漠之鹰 | 红色代号 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 310, 0.03);
-                        connect237();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰 | 红色代号 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 310, 0.03);
+                                connect237();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect237();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect237();
+                            }
+                        });
             }
         });
 
@@ -958,19 +959,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759245&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475211688")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "沙漠之鹰 | 红色代号 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 172, 0.080);
-                        connect238();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰 | 红色代号 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 172, 0.080);
+                                connect238();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect238();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect238();
+                            }
+                        });
             }
         });
 
@@ -982,19 +983,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759244&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475318621")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "沙漠之鹰 | 红色代号 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 100, 0.17);
-                        connect239();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰 | 红色代号 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 100, 0.17);
+                                connect239();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect239();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect239();
+                            }
+                        });
             }
         });
 
@@ -1006,19 +1007,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34389&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475470973")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "沙漠之鹰 | 炽烈之炎 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 600, 0.01);
-                        connect240();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰 | 炽烈之炎 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 600, 0.01);
+                                connect242();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect240();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect242();
+                            }
+                        });
             }
         });
 
@@ -1030,19 +1031,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34431&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475586496")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "沙漠之鹰 | 大佬龙 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 85, 0.01);
-                        connect242();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰 | 大佬龙 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 85, 0.01);
+                                connect242();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect242();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect242();
+                            }
+                        });
             }
         });
 
@@ -1054,19 +1055,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34433&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475710609")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "沙漠之鹰 | 大佬龙 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 45, 0.071);
-                        connect242();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰 | 大佬龙 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 45, 0.071);
+                                connect242();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect242();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect242();
+                            }
+                        });
             }
         });
 
@@ -1078,19 +1079,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34461&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543475939163")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "沙漠之鹰 | 飞行员 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 256, 0.02);
-                        connect243();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰 | 飞行员 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 256, 0.02);
+                                connect243();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect243();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect243();
+                            }
+                        });
             }
         });
 
@@ -1102,19 +1103,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34463&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543476147565")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "沙漠之鹰 | 飞行员 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 150, 0.08);
-                        connect245();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰 | 飞行员 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 150, 0.08);
+                                connect245();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect245();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect245();
+                            }
+                        });
             }
         });
 
@@ -1126,19 +1127,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34463&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543476147565")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "沙漠之鹰 | 飞行员 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 150, 0.08);
-                        connect245();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰 | 飞行员 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 150, 0.08);
+                                connect245();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect245();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect245();
+                            }
+                        });
             }
         });
 
@@ -1150,19 +1151,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34902&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477324839")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "加利尔 AR | 地狱看门犬 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 85, 0.02);
-                        connect246();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "加利尔 AR | 地狱看门犬 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 85, 0.02);
+                                connect246();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect246();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect246();
+                            }
+                        });
             }
         });
 
@@ -1174,19 +1175,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34963&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477464971")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "加利尔 AR | ~甜甜的~ (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 75, 0.01);
-                        connect247();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "加利尔 AR | ~甜甜的~ (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 75, 0.01);
+                                connect247();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect247();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect247();
+                            }
+                        });
             }
         });
 
@@ -1198,19 +1199,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34916&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477672911")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "加利尔 AR | 「经济」克鲁尔 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 55, 0.09);
-                        connect248();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "加利尔 AR | 「经济」克鲁尔 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 55, 0.09);
+                                connect248();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect248();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect248();
+                            }
+                        });
             }
         });
 
@@ -1222,43 +1223,43 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34915&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477829307")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "加利尔 AR | 「经济」克鲁尔 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 15, 0.17);
-                        connect249();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "加利尔 AR | 「经济」克鲁尔 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 15, 0.17);
+                                connect249();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect249();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect249();
+                            }
+                        });
             }
         });
 
     }
 
     //AWP | 二西莫夫 (久经沙场)
-    private void connect249() {
+    public void connect249() {
         mService.post(new Runnable() {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34066&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543477983488")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 二西莫夫 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 250, 0.24);
-                        connect250();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 二西莫夫 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 250, 0.24);
+                                connect250();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect250();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect250();
+                            }
+                        });
             }
         });
 
@@ -1270,19 +1271,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45247&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479183613")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 死神 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 65, 0.02);
-                        connect252();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 死神 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 65, 0.02);
+                                connect252();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect252();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect252();
+                            }
+                        });
             }
         });
 
@@ -1294,19 +1295,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45247&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479556659")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 死神 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 60, 0.02);
-                        connect252();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 死神 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 60, 0.02);
+                                connect252();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect252();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect252();
+                            }
+                        });
             }
         });
 
@@ -1318,19 +1319,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34095&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479632564")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 暴怒野兽 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 280, 0.03);
-                        connect253();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 暴怒野兽 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 280, 0.03);
+                                connect255();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect253();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect255();
+                            }
+                        });
             }
         });
 
@@ -1342,19 +1343,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34097&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479770945")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 暴怒野兽 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 180, 0.08);
-                        connect255();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 暴怒野兽 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 180, 0.08);
+                                connect255();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect255();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect255();
+                            }
+                        });
             }
         });
 
@@ -1366,19 +1367,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34096&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543479870551")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 暴怒野兽 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 125, 0.17);
-                        connect255();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 暴怒野兽 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 125, 0.17);
+                                connect255();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect255();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect255();
+                            }
+                        });
             }
         });
 
@@ -1390,19 +1391,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34088&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480354611")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 浮生如梦 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 50, 0.02);
-                        connect256();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 浮生如梦 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 50, 0.02);
+                                connect256();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect256();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect256();
+                            }
+                        });
             }
         });
 
@@ -1414,19 +1415,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34108&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480466460")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 鬼退治 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 355, 0.03);
-                        connect260();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 鬼退治 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 355, 0.02);
+                                connect260();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect260();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect260();
+                            }
+                        });
             }
         });
 
@@ -1438,19 +1439,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34110&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480535184")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 鬼退治 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 280, 0.09);
-                        connect258();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 鬼退治 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 280, 0.09);
+                                connect258();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect258();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect258();
+                            }
+                        });
             }
         });
 
@@ -1462,19 +1463,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34109&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480608246")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 鬼退治 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 200, 0.17);
-                        connect260();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 鬼退治 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 200, 0.17);
+                                connect260();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect260();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect260();
+                            }
+                        });
             }
         });
 
@@ -1486,19 +1487,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34109&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480608246")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 鬼退治 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 180, 0.17);
-                        connect260();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 鬼退治 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 180, 0.17);
+                                connect260();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect260();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect260();
+                            }
+                        });
             }
         });
 
@@ -1510,19 +1511,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34078&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543480737879")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 电子蜂巢 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 75, 0.02);
-                        connect261();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 电子蜂巢 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 75, 0.02);
+                                connect261();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect261();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect261();
+                            }
+                        });
             }
         });
 
@@ -1534,19 +1535,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=44060&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481004692")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 巨龙传说 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 10000, 0.04);
-                        connect263();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 巨龙传说 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 10000, 0.04);
+                                connect263();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect263();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect263();
+                            }
+                        });
             }
         });
 
@@ -1558,19 +1559,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=44060&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481004692")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AWP | 巨龙传说 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 9300, 0.04);
-                        connect263();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP | 巨龙传说 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 9300, 0.04);
+                                connect263();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect263();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect263();
+                            }
+                        });
             }
         });
 
@@ -1582,19 +1583,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33974&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481445591")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 火神 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 510, 0.02);
-                        connect264();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 火神 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 510, 0.02);
+                                connect264();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect264();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect264();
+                            }
+                        });
             }
         });
 
@@ -1606,19 +1607,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33976&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543481571960")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 火神 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 270, 0.08);
-                        connect265();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 火神 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 270, 0.08);
+                                connect265();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect265();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect265();
+                            }
+                        });
             }
         });
 
@@ -1630,19 +1631,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33975&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543482929338")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 火神 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 165, 0.17);
-                        connect266();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 火神 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 165, 0.17);
+                                connect266();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect266();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect266();
+                            }
+                        });
             }
         });
 
@@ -1654,19 +1655,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33935&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543483083123")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 霓虹革命 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 245, 0.02);
-                        connect268();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 霓虹革命 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 245, 0.02);
+                                connect268();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect268();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect268();
+                            }
+                        });
             }
         });
 
@@ -1678,19 +1679,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33937&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543483283552")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 霓虹革命 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 155, 0.08);
-                        connect268();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 霓虹革命 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 155, 0.08);
+                                connect268();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect268();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect268();
+                            }
+                        });
             }
         });
 
@@ -1702,19 +1703,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33969&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543483449650")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 皇后 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 600, 0.04);
-                        connect269();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 皇后 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 600, 0.04);
+                                connect269();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect269();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect269();
+                            }
+                        });
             }
         });
 
@@ -1726,19 +1727,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33971&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543545419527")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 皇后 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 300, 0.09);
-                        connect270();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 皇后 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 300, 0.09);
+                                connect270();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect270();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect270();
+                            }
+                        });
             }
         });
 
@@ -1750,19 +1751,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33970&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543545564032")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 皇后 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 210, 0.18);
-                        connect271();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 皇后 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 210, 0.18);
+                                connect271();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect271();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect271();
+                            }
+                        });
             }
         });
 
@@ -1774,19 +1775,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33910&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546134659")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 燃料喷射器 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 500, 0.04);
-                        connect272();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 燃料喷射器 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 500, 0.04);
+                                connect272();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect272();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect272();
+                            }
+                        });
             }
         });
 
@@ -1798,19 +1799,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33912&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546244620")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 燃料喷射器 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 260, 0.09);
-                        connect273();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 燃料喷射器 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 260, 0.09);
+                                connect273();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect273();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect273();
+                            }
+                        });
             }
         });
 
@@ -1822,19 +1823,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33911&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546332653")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 燃料喷射器 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 185, 0.17);
-                        connect274();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 燃料喷射器 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 175, 0.17);
+                                connect274();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect274();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect274();
+                            }
+                        });
             }
         });
 
@@ -1846,19 +1847,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33859&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546576633")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 深海复仇 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 215, 0.03);
-                        connect276();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 深海复仇 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 215, 0.03);
+                                connect276();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect276();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect276();
+                            }
+                        });
             }
         });
 
@@ -1870,19 +1871,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33861&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546652958")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 深海复仇 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 160, 0.08);
-                        connect276();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 深海复仇 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 160, 0.08);
+                                connect276();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect276();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect276();
+                            }
+                        });
             }
         });
 
@@ -1894,19 +1895,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33868&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546743907")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 血腥运动 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 280, 0.03);
-                        connect278();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 血腥运动 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 280, 0.03);
+                                connect278();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect278();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect278();
+                            }
+                        });
             }
         });
 
@@ -1918,19 +1919,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33870&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543546991926")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 血腥运动 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 210, 0.08);
-                        connect278();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 血腥运动 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 210, 0.08);
+                                connect278();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect278();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect278();
+                            }
+                        });
             }
         });
 
@@ -1942,19 +1943,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33905&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543547429327")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 前线迷雾 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 200, 0.03);
-                        connect279();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 前线迷雾 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 200, 0.03);
+                                connect279();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect279();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect279();
+                            }
+                        });
             }
         });
 
@@ -1966,19 +1967,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33907&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543547577596")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 前线迷雾 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 100, 0.08);
-                        connect280();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 前线迷雾 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 100, 0.08);
+                                connect280();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect280();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect280();
+                            }
+                        });
             }
         });
 
@@ -1990,19 +1991,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33881&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543547983188")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 表面淬火 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 320, 0.02);
-                        connect281();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 表面淬火 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 320, 0.02);
+                                connect282();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect281();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect282();
+                            }
+                        });
             }
         });
 
@@ -2014,19 +2015,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33883&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548073573")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 表面淬火 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 210, 0.08);
-                        connect282();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 表面淬火 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 210, 0.08);
+                                connect282();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect282();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect282();
+                            }
+                        });
             }
         });
 
@@ -2038,19 +2039,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759363&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548232525")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 霓虹骑士 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 500, 0.03);
-                        connect283();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 霓虹骑士 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 500, 0.03);
+                                connect283();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect283();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect283();
+                            }
+                        });
             }
         });
 
@@ -2062,19 +2063,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759234&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548319962")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 霓虹骑士 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 300, 0.08);
-                        connect284();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 霓虹骑士 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 300, 0.08);
+                                connect284();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect284();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect284();
+                            }
+                        });
             }
         });
 
@@ -2086,19 +2087,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759341&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548423057")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 霓虹骑士 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 190, 0.17);
-                        connect285();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 霓虹骑士 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 170, 0.17);
+                                connect285();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect285();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect285();
+                            }
+                        });
             }
         });
 
@@ -2110,19 +2111,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33945&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548568689")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 混沌点阵 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 190, 0.03);
-                        connect287();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 混沌点阵 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 190, 0.03);
+                                connect288();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect287();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect288();
+                            }
+                        });
             }
         });
 
@@ -2134,19 +2135,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33947&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543548924345")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 混沌点阵 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 130, 0.08);
-                        connect287();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 混沌点阵 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 130, 0.08);
+                                connect287();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect287();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect287();
+                            }
+                        });
             }
         });
 
@@ -2158,19 +2159,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=762172&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543549729645")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | Safety Net (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 90, 0.01);
-                        connect288();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | Safety Net (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 90, 0.01);
+                                connect288();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect288();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect288();
+                            }
+                        });
             }
         });
 
@@ -2182,19 +2183,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33940&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543559027631")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 轨道 Mk01 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 70, 0.02);
-                        connect289();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 轨道 Mk01 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 70, 0.01);
+                                connect289();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect289();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect289();
+                            }
+                        });
             }
         });
 
@@ -2206,19 +2207,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33916&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543559328914")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 水栽竹 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 310, 0.20);
-                        connect289_1();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 水栽竹 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 310, 0.20);
+                                connect289_1();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect289_1();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect289_1();
+                            }
+                        });
             }
         });
 
@@ -2229,19 +2230,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33917&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551800287883")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 水栽竹 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 580, 0.08);
-                        connect289_2();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 水栽竹 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 530, 0.08);
+                                connect289_2();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect289_2();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect289_2();
+                            }
+                        });
             }
         });
 
@@ -2252,19 +2253,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33915&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551800377431")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AK-47 | 水栽竹 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 800, 0.04);
-                        connect290();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AK-47 | 水栽竹 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 800, 0.04);
+                                connect290();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect290();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect290();
+                            }
+                        });
             }
         });
 
@@ -2276,19 +2277,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34670&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560178466")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "法玛斯 | 防滚架 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 123, 0.01);
-                        connect291();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "法玛斯 | 防滚架 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 123, 0.01);
+                                connect291();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect291();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect291();
+                            }
+                        });
             }
         });
 
@@ -2300,19 +2301,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34672&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560336622")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "法玛斯 | 防滚架 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 35, 0.08);
-                        connect292();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "法玛斯 | 防滚架 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 35, 0.08);
+                                connect292();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect292();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect292();
+                            }
+                        });
             }
         });
 
@@ -2324,19 +2325,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34656&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560450205")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "法玛斯 | 机械工业 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 29, 0.02);
-                        connect293();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "法玛斯 | 机械工业 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 29, 0.02);
+                                connect293();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect293();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect293();
+                            }
+                        });
             }
         });
 
@@ -2348,19 +2349,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35353&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560639899")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 龙王 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 95, 0.03);
-                        connect295();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 龙王 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 95, 0.03);
+                                connect295();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect295();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect295();
+                            }
+                        });
             }
         });
 
@@ -2372,19 +2373,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35355&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543560755035")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 龙王 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 56, 0.08);
-                        connect295();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 龙王 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 56, 0.08);
+                                connect295();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect295();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect295();
+                            }
+                        });
             }
         });
 
@@ -2396,19 +2397,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35286&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561039641")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 杀意大名 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 32, 0.01);
-                        connect297();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 杀意大名 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 32, 0.01);
+                                connect297();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect297();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect297();
+                            }
+                        });
             }
         });
 
@@ -2420,19 +2421,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35286&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561039641")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 杀意大名 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 30, 0.03);
-                        connect297();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 杀意大名 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 30, 0.03);
+                                connect297();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect297();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect297();
+                            }
+                        });
             }
         });
 
@@ -2444,19 +2445,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45385&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561971452")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 黑色魅影 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 400, 0.09);
-                        connect298();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 黑色魅影 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 400, 0.09);
+                                connect298();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect298();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect298();
+                            }
+                        });
             }
         });
 
@@ -2468,19 +2469,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45385&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543561971452")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 黑色魅影 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 185, 0.24);
-                        connect299();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 黑色魅影 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 150, 0.18);
+                                connect299();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect299();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect299();
+                            }
+                        });
             }
         });
 
@@ -2492,19 +2493,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35253&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562226052")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 二西莫夫 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 350, 0.26);
-                        connect300();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 二西莫夫 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 350, 0.26);
+                                connect300();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect300();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect300();
+                            }
+                        });
             }
         });
 
@@ -2516,19 +2517,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35254&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562381309")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 二西莫夫 (破损不堪)", Constant.PSBK);
-                        handleDataForBuff(response, 250, 0.39);
-                        connect301();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 二西莫夫 (破损不堪)", Constant.PSBK);
+                                handleDataForBuff(response, 220, 0.39);
+                                connect301();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect301();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect301();
+                            }
+                        });
             }
         });
 
@@ -2540,19 +2541,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35252&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562500561")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 二西莫夫 (战痕累累)", Constant.ZHLL);
-                        handleDataForBuff(response, 150, 0.46);
-                        connect302();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 二西莫夫 (战痕累累)", Constant.ZHLL);
+                                handleDataForBuff(response, 130, 0.46);
+                                connect302();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect302();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect302();
+                            }
+                        });
             }
         });
 
@@ -2564,19 +2565,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=38843&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562568149")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4（StatTrak™） | 二西莫夫 (战痕累累)", Constant.ZHLL);
-                        handleDataForBuff(response, 410, 0.46);
-                        connect303();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4（StatTrak™） | 二西莫夫 (战痕累累)", Constant.ZHLL);
+                                handleDataForBuff(response, 410, 0.46);
+                                connect303();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect303();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect303();
+                            }
+                        });
             }
         });
 
@@ -2588,19 +2589,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35345&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543562812410")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | X 光 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 65, 0.01);
-                        connect304();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | X 光 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 65, 0.01);
+                                connect304();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect304();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect304();
+                            }
+                        });
             }
         });
 
@@ -2612,19 +2613,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35328&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563005412")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 皇家圣骑士 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 140, 0.09);
-                        connect305();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 皇家圣骑士 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 140, 0.08);
+                                connect306();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect305();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect306();
+                            }
+                        });
             }
         });
 
@@ -2636,19 +2637,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35327&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563106073")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 皇家圣骑士 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 55, 0.17);
-                        connect306();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 皇家圣骑士 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 55, 0.17);
+                                connect306();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect306();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect306();
+                            }
+                        });
             }
         });
 
@@ -2660,19 +2661,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35281&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563282154")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 死寂空间 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 165, 0.02);
-                        connect307();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 死寂空间 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 165, 0.02);
+                                connect308();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect307();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect308();
+                            }
+                        });
             }
         });
 
@@ -2684,19 +2685,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35283&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543563902110")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 死寂空间 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 80, 0.08);
-                        connect308();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 死寂空间 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 80, 0.08);
+                                connect308();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect308();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect308();
+                            }
+                        });
             }
         });
 
@@ -2708,19 +2709,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35261&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564075953")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 喧嚣杀戮 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 172, 0.03);
-                        connect311();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 喧嚣杀戮 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 172, 0.03);
+                                connect311();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect311();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect311();
+                            }
+                        });
             }
         });
 
@@ -2732,19 +2733,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35263&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564253193")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 喧嚣杀戮 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 100, 0.09);
-                        connect311();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 喧嚣杀戮 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 100, 0.09);
+                                connect311();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect311();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect311();
+                            }
+                        });
             }
         });
 
@@ -2756,19 +2757,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35263&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564253193")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 喧嚣杀戮 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 74, 0.17);
-                        connect311();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 喧嚣杀戮 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 74, 0.17);
+                                connect311();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect311();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect311();
+                            }
+                        });
             }
         });
 
@@ -2780,19 +2781,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35256&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564386488")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 弹雨 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 125, 0.03);
-                        connect314();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 弹雨 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 125, 0.03);
+                                connect314();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect314();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect314();
+                            }
+                        });
             }
         });
 
@@ -2804,18 +2805,18 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35258&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564469264")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 弹雨 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 60, 0.08);
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 弹雨 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 60, 0.08);
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
+                            @Override
+                            public void onError(Response<Buff> response) {
 
-                    }
-                });
+                            }
+                        });
             }
         });
 
@@ -2827,19 +2828,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35258&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564469264")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 弹雨 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 58, 0.08);
-                        connect314();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 弹雨 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 58, 0.08);
+                                connect314();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect314();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect314();
+                            }
+                        });
             }
         });
 
@@ -2851,19 +2852,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35300&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564569337")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 地狱烈焰 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 140, 0.03);
-                        connect316();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 地狱烈焰 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 140, 0.03);
+                                connect316();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect316();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect316();
+                            }
+                        });
             }
         });
 
@@ -2875,19 +2876,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35302&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564630936")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 地狱烈焰 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 88, 0.09);
-                        connect316();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 地狱烈焰 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 88, 0.09);
+                                connect316();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect316();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect316();
+                            }
+                        });
             }
         });
 
@@ -2899,19 +2900,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35331&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564738791")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 战场之星 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 70, 0.02);
-                        connect317();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 战场之星 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 70, 0.01);
+                                connect317();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect317();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect317();
+                            }
+                        });
             }
         });
 
@@ -2923,19 +2924,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35341&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564893530")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 都市 DDPAT (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 25, 0.03);
-                        connect319();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 都市 DDPAT (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 25, 0.02);
+                                connect319();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect319();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect319();
+                            }
+                        });
             }
         });
 
@@ -2947,19 +2948,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35295&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543564979058")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 狮鹫 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 42, 0.01);
-                        connect319();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 狮鹫 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 42, 0.01);
+                                connect319();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect319();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect319();
+                            }
+                        });
             }
         });
 
@@ -2971,19 +2972,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35323&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543565131445")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 辐射危机 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 155, 0.11);
-                        connect321();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 辐射危机 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 155, 0.10);
+                                connect321();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect321();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect321();
+                            }
+                        });
             }
         });
 
@@ -2995,19 +2996,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35322&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543565231394")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 辐射危机 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 47, 0.20);
-                        connect321();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 辐射危机 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 47, 0.20);
+                                connect321();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect321();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect321();
+                            }
+                        });
             }
         });
 
@@ -3019,19 +3020,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35348&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566083122")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 星级 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 85, 0.03);
-                        connect325();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 星级 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 85, 0.02);
+                                connect325();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect325();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect325();
+                            }
+                        });
             }
         });
 
@@ -3043,19 +3044,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35350&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566182437")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 星级 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 30, 0.08);
-                        connect323();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 星级 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 30, 0.08);
+                                connect323();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect323();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect323();
+                            }
+                        });
             }
         });
 
@@ -3067,19 +3068,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35266&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566259983")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A4 | 破晓 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 110, 0.03);
-                        connect324();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 破晓 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 110, 0.03);
+                                connect324();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect324();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect324();
+                            }
+                        });
             }
         });
 
@@ -3091,19 +3092,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35202&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566476459")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 闪回 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 25, 0.01);
-                        connect325();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 闪回 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 25, 0.01);
+                                connect325();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect325();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect325();
+                            }
+                        });
             }
         });
 
@@ -3115,19 +3116,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759260&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566672108")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 梦魇 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 110, 0.01);
-                        connect326();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 梦魇 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 110, 0.01);
+                                connect326();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect326();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect326();
+                            }
+                        });
             }
         });
 
@@ -3139,19 +3140,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759261&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566747749")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 梦魇 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 50, 0.08);
-                        connect328();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 梦魇 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 50, 0.08);
+                                connect328();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect328();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect328();
+                            }
+                        });
             }
         });
 
@@ -3163,19 +3164,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759220&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566842068")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 梦魇 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 24, 0.17);
-                        connect328();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 梦魇 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 24, 0.17);
+                                connect328();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect328();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect328();
+                            }
+                        });
             }
         });
 
@@ -3187,19 +3188,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35207&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543566954644")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 金蛇缠绕 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 200, 0.02);
-                        connect329();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 金蛇缠绕 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 200, 0.02);
+                                connect329();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect329();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect329();
+                            }
+                        });
             }
         });
 
@@ -3211,19 +3212,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35209&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568535166")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 金蛇缠绕 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 110, 0.08);
-                        connect330();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 金蛇缠绕 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 110, 0.08);
+                                connect330();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect330();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect330();
+                            }
+                        });
             }
         });
 
@@ -3235,19 +3236,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35238&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568629163")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 机械工业 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 180, 0.03);
-                        connect331();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 机械工业 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 180, 0.03);
+                                connect331();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect331();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect331();
+                            }
+                        });
             }
         });
 
@@ -3259,19 +3260,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35240&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568712731")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 机械工业 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 90, 0.072);
-                        connect332();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 机械工业 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 90, 0.072);
+                                connect332();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect332();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect332();
+                            }
+                        });
             }
         });
 
@@ -3283,19 +3284,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35219&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568836031")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 暴怒野兽 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 280, 0.01);
-                        connect333();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 暴怒野兽 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 280, 0.01);
+                                connect333();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect333();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect333();
+                            }
+                        });
             }
         });
 
@@ -3307,19 +3308,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35221&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543568943778")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 暴怒野兽 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 90, 0.09);
-                        connect334();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 暴怒野兽 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 90, 0.08);
+                                connect334();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect334();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect334();
+                            }
+                        });
             }
         });
 
@@ -3331,19 +3332,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35212&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569069988")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 守护者 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 40, 0.03);
-                        connect335();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 守护者 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 40, 0.03);
+                                connect335();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect335();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect335();
+                            }
+                        });
             }
         });
 
@@ -3355,19 +3356,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35190&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569155833")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 次时代 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 70, 0.02);
-                        connect336();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 次时代 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 70, 0.02);
+                                connect336();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect336();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect336();
+                            }
+                        });
             }
         });
 
@@ -3379,19 +3380,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35187&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569294510")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 女火神之炽焰 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 145, 0.09);
-                        connect336_1();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 女火神之炽焰 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 145, 0.08);
+                                connect336_1();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect336_1();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect336_1();
+                            }
+                        });
             }
         });
 
@@ -3402,19 +3403,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35185&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551795193477")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 女火神之炽焰 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 350, 0.01);
-                        connect337();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 女火神之炽焰 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 350, 0.01);
+                                connect337();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect337();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect337();
+                            }
+                        });
             }
         });
 
@@ -3426,19 +3427,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35197&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569555722")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 毁灭者 2000 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 60, 0.02);
-                        connect338();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 毁灭者 2000 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 60, 0.02);
+                                connect338();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect338();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect338();
+                            }
+                        });
             }
         });
 
@@ -3450,20 +3451,20 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35160&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569833149")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 原子合金 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 60, 0.02);
-                        connect339();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 原子合金 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 60, 0.02);
+                                connect339();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect339();
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect339();
 
-                    }
-                });
+                            }
+                        });
             }
         });
 
@@ -3475,19 +3476,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=35216&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543569939640")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "M4A1 消音型 | 赤红新星 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 350, 0.01);
-                        connect340();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A1 消音型 | 赤红新星 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 350, 0.01);
+                                connect340();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect340();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect340();
+                            }
+                        });
             }
         });
 
@@ -3499,19 +3500,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36458&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570124283")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "SG 553 | 次时代 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 75, 0.02);
-                        connect341();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "SG 553 | 次时代 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 75, 0.02);
+                                connect342();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect341();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect342();
+                            }
+                        });
             }
         });
 
@@ -3523,19 +3524,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36460&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570245437")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "SG 553 | 次时代 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 38, 0.08);
-                        connect343();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "SG 553 | 次时代 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 38, 0.08);
+                                connect343();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect343();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect343();
+                            }
+                        });
             }
         });
 
@@ -3547,19 +3548,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36487&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570387623")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "SG 553 | 豹灯蛾 (崭新出厂)", Constant.LVMS);
-                        handleDataForBuff(response, 40, 0.02);
-                        connect343();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "SG 553 | 豹灯蛾 (崭新出厂)", Constant.LVMS);
+                                handleDataForBuff(response, 40, 0.02);
+                                connect343();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect343();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect343();
+                            }
+                        });
             }
         });
 
@@ -3571,19 +3572,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=36552&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570573301")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "SSG 08 | 炎龙之焰 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 105, 0.02);
-                        connect344();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "SSG 08 | 炎龙之焰 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 105, 0.02);
+                                connect344();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect344();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect344();
+                            }
+                        });
             }
         });
 
@@ -3595,19 +3596,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34001&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570687418")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AUG | 变色龙 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 40, 0.01);
-                        connect345();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG | 变色龙 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 40, 0.01);
+                                connect345();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect345();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect345();
+                            }
+                        });
             }
         });
 
@@ -3619,19 +3620,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45245&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570798702")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AUG | 湖怪鸟 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 65, 0.01);
-                        connect346();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG | 湖怪鸟 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 65, 0.01);
+                                connect346();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect346();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect346();
+                            }
+                        });
             }
         });
 
@@ -3643,19 +3644,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34049&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570871320")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AUG | 席德.米德 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 95, 0.02);
-                        connect347();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG | 席德.米德 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 95, 0.02);
+                                connect347();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect347();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect347();
+                            }
+                        });
             }
         });
 
@@ -3667,23 +3668,179 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34027&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543570959377")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AUG | 燕群 (崭新出厂)", Constant.ZXCC);
-                        handleDataForBuff(response, 135, 0.03);
-                        connect348();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG | 燕群 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 135, 0.03);
+                                connect1038();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        connect348();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1038();
+                            }
+                        });
             }
         });
 
     }
+
+    // M4A4 | 皇帝 (崭新出厂)
+    private void connect1038() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769584&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1555777911913")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 皇帝 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 1200, 0.04);
+                                connect1039();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1039();
+                            }
+                        });
+            }
+        });
+    }
+    // M4A4 | 皇帝 (略有磨损)
+    private void connect1039() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769583&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1555777882284")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 皇帝 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 600, 0.08);
+                                connect1040();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1040();
+                            }
+                        });
+            }
+        });
+    }
+    // M4A4 | 皇帝 (久经沙场)
+    private void connect1040() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769572&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1555777848346")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4 | 皇帝 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 300, 0.24);
+                                connect1041();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1041();
+                            }
+                        });
+            }
+        });
+    }
+    // M4A4（StatTrak™） | 皇帝 (久经沙场)
+    private void connect1041() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769569&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1555777813622")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4（StatTrak™） | 皇帝 (久经沙场)", Constant.JJSC);
+                                handleDataForBuff(response, 610, 0.25);
+                                connect1042();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1042();
+                            }
+                        });
+            }
+        });
+    }
+    // M4A4（StatTrak™） | 皇帝 (略有磨损)
+    private void connect1042() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769573&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1555777541541")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4（StatTrak™） | 皇帝 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 1700, 0.09);
+                                connect1043();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1043();
+                            }
+                        });
+            }
+        });
+    }
+    // 沙漠之鹰 | 轻轨 (崭新出厂)
+    private void connect1043() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769171&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1555777503981")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰 | 轻轨 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 50, 0.01);
+                                connect1044();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1044();
+                            }
+                        });
+            }
+        });
+    }
+    // 沙漠之鹰（StatTrak™） | 轻轨 (崭新出厂)
+    private void connect1044() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769422&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1555777477918")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "沙漠之鹰（StatTrak™） | 轻轨 (崭新出厂)", Constant.ZXCC);
+                                handleDataForBuff(response, 200, 0.01);
+                                mService.buffKnifes.connect3200();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                mService.buffKnifes.connect3200();
+                            }
+                        });
+            }
+        });
+    }
+
 
     //AUG | 燕群 (略有磨损)
     private void connect348() {
@@ -3691,19 +3848,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34029&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543571039414")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AUG | 燕群 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 50, 0.08);
-                        mService.buffKnifes.connect3200();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG | 燕群 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 50, 0.08);
+                                mService.buffKnifes.connect3200();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        mService.buffKnifes.connect3200();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                mService.buffKnifes.connect3200();
+                            }
+                        });
             }
         });
 
@@ -3715,19 +3872,19 @@ public class BuffGuns {
             @Override
             public void run() {
                 OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33998&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543571239234")
-                .execute(new JsonCallback<Buff>(Buff.class) {
-                    @Override
-                    public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "AUG | 孟加拉猛虎 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 60, 0.08);
-                        mService.buffKnifes.connect3200();
-                    }
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG | 孟加拉猛虎 (略有磨损)", Constant.LVMS);
+                                handleDataForBuff(response, 60, 0.08);
+                                mService.buffKnifes.connect3200();
+                            }
 
-                    @Override
-                    public void onError(Response<Buff> response) {
-                        mService.buffKnifes.connect3200();
-                    }
-                });
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                mService.buffKnifes.connect3200();
+                            }
+                        });
             }
         });
 
