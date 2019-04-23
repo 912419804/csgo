@@ -57,6 +57,27 @@ public class BuffGuns {
 
     }
 
+    private void fillBuff(Response<Buff> response, String name) {
+        Buff buff = response.body();
+        List<BuffWeapon> items = buff.getData().getItems();
+        for (BuffWeapon item : items) {
+            String exterior = "";
+            if (name.contains("崭新")){
+                exterior = Constant.ZXCC;
+            }else if (name.contains("略磨")){
+                exterior = Constant.LVMS;
+            }else if(name.contains("久经")){
+                exterior = Constant.JJSC;
+            }else if (name.contains("破损")){
+                exterior = Constant.PSBK;
+            }else {
+                exterior = Constant.ZHLL;
+            }
+            item.setTags_exterior(exterior);
+            item.setName(name);
+        }
+    }
+
     private void handleDataForBuff2(Response<Buff> response, int p, double w, int minMoney) {
         List<BuffWeapon> weapons = response.body().getData().getItems();
         ArrayList<BuffWeapon> list = new ArrayList<>();
@@ -3696,7 +3717,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4 | 皇帝 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 1200, 0.04);
+                                handleDataForBuff(response, 1200, 0.03);
                                 connect1039();
                             }
 
@@ -3740,7 +3761,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4 | 皇帝 (久经沙场)", Constant.JJSC);
-                                handleDataForBuff(response, 300, 0.24);
+                                handleDataForBuff(response, 300, 0.22);
                                 connect1041();
                             }
 
@@ -3784,7 +3805,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4（StatTrak™） | 皇帝 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 1700, 0.09);
+                                handleDataForBuff(response, 1700, 0.08);
                                 connect1043();
                             }
 
@@ -3829,54 +3850,207 @@ public class BuffGuns {
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "沙漠之鹰（StatTrak™） | 轻轨 (崭新出厂)", Constant.ZXCC);
                                 handleDataForBuff(response, 200, 0.01);
-                                mService.buffKnifes.connect3200();
+                                connect1045();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                mService.buffKnifes.connect3200();
+                                connect1045();
                             }
                         });
             }
         });
     }
 
-
-    //AUG | 燕群 (略有磨损)
-    private void connect348() {
+    // AWP | 树蝰 (崭新出厂)
+    private void connect1045() {
         mService.post(new Runnable() {
             @Override
             public void run() {
-                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=34029&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543571039414")
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769191&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1556034525813")
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AUG | 燕群 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 50, 0.08);
-                                mService.buffKnifes.connect3200();
+                                fillBuff(response, "AWP | 树蝰 (崭新出厂)");
+                                handleDataForBuff(response, 200, 0.02);
+                                connect1046();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                mService.buffKnifes.connect3200();
+                                connect1046();
                             }
                         });
             }
         });
-
     }
-
-    //AUG | 孟加拉猛虎 (略有磨损)
-    private void connect349() {
+    // AWP（StatTrak™） | 树蝰 (崭新出厂)
+    private void connect1046() {
         mService.post(new Runnable() {
             @Override
             public void run() {
-                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=33998&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1543571239234")
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769475&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1556034501470")
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AUG | 孟加拉猛虎 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 60, 0.08);
+                                fillBuff(response, "AWP（StatTrak™） | 树蝰 (崭新出厂)");
+                                handleDataForBuff(response, 500, 0.02);
+                                connect1047();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1047();
+                            }
+                        });
+            }
+        });
+    }
+    // AUG | 动量 (崭新出厂)
+    private void connect1047() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769483&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1556034456705")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG | 动量 (崭新出厂)");
+                                handleDataForBuff(response, 320, 0.04);
+                                connect1048();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1048();
+                            }
+                        });
+            }
+        });
+    }
+    // AUG | 动量 (略有磨损)
+    private void connect1048() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769269&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1556034427103")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG | 动量 (略有磨损)");
+                                handleDataForBuff(response, 100, 0.09);
+                                connect1049();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1049();
+                            }
+                        });
+            }
+        });
+    }
+    // AUG | 动量 (久经沙场)
+    private void connect1049() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769137&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1556034398274")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG | 动量 (久经沙场)");
+                                handleDataForBuff(response, 35, 0.17);
+                                connect1050();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1050();
+                            }
+                        });
+            }
+        });
+    }
+    // AUG（StatTrak™） | 动量 (久经沙场)
+    private void connect1050() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769258&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1556034371113")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG（StatTrak™） | 动量 (久经沙场)");
+                                handleDataForBuff(response, 100, 0.18);
+                                connect1051();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1051();
+                            }
+                        });
+            }
+        });
+    }
+    // AUG（StatTrak™） | 动量 (略有磨损)
+    private void connect1051() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769469&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1556034350669")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AUG（StatTrak™） | 动量 (略有磨损)");
+                                handleDataForBuff(response, 310, 0.09);
+                                connect1052();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1052();
+                            }
+                        });
+            }
+        });
+    }
+
+    // AWP（StatTrak™） | 树蝰 (略有磨损)
+    private void connect1052() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769273&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1556034286761")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP（StatTrak™） | 树蝰 (略有磨损)");
+                                handleDataForBuff(response, 310, 0.08);
+                                connect1053();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect1053();
+                            }
+                        });
+            }
+        });
+    }
+    //  AWP（StatTrak™） | 树蝰 (久经沙场)
+    private void connect1053() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769175&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1556034249839\n" +
+                        "Request Method:GET")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "AWP（StatTrak™） | 树蝰 (久经沙场)");
+                                handleDataForBuff(response, 150, 0.17);
                                 mService.buffKnifes.connect3200();
                             }
 
@@ -3887,8 +4061,10 @@ public class BuffGuns {
                         });
             }
         });
-
     }
+
+
+
 
 
 }

@@ -6,7 +6,8 @@ import android.text.TextUtils;
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.C5;
 import com.frank.csgo.bean.C5Weapon;
-import com.frank.csgo.bean.Igxe;
+import com.frank.csgo.bean.C5;
+import com.frank.csgo.bean.C5;
 import com.frank.csgo.https.JsonCallback;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
@@ -2801,7 +2802,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1000, 0.03, 800);
+                        handleDataC53(response, 1000, 0.03, 780);
                         connect168();
                     }
 
@@ -4009,7 +4010,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1200, 0.04, 900);
+                        handleDataC53(response, 1200, 0.03, 900);
                         connect1039();
                     }
 
@@ -4041,7 +4042,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 300, 0.24, 220);
+                        handleDataC53(response, 300, 0.22, 220);
                         connect1041();
                     }
 
@@ -4073,7 +4074,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1700, 0.09, 1500);
+                        handleDataC53(response, 1700, 0.08, 1500);
                         connect1043();
                     }
 
@@ -4106,6 +4107,152 @@ public class C5Guns {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 200, 0.01, 130);
+                        connect1045();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1045();
+                    }
+                });
+    }
+
+    // AWP | 树蝰 (崭新出厂)
+    private void connect1045() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464784&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, 200, 0.02, 130);
+                        connect1046();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1046();
+                    }
+                });
+    }
+    // AWP（StatTrak™） | 树蝰 (崭新出厂)
+    private void connect1046() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464893&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, 500, 0.02, 400);
+                        connect1047();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1047();
+                    }
+                });
+    }
+    // AUG | 动量 (崭新出厂)
+    private void connect1047() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553465433&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, 320, 0.04, 250);
+                        connect1048();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1048();
+                    }
+                });
+    }
+    // AUG | 动量 (略有磨损)
+    private void connect1048() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464873&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, 100, 0.09, 70);
+                        connect1049();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1049();
+                    }
+                });
+    }
+    // AUG | 动量 (久经沙场)
+    private void connect1049() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464779&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, 35, 0.17, 20);
+                        connect1050();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1050();
+                    }
+                });
+    }
+    // AUG（StatTrak™） | 动量 (久经沙场)
+    private void connect1050() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464825&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, 100, 0.18, 60);
+                        connect1051();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1051();
+                    }
+                });
+    }
+    // AUG（StatTrak™） | 动量 (略有磨损)
+    private void connect1051() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553465306&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, 310, 0.09, 250);
+                        connect1052();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1052();
+                    }
+                });
+    }
+
+    // AWP（StatTrak™） | 树蝰 (略有磨损)
+    private void connect1052() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464943&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, 310, 0.08, 220);
+                        connect1053();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1053();
+                    }
+                });
+    }
+    //  AWP（StatTrak™） | 树蝰 (久经沙场)
+    private void connect1053() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464914&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, 150, 0.17, 100);
                         connect2000();
                     }
 

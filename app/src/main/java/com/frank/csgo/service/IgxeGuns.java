@@ -1998,7 +1998,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 300, 0.16, 180);
+                        handleDataIgxe3(response, 300, 0.16, 170);
                         connect121();
                     }
 
@@ -4004,7 +4004,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1200, 0.04, 900);
+                        handleDataIgxe3(response, 1200, 0.03, 900);
                         connect1039();
                     }
 
@@ -4068,7 +4068,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1700, 0.09, 1500);
+                        handleDataIgxe3(response, 1700, 0.08, 1500);
                         connect1043();
                     }
 
@@ -4101,6 +4101,150 @@ public class IgxeGuns {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe3(response, 200, 0.01, 130);
+                        connect1045();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1045();
+                    }
+                });
+    }
+    // AWP | 树蝰 (崭新出厂)
+    private void connect1045() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621572")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, 200, 0.02, 130);
+                        connect1046();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1046();
+                    }
+                });
+    }
+    // AWP（StatTrak™） | 树蝰 (崭新出厂)
+    private void connect1046() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621675")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, 500, 0.02, 400);
+                        connect1047();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1047();
+                    }
+                });
+    }
+    // AUG | 动量 (崭新出厂)
+    private void connect1047() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621659")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, 320, 0.04, 250);
+                        connect1048();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1048();
+                    }
+                });
+    }
+    // AUG | 动量 (略有磨损)
+    private void connect1048() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621653")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, 100, 0.09, 70);
+                        connect1049();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1049();
+                    }
+                });
+    }
+    // AUG | 动量 (久经沙场)
+    private void connect1049() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621563")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, 35, 0.17, 20);
+                        connect1050();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1050();
+                    }
+                });
+    }
+    // AUG（StatTrak™） | 动量 (久经沙场)
+    private void connect1050() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621576")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, 100, 0.18, 60);
+                        connect1051();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1051();
+                    }
+                });
+    }
+    // AUG（StatTrak™） | 动量 (略有磨损)
+    private void connect1051() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621577")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, 310, 0.09, 250);
+                        connect1052();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1052();
+                    }
+                });
+    }
+    // AWP（StatTrak™） | 树蝰 (略有磨损)
+    private void connect1052() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621575")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, 310, 0.08, 220);
+                        connect1053();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1053();
+                    }
+                });
+    }
+    //  AWP（StatTrak™） | 树蝰 (久经沙场)
+    private void connect1053() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621636")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, 150, 0.17, 100);
                         connect2000();
                     }
 
