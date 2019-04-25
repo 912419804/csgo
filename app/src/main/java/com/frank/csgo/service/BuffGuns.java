@@ -1560,7 +1560,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AWP | 巨龙传说 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 10000, 0.04);
+                                handleDataForBuff(response, 10700, 0.04);
                                 connect263();
                             }
 
