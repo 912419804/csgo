@@ -1254,7 +1254,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 170, 0.02, 110);
+                        handleDataC53(response, 140, 0.02, 110);
                         connect78();
                     }
 
@@ -1866,7 +1866,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 320, 0.03, 240);
+                        handleDataC53(response, 300, 0.02, 240);
                         connect113();
                     }
 
@@ -2207,12 +2207,12 @@ public class C5Guns {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 60, 0.02, 45);
-                        connect133();
+                        connect135();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect133();
+                        connect135();
                     }
                 });
     }
@@ -2631,7 +2631,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 170, 0.20, 110);
+                        handleDataC53(response, 160, 0.20, 110);
                         connect160();
                     }
 
@@ -2932,13 +2932,13 @@ public class C5Guns {
                 });
     }
 
-    //P250（StatTrak™） | 二西末夫(略磨)
+    //P250（StatTrak™） | 二西莫夫(略磨)
     private void connect175() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/554032")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 420, 0.11, 350);
+                        handleDataC53(response, 360, 0.11, 290);
                         connect176();
                     }
 
@@ -2949,19 +2949,19 @@ public class C5Guns {
                 });
     }
 
-    //P250（StatTrak™） | 二西末夫(久经)
+    //P250（StatTrak™） | 二西莫夫(久经)
     private void connect176() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/445663")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 150, 0.18, 90);
-                        connect177();
+                        connect196();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect177();
+                        connect196();
                     }
                 });
     }
@@ -3312,13 +3312,13 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 100, 0.01, 45);
-                        connect199();
+                        handleDataC53(response, 80, 0.01, 45);
+                        connect1002();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect199();
+                        connect1002();
                     }
                 });
     }
@@ -3516,7 +3516,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 900, 0.09, 670);
+                        handleDataC53(response, 800, 0.08, 650);
                         connect1010();
                     }
 
@@ -4043,12 +4043,12 @@ public class C5Guns {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 300, 0.22, 220);
-                        connect1041();
+                        connect1043();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect1041();
+                        connect1043();
                     }
                 });
     }

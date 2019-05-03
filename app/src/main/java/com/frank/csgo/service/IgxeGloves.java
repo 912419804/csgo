@@ -400,7 +400,7 @@ public class IgxeGloves {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 800, 0.08, 600);
+                        handleDataIgxe3(response, 700, 0.08, 600);
                         connect1117();
                     }
 
@@ -417,7 +417,7 @@ public class IgxeGloves {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 700, 0.08, 600);
+                        handleDataIgxe3(response, 700, 0.08, 550);
                         connect1118();
                     }
 
@@ -983,7 +983,7 @@ public class IgxeGloves {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 620, 0.17, 500);
+                        handleDataIgxe3(response, 620, 0.16, 500);
                         connect1152();
                     }
 

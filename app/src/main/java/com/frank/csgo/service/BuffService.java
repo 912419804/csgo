@@ -124,8 +124,8 @@ public class BuffService extends Service {
         notifyManager.cancel(noteId);
     }
 
-    private static int MIN_DELAY = 2000;
-    private static int MAX_DELAY = 5000;
+    private static int MIN_DELAY = 1000;
+    private static int MAX_DELAY = 4000;
     public void post(Runnable r){
         handler.postDelayed(r, Long.parseLong(NumUtils.getRandom(MIN_DELAY,MAX_DELAY)));
     }
