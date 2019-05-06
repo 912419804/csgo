@@ -3721,12 +3721,12 @@ public class C5Guns {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 320, 0.08, 270);
-                        connect1022();
+                        connect1025();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect1022();
+                        connect1025();
                     }
                 });
     }

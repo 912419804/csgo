@@ -3717,12 +3717,12 @@ public class IgxeGuns {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe3(response, 320, 0.08, 270);
-                        connect1022();
+                        connect1025();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect1022();
+                        connect1025();
                     }
                 });
     }
