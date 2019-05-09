@@ -1713,7 +1713,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 10700, 0.04, 10000);
+                        handleDataC53(response, 11000, 0.04, 10000);
                         connect104();
                     }
 
