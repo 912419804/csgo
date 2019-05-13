@@ -4028,12 +4028,12 @@ public class BuffGuns {
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AWP（StatTrak™） | 树蝰 (略有磨损)");
                                 handleDataForBuff(response, 310, 0.08);
-                                connect1053();
+                                mService.buffKnifes.connect3200();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1053();
+                                mService.buffKnifes.connect3200();
                             }
                         });
             }

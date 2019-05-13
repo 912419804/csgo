@@ -4229,12 +4229,12 @@ public class IgxeGuns {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe3(response, 310, 0.08, 190);
-                        connect1053();
+                        connect2000();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect1053();
+                        connect2000();
                     }
                 });
     }
