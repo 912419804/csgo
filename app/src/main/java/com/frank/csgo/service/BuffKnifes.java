@@ -193,7 +193,7 @@ public class BuffKnifes {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "折叠刀（★） | 自动化 (略有磨损)", Constant.LVMS);
-                        handleDataForBuff(response, 840, 0.08);
+                        handleDataForBuff(response, 900, 0.08);
                         connect3206();
                     }
 
@@ -215,7 +215,7 @@ public class BuffKnifes {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "折叠刀（★） | 自动化 (久经沙场)", Constant.JJSC);
-                        handleDataForBuff(response, 700, 0.17);
+                        handleDataForBuff(response, 780, 0.17);
                         connect3207();
                     }
 
@@ -284,7 +284,7 @@ public class BuffKnifes {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "刺刀（★） | 自动化 (久经沙场)");
-                        handleDataForBuff(response, 1250, 0.17);
+                        handleDataForBuff(response, 1399, 0.17);
                         connect3213();
                     }
 
@@ -307,7 +307,7 @@ public class BuffKnifes {
                     @Override
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "刺刀（★） | 自动化 (略有磨损)");
-                        handleDataForBuff(response, 1600, 0.08);
+                        handleDataForBuff(response, 1660, 0.08);
                         connect3214();
                     }
 
@@ -354,7 +354,7 @@ public class BuffKnifes {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "刺刀（★） | 深红之网 (久经沙场)");
-                                handleDataForBuff(response, 710, 0.23);
+                                handleDataForBuff(response, 780, 0.19);
                                 connect3217();
                             }
 
@@ -443,7 +443,7 @@ public class BuffKnifes {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M9 刺刀（★） | 自动化 (久经沙场)");
-                                handleDataForBuff(response, 1500, 0.25);
+                                handleDataForBuff(response, 1650, 0.25);
                                 connect3224();
                             }
 
@@ -536,7 +536,7 @@ public class BuffKnifes {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M9 刺刀（★） | 深红之网 (久经沙场)");
-                                handleDataForBuff(response, 1000, 0.25);
+                                handleDataForBuff(response, 1100, 0.24);
                                 connect3232();
                             }
 
@@ -593,7 +593,7 @@ public class BuffKnifes {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "蝴蝶刀（★） | 深红之网 (久经沙场)");
-                                handleDataForBuff(response, 1500, 0.25);
+                                handleDataForBuff(response, 1550, 0.25);
                                 connect3233();
                             }
 
@@ -725,7 +725,7 @@ public class BuffKnifes {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "爪子刀（★） | 自动化 (久经沙场)");
-                                handleDataForBuff(response, 2100, 0.25);
+                                handleDataForBuff(response, 2250, 0.25);
                                 connect3243();
                             }
 
@@ -789,7 +789,7 @@ public class BuffKnifes {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "爪子刀（★） | 深红之网 (久经沙场)");
-                                handleDataForBuff(response, 1400, 0.20);
+                                handleDataForBuff(response, 1480, 0.20);
                                 connect3245();
                             }
 

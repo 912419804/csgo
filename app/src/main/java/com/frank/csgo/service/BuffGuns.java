@@ -3849,7 +3849,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "沙漠之鹰（StatTrak™） | 轻轨 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 200, 0.01);
+                                handleDataForBuff(response, 150, 0.01);
                                 connect1045();
                             }
 
