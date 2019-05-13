@@ -3501,7 +3501,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A1 消音型 | 赤红新星 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 350, 0.01);
+                                handleDataForBuff(response, 399, 0.01);
                                 connect340();
                             }
 
