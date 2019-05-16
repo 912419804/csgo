@@ -192,7 +192,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "USP 消音版 | 枪响人亡 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 450, 0.03);
+                                handleDataForBuff(response, 430, 0.03);
                                 connect205();
                             }
 
@@ -216,7 +216,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "USP 消音版 | 枪响人亡 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 230, 0.08);
+                                handleDataForBuff(response, 280, 0.08);
                                 connect206();
                             }
 
@@ -240,7 +240,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "USP 消音版 | 枪响人亡 (久经沙场)", Constant.JJSC);
-                                handleDataForBuff(response, 160, 0.17);
+                                handleDataForBuff(response, 180, 0.16);
                                 connect207();
                             }
 
@@ -264,7 +264,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "USP 消音版 | 黑色魅影 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 270, 0.03);
+                                handleDataForBuff(response, 270, 0.02);
                                 connect211();
                             }
 
@@ -1032,7 +1032,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "沙漠之鹰 | 炽烈之炎 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 600, 0.01);
+                                handleDataForBuff(response, 680, 0.01);
                                 connect248();
                             }
 
@@ -1752,7 +1752,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AK-47 | 皇后 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 300, 0.09);
+                                handleDataForBuff(response, 315, 0.09);
                                 connect270();
                             }
 
@@ -1776,7 +1776,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AK-47 | 皇后 (久经沙场)", Constant.JJSC);
-                                handleDataForBuff(response, 210, 0.18);
+                                handleDataForBuff(response, 220, 0.18);
                                 connect271();
                             }
 
@@ -2016,7 +2016,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AK-47 | 表面淬火 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 320, 0.02);
+                                handleDataForBuff(response, 350, 0.02);
                                 connect282();
                             }
 
@@ -2232,7 +2232,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AK-47 | 水栽竹 (久经沙场)", Constant.JJSC);
-                                handleDataForBuff(response, 310, 0.20);
+                                handleDataForBuff(response, 450, 0.20);
                                 connect289_1();
                             }
 
@@ -2255,7 +2255,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AK-47 | 水栽竹 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 530, 0.08);
+                                handleDataForBuff(response, 650, 0.08);
                                 connect289_2();
                             }
 
@@ -2278,7 +2278,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AK-47 | 水栽竹 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 800, 0.04);
+                                handleDataForBuff(response, 1000, 0.04);
                                 connect290();
                             }
 
@@ -3213,7 +3213,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A1 消音型 | 金蛇缠绕 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 200, 0.02);
+                                handleDataForBuff(response, 210, 0.02);
                                 connect329();
                             }
 
@@ -3309,7 +3309,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A1 消音型 | 暴怒野兽 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 280, 0.01);
+                                handleDataForBuff(response, 300, 0.01);
                                 connect335();
                             }
 
@@ -3381,7 +3381,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A1 消音型 | 次时代 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 70, 0.02);
+                                handleDataForBuff(response, 75, 0.02);
                                 connect336();
                             }
 
@@ -3428,7 +3428,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A1 消音型 | 女火神之炽焰 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 350, 0.01);
+                                handleDataForBuff(response, 410, 0.01);
                                 connect339();
                             }
 
@@ -3693,7 +3693,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AUG | 燕群 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 135, 0.03);
+                                handleDataForBuff(response, 105, 0.03);
                                 connect1038();
                             }
 
@@ -3717,7 +3717,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4 | 皇帝 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 1200, 0.03);
+                                handleDataForBuff(response, 1100, 0.03);
                                 connect1039();
                             }
 
@@ -3739,7 +3739,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4 | 皇帝 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 520, 0.08);
+                                handleDataForBuff(response, 500, 0.08);
                                 connect1040();
                             }
 
@@ -3873,12 +3873,12 @@ public class BuffGuns {
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AWP | 树蝰 (崭新出厂)");
                                 handleDataForBuff(response, 160, 0.01);
-                                connect1046();
+                                connect1047();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1046();
+                                connect1047();
                             }
                         });
             }

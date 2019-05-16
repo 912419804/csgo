@@ -26,6 +26,7 @@ import com.frank.csgo.utils.TimeUtil;
 public class BuffService extends Service {
     private int noteId = 2;
     private int count = 1;
+    private String channel = "buff";
 
     NotificationManager notifyManager;
 
@@ -88,7 +89,7 @@ public class BuffService extends Service {
         Uri mUri = Settings.System.DEFAULT_NOTIFICATION_URI;
         NotificationChannel mChannel = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            mChannel = new NotificationChannel("9999", "9999", NotificationManager.IMPORTANCE_LOW);
+            mChannel = new NotificationChannel(channel, channel, NotificationManager.IMPORTANCE_LOW);
             mChannel.setDescription("buff");
             mChannel.setSound(mUri, Notification.AUDIO_ATTRIBUTES_DEFAULT);
             notifyManager.createNotificationChannel(mChannel);
@@ -98,11 +99,11 @@ public class BuffService extends Service {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             Intent mainIntent = new Intent(this, Main2Activity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mainIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-            notification = new Notification.Builder(this, "9999")
+            notification = new Notification.Builder(this, channel)
 //                    .setSmallIcon(R.mipmap.ic_launcher)
                     .setSmallIcon(R.mipmap.cs)
                     .setContentText("扫描第" + count + "次                     " + TimeUtil.timeString(System.currentTimeMillis()))
-                    .setSubText("buff")
+                    .setSubText(channel)
                     .setContentIntent(pendingIntent)
                     .build();
             //设置通知默认效果
@@ -125,7 +126,7 @@ public class BuffService extends Service {
     }
 
     private static int MIN_DELAY = 1000;
-    private static int MAX_DELAY = 4000;
+    private static int MAX_DELAY = 3000;
     public void post(Runnable r){
         handler.postDelayed(r, Long.parseLong(NumUtils.getRandom(MIN_DELAY,MAX_DELAY)));
     }

@@ -514,7 +514,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1450, 0.10, 1350);
+                        handleDataC53(response, 1700, 0.10, 1500);
                         connect1232();
                     }
 
@@ -796,13 +796,13 @@ public class C5Knifes {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 1050, 0.01, 950);
-                        connect1253();
+                        connect1254();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
                         super.onError(response);
-                        connect1253();
+                        connect1254();
                     }
                 });
     }

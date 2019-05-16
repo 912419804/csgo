@@ -175,7 +175,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 280, 0.02, 230);
+                        handleDataIgxe3(response, 280, 0.03, 230);
                         connect13();
                     }
 
@@ -263,7 +263,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 270, 0.08, 240);
+                        handleDataIgxe3(response, 270, 0.09, 240);
                         connect15_1();
                     }
 
@@ -280,7 +280,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 500, 0.04, 450);
+                        handleDataIgxe3(response, 550, 0.04, 450);
                         connect17();
                     }
 
@@ -314,7 +314,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 600, 0.009, 500);
+                        handleDataIgxe3(response, 680, 0.009, 570);
                         connect20();
                     }
 
@@ -365,7 +365,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 240, 0.09, 200);
+                        handleDataIgxe3(response, 280, 0.08, 220);
                         connect21();
                     }
 
@@ -382,7 +382,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 450, 0.03, 380);
+                        handleDataIgxe3(response, 530, 0.03, 430);
                         connect27();
                     }
 
@@ -417,7 +417,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 110, 0.11, 80);
+                        handleDataIgxe3(response, 105, 0.11, 80);
                         connect29();
                     }
 
@@ -485,7 +485,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 270, 0.03, 200);
+                        handleDataIgxe3(response, 280, 0.03, 230);
                         connect33();
                     }
 
@@ -502,7 +502,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 100, 0.08, 70);
+                        handleDataIgxe3(response, 105, 0.08, 80);
                         connect34();
                     }
 
@@ -519,7 +519,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 270, 0.01, 210);
+                        handleDataIgxe3(response, 300, 0.01, 230);
                         connect35();
                     }
 
@@ -536,7 +536,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 320, 0.02, 250);
+                        handleDataIgxe3(response, 350, 0.02, 280);
                         connect39();
                     }
 
@@ -655,7 +655,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 260, 0.020, 210);
+                        handleDataIgxe3(response, 270, 0.020, 220);
                         connect43();
                     }
 
@@ -672,7 +672,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 70, 0.02, 55);
+                        handleDataIgxe3(response, 80, 0.02, 60);
                         connect46();
                     }
 
@@ -791,7 +791,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 160, 0.17, 120);
+                        handleDataIgxe3(response, 180, 0.16, 140);
                         connect55();
                     }
 
@@ -944,7 +944,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 45, 0.01, 35);
+                        handleDataIgxe3(response, 60, 0.01, 40);
                         connect60();
                     }
 
@@ -961,7 +961,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 130, 0.03, 110);
+                        handleDataIgxe3(response, 150, 0.03, 110);
                         connect61();
                     }
 
@@ -978,7 +978,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 60, 0.08, 50);
+                        handleDataIgxe3(response, 68, 0.08, 50);
                         connect62();
                     }
 
@@ -1006,13 +1006,13 @@ public class IgxeGuns {
                 });
     }
 
-    //防滚架 | 炽烈之炎 (崭新出厂)",
+    //法玛斯 | 防滚架 (崭新出厂)",
     private void connect63() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/558529")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 110, 0.02, 90);
+                        handleDataIgxe3(response, 115, 0.02, 90);
                         connect64();
                     }
 
@@ -1029,7 +1029,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 90, 0.01, 50);
+                        handleDataIgxe3(response, 120, 0.01, 80);
                         connect65();
                     }
 
@@ -1046,7 +1046,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 23, 0.39, 15);
+                        handleDataIgxe3(response, 28, 0.39, 15);
                         connect66();
                     }
 
@@ -1063,7 +1063,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 60, 0.01, 40);
+                        handleDataIgxe3(response, 75, 0.01, 50);
                         connect67();
                     }
 
@@ -1471,7 +1471,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 250, 0.01, 200);
+                        handleDataIgxe3(response, 285, 0.01, 230);
                         connect91();
                     }
 
@@ -1505,7 +1505,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 350, 0.02, 270);
+                        handleDataIgxe3(response, 410, 0.01, 320);
                         connect92();
                     }
 
@@ -1522,7 +1522,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 140, 0.08, 100);
+                        handleDataIgxe3(response, 145, 0.08, 100);
                         connect94();
                     }
 
@@ -1624,7 +1624,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 200, 0.02, 135);
+                        handleDataIgxe3(response, 210, 0.02, 170);
                         connect99();
                     }
 
@@ -1641,7 +1641,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 100, 0.08, 70);
+                        handleDataIgxe3(response, 110, 0.08, 90);
                         connect101();
                     }
 
@@ -1675,7 +1675,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 70, 0.02, 40);
+                        handleDataIgxe3(response, 75, 0.02, 40);
                         connect103();
                     }
 
@@ -1709,7 +1709,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 11000, 0.04, 10000);
+                        handleDataIgxe3(response, 12500, 0.04, 10500);
                         connect104();
                     }
 
@@ -1726,7 +1726,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 300, 0.09, 250);
+                        handleDataIgxe3(response, 315, 0.09, 280);
                         connect105();
                     }
 
@@ -1743,7 +1743,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 210, 0.17, 190);
+                        handleDataIgxe3(response, 220, 0.17, 190);
                         connect106();
                     }
 
@@ -1760,7 +1760,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 580, 0.04, 520);
+                        handleDataIgxe3(response, 600, 0.04, 530);
                         connect107();
                     }
 
@@ -1930,7 +1930,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 850, 0.030, 700);
+                        handleDataIgxe3(response, 1000, 0.030, 800);
                         connect117();
                     }
 
@@ -1947,7 +1947,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 500, 0.080, 440);
+                        handleDataIgxe3(response, 650, 0.080, 550);
                         connect118();
                     }
 
@@ -1964,7 +1964,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 310, 0.17, 240);
+                        handleDataIgxe3(response, 450, 0.17, 370);
                         connect120();
                     }
 
@@ -1998,7 +1998,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 300, 0.16, 170);
+                        handleDataIgxe3(response, 220, 0.18, 170);
                         connect121();
                     }
 
@@ -2015,7 +2015,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 440, 0.090, 280);
+                        handleDataIgxe3(response, 400, 0.090, 280);
                         connect123();
                     }
 
@@ -2117,7 +2117,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 95, 0.11, 60);
+                        handleDataIgxe3(response, 100, 0.11, 80);
                         connect128();
                     }
 
@@ -2134,7 +2134,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 500, 0.02, 330);
+                        handleDataIgxe3(response, 400, 0.02, 310);
                         connect131();
                     }
 
@@ -2185,7 +2185,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 160, 0.08, 120);
+                        handleDataIgxe3(response, 175, 0.08, 120);
                         connect132();
                     }
 
@@ -2236,7 +2236,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1500, 0.09, 1300);
+                        handleDataIgxe3(response, 1750, 0.09, 1500);
                         connect135();
                     }
 
@@ -2764,7 +2764,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 230, 0.02, 190);
+                        handleDataIgxe3(response, 270, 0.02, 190);
                         connect166();
                     }
 
@@ -2781,7 +2781,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 60, 0.01, 30);
+                        handleDataIgxe3(response, 45, 0.01, 30);
                         connect167();
                     }
 
@@ -2849,7 +2849,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 520, 0.17, 450);
+                        handleDataIgxe3(response, 600, 0.17, 450);
                         connect171();
                     }
 
@@ -2883,7 +2883,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 220, 0.02, 150);
+                        handleDataIgxe3(response, 250, 0.02, 180);
                         connect173();
                     }
 
@@ -2951,7 +2951,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 150, 0.18, 80);
+                        handleDataIgxe3(response, 120, 0.18, 80);
                         connect196();
                     }
 
@@ -3529,7 +3529,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 480, 0.18, 380);
+                        handleDataIgxe3(response, 450, 0.18, 350);
                         connect1011();
                     }
 
@@ -3546,7 +3546,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 830, 0.09, 740);
+                        handleDataIgxe3(response, 930, 0.09, 800);
                         connect1012();
                     }
 
@@ -3563,7 +3563,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 550, 0.20, 430);
+                        handleDataIgxe3(response, 570, 0.20, 450);
                         connect1013();
                     }
 
@@ -3597,7 +3597,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 390, 0.09, 340);
+                        handleDataIgxe3(response, 450, 0.09, 360);
                         connect1015();
                     }
 
@@ -3614,7 +3614,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 260, 0.17, 220);
+                        handleDataIgxe3(response, 280, 0.17, 220);
                         connect1016();
                     }
 
@@ -3631,7 +3631,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 820, 0.03, 750);
+                        handleDataIgxe3(response, 880, 0.03, 750);
                         connect1018();
                     }
 
@@ -3716,7 +3716,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 320, 0.08, 270);
+                        handleDataIgxe3(response, 370, 0.08, 290);
                         connect1025();
                     }
 
@@ -3971,7 +3971,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 230, 0.02, 170);
+                        handleDataIgxe3(response, 330, 0.02, 220);
                         connect1038();
                     }
 
@@ -4004,7 +4004,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1200, 0.03, 900);
+                        handleDataIgxe3(response, 1100, 0.03, 900);
                         connect1039();
                     }
 
@@ -4020,7 +4020,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 600, 0.08, 420);
+                        handleDataIgxe3(response, 500, 0.08, 420);
                         connect1040();
                     }
 
@@ -4116,13 +4116,13 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 160, 0.01, 110);
-                        connect1046();
+                        handleDataIgxe3(response, 140, 0.01, 110);
+                        connect1047();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect1046();
+                        connect1047();
                     }
                 });
     }

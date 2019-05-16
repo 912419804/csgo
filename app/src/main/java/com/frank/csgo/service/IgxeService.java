@@ -28,6 +28,7 @@ public class IgxeService extends Service {
 
     private int noteId = 1;
     private int count = 1;
+    private String channel = "igxe";
 
     NotificationManager notifyManager;
 
@@ -88,8 +89,8 @@ public class IgxeService extends Service {
         Uri mUri = Settings.System.DEFAULT_NOTIFICATION_URI;
         NotificationChannel mChannel = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            mChannel = new NotificationChannel("999", "999", NotificationManager.IMPORTANCE_LOW);
-            mChannel.setDescription("igxe");
+            mChannel = new NotificationChannel(channel, channel, NotificationManager.IMPORTANCE_LOW);
+            mChannel.setDescription(channel);
             mChannel.setSound(mUri, Notification.AUDIO_ATTRIBUTES_DEFAULT);
             notifyManager.createNotificationChannel(mChannel);
         }
@@ -98,10 +99,10 @@ public class IgxeService extends Service {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             Intent mainIntent = new Intent(this, Main2Activity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mainIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-            notification = new Notification.Builder(this, "999")
+            notification = new Notification.Builder(this, channel)
 //                    .setSmallIcon(R.mipmap.ic_launcher)
                     .setSmallIcon(R.mipmap.cs)
-                    .setSubText("igxe")
+                    .setSubText(channel)
                     .setContentText("扫描第" + count + "次                     " + TimeUtil.timeString(System.currentTimeMillis()))
                     .setContentIntent(pendingIntent)
                     .build();
