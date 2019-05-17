@@ -600,7 +600,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 恶土 (略有磨损)");
-                                handleDataForBuff(response, 1500, 0.12);
+                                handleDataForBuff(response, 1600, 0.10);
                                 connect1122();
                             }
 

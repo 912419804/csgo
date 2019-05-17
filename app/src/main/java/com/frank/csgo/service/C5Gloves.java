@@ -497,7 +497,7 @@ public class C5Gloves {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1600, 0.11, 1350);
+                        handleDataC53(response, 1600, 0.10, 1350);
                         connect1122();
                     }
 
