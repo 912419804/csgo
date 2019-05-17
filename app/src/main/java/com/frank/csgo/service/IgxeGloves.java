@@ -1059,7 +1059,7 @@ public class IgxeGloves {
     }
     //  运动手套（★） | 超导体(久经沙场)
     private void connect1156() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610901")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/566289")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
