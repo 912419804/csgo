@@ -6,10 +6,7 @@ import android.text.TextUtils;
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.C5;
 import com.frank.csgo.bean.C5Weapon;
-import com.frank.csgo.bean.C5;
-import com.frank.csgo.bean.C5;
 import com.frank.csgo.https.JsonCallback;
-import com.frank.csgo.price.IgxeGus;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
@@ -2890,12 +2887,12 @@ public class C5Guns {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, 240, 0.08, 190);
-                        connect190();
+                        connect191();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect190();
+                        connect191();
                     }
                 });
     }
@@ -3739,7 +3736,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 500, 0.08, 420);
+                        handleDataC53(response, 520, 0.08, 420);
                         connect1040();
                     }
 

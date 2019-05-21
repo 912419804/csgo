@@ -3381,7 +3381,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A1 消音型 | 次时代 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 75, 0.02);
+                                handleDataForBuff(response, 75, 0.01);
                                 connect336();
                             }
 
@@ -3476,7 +3476,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A1 消音型 | 原子合金 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 60, 0.02);
+                                handleDataForBuff(response, 60, 0.01);
                                 connect339();
                             }
 
@@ -3669,7 +3669,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AUG | 席德.米德 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 95, 0.02);
+                                handleDataForBuff(response, 95, 0.01);
                                 connect347();
                             }
 
@@ -3739,7 +3739,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4 | 皇帝 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 500, 0.08);
+                                handleDataForBuff(response, 520, 0.08);
                                 connect1040();
                             }
 

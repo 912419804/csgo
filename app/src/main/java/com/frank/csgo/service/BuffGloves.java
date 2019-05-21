@@ -9,12 +9,15 @@ import com.frank.csgo.bean.BuffWeapon;
 import com.frank.csgo.bean.C5;
 import com.frank.csgo.bean.C5Weapon;
 import com.frank.csgo.https.JsonCallback;
+import com.frank.csgo.price.Glove;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.frank.csgo.price.Glove.*;
 
 /**
  * @author 作者 hasee
@@ -31,6 +34,31 @@ public class BuffGloves {
 
 
     private void handleDataForBuff(Response<Buff> response, int p, double w) {
+        List<BuffWeapon> weapons = response.body().getData().getItems();
+        ArrayList<BuffWeapon> list = new ArrayList<>();
+        for (BuffWeapon weapon : weapons) {
+            String unit_price = weapon.getPrice();
+            double price = Double.valueOf(unit_price);
+            if (price < p) {
+                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+                String exterior_wear = weapon.getAsset_info().getPaintwear();
+                if (!TextUtils.isEmpty(exterior_wear)) {
+                    Double wear = Double.valueOf(exterior_wear);
+                    if (wear < w) {
+                        list.add(weapon);
+                    }
+                }
+            }
+        }
+        if (!list.isEmpty()) {
+            Intent intent = new Intent(Constant.BUFF_WEAPON);
+            intent.putExtra(Constant.BUFF_WEAPON, list);
+            mService.sendBroadcast(intent);
+        }
+    }
+    private void handleDataForBuff(Response<Buff> response, double[] res) {
+        double p = res[0];
+        double w = res[1];
         List<BuffWeapon> weapons = response.body().getData().getItems();
         ArrayList<BuffWeapon> list = new ArrayList<>();
         for (BuffWeapon weapon : weapons) {
@@ -117,7 +145,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 焦炭 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 2000, 0.11);
+                                handleDataForBuff(response, XL_JT_LM);
                                 connect1101();
                             }
 
@@ -140,7 +168,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 焦炭 (久经沙场)");
-                                handleDataForBuff(response, 950, 0.20);
+                                handleDataForBuff(response, XL_JT_JJ);
                                 connect1102();
                             }
 
@@ -163,7 +191,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 蛇咬 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 1750, 0.12);
+                                handleDataForBuff(response, XL_SY_LM);
                                 connect1103();
                             }
 
@@ -186,7 +214,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 蛇咬 (久经沙场)");
-                                handleDataForBuff(response, 920, 0.24);
+                                handleDataForBuff(response, XL_SY_JJ);
                                 connect1104();
                             }
 
@@ -209,7 +237,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 染铜 (略有磨损)");
-                                handleDataForBuff(response, 1400, 0.11);
+                                handleDataForBuff(response, XL_RT_LM);
                                 connect1105();
                             }
 
@@ -232,7 +260,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 染铜 (久经沙场)");
-                                handleDataForBuff(response, 850, 0.18);
+                                handleDataForBuff(response, XL_RT_JJ);
                                 connect1106();
                             }
 
@@ -255,7 +283,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 游击队 (略有磨损)");
-                                handleDataForBuff(response, 1350, 0.11);
+                                handleDataForBuff(response, XL_YJD_LM);
                                 connect1107();
                             }
 
@@ -278,7 +306,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 游击队 (久经沙场)");
-                                handleDataForBuff(response, 840, 0.20);
+                                handleDataForBuff(response, XL_YJD_JJ);
                                 connect1108();
                             }
 
@@ -301,7 +329,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 深红织物 (久经沙场)");
-                                handleDataForBuff(response, 1900, 0.25);
+                                handleDataForBuff(response, XL_SHZW_JJ);
                                 connect1109();
                             }
 
@@ -324,7 +352,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 紫蓝格子 (久经沙场)");
-                                handleDataForBuff(response, 1900, 0.22);
+                                handleDataForBuff(response, XL_LZGZ_JJ);
                                 connect1110();
                             }
 
@@ -347,7 +375,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 王蛇 (久经沙场)");
-                                handleDataForBuff(response, 1600, 0.22);
+                                handleDataForBuff(response, XL_WS_JJ);
                                 connect1111();
                             }
 
@@ -370,7 +398,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 月色织物 (略有磨损)");
-                                handleDataForBuff(response, 1600, 0.11);
+                                handleDataForBuff(response, XL_YSZW_LM);
                                 connect1112();
                             }
 
@@ -393,7 +421,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 月色织物 (久经沙场)");
-                                handleDataForBuff(response, 750, 0.22);
+                                handleDataForBuff(response, XL_YSZW_JJ);
                                 connect1113();
                             }
 
@@ -416,7 +444,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 超越 (略有磨损)");
-                                handleDataForBuff(response, 1500, 0.08);
+                                handleDataForBuff(response, JS_CY_LM);
                                 connect1114();
                             }
 
@@ -439,7 +467,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 超越 (久经沙场)");
-                                handleDataForBuff(response, 800, 0.17);
+                                handleDataForBuff(response, JS_CY_JJ);
                                 connect1115();
                             }
 
@@ -462,7 +490,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 菱背蛇纹 (略有磨损)");
-                                handleDataForBuff(response, 920, 0.08);
+                                handleDataForBuff(response, JS_LBSW_LM);
                                 connect1116();
                             }
 
@@ -485,7 +513,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 护卫 (略有磨损)");
-                                handleDataForBuff(response, 700, 0.08);
+                                handleDataForBuff(response, JS_HW_LM);
                                 connect1117();
                             }
 
@@ -508,7 +536,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 墨绿色调(略有磨损)");
-                                handleDataForBuff(response, 700, 0.08);
+                                handleDataForBuff(response, JS_MLSD_LM);
                                 connect1118();
                             }
 
@@ -531,7 +559,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 钴蓝骷髅 (久经沙场)");
-                                handleDataForBuff(response, 2700, 0.28);
+                                handleDataForBuff(response, GS_GLKL_LM);
                                 connect1119();
                             }
 
@@ -554,7 +582,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 屠夫 (略有磨损)");
-                                handleDataForBuff(response, 2800, 0.12);
+                                handleDataForBuff(response, GS_TF_LM);
                                 connect1120();
                             }
 
@@ -577,7 +605,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 屠夫 (久经沙场)");
-                                handleDataForBuff(response, 1530, 0.22);
+                                handleDataForBuff(response, GS_TF_JJ);
                                 connect1121();
                             }
 
@@ -600,7 +628,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 恶土 (略有磨损)");
-                                handleDataForBuff(response, 1600, 0.10);
+                                handleDataForBuff(response, GS_ET_LM);
                                 connect1122();
                             }
 
@@ -623,7 +651,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 恶土 (久经沙场)");
-                                handleDataForBuff(response, 930, 0.20);
+                                handleDataForBuff(response, GS_ET_JJ);
                                 connect1123();
                             }
 
@@ -646,7 +674,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 皮革 (略有磨损)");
-                                handleDataForBuff(response, 1400, 0.11);
+                                handleDataForBuff(response, GS_PG_LM);
                                 connect1124();
                             }
 
@@ -669,7 +697,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 皮革 (久经沙场)");
-                                handleDataForBuff(response, 850, 0.20);
+                                handleDataForBuff(response, GS_PG_JJ);
                                 connect1125();
                             }
 
@@ -692,7 +720,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 森林色调 (略有磨损)");
-                                handleDataForBuff(response, 1200, 0.11);
+                                handleDataForBuff(response, GS_SLSD_LM);
                                 connect1126();
                             }
 
@@ -715,7 +743,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 森林色调 (久经沙场)");
-                                handleDataForBuff(response, 750, 0.22);
+                                handleDataForBuff(response, GS_SLSD_JJ);
                                 connect1127();
                             }
 
@@ -738,7 +766,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 云杉DDPAT(略有磨损)");
-                                handleDataForBuff(response, 1000, 0.11);
+                                handleDataForBuff(response, GS_YS_LM);
                                 connect1128();
                             }
 
@@ -761,7 +789,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 薄荷 (久经沙场)");
-                                handleDataForBuff(response, 3400, 0.31);
+                                handleDataForBuff(response, GS_BH_JJ);
                                 connect1129();
                             }
 
@@ -784,7 +812,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 清凉薄荷 (略有磨损)");
-                                handleDataForBuff(response, 3100, 0.12);
+                                handleDataForBuff(response, MT_QLBH_LM);
                                 connect1130();
                             }
 
@@ -807,7 +835,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 清凉薄荷 (久经沙场)");
-                                handleDataForBuff(response, 1500, 0.25);
+                                handleDataForBuff(response, MT_QLBH_JJ);
                                 connect1131();
                             }
 
@@ -830,7 +858,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | *嘣！* (略有磨损)");
-                                handleDataForBuff(response, 2400, 0.11);
+                                handleDataForBuff(response, MT_B_LM);
                                 connect1132();
                             }
 
@@ -853,7 +881,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | *嘣！* (久经沙场)");
-                                handleDataForBuff(response, 1150, 0.25);
+                                handleDataForBuff(response, MT_B_JJ);
                                 connect1133();
                             }
 
@@ -876,7 +904,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 嘭！ (久经沙场)");
-                                handleDataForBuff(response, 2200, 0.26);
+                                handleDataForBuff(response, MT_P_LM);
                                 connect1134();
                             }
 
@@ -899,7 +927,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 交运 (略有磨损)");
-                                handleDataForBuff(response, 1500, 0.09);
+                                handleDataForBuff(response, MT_JY_LM);
                                 connect1135();
                             }
 
@@ -922,7 +950,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 交运 (久经沙场)");
-                                handleDataForBuff(response, 800, 0.18);
+                                handleDataForBuff(response, MT_JY_JJ);
                                 connect1136();
                             }
 
@@ -945,7 +973,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 多边形 (久经沙场)");
-                                handleDataForBuff(response, 1550, 0.21);
+                                handleDataForBuff(response, MT_DBX_JJ);
                                 connect1137();
                             }
 
@@ -968,7 +996,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 玳瑁 (久经沙场)");
-                                handleDataForBuff(response, 1450, 0.28);
+                                handleDataForBuff(response, MT_DM_JJ);
                                 connect1138();
                             }
 
@@ -991,7 +1019,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 日蚀 (略有磨损)");
-                                handleDataForBuff(response, 1900, 0.10);
+                                handleDataForBuff(response, MT_RS_LM);
                                 connect1139();
                             }
 
@@ -1014,7 +1042,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 日蚀 (久经沙场)");
-                                handleDataForBuff(response, 950, 0.25);
+                                handleDataForBuff(response, MT_RS_JJ);
                                 connect1140();
                             }
 
@@ -1036,7 +1064,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 深红和服 (久经沙场)");
-                                handleDataForBuff(response, 3100, 0.20);
+                                handleDataForBuff(response, ZY_SHHF_JJ);
                                 connect1141();
                             }
 
@@ -1058,7 +1086,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 深红之网 (略有磨损)");
-                                handleDataForBuff(response, 3800, 0.12);
+                                handleDataForBuff(response, ZY_SHZW_LM);
                                 connect1142();
                             }
 
@@ -1080,7 +1108,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 深红之网 (久经沙场)");
-                                handleDataForBuff(response, 1750, 0.22);
+                                handleDataForBuff(response, ZY_SHZW_JJ);
                                 connect1143();
                             }
 
@@ -1102,7 +1130,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 大腕 (略有磨损)");
-                                handleDataForBuff(response, 3000, 0.11);
+                                handleDataForBuff(response, ZY_DW_LM);
                                 connect1144();
                             }
 
@@ -1124,7 +1152,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 大腕 (久经沙场)");
-                                handleDataForBuff(response, 1500, 0.24);
+                                handleDataForBuff(response, ZY_DW_JJ);
                                 connect1145();
                             }
 
@@ -1146,7 +1174,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 元勋 (略有磨损)");
-                                handleDataForBuff(response, 3000, 0.11);
+                                handleDataForBuff(response, ZY_YX_LM);
                                 connect1146();
                             }
 
@@ -1168,7 +1196,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 元勋 (久经沙场)");
-                                handleDataForBuff(response, 1400, 0.22);
+                                handleDataForBuff(response, ZY_YX_JJ);
                                 connect1147();
                             }
 
@@ -1190,7 +1218,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 渐变之色 (久经沙场)");
-                                handleDataForBuff(response, 2200, 0.28);
+                                handleDataForBuff(response, ZY_JBZS_JJ);
                                 connect1148();
                             }
 
@@ -1212,7 +1240,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 翠绿之网 (久经沙场)");
-                                handleDataForBuff(response, 1900, 0.25);
+                                handleDataForBuff(response, ZY_CLZW_JJ);
                                 connect1150();
                             }
 
@@ -1234,7 +1262,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 翠绿之网 (久经沙场)");
-                                handleDataForBuff(response, 800, 0.18);
+                                handleDataForBuff(response, ZY_CLZW_JJ);
                                 connect1136();
                             }
 
@@ -1256,7 +1284,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 狩鹿(略有磨损)");
-                                handleDataForBuff(response, 1000, 0.09);
+                                handleDataForBuff(response, ZY_SL_LM);
                                 connect1152();
                             }
 
@@ -1278,7 +1306,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 狩鹿(久经沙场)");
-                                handleDataForBuff(response, 800, 0.18);
+                                handleDataForBuff(response, ZY_SL_JJ);
                                 connect1136();
                             }
 
@@ -1300,7 +1328,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 森林 DDPAT (略有磨损)");
-                                handleDataForBuff(response, 1000, 0.08);
+                                handleDataForBuff(response, ZY_SLD_LM);
                                 connect1154();
                             }
 
@@ -1322,7 +1350,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 森林 DDPAT (久经沙场)");
-                                handleDataForBuff(response, 800, 0.18);
+                                handleDataForBuff(response, ZY_SLD_JJ);
                                 connect1136();
                             }
 
@@ -1344,7 +1372,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "运动手套（★） | 潘多拉之盒(久经沙场)");
-                                handleDataForBuff(response, 5500, 0.25);
+                                handleDataForBuff(response, YD_PDLZH_JJ);
                                 connect1155();
                             }
 
@@ -1366,7 +1394,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "运动手套（★） | 迈阿密风云(久经沙场)");
-                                handleDataForBuff(response, 4800, 0.25);
+                                handleDataForBuff(response, YD_MAMFY_JJ);
                                 connect1156();
                             }
 
@@ -1388,7 +1416,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "运动手套（★） | 超导体(久经沙场)");
-                                handleDataForBuff(response, 3400, 0.20);
+                                handleDataForBuff(response, YD_CDT_JJ);
                                 connect1157();
                             }
 
@@ -1410,7 +1438,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "运动手套（★） | 树篱迷宫(久经沙场)");
-                                handleDataForBuff(response, 3000, 0.25);
+                                handleDataForBuff(response, YD_SLMG_JJ);
                                 connect1158();
                             }
 
@@ -1432,7 +1460,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "运动手套（★） | 双栖(久经沙场)");
-                                handleDataForBuff(response, 2600, 0.25);
+                                handleDataForBuff(response, YD_SX_JJ);
                                 connect1159();
                             }
 
@@ -1454,7 +1482,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "运动手套（★） | 欧米伽(久经沙场)");
-                                handleDataForBuff(response, 2200, 0.22);
+                                handleDataForBuff(response, YD_OMJ_JJ);
                                 connect1160();
                             }
 
@@ -1476,7 +1504,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 表面淬火(略有磨损)");
-                                handleDataForBuff(response, 1800, 0.10);
+                                handleDataForBuff(response, JTS_BMCH_LM);
                                 connect1161();
                             }
 
@@ -1498,7 +1526,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 表面淬火(久经沙场)");
-                                handleDataForBuff(response, 950, 0.20);
+                                handleDataForBuff(response, JTS_BMCH_JJ);
                                 connect1162();
                             }
 
@@ -1520,7 +1548,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 翡翠色调(略有磨损)");
-                                handleDataForBuff(response, 1700, 0.10);
+                                handleDataForBuff(response, JTS_FCSD_LM);
                                 connect1163();
                             }
 
@@ -1542,7 +1570,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 翡翠色调(久经沙场)");
-                                handleDataForBuff(response, 900, 0.19);
+                                handleDataForBuff(response, JTS_FCSD_JJ);
                                 connect1164();
                             }
 
@@ -1564,7 +1592,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 响尾蛇(略有磨损)");
-                                handleDataForBuff(response, 1150, 0.10);
+                                handleDataForBuff(response, JTS_XWS_LM);
                                 connect1165();
                             }
 
@@ -1586,13 +1614,13 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 响尾蛇(久经沙场)");
-                                handleDataForBuff(response, 760, 0.18);
-                                connect1166();
+                                handleDataForBuff(response, JTS_XWS_JJ);
+                                mService.startScan();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1166();
+                                mService.startScan();
                             }
                         });
             }
@@ -1608,7 +1636,7 @@ public class BuffGloves {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 红树林(略有磨损)");
-                                handleDataForBuff(response, 950, 0.08);
+                                handleDataForBuff(response, JTS_HSL_LM);
                                 mService.startScan();
                             }
 
