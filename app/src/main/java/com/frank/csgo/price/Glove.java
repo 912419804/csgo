@@ -7,13 +7,13 @@ public class Glove {
     public static double[] XL_JT_LM = {2000, 0.11,1600};
 
     // 血猎手套（★） | 焦炭 (久经沙场)
-    public static double[] XL_JT_JJ = {950, 0.20, 800};
+    public static double[] XL_JT_JJ = {1000, 0.20, 800};
 
     // 血猎手套（★） | 蛇咬 (略有磨损)
     public static double[] XL_SY_LM = {1750, 0.12, 1500};
 
     // 血猎手套（★） | 蛇咬 (久经沙场)
-    public static double[] XL_SY_JJ = {920, 0.19, 800};
+    public static double[] XL_SY_JJ = {1000, 0.22, 800};
 
     // 血猎手套（★） | 染铜 (略有磨损)
     public static double[] XL_RT_LM = {1400, 0.10, 1100};
@@ -22,25 +22,25 @@ public class Glove {
     public static double[] XL_RT_JJ = {850, 0.18, 700};
 
     // 血猎手套（★） | 游击队 (略有磨损)
-    public static double[] XL_YJD_LM = {1350, 0.10, 1100};
+    public static double[] XL_YJD_LM = {1500, 0.10, 1300};
 
     // 血猎手套（★） | 游击队 (久经沙场)
     public static double[] XL_YJD_JJ = {850, 0.19, 720};
 
     // 驾驶手套（★） | 深红织物 (久经沙场)
-    public static double[] XL_SHZW_JJ = {1900, 0.25, 1600};
+    public static double[] XL_SHZW_JJ = {1950, 0.25, 1700};
 
     // 驾驶手套（★） | 紫蓝格子 (久经沙场)
     public static double[] XL_LZGZ_JJ = {1900, 0.22, 1500};
 
     // 驾驶手套（★） | 王蛇 (久经沙场)
-    public static double[] XL_WS_JJ = {1600, 0.22, 1300};
+    public static double[] XL_WS_JJ = {1650, 0.22, 1400};
 
     // 驾驶手套（★） | 月色织物 (略有磨损)
     public static double[] XL_YSZW_LM = {1600, 0.11, 1300};
 
     //  驾驶手套（★） | 月色织物 (久经沙场)
-    public static double[] XL_YSZW_JJ = {750, 0.22, 620};
+    public static double[] XL_YSZW_JJ = {800, 0.22, 620};
 
     //  驾驶手套（★） | 超越 (略有磨损)
     public static double[] JS_CY_LM = {1500, 0.09, 1300};
@@ -58,49 +58,49 @@ public class Glove {
     public static double[] JS_MLSD_LM = {700, 0.08, 550};
 
     //  裹手（★） | 钴蓝骷髅 (久经沙场)
-    public static double[] GS_GLKL_LM = {2700, 0.25, 2300};
+    public static double[] GS_GLKL_LM = {3100, 0.25, 2600};
 
     //  裹手（★） | 屠夫 (略有磨损)
-    public static double[] GS_TF_LM = {2800, 0.11, 2300};
+    public static double[] GS_TF_LM = {2900, 0.13, 2300};
 
     //  裹手（★） | 屠夫 (久经沙场)
-    public static double[] GS_TF_JJ = {1530, 0.20, 1300};
+    public static double[] GS_TF_JJ = {1530, 0.24, 1300};
 
     //  裹手（★） | 恶土 (略有磨损)
-    public static double[] GS_ET_LM = {1600, 0.10, 1350};
+    public static double[] GS_ET_LM = {1650, 0.10, 1350};
 
     //  裹手（★） | 恶土 (久经沙场)
-    public static double[] GS_ET_JJ = {930, 0.20, 820};
+    public static double[] GS_ET_JJ = {940, 0.23, 820};
 
     //  裹手（★） | 皮革 (略有磨损)
-    public static double[] GS_PG_LM = {1450, 0.11, 1250};
+    public static double[] GS_PG_LM = {1500, 0.11, 1250};
 
     //  裹手（★） | 皮革 (久经沙场)
-    public static double[] GS_PG_JJ = {850, 0.20, 700};
+    public static double[] GS_PG_JJ = {880, 0.20, 700};
 
     //  裹手（★） | 森林色调 (略有磨损)
     public static double[] GS_SLSD_LM = {1200, 0.11, 990};
 
     //  裹手（★） | 森林色调 (久经沙场)
-    public static double[] GS_SLSD_JJ = {760, 0.22, 660};
+    public static double[] GS_SLSD_JJ = {800, 0.22, 660};
 
     //  裹手（★） | 云杉DDPAT(略有磨损)
-    public static double[] GS_YS_LM = {1000, 0.11, 800};
+    public static double[] GS_YS_LM = {1100, 0.11, 900};
 
     //  摩托手套（★） | 薄荷 (久经沙场)
     public static double[] GS_BH_JJ = {3400, 0.31, 2700};
 
     //  摩托手套（★） | 清凉薄荷 (略有磨损)
-    public static double[] MT_QLBH_LM = {3100, 0.12, 2700};
+    public static double[] MT_QLBH_LM = {3200, 0.12, 2800};
 
     //  摩托手套（★） | 清凉薄荷 (久经沙场)
-    public static double[] MT_QLBH_JJ = {1500, 0.25, 1250};
+    public static double[] MT_QLBH_JJ = {1700, 0.26, 1400};
 
     //  摩托手套（★） | *嘣！* (略有磨损)
     public static double[] MT_B_LM = {2400, 0.10, 2100};
 
     //  摩托手套（★） | *嘣！* (久经沙场)
-    public static double[] MT_B_JJ = {1150, 0.25, 950};
+    public static double[] MT_B_JJ = {1150, 0.32, 950};
 
     //  摩托手套（★） | 嘭！ (久经沙场)
     public static double[] MT_P_LM = {2200, 0.26, 1800};
@@ -115,7 +115,7 @@ public class Glove {
     public static double[] MT_DBX_JJ = {1550, 0.21, 1350};
 
     //  摩托手套（★） | 玳瑁 (久经沙场)
-    public static double[] MT_DM_JJ = {1450, 0.28, 1200};
+    public static double[] MT_DM_JJ = {1490, 0.25, 1200};
 
     //  摩托手套（★） | 日蚀 (略有磨损)
     public static double[] MT_RS_LM = {1900, 0.10, 1500};
@@ -130,13 +130,13 @@ public class Glove {
     public static double[] ZY_SHZW_LM = {3800, 0.12, 3300};
 
     //  专业手套（★） | 深红之网 (久经沙场)
-    public static double[] ZY_SHZW_JJ = {1750, 0.22, 1450};
+    public static double[] ZY_SHZW_JJ = {1750, 0.25, 1450};
 
     //  专业手套（★） | 大腕 (略有磨损)
-    public static double[] ZY_DW_LM = {3000, 0.11, 2500};
+    public static double[] ZY_DW_LM = {3000, 0.11, 2600};
 
     //  专业手套（★） | 大腕 (久经沙场)
-    public static double[] ZY_DW_JJ = {1500, 0.24, 1200};
+    public static double[] ZY_DW_JJ = {1520, 0.24, 1300};
 
     //  专业手套（★） | 元勋 (略有磨损)
     public static double[] ZY_YX_LM = {3000, 0.11, 2500};
@@ -148,7 +148,7 @@ public class Glove {
     public static double[] ZY_JBZS_JJ = {2200, 0.28, 1900};
 
     //  专业手套（★） | 翠绿之网 (久经沙场)
-    public static double[] ZY_CLZW_JJ = {1900, 0.25, 1600};
+    public static double[] ZY_CLZW_JJ = {1950, 0.25, 1700};
 
     //  专业手套（★） | 狩鹿(略有磨损)
     public static double[] ZY_SL_LM = {1000, 0.09, 800};
@@ -166,7 +166,7 @@ public class Glove {
     public static double[] YD_PDLZH_JJ = {5500, 0.25, 4400};
 
     //  运动手套（★） | 迈阿密风云(久经沙场)
-    public static double[] YD_MAMFY_JJ = {4800, 0.25, 3800};
+    public static double[] YD_MAMFY_JJ = {5500, 0.25, 4400};
 
     //  运动手套（★） | 超导体(久经沙场)
     public static double[] YD_CDT_JJ = {3400, 0.20, 2500};
@@ -196,7 +196,7 @@ public class Glove {
     public static double[] JTS_XWS_LM = {1150, 0.10, 900};
 
     // 九头蛇手套（★） | 响尾蛇(久经沙场)
-    public static double[] JTS_XWS_JJ = {770, 0.17, 650};
+    public static double[] JTS_XWS_JJ = {800, 0.17, 700};
 
     //九头蛇手套（★） | 红树林(略有磨损)
     public static double[] JTS_HSL_LM = {900, 0.09, 700};
