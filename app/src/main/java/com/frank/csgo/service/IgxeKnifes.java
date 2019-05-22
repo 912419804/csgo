@@ -14,6 +14,8 @@ import com.lzy.okgo.model.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.frank.csgo.price.Knife.*;
+
 /**
  * @author 作者 hasee
  * @createTime 创建时间： 2019/2/15 15:32
@@ -61,6 +63,48 @@ public class IgxeKnifes {
             mService.sendBroadcast(intent);
         }
     }
+    private void handleDataIgxe3(Response<Igxe> response, double[] res) {
+        try {
+            double value = res[0];
+            double w = res[1];
+            double minMoney = res[2];
+            List<IgxeWeapon> weapons = response.body().getD_list();
+            ArrayList<IgxeWeapon> list = new ArrayList<>();
+            for (IgxeWeapon weapon : weapons) {
+                String unit_price = weapon.getUnit_price();
+                double price = Double.valueOf(unit_price);
+                if (price <= value) {
+                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+                    if (price <= minMoney) {
+                        list.add(weapon);
+                    } else {
+                        String exterior_wear = weapon.getExterior_wear();
+                        if (!TextUtils.isEmpty(exterior_wear)) {
+                            Double wear = Double.valueOf(exterior_wear);
+                            if (wear <= w) {
+                                list.add(weapon);
+                            }
+//                        else {
+//                            List<IgxeWeapon.StickerBean> stickers = weapon.getSticker();
+//                            if (stickers != null && stickers.size() >= 3) {
+//                                list.add(weapon);
+//                            }
+//                        }
+                        }
+                    }
+                }
+
+            }
+            if (!list.isEmpty()) {
+                Intent intent = new Intent(Constant.IGXE_WEAPON);
+                intent.putExtra(Constant.IGXE_WEAPON, list);
+                mService.sendBroadcast(intent);
+            }
+        }catch (Exception e){
+
+        }
+
+    }
 
     // 折叠刀（★） | 深红之网 (略有磨损)
     public void connect1200() {
@@ -68,7 +112,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1500, 0.10, 1200);
+                        handleDataIgxe3(response, ZDD_SHZW_LM);
                         connect1201();
                     }
 
@@ -85,7 +129,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 750, 0.20, 600);
+                        handleDataIgxe3(response, ZDD_SHZW_JJ);
                         connect1204();
                     }
 
@@ -119,7 +163,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 2000, 0.03, 1500);
+                        handleDataIgxe3(response, ZDD_CS_ZX);
                         connect1204();
                     }
 
@@ -136,7 +180,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 850, 0.20, 800);
+                        handleDataIgxe3(response, ZDD_CS_JJ);
                         connect1205();
                     }
 
@@ -153,7 +197,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 900, 0.09, 770);
+                        handleDataIgxe3(response, ZDD_ZDH_LM);
                         connect1206();
                     }
 
@@ -170,7 +214,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 780, 0.16, 610);
+                        handleDataIgxe3(response, ZDD_ZDH_JJ);
                         connect1207();
                     }
 
@@ -187,7 +231,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 900, 0.003, 750);
+                        handleDataIgxe3(response, ZDD_HY_ZX);
                         connect1211();
                     }
 
@@ -204,7 +248,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1500, 0.18, 1300);
+                        handleDataIgxe3(response, CD_CS_JJ);
                         connect1212();
                     }
 
@@ -221,7 +265,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1399, 0.17, 1200);
+                        handleDataIgxe3(response, CD_ZDH_JJ);
                         connect1213();
                     }
 
@@ -238,7 +282,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1660, 0.08, 1500);
+                        handleDataIgxe3(response, CD_ZDH_LM);
                         connect1214();
                     }
 
@@ -255,7 +299,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1500, 0.09, 1200);
+                        handleDataIgxe3(response, CD_SHZW_LM);
                         connect1215();
                     }
 
@@ -272,7 +316,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 780, 0.18, 650);
+                        handleDataIgxe3(response, CD_SHZW_JJ);
                         connect1216();
                     }
 
@@ -289,7 +333,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1300, 0.01, 1200);
+                        handleDataIgxe3(response, CD_DPL_ZX);
                         connect1217();
                     }
 
@@ -306,7 +350,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1350, 0.01, 1200);
+                        handleDataIgxe3(response, CD_HY_ZX);
                         connect1221();
                     }
 
@@ -323,7 +367,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1630, 0.01, 1480);
+                        handleDataIgxe3(response, M9_HY_ZX);
                         connect1222();
                     }
 
@@ -340,7 +384,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1700, 0.20, 1500);
+                        handleDataIgxe3(response, M9_ZDH_JJ);
                         connect1223();
                     }
 
@@ -358,7 +402,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1480, 0.01, 1300);
+                        handleDataIgxe3(response, M9_DPL_ZX);
                         connect1224();
                     }
 
@@ -375,7 +419,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1940, 0.25, 1750);
+                        handleDataIgxe3(response, M9_CS_JJ);
                         connect1225();
                     }
 
@@ -392,7 +436,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 3000, 0.12, 2500);
+                        handleDataIgxe3(response, M9_SHZW_LM);
                         connect1226();
                     }
 
@@ -409,7 +453,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1100, 0.25, 900);
+                        handleDataIgxe3(response, M9_SHZW_JJ);
                         connect1227();
                     }
 
@@ -426,7 +470,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 580, 0.16, 500);
+                        handleDataIgxe3(response, M9_BFSL_JJ);
                         connect1231();
                     }
 
@@ -443,7 +487,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1700, 0.10, 1500);
+                        handleDataIgxe3(response, HDD_WTZ);
                         connect1232();
                     }
 
@@ -460,7 +504,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1550, 0.25, 1400);
+                        handleDataIgxe3(response, HDD_SHZW_JJ);
                         connect1233();
                     }
 
@@ -477,7 +521,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1200, 0.09, 980);
+                        handleDataIgxe3(response, HDD_BFSL_LM);
                         connect1234();
                     }
 
@@ -494,7 +538,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 860, 0.17, 740);
+                        handleDataIgxe3(response, HDD_BFSL_JJ);
                         connect1235();
                     }
 
@@ -511,7 +555,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1650, 0.09, 1400);
+                        handleDataIgxe3(response, HDD_EMZY_LM);
                         connect1236();
                     }
 
@@ -528,7 +572,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1100, 0.18, 900);
+                        handleDataIgxe3(response, HDD_EMZY_JJ);
                         connect1237();
                     }
 
@@ -545,7 +589,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1050, 0.09, 820);
+                        handleDataIgxe3(response, HDD_SLD_LM);
                         connect1240();
                     }
 
@@ -562,7 +606,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1500, 0.12, 1300);
+                        handleDataIgxe3(response, ZZD_WTZ);
                         connect1241();
                     }
 
@@ -580,7 +624,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 2250, 0.22, 2050);
+                        handleDataIgxe3(response, ZZD_ZDH_JJ);
                         connect1243();
                     }
 
@@ -598,7 +642,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 2000, 0.005, 1700);
+                        handleDataIgxe3(response, ZZD_HY_ZX);
                         connect1243();
                     }
 
@@ -616,7 +660,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 2000, 0.19, 1700);
+                        handleDataIgxe3(response, ZZD_CS_JJ);
                         connect1244();
                     }
 
@@ -634,7 +678,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1500, 0.20, 1300);
+                        handleDataIgxe3(response, ZZD_SHZW_JJ);
                         connect1245();
                     }
 
@@ -652,7 +696,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 900, 0.09, 700);
+                        handleDataIgxe3(response, ZZD_SLD_LM);
                         connect1246();
                     }
 
@@ -670,7 +714,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 730, 0.16, 600);
+                        handleDataIgxe3(response, ZZD_SLD_JJ);
                         connect1247();
                     }
 
@@ -688,7 +732,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1000, 0.08, 800);
+                        handleDataIgxe3(response, ZZD_BFSL_LM);
                         connect1248();
                     }
 
@@ -706,7 +750,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 800, 0.17, 700);
+                        handleDataIgxe3(response, ZZD_BFSL_JJ);
                         connect1253();
                     }
 
@@ -724,7 +768,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1050, 0.01, 950);
+                        handleDataIgxe3(response, LSZ_JBDLS_ZX);
                         connect1253();
                     }
 
@@ -742,7 +786,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 950, 0.01, 900);
+                        handleDataIgxe3(response, LSZ_DPL_ZX);
                         connect1253();
                     }
 
@@ -760,7 +804,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1050, 0.01, 900);
+                        handleDataIgxe3(response, LSZ_DPL_ZX);
                         connect1253();
                     }
 
@@ -778,7 +822,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1000, 0.11, 850);
+                        handleDataIgxe3(response, LSZ_SHZW_LM);
                         connect1254();
                     }
 
@@ -796,7 +840,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 630, 0.20, 500);
+                        handleDataIgxe3(response, LSZ_SHZW_JJ);
                         connect1260();
                     }
 
@@ -814,7 +858,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 620, 0.01, 500);
+                        handleDataIgxe3(response, LSZ_JBZS_ZX);
                         connect1257();
                     }
 
@@ -832,7 +876,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 820, 0.004, 740);
+                        handleDataIgxe3(response, LSZ_HY_ZX);
                         connect1257();
                     }
 
@@ -850,7 +894,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 550, 0.16, 500);
+                        handleDataIgxe3(response, LSZ_WTZ);
                         connect1260();
                     }
 
@@ -868,7 +912,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1600, 0.20, 1400);
+                        handleDataIgxe3(response, XD_SHZW_JJ);
                         connect1261();
                     }
 
@@ -886,7 +930,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1300, 0.10, 1100);
+                        handleDataIgxe3(response, XD_WTZ);
                         connect1292();
                     }
 
@@ -899,382 +943,382 @@ public class IgxeKnifes {
     }
 
     //鲍伊猎刀（★） | 多普勒 (崭新出厂)
-    private void connect1271() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571703")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1000, 0.01, 900);
-                        connect1272();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1272();
-                    }
-                });
-    }
-
-    //鲍伊猎刀（★） | 深红之网 (略有磨损)
-    private void connect1272() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/103983")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1300, 0.10, 1050);
-                        connect1273();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1273();
-                    }
-                });
-    }
-
-    //鲍伊猎刀（★） | 深红之网 (久经沙场)
-    private void connect1273() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/121349")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 770, 0.19, 600);
-                        connect1277();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1277();
-                    }
-                });
-    }
-
-    //鲍伊猎刀（★） | 虎牙 (崭新出厂)
-    private void connect1274() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571701")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 880, 0.01, 800);
-                        connect1277();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1277();
-                    }
-                });
-    }
-
-    //弯刀（★） | 多普勒 (崭新出厂)
-    private void connect1275() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571789")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 900, 0.01, 800);
-                        connect1276();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1276();
-                    }
-                });
-    }
-
-    //弯刀（★） | 渐变大理石 (崭新出厂)
-    private void connect1276() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571713")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 900, 0.01, 800);
-                        connect1277();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1277();
-                    }
-                });
-    }
-
-    //弯刀（★） | 虎牙 (崭新出厂)
-    private void connect1277() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571834")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 730, 0.003, 610);
-                        connect1280();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1280();
-                    }
-                });
-    }
-
-    //弯刀（★） | 深红之网 (略有磨损)
-    private void connect1278() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15690")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 800, 0.11, 600);
-                        connect1279();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1279();
-                    }
-                });
-    }
-
-    //弯刀（★） | 深红之网 (久经沙场)
-    private void connect1279() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/9530")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 520, 0.17, 400);
-                        connect1280();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1280();
-                    }
-                });
-    }
-
-    //穿肠刀（★） | 自动化 (略有磨损)
-    private void connect1280() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555287")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 750, 0.08, 600);
-                        connect1281();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1281();
-                    }
-                });
-    }
-
-    //穿肠刀（★） | 自动化 (久经沙场)
-    private void connect1281() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555629")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 620, 0.17, 500);
-                        connect1283();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1283();
-                    }
-                });
-    }
-
-    //穿肠刀（★） | 伽玛多普勒 (崭新出厂)
-    private void connect1282() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555181")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 620, 0.01, 500);
-                        connect1283();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1283();
-                    }
-                });
-    }
-
-    //穿肠刀（★） | 虎牙 (崭新出厂)
-    private void connect1283() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7188")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 500, 0.003, 400);
-                        connect1285();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1285();
-                    }
-                });
-    }
-
-    //穿肠刀（★） | 传说 (崭新出厂)
-    private void connect1284() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555624")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1200, 0.02, 1020);
-                        connect1286();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1286();
-                    }
-                });
-    }
-
-    //穿肠刀（★） | 传说 (略有磨损)
-    private void connect1285() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555630")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 830, 0.08, 760);
-                        connect1286();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1286();
-                    }
-                });
-    }
-
-    //穿肠刀（★） | 传说 (久经沙场)
-    private void connect1286() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555751")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 600, 0.17, 500);
-                        connect1287();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1287();
-                    }
-                });
-    }
-
-    //穿肠刀（★） | 深红之网 (略有磨损)
-    private void connect1287() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15688")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 550, 0.09, 450);
-                        connect1288();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1288();
-                    }
-                });
-    }
-
-    //穿肠刀（★） | 深红之网 (久经沙场)
-    private void connect1288() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/19646")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 400, 0.17, 300);
-                        connect1289();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1289();
-                    }
-                });
-    }
-
-    //暗影双匕（★） | 渐变之色 (崭新出厂)
-    private void connect1289() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/11396")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 605, 0.01, 500);
-                        connect1292();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1292();
-                    }
-                });
-    }
-
-    //暗影双匕（★） | 多普勒 (崭新出厂)
-    private void connect1290() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571915")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 610, 0.01, 500);
-                        connect1291();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1291();
-                    }
-                });
-    }
-
-    //暗影双匕（★） | 虎牙 (崭新出厂)
-    private void connect1291() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571833")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 550, 0.01, 500);
-                        connect1292();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        super.onError(response);
-                        connect1292();
-                    }
-                });
-    }
+//    private void connect1271() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571703")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 1000, 0.01, 900);
+//                        connect1272();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1272();
+//                    }
+//                });
+//    }
+//
+//    //鲍伊猎刀（★） | 深红之网 (略有磨损)
+//    private void connect1272() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/103983")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 1300, 0.10, 1050);
+//                        connect1273();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1273();
+//                    }
+//                });
+//    }
+//
+//    //鲍伊猎刀（★） | 深红之网 (久经沙场)
+//    private void connect1273() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/121349")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 770, 0.19, 600);
+//                        connect1277();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1277();
+//                    }
+//                });
+//    }
+//
+//    //鲍伊猎刀（★） | 虎牙 (崭新出厂)
+//    private void connect1274() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571701")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 880, 0.01, 800);
+//                        connect1277();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1277();
+//                    }
+//                });
+//    }
+//
+//    //弯刀（★） | 多普勒 (崭新出厂)
+//    private void connect1275() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571789")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 900, 0.01, 800);
+//                        connect1276();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1276();
+//                    }
+//                });
+//    }
+//
+//    //弯刀（★） | 渐变大理石 (崭新出厂)
+//    private void connect1276() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571713")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 900, 0.01, 800);
+//                        connect1277();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1277();
+//                    }
+//                });
+//    }
+//
+//    //弯刀（★） | 虎牙 (崭新出厂)
+//    private void connect1277() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571834")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 730, 0.003, 610);
+//                        connect1280();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1280();
+//                    }
+//                });
+//    }
+//
+//    //弯刀（★） | 深红之网 (略有磨损)
+//    private void connect1278() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15690")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 800, 0.11, 600);
+//                        connect1279();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1279();
+//                    }
+//                });
+//    }
+//
+//    //弯刀（★） | 深红之网 (久经沙场)
+//    private void connect1279() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/9530")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 520, 0.17, 400);
+//                        connect1280();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1280();
+//                    }
+//                });
+//    }
+//
+//    //穿肠刀（★） | 自动化 (略有磨损)
+//    private void connect1280() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555287")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 750, 0.08, 600);
+//                        connect1281();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1281();
+//                    }
+//                });
+//    }
+//
+//    //穿肠刀（★） | 自动化 (久经沙场)
+//    private void connect1281() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555629")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 620, 0.17, 500);
+//                        connect1283();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1283();
+//                    }
+//                });
+//    }
+//
+//    //穿肠刀（★） | 伽玛多普勒 (崭新出厂)
+//    private void connect1282() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555181")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 620, 0.01, 500);
+//                        connect1283();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1283();
+//                    }
+//                });
+//    }
+//
+//    //穿肠刀（★） | 虎牙 (崭新出厂)
+//    private void connect1283() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7188")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 500, 0.003, 400);
+//                        connect1285();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1285();
+//                    }
+//                });
+//    }
+//
+//    //穿肠刀（★） | 传说 (崭新出厂)
+//    private void connect1284() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555624")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 1200, 0.02, 1020);
+//                        connect1286();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1286();
+//                    }
+//                });
+//    }
+//
+//    //穿肠刀（★） | 传说 (略有磨损)
+//    private void connect1285() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555630")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 830, 0.08, 760);
+//                        connect1286();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1286();
+//                    }
+//                });
+//    }
+//
+//    //穿肠刀（★） | 传说 (久经沙场)
+//    private void connect1286() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555751")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 600, 0.17, 500);
+//                        connect1287();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1287();
+//                    }
+//                });
+//    }
+//
+//    //穿肠刀（★） | 深红之网 (略有磨损)
+//    private void connect1287() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15688")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 550, 0.09, 450);
+//                        connect1288();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1288();
+//                    }
+//                });
+//    }
+//
+//    //穿肠刀（★） | 深红之网 (久经沙场)
+//    private void connect1288() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/19646")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 400, 0.17, 300);
+//                        connect1289();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1289();
+//                    }
+//                });
+//    }
+//
+//    //暗影双匕（★） | 渐变之色 (崭新出厂)
+//    private void connect1289() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/11396")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 605, 0.01, 500);
+//                        connect1292();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1292();
+//                    }
+//                });
+//    }
+//
+//    //暗影双匕（★） | 多普勒 (崭新出厂)
+//    private void connect1290() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571915")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 610, 0.01, 500);
+//                        connect1291();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1291();
+//                    }
+//                });
+//    }
+//
+//    //暗影双匕（★） | 虎牙 (崭新出厂)
+//    private void connect1291() {
+//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571833")
+//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//                    @Override
+//                    public void onSuccess(Response<Igxe> response) {
+//                        handleDataIgxe3(response, 550, 0.01, 500);
+//                        connect1292();
+//                    }
+//
+//                    @Override
+//                    public void onError(Response<Igxe> response) {
+//                        super.onError(response);
+//                        connect1292();
+//                    }
+//                });
+//    }
 
     //短剑（★） | 深红之网 (略有磨损)
     private void connect1292() {
@@ -1282,7 +1326,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1500, 0.08, 1200);
+                        handleDataIgxe3(response, DJ_SHZW_LM);
                         connect1293();
                     }
 
@@ -1300,7 +1344,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 800, 0.19, 620);
+                        handleDataIgxe3(response, DJ_SHZW_JJ);
                         connect1295();
                     }
 
@@ -1318,7 +1362,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1800, 0.10, 1600);
+                        handleDataIgxe3(response, JCZD_WTZ);
                         connect1295();
                     }
 
@@ -1336,7 +1380,7 @@ public class IgxeKnifes {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1600, 0.19, 1340);
+                        handleDataIgxe3(response, JCZD_CS_JJ);
                         mService.startScan();
                     }
 
