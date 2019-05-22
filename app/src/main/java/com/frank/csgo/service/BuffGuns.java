@@ -146,12 +146,12 @@ public class BuffGuns {
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "USP 消音版 | 次时代 (崭新出厂)", Constant.ZXCC);
                                 handleDataForBuff(response, 25, 0.01);
-                                connect204();
+                                connect205();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect204();
+                                connect205();
                             }
                         });
             }
@@ -216,13 +216,13 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "USP 消音版 | 枪响人亡 (略有磨损)", Constant.LVMS);
-                                handleDataForBuff(response, 280, 0.08);
-                                connect206();
+                                handleDataForBuff(response, 300, 0.08);
+                                connect207();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect206();
+                                connect207();
                             }
                         });
             }
@@ -240,7 +240,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "USP 消音版 | 枪响人亡 (久经沙场)", Constant.JJSC);
-                                handleDataForBuff(response, 180, 0.16);
+                                handleDataForBuff(response, 200, 0.16);
                                 connect207();
                             }
 
@@ -264,7 +264,7 @@ public class BuffGuns {
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "USP 消音版 | 黑色魅影 (崭新出厂)", Constant.ZXCC);
-                                handleDataForBuff(response, 270, 0.02);
+                                handleDataForBuff(response, 300, 0.02);
                                 connect211();
                             }
 

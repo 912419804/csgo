@@ -314,7 +314,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 680, 0.009, 570);
+                        handleDataIgxe3(response, 720, 0.009, 600);
                         connect20();
                     }
 
@@ -354,7 +354,7 @@ public class IgxeGuns {
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect20();
+                        connect21();
                     }
                 });
     }
@@ -2247,7 +2247,7 @@ public class IgxeGuns {
                 });
     }
 
-    // M4A4（StatTrak™） | 二西莫夫 (久经沙
+    // M4A4（StatTrak™） | 二西莫夫 (久经沙场)
     private void connect135() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/11759")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
