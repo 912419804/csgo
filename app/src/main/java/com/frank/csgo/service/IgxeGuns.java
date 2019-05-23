@@ -14,6 +14,8 @@ import com.lzy.okgo.model.Response;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.frank.csgo.price.Gun.*;
+
 /**
  * @author 作者 hasee
  * @createTime 创建时间： 2019/2/14 14:16
@@ -131,6 +133,48 @@ public class IgxeGuns {
         }
 
     }
+    private void handleDataIgxe3(Response<Igxe> response, double[] res) {
+        try {
+            double value = res[0];
+            double w     = res[1];
+            double minMoney = res[2];
+            List<IgxeWeapon> weapons = response.body().getD_list();
+            ArrayList<IgxeWeapon> list = new ArrayList<>();
+            for (IgxeWeapon weapon : weapons) {
+                String unit_price = weapon.getUnit_price();
+                double price = Double.valueOf(unit_price);
+                if (price <= value) {
+                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+                    if (price <= minMoney) {
+                        list.add(weapon);
+                    } else {
+                        String exterior_wear = weapon.getExterior_wear();
+                        if (!TextUtils.isEmpty(exterior_wear)) {
+                            Double wear = Double.valueOf(exterior_wear);
+                            if (wear <= w) {
+                                list.add(weapon);
+                            }
+//                        else {
+//                            List<IgxeWeapon.StickerBean> stickers = weapon.getSticker();
+//                            if (stickers != null && stickers.size() >= 3) {
+//                                list.add(weapon);
+//                            }
+//                        }
+                        }
+                    }
+                }
+
+            }
+            if (!list.isEmpty()) {
+                Intent intent = new Intent(Constant.IGXE_WEAPON);
+                intent.putExtra(Constant.IGXE_WEAPON, list);
+                mService.sendBroadcast(intent);
+            }
+        }catch (Exception e){
+
+        }
+
+    }
 
     //awp 二西莫夫 久经
     public void connect() {
@@ -138,7 +182,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 250, 0.25, 200);
+                        handleDataIgxe3(response, AWP_EXMF_JJ);
                         connect2();
                     }
 
@@ -156,7 +200,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 350, 0.27, 300);
+                        handleDataIgxe3(response, M4A4_EXMF_JJ);
                         connect4();
                     }
 
@@ -175,7 +219,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 280, 0.03, 230);
+                        handleDataIgxe3(response, AK47_XXYD_ZX);
                         connect13();
                     }
 
@@ -229,7 +273,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 160, 0.02, 110);
+                        handleDataIgxe3(response, M4A4_XXSL_ZX);
                         connect14();
                     }
 
@@ -246,7 +290,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 90, 0.02, 75);
+                        handleDataIgxe3(response, M4A4_LW_ZX);
                         connect15();
                     }
 
@@ -263,7 +307,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 270, 0.09, 240);
+                        handleDataIgxe3(response, AK47_RLPSQ_LM);
                         connect15_1();
                     }
 
@@ -280,7 +324,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 550, 0.04, 450);
+                        handleDataIgxe3(response, AK47_RLPSQ_ZX);
                         connect17();
                     }
 
@@ -314,13 +358,13 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 720, 0.009, 600);
-                        connect20();
+                        handleDataIgxe3(response, SY_CLZY_ZX);
+                        connect18();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect20();
+                        connect18();
                     }
                 });
     }
@@ -331,7 +375,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 690, 0.25, 600);
+                        handleDataIgxe3(response, AWP_EXMF_JJ_ST);
                         connect20();
                     }
 
@@ -365,7 +409,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 280, 0.08, 220);
+                        handleDataIgxe3(response, USP_QXRW_LM);
                         connect21();
                     }
 
@@ -382,7 +426,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 530, 0.03, 430);
+                        handleDataIgxe3(response, USP_QXRW_ZX);
                         connect27();
                     }
 
@@ -400,7 +444,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 210, 0.11, 150);
+                        handleDataIgxe3(response, AK47_HX_LM);
                         connect28();
                     }
 
@@ -417,7 +461,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 105, 0.11, 80);
+                        handleDataIgxe3(response, AWP_HX_LM);
                         connect29();
                     }
 
@@ -434,7 +478,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 360, 0.02, 290);
+                        handleDataIgxe3(response, AWP_GTZ_ZX);
                         connect32();
                     }
 
@@ -485,7 +529,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 280, 0.03, 230);
+                        handleDataIgxe3(response, AWP_BNYS_ZX);
                         connect33();
                     }
 
@@ -502,7 +546,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 105, 0.08, 80);
+                        handleDataIgxe3(response, M4A1_BNYS_LM);
                         connect34();
                     }
 
@@ -519,7 +563,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 300, 0.01, 230);
+                        handleDataIgxe3(response, M4A1_BNYS_ZX);
                         connect35();
                     }
 
@@ -536,7 +580,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 350, 0.02, 280);
+                        handleDataIgxe3(response, AK47_BMCH_ZX);
                         connect39();
                     }
 
@@ -604,7 +648,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 60, 0.01, 35);
+                        handleDataIgxe3(response, AWP_SS_ZX);
                         connect40();
                     }
 
@@ -621,7 +665,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 120, 0.08, 90);
+                        handleDataIgxe3(response, AWP_B_LM);
                         connect42();
                     }
 
@@ -655,7 +699,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 270, 0.020, 220);
+                        handleDataIgxe3(response, USP_HSMY_ZX);
                         connect43();
                     }
 
@@ -672,7 +716,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 80, 0.02, 60);
+                        handleDataIgxe3(response, USP_LH_ZX);
                         connect46();
                     }
 
@@ -723,7 +767,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 220, 0.39, 200);
+                        handleDataIgxe3(response, M4A4_EXMF_PS);
                         connect47();
                     }
 
@@ -740,7 +784,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 130, 0.47, 110);
+                        handleDataIgxe3(response, M4A4_EXMF_ZH);
                         connect49();
                     }
 
@@ -774,7 +818,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 110, 0.02, 95);
+                        handleDataIgxe3(response, USP_NDDK_ZX);
                         connect50();
                     }
 
@@ -791,7 +835,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 180, 0.16, 140);
+                        handleDataIgxe3(response, USP_QXRW_JJ);
                         connect55();
                     }
 
@@ -819,7 +863,7 @@ public class IgxeGuns {
                 });
     }
 
-    // "USP 消音版 | 脑洞大开 (略有磨损)",
+    // "USP 消音版 | 脑洞大开 (略有磨损)
     private void connect52() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610635")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -836,7 +880,7 @@ public class IgxeGuns {
                 });
     }
 
-    // "USP 消音版 | Cortex (久经沙场)",
+    // "USP 消音版 | Cortex (久经沙场)
     private void connect53() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610667")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -853,7 +897,7 @@ public class IgxeGuns {
                 });
     }
 
-    // "USP 消音版 | Cortex (破损不堪)",
+    // "USP 消音版 | Cortex (破损不堪)
     private void connect54() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610667")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -870,13 +914,13 @@ public class IgxeGuns {
                 });
     }
 
-    // "USP 消音版 | 不锈钢 (崭新出厂)",
+    // "USP 消音版 | 不锈钢 (崭新出厂)
     private void connect55() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4159")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 55, 0.01, 40);
+                        handleDataIgxe3(response, USP_BXG_ZX);
                         connect56();
                     }
 
@@ -887,13 +931,13 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版 | 次时代 (崭新出厂)",
+    //USP 消音版 | 次时代 (崭新出厂)
     private void connect56() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/565440")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 24, 0.01, 18);
+                        handleDataIgxe3(response, USP_CSD_ZX);
                         connect59();
                     }
 
@@ -938,13 +982,13 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版 | 蓝图 (崭新出厂)",
+    //USP 消音版 | 蓝图 (崭新出厂)
     private void connect59() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/580409")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 60, 0.01, 40);
+                        handleDataIgxe3(response, USP_LT_ZX);
                         connect60();
                     }
 
@@ -955,13 +999,13 @@ public class IgxeGuns {
                 });
     }
 
-    //P90 | 二西莫夫 (崭新出厂)",
+    //P90 | 二西莫夫 (崭新出厂)
     private void connect60() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4358")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 150, 0.03, 110);
+                        handleDataIgxe3(response, P90_EXMF_ZX);
                         connect61();
                     }
 
@@ -972,13 +1016,13 @@ public class IgxeGuns {
                 });
     }
 
-    //P90 | 二西莫夫 (略磨)",
+    //P90 | 二西莫夫 (略有磨损)
     private void connect61() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/3819")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 68, 0.08, 50);
+                        handleDataIgxe3(response, P90_EXMF_LM);
                         connect62();
                     }
 
@@ -989,13 +1033,13 @@ public class IgxeGuns {
                 });
     }
 
-    //UMP-45 | 炽烈之炎 (崭新出厂)",
+    //UMP-45 | 炽烈之炎 (崭新出厂)
     private void connect62() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/3960")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 62, 0.01, 45);
+                        handleDataIgxe3(response, UMP_CLZY_ZX);
                         connect63();
                     }
 
@@ -1006,13 +1050,13 @@ public class IgxeGuns {
                 });
     }
 
-    //法玛斯 | 防滚架 (崭新出厂)",
+    //法玛斯 | 防滚架 (崭新出厂)
     private void connect63() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/558529")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 115, 0.02, 90);
+                        handleDataIgxe3(response, FMS_FGJ_ZX);
                         connect64();
                     }
 
@@ -1023,13 +1067,13 @@ public class IgxeGuns {
                 });
     }
 
-    //加利尔 AR | 地狱看门犬 (崭新出厂)",
+    //加利尔 AR | 地狱看门犬 (崭新出厂)
     private void connect64() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5679")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 120, 0.01, 80);
+                        handleDataIgxe3(response, JLE_DYKMQ_ZX);
                         connect65();
                     }
 
@@ -1040,13 +1084,13 @@ public class IgxeGuns {
                 });
     }
 
-    //加利尔 AR | 喧闹骷髅 (破损不堪)",
+    //加利尔 AR | 喧闹骷髅 (破损不堪)
     private void connect65() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6584")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 28, 0.39, 15);
+                        handleDataIgxe3(response, JLE_XNKL_PS);
                         connect66();
                     }
 
@@ -1057,13 +1101,13 @@ public class IgxeGuns {
                 });
     }
 
-    //加利尔 AR | ~甜甜的~ (崭新出厂)",
+    //加利尔 AR | ~甜甜的~ (崭新出厂)
     private void connect66() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/580686")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 75, 0.01, 50);
+                        handleDataIgxe3(response, JLE_TTD_ZX);
                         connect67();
                     }
 
@@ -1074,13 +1118,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 | 地狱烈焰 (崭新出厂)",
+    //M4A4 | 地狱烈焰 (崭新出厂)
     private void connect67() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/580303")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 150, 0.02, 100);
+                        handleDataIgxe3(response, M4A4_DYLY_ZX);
                         connect74();
                     }
 
@@ -1091,7 +1135,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 | 地狱烈焰 (略磨)",
+    //M4A4 | 地狱烈焰 (略有磨损)
     private void connect68() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/580630")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1108,7 +1152,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 | 地狱烈焰 (久经)",
+    //M4A4 | 地狱烈焰 (久经沙场)
     private void connect69() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/580400")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1193,13 +1237,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 | 皇家圣骑士 (略磨)",
+    //M4A4 | 皇家圣骑士 (略有磨损)
     private void connect74() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/9102")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 145, 0.08, 110);
+                        handleDataIgxe3(response, M4A4_HJSQS_LM);
                         connect76();
                     }
 
@@ -1210,7 +1254,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 | X光 (略磨)",
+    //M4A4 | X光 (略有磨损)
     private void connect75() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/19475")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1227,13 +1271,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 | X光 (崭新)",
+    //M4A4 | X光 (崭新出厂)
     private void connect76() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4173")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 70, 0.01, 40);
+                        handleDataIgxe3(response, M4A4_XG_ZX);
                         connect77();
                     }
 
@@ -1244,13 +1288,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 |死寂空间 (崭新)",
+    //M4A4 |死寂空间 (崭新出厂)
     private void connect77() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555129")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 140, 0.02, 110);
+                        handleDataIgxe3(response, M4A4_SJKJ_ZX);
                         connect81();
                     }
 
@@ -1261,7 +1305,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 |死寂空间 (略磨)",
+    //M4A4 |死寂空间 (略有磨损)
     private void connect78() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555157")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1278,7 +1322,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 |死寂空间 (久经)",
+    //M4A4 |死寂空间 (久经沙场)
     private void connect79() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555149")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1295,7 +1339,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 |死寂空间 (破损)",
+    //M4A4 |死寂空间 (破损不堪)
     private void connect80() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555277")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1312,13 +1356,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 |黑色魅影 (久经)",
+    //M4A4 |黑色魅影 (久经沙场)
     private void connect81() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610655")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 170, 0.20, 120);
+                        handleDataIgxe3(response, M4A4_HSMY_JJ);
                         connect82();
                     }
 
@@ -1329,13 +1373,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 |黑色魅影 (略有磨损)",
+    //M4A4 |黑色魅影 (略有磨损)
     private void connect82() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610628")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 340, 0.08, 290);
+                        handleDataIgxe3(response, M4A4_HSMY_LM);
                         connect86();
                     }
 
@@ -1346,7 +1390,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 |黑色魅影 (战痕)",
+    //M4A4 |黑色魅影 (战痕累累)
     private void connect83() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610665")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1363,7 +1407,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 |弹雨 (久经)",
+    //M4A4 |弹雨 (久经沙场)
     private void connect84() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/10076")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1380,7 +1424,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 |弹雨 (略磨)",
+    //M4A4 |弹雨 (略有磨损)
     private void connect85() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/8443")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1397,13 +1441,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4 |弹雨 (崭新)",
+    //M4A4 |弹雨 (崭新出厂)
     private void connect86() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7947")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 130, 0.02, 70);
+                        handleDataIgxe3(response, M4A4_DY_ZX);
                         connect87();
                     }
 
@@ -1414,13 +1458,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音型 | 梦魇 (崭新出厂)",
+    //M4A1 消音型 | 梦魇 (崭新出厂)
     private void connect87() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/613858")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 120, 0.02, 80);
+                        handleDataIgxe3(response, M4A4_MY_ZX);
                         connect90();
                     }
 
@@ -1431,7 +1475,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音型 | 梦魇 (略磨)",
+    //M4A1 消音型 | 梦魇 (略有磨损)
     private void connect88() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/613939")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1448,7 +1492,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音型 | 梦魇 久经)",
+    //M4A1 消音型 | 梦魇 久经)
     private void connect89() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/613886")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1465,13 +1509,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 伊卡洛斯殒落 (崭新出厂)",
+    //M4A1 消音版 | 伊卡洛斯殒落 (崭新出厂)
     private void connect90() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4559")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 285, 0.01, 230);
+                        handleDataIgxe3(response, M4A4_YKLSYL_ZX);
                         connect91();
                     }
 
@@ -1482,13 +1526,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 破碎千秋 (崭新出厂)",
+    //M4A1 消音版 | 破碎千秋 (崭新出厂)
     private void connect91() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/605295")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 45, 0.02, 30);
+                        handleDataIgxe3(response, M4A4_PSQQ_ZX);
                         connect92_1();
                     }
 
@@ -1505,7 +1549,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 410, 0.01, 320);
+                        handleDataIgxe3(response, M4A4_NHSZCY_ZX);
                         connect92();
                     }
 
@@ -1522,7 +1566,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 145, 0.08, 100);
+                        handleDataIgxe3(response, M4A4_NHSZCY_LM);
                         connect94();
                     }
 
@@ -1556,7 +1600,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 399, 0.01, 300);
+                        handleDataIgxe3(response, M4A1_CHXX_ZX);
                         connect95();
                     }
 
@@ -1573,7 +1617,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 75, 0.01, 40);
+                        handleDataIgxe3(response, M4A1_HMZ_ZX);
                         connect96();
                     }
 
@@ -1590,7 +1634,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 170, 0.02, 120);
+                        handleDataIgxe3(response,M4A1_JXGY_ZX );
                         connect97();
                     }
 
@@ -1607,7 +1651,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 85, 0.08, 50);
+                        handleDataIgxe3(response, M4A1_JXGY_LM);
                         connect98();
                     }
 
@@ -1624,7 +1668,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 210, 0.02, 170);
+                        handleDataIgxe3(response, M4A1_JSCR_ZX);
                         connect99();
                     }
 
@@ -1641,7 +1685,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 110, 0.08, 90);
+                        handleDataIgxe3(response, M4A1_JSCR_LM);
                         connect101();
                     }
 
@@ -1675,7 +1719,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 75, 0.02, 40);
+                        handleDataIgxe3(response, M4A1_CSD_ZX);
                         connect103();
                     }
 
@@ -1709,7 +1753,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 12500, 0.04, 10500);
+                        handleDataIgxe3(response, AWP_JLCS_ZX);
                         connect104();
                     }
 
@@ -1726,7 +1770,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 315, 0.09, 280);
+                        handleDataIgxe3(response, AK47_HH_LM);
                         connect105();
                     }
 
@@ -1743,7 +1787,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 220, 0.17, 190);
+                        handleDataIgxe3(response, AK47_HH_JJ);
                         connect106();
                     }
 
@@ -1760,7 +1804,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 600, 0.04, 530);
+                        handleDataIgxe3(response, AK47_HH_ZX);
                         connect107();
                     }
 
@@ -1777,7 +1821,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 500, 0.03, 380);
+                        handleDataIgxe3(response, AK47_NHQS_ZX);
                         connect108();
                     }
 
@@ -1794,7 +1838,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 290, 0.080, 220);
+                        handleDataIgxe3(response, AK47_NHQS_LM);
                         connect109();
                     }
 
@@ -1811,7 +1855,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 190, 0.16, 120);
+                        handleDataIgxe3(response, AK47_NHQS_JJ);
                         connect110();
                     }
 
@@ -1828,7 +1872,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 260, 0.01, 200);
+                        handleDataIgxe3(response, AK47_NHGM_ZX);
                         connect112();
                     }
 
@@ -1862,7 +1906,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 300, 0.02, 240);
+                        handleDataIgxe3(response, SMZY_HSDH_ZX);
                         connect113();
                     }
 
@@ -1879,7 +1923,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 170, 0.08, 110);
+                        handleDataIgxe3(response, SMZY_HSDH_LM);
                         connect114();
                     }
 
@@ -1896,7 +1940,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 220, 0.020, 160);
+                        handleDataIgxe3(response, AK47_SHFC_ZX);
                         connect116();
                     }
 
@@ -1930,7 +1974,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1000, 0.030, 800);
+                        handleDataIgxe3(response, AK47_SZZ_ZX);
                         connect117();
                     }
 
@@ -1947,7 +1991,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 650, 0.080, 550);
+                        handleDataIgxe3(response, AK47_SZZ_LM);
                         connect118();
                     }
 
@@ -1964,7 +2008,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 450, 0.17, 370);
+                        handleDataIgxe3(response, AK47_SZZ_JJ);
                         connect120();
                     }
 
@@ -1998,7 +2042,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 220, 0.18, 170);
+                        handleDataIgxe3(response, AK47_EXMF_JJ);
                         connect121();
                     }
 
@@ -2015,7 +2059,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 400, 0.090, 280);
+                        handleDataIgxe3(response, AK47_EXMF_LM);
                         connect123();
                     }
 
@@ -2049,7 +2093,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 22, 0.003, 8);
+                        handleDataIgxe3(response, M4A4_MYS_ZX);
                         connect124();
                     }
 
@@ -2066,7 +2110,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 70, 0.020, 40);
+                        handleDataIgxe3(response, SMZY_JXGY_ZX);
                         connect126();
                     }
 
@@ -2100,7 +2144,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 60, 0.010, 40);
+                        handleDataIgxe3(response, MP5_LGT_ZX);
                         connect127();
                     }
 
@@ -2117,7 +2161,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 100, 0.11, 80);
+                        handleDataIgxe3(response, P250_EXMF_LM);
                         connect128();
                     }
 
@@ -2134,7 +2178,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 400, 0.02, 310);
+                        handleDataIgxe3(response, AWP_HSMY_ZX);
                         connect131();
                     }
 
@@ -2185,7 +2229,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 175, 0.08, 120);
+                        handleDataIgxe3(response, AK47_HYFP_LM);
                         connect132();
                     }
 
@@ -2202,7 +2246,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 60, 0.02, 45);
+                        handleDataIgxe3(response, GLK_HYFP_ZX);
                         connect134();
                     }
 
@@ -2236,7 +2280,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1750, 0.09, 1500);
+                        handleDataIgxe3(response, AK47_HS_LM);
                         connect135();
                     }
 
@@ -2253,7 +2297,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1200, 0.26, 1000);
+                        handleDataIgxe3(response, M4A4_EXMF_JJ_ST);
                         connect138();
                     }
 

@@ -13,6 +13,7 @@ import com.lzy.okgo.model.Response;
 
 import java.util.ArrayList;
 import java.util.List;
+import static com.frank.csgo.price.Gun.*;
 
 /**
  * @author 作者 hasee
@@ -133,6 +134,49 @@ public class C5Guns {
         }
 
     }
+    private void handleDataC53(Response<C5> response, double[] res) {
+        try {
+            double value = res[0];
+            double w     = res[1];
+            double minMoney = res[2];
+            List<C5Weapon> weapons = response.body().getBody().getItems();
+            ArrayList<C5Weapon> list = new ArrayList<>();
+            for (C5Weapon weapon : weapons) {
+                String unit_price = weapon.getPrice();
+                double price = Double.valueOf(unit_price);
+                String exterior_wear = weapon.getWear();
+                Double wear_ = Double.valueOf(exterior_wear);
+                if (price <= value) {
+                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+                    if (price <= minMoney) {
+                        list.add(weapon);
+                    } else {
+                        if (!TextUtils.isEmpty(exterior_wear) && wear_>0) {
+                            Double wear = Double.valueOf(exterior_wear);
+                            if (wear <= w && wear!=0) {
+                                list.add(weapon);
+                            }
+//                        else {
+//                            List<C5Weapon.StickerBean> stickers = weapon.getSticker();
+//                            if (stickers != null && stickers.size() >= 3) {
+//                                list.add(weapon);
+//                            }
+//                        }
+                        }
+                    }
+                }
+
+            }
+            if (!list.isEmpty()) {
+                Intent intent = new Intent(Constant.C5_WEAPON);
+                intent.putExtra(Constant.C5_WEAPON, list);
+                mService.sendBroadcast(intent);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
 
     //awp 二西莫夫 久经
     public void connect() {
@@ -140,7 +184,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 250, 0.25, 200);
+                        handleDataC53(response, AWP_EXMF_JJ);
                         connect2();
                     }
 
@@ -158,7 +202,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 350, 0.27, 300);
+                        handleDataC53(response, M4A4_EXMF_JJ);
                         connect4();
                     }
 
@@ -177,7 +221,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 280, 0.03, 230);
+                        handleDataC53(response, AK47_XXYD_ZX);
                         connect13();
                     }
 
@@ -231,7 +275,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 170, 0.02, 110);
+                        handleDataC53(response, M4A4_XXSL_ZX);
                         connect14();
                     }
 
@@ -248,7 +292,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 90, 0.03, 75);
+                        handleDataC53(response, M4A4_LW_ZX);
                         connect15();
                     }
 
@@ -265,7 +309,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 270, 0.09, 240);
+                        handleDataC53(response, AK47_RLPSQ_LM);
                         connect15_1();
                     }
 
@@ -282,7 +326,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 550, 0.04, 450);
+                        handleDataC53(response, AK47_RLPSQ_ZX);
                         connect17();
                     }
 
@@ -316,7 +360,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 680, 0.009, 570);
+                        handleDataC53(response, SY_CLZY_ZX);
                         connect18();
                     }
 
@@ -333,13 +377,13 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 650, 0.25, 550);
-                        connect21();
+                        handleDataC53(response, AWP_EXMF_JJ_ST);
+                        connect20();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect21();
+                        connect20();
                     }
                 });
     }
@@ -367,7 +411,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 280, 0.08, 220);
+                        handleDataC53(response, USP_QXRW_LM);
                         connect21();
                     }
 
@@ -384,7 +428,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 530, 0.03, 430);
+                        handleDataC53(response, USP_QXRW_ZX);
                         connect27();
                     }
 
@@ -402,7 +446,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 210, 0.11, 150);
+                        handleDataC53(response, AK47_HX_LM);
                         connect28();
                     }
 
@@ -419,7 +463,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 105, 0.12, 80);
+                        handleDataC53(response, AWP_HX_LM);
                         connect29();
                     }
 
@@ -436,13 +480,13 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 360, 0.02, 290);
-                        connect31();
+                        handleDataC53(response, AWP_GTZ_ZX);
+                        connect32();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect31();
+                        connect32();
                     }
                 });
     }
@@ -487,7 +531,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 280, 0.03, 230);
+                        handleDataC53(response, AWP_BNYS_ZX);
                         connect33();
                     }
 
@@ -504,7 +548,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 105, 0.08, 80);
+                        handleDataC53(response, M4A1_BNYS_LM);
                         connect34();
                     }
 
@@ -521,7 +565,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 300, 0.01, 230);
+                        handleDataC53(response, M4A1_BNYS_ZX);
                         connect35();
                     }
 
@@ -538,7 +582,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 350, 0.02, 280);
+                        handleDataC53(response, AK47_BMCH_ZX);
                         connect39();
                     }
 
@@ -606,7 +650,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 65, 0.01, 40);
+                        handleDataC53(response, AWP_SS_ZX);
                         connect40();
                     }
 
@@ -623,7 +667,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 110, 0.08, 90);
+                        handleDataC53(response, AWP_B_LM);
                         connect42();
                     }
 
@@ -657,7 +701,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 270, 0.020, 220);
+                        handleDataC53(response, USP_LH_ZX);
                         connect43();
                     }
 
@@ -674,7 +718,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 80, 0.02, 60);
+                        handleDataC53(response, USP_LH_ZX);
                         connect46();
                     }
 
@@ -725,7 +769,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 230, 0.39, 200);
+                        handleDataC53(response, M4A4_EXMF_PS);
                         connect47();
                     }
 
@@ -742,7 +786,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 130, 0.47, 110);
+                        handleDataC53(response, M4A4_EXMF_ZH);
                         connect49();
                     }
 
@@ -776,7 +820,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 110, 0.02, 90);
+                        handleDataC53(response, USP_NDDK_ZX);
                         connect50();
                     }
 
@@ -793,13 +837,13 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 180, 0.16, 140);
-                        connect52();
+                        handleDataC53(response, USP_QXRW_JJ);
+                        connect55();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect52();
+                        connect55();
                     }
                 });
     }
@@ -821,7 +865,7 @@ public class C5Guns {
                 });
     }
 
-    // "USP 消音版 | 脑洞大开 (略有磨损)",
+    // "USP 消音版 | 脑洞大开 (略有磨损)
     private void connect52() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553445946&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -838,7 +882,7 @@ public class C5Guns {
                 });
     }
 
-    // "USP 消音版 | Cortex (久经沙场)",
+    // "USP 消音版 | Cortex (久经沙场)
     private void connect53() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/610667")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -855,7 +899,7 @@ public class C5Guns {
                 });
     }
 
-    // "USP 消音版 | Cortex (破损不堪)",
+    // "USP 消音版 | Cortex (破损不堪)
     private void connect54() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/610667")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -872,13 +916,13 @@ public class C5Guns {
                 });
     }
 
-    // "USP 消音版 | 不锈钢 (崭新出厂)",
+    // "USP 消音版 | 不锈钢 (崭新出厂)
     private void connect55() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=144902242&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 55, 0.01, 40);
+                        handleDataC53(response, USP_BXG_ZX);
                         connect56();
                     }
 
@@ -889,13 +933,13 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版 | 次时代 (崭新出厂)",
+    //USP 消音版 | 次时代 (崭新出厂)
     private void connect56() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=352874619&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 24, 0.01, 18);
+                        handleDataC53(response, USP_CSD_ZX);
                         connect59();
                     }
 
@@ -940,13 +984,13 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版 | 蓝图 (崭新出厂)",
+    //USP 消音版 | 蓝图 (崭新出厂)
     private void connect59() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553398626&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 60, 0.01, 40);
+                        handleDataC53(response, USP_LT_ZX);
                         connect60();
                     }
 
@@ -957,13 +1001,13 @@ public class C5Guns {
                 });
     }
 
-    //P90 | 二西莫夫 (崭新出厂)",
+    //P90 | 二西莫夫 (崭新出厂)
     private void connect60() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3011039&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 150, 0.03, 110);
+                        handleDataC53(response, P90_EXMF_ZX);
                         connect61();
                     }
 
@@ -974,13 +1018,13 @@ public class C5Guns {
                 });
     }
 
-    //P90 | 二西莫夫 (略磨)",
+    //P90 | 二西莫夫 (略有磨损)
     private void connect61() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2777065&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 68, 0.08, 50);
+                        handleDataC53(response, P90_EXMF_LM);
                         connect62();
                     }
 
@@ -991,13 +1035,13 @@ public class C5Guns {
                 });
     }
 
-    //UMP-45 | 炽烈之炎 (崭新出厂)",
+    //UMP-45 | 炽烈之炎 (崭新出厂)
     private void connect62() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2991441&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 62, 0.01, 50);
+                        handleDataC53(response, UMP_CLZY_ZX);
                         connect63();
                     }
 
@@ -1008,13 +1052,13 @@ public class C5Guns {
                 });
     }
 
-    //法玛斯 | 防滚架 (崭新出厂)",
+    //法玛斯 | 防滚架 (崭新出厂)
     private void connect63() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553382200&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 115, 0.02, 90);
+                        handleDataC53(response, FMS_FGJ_ZX);
                         connect64();
                     }
 
@@ -1025,13 +1069,13 @@ public class C5Guns {
                 });
     }
 
-    //加利尔 AR | 地狱看门犬 (崭新出厂)",
+    //加利尔 AR | 地狱看门犬 (崭新出厂)
     private void connect64() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=220002371&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 120, 0.01, 80);
+                        handleDataC53(response, JLE_DYKMQ_ZX);
                         connect65();
                     }
 
@@ -1042,13 +1086,13 @@ public class C5Guns {
                 });
     }
 
-    //加利尔 AR | 喧闹骷髅 (破损不堪)",
+    //加利尔 AR | 喧闹骷髅 (破损不堪)
     private void connect65() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=176162044&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 28, 0.39, 15);
+                        handleDataC53(response, JLE_XNKL_PS);
                         connect66();
                     }
 
@@ -1059,13 +1103,13 @@ public class C5Guns {
                 });
     }
 
-    //加利尔 AR | ~甜甜的~ (崭新出厂)",
+    //加利尔 AR | ~甜甜的~ (崭新出厂)
     private void connect66() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553395948&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 75, 0.01, 50);
+                        handleDataC53(response, JLE_TTD_ZX);
                         connect67();
                     }
 
@@ -1076,24 +1120,24 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 | 地狱烈焰 (崭新出厂)",
+    //M4A4 | 地狱烈焰 (崭新出厂)
     private void connect67() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553395894&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 150, 0.02, 100);
-                        connect73();
+                        handleDataC53(response, M4A4_DYLY_ZX);
+                        connect74();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect73();
+                        connect74();
                     }
                 });
     }
 
-    //M4A4 | 地狱烈焰 (略磨)",
+    //M4A4 | 地狱烈焰 (略有磨损)
     private void connect68() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553395866&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1110,7 +1154,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 | 地狱烈焰 (久经)",
+    //M4A4 | 地狱烈焰 (久经沙场)
     private void connect69() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/580400")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1127,7 +1171,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 | 沙漠精英 (崭新出厂)",
+    //M4A4 | 沙漠精英 (崭新出厂)
     private void connect70() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3025223&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1178,7 +1222,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 | 狮鹫 (崭新出厂)",
+    //M4A4 | 狮鹫 (崭新出厂)
     private void connect73() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3025886&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1195,13 +1239,13 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 | 皇家圣骑士 (略磨)",
+    //M4A4 | 皇家圣骑士 (略有磨损)
     private void connect74() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3023216&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 145, 0.08, 110);
+                        handleDataC53(response, M4A4_HJSQS_LM);
                         connect76();
                     }
 
@@ -1212,7 +1256,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 | X光 (略磨)",
+    //M4A4 | X光 (略有磨损)
     private void connect75() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/19475")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1229,13 +1273,13 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 | X光 (崭新)",
+    //M4A4 | X光 (崭新出厂)
     private void connect76() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2914656&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 70, 0.01, 40);
+                        handleDataC53(response, M4A4_XG_ZX);
                         connect77();
                     }
 
@@ -1246,24 +1290,24 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 |死寂空间 (崭新)",
+    //M4A4 |死寂空间 (崭新出厂)
     private void connect77() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=7424865&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 140, 0.02, 110);
-                        connect78();
+                        handleDataC53(response, M4A4_SJKJ_ZX);
+                        connect81();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect78();
+                        connect81();
                     }
                 });
     }
 
-    //M4A4 |死寂空间 (略磨)",
+    //M4A4 |死寂空间 (略有磨损)
     private void connect78() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2996384&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1280,7 +1324,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 |死寂空间 (久经)",
+    //M4A4 |死寂空间 (久经沙场)
     private void connect79() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/555149")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1297,7 +1341,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 |死寂空间 (破损)",
+    //M4A4 |死寂空间 (破损不堪)
     private void connect80() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/555277")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1314,13 +1358,13 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 |黑色魅影 (久经)",
+    //M4A4 |黑色魅影 (久经沙场)
     private void connect81() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553445891&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 180, 0.20, 120);
+                        handleDataC53(response, M4A4_HSMY_JJ);
                         connect82();
                     }
 
@@ -1331,13 +1375,13 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 |黑色魅影 (略有磨损)",
+    //M4A4 |黑色魅影 (略有磨损)
     private void connect82() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553445825&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 340, 0.08, 290);
+                        handleDataC53(response, M4A4_HSMY_LM);
                         connect86();
                     }
 
@@ -1348,7 +1392,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 |黑色魅影 (战痕)",
+    //M4A4 |黑色魅影 (战痕累累)
     private void connect83() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/610665")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1365,7 +1409,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 |弹雨 (久经)",
+    //M4A4 |弹雨 (久经沙场)
     private void connect84() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/10076")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1382,7 +1426,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 |弹雨 (略磨)",
+    //M4A4 |弹雨 (略有磨损)
     private void connect85() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/8443")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1399,13 +1443,13 @@ public class C5Guns {
                 });
     }
 
-    //M4A4 |弹雨 (崭新)",
+    //M4A4 |弹雨 (崭新出厂)
     private void connect86() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=156213218&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 120, 0.02, 70);
+                        handleDataC53(response, M4A4_DY_ZX);
                         connect87();
                     }
 
@@ -1416,24 +1460,24 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音型 | 梦魇 (崭新出厂)",
+    //M4A1 消音型 | 梦魇 (崭新出厂)
     private void connect87() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553453516&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 120, 0.02, 80);
-                        connect88();
+                        handleDataC53(response, M4A4_MY_ZX);
+                        connect90();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect88();
+                        connect90();
                     }
                 });
     }
 
-    //M4A1 消音型 | 梦魇 (略磨)",
+    //M4A1 消音型 | 梦魇 (略有磨损)
     private void connect88() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553453341&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1450,7 +1494,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音型 | 梦魇 久经)",
+    //M4A1 消音型 | 梦魇 久经)
     private void connect89() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553453642&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1467,13 +1511,13 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 伊卡洛斯殒落 (崭新出厂)",
+    //M4A1 消音版 | 伊卡洛斯殒落 (崭新出厂)
     private void connect90() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2913091&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 285, 0.01, 230);
+                        handleDataC53(response, M4A4_YKLSYL_ZX);
                         connect91();
                     }
 
@@ -1484,13 +1528,13 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 破碎千秋 (崭新出厂)",
+    //M4A1 消音版 | 破碎千秋 (崭新出厂)
     private void connect91() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553421575&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 45, 0.02, 30);
+                        handleDataC53(response, M4A4_PSQQ_ZX);
                         connect92_1();
                     }
 
@@ -1507,7 +1551,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 410, 0.01, 320);
+                        handleDataC53(response, M4A4_NHSZCY_ZX);
                         connect92();
                     }
 
@@ -1524,7 +1568,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 145, 0.08, 100);
+                        handleDataC53(response, M4A4_NHSZCY_LM);
                         connect94();
                     }
 
@@ -1558,7 +1602,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 399, 0.01, 300);
+                        handleDataC53(response, M4A1_CHXX_ZX);
                         connect95();
                     }
 
@@ -1575,7 +1619,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 75, 0.01, 40);
+                        handleDataC53(response, M4A1_HMZ_ZX);
                         connect96();
                     }
 
@@ -1592,7 +1636,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 170, 0.02, 120);
+                        handleDataC53(response, M4A1_JXGY_ZX);
                         connect97();
                     }
 
@@ -1609,7 +1653,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 85, 0.08, 50);
+                        handleDataC53(response, M4A1_JXGY_LM);
                         connect98();
                     }
 
@@ -1626,7 +1670,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 210, 0.02, 170);
+                        handleDataC53(response, M4A1_JSCR_ZX);
                         connect99();
                     }
 
@@ -1643,7 +1687,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 110, 0.08, 90);
+                        handleDataC53(response, M4A1_JSCR_LM);
                         connect101();
                     }
 
@@ -1677,13 +1721,13 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 75, 0.02, 40);
-                        connect102();
+                        handleDataC53(response, M4A1_CSD_ZX);
+                        connect103();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect102();
+                        connect103();
                     }
                 });
     }
@@ -1711,7 +1755,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 12500, 0.04, 10500);
+                        handleDataC53(response, AWP_JLCS_ZX);
                         connect104();
                     }
 
@@ -1728,7 +1772,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 315, 0.09, 280);
+                        handleDataC53(response, AK47_HH_LM);
                         connect105();
                     }
 
@@ -1745,7 +1789,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 220, 0.18, 190);
+                        handleDataC53(response, AK47_HH_JJ);
                         connect106();
                     }
 
@@ -1762,7 +1806,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 600, 0.04, 530);
+                        handleDataC53(response, AK47_HH_ZX);
                         connect107();
                     }
 
@@ -1779,7 +1823,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 500, 0.03, 380);
+                        handleDataC53(response, AK47_NHQS_ZX);
                         connect108();
                     }
 
@@ -1796,7 +1840,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 290, 0.08, 220);
+                        handleDataC53(response, AK47_NHQS_LM);
                         connect109();
                     }
 
@@ -1813,7 +1857,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 190, 0.17, 120);
+                        handleDataC53(response, AK47_NHQS_JJ);
                         connect110();
                     }
 
@@ -1830,7 +1874,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 250, 0.01, 200);
+                        handleDataC53(response, AK47_NHGM_ZX);
                         connect112();
                     }
 
@@ -1864,7 +1908,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 300, 0.02, 240);
+                        handleDataC53(response, SMZY_HSDH_ZX);
                         connect113();
                     }
 
@@ -1881,7 +1925,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 170, 0.08, 110);
+                        handleDataC53(response, SMZY_HSDH_LM);
                         connect114();
                     }
 
@@ -1898,13 +1942,13 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 220, 0.020, 160);
-                        connect115();
+                        handleDataC53(response, AK47_SHFC_ZX);
+                        connect116();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect115();
+                        connect116();
                     }
                 });
     }
@@ -1932,7 +1976,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1000, 0.030, 800);
+                        handleDataC53(response, AK47_SZZ_ZX);
                         connect117();
                     }
 
@@ -1949,7 +1993,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 650, 0.080, 550);
+                        handleDataC53(response, AK47_SZZ_LM);
                         connect118();
                     }
 
@@ -1966,7 +2010,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 450, 0.17, 370);
+                        handleDataC53(response, AK47_SZZ_JJ);
                         connect120();
                     }
 
@@ -2000,7 +2044,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 220, 0.18, 170);
+                        handleDataC53(response, AK47_EXMF_JJ);
                         connect121();
                     }
 
@@ -2017,7 +2061,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 400, 0.09, 280);
+                        handleDataC53(response, AK47_EXMF_LM);
                         connect123();
                     }
 
@@ -2051,7 +2095,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 22, 0.003, 8);
+                        handleDataC53(response, M4A4_MYS_ZX);
                         connect124();
                     }
 
@@ -2068,7 +2112,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 100, 0.010, 40);
+                        handleDataC53(response, SMZY_JXGY_ZX);
                         connect126();
                     }
 
@@ -2102,7 +2146,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 60, 0.010, 40);
+                        handleDataC53(response, MP5_LGT_ZX);
                         connect127();
                     }
 
@@ -2119,7 +2163,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 100, 0.11, 80);
+                        handleDataC53(response, P250_EXMF_LM);
                         connect128();
                     }
 
@@ -2136,7 +2180,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 400, 0.02, 310);
+                        handleDataC53(response, AWP_HSMY_ZX);
                         connect131();
                     }
 
@@ -2187,7 +2231,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 175, 0.08, 120);
+                        handleDataC53(response, AK47_HYFP_LM);
                         connect132();
                     }
 
@@ -2204,7 +2248,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 60, 0.02, 45);
+                        handleDataC53(response, GLK_HYFP_ZX);
                         connect135();
                     }
 
@@ -2238,7 +2282,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1750, 0.09, 1500);
+                        handleDataC53(response, AK47_HS_LM);
                         connect135();
                     }
 
@@ -2255,7 +2299,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1200, 0.26, 1000);
+                        handleDataC53(response, M4A4_EXMF_JJ_ST);
                         connect138();
                     }
 
