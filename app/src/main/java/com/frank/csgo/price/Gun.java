@@ -196,27 +196,52 @@ public class Gun {
     // M4A4（StatTrak™） | 二西莫夫 (久经沙场)
     public static double[] M4A4_EXMF_JJ_ST = {1250, 0.28, 1000};
     // M4A4 | 咆哮 (略有磨损)
+    public static double[] M4A4_PX_LM = {6000, 0.08, 5500};
+
     // P250 | 生化短吻鳄 (崭新出厂)
+    public static double[] P250_SHDWE_ZX = {95, 0.02, 60};
+
     // P250 | 银装素裹 (略有磨损)
+    public static double[] P250_YZSG_LM = {35, 0.10, 25};
     // SG 553 | 意式拉力 (略有磨损)
+    public static double[] SG553_YSLL_LM = {300, 0.09, 250};
     // SG 553 | 意式拉力 (久经沙场)
+    public static double[] SG553_YSLL_JJ = {160, 0.20, 110};
     //USP 消音版（StatTrak™） | 脑洞大开 (崭新出厂)
+    public static double[] USP_NDDK_ZX_ST = {420, 0.02, 330};
+    //USP 消音版（StatTrak™） | 脑洞大开(久经沙场)
     //USP 消音版（StatTrak™） | 次时代(崭新出厂)
+    public static double[] USP_CSD_ZX_ST = {100, 0.02, 70};
+
     //USP 消音版（StatTrak™） | 不锈钢(略有磨损)
+    public static double[] USP_BXG_LM_ST = {90, 0.08, 70};
     //USP 消音版（StatTrak™） | 不锈钢(崭新出厂)
     //USP 消音版（StatTrak™） | 蓝图(崭新出厂)
     //USP 消音版（StatTrak™） | 闪回(崭新出厂)
     //USP 消音版（StatTrak™） | 黑色魅影(崭新出厂)
+    public static double[] USP_HSMY_ZX_ST = {1000, 0.059, 800};
     //USP 消音版（StatTrak™） | 黑色魅影(略有磨损)
+    public static double[] USP_HSMY_LM_ST = {555, 0.072, 440};
     //USP 消音版（StatTrak™） | 黑色魅影(久经沙场)
+    public static double[] USP_HSMY_JJ_ST = {340, 0.17, 250};
+    //USP 消音版（StatTrak™） | 枪响人亡(略有磨损)
+    public static double[] USP_QXRW_LM_ST = {1000, 0.11, 800};
     //USP 消音版（StatTrak™） | 枪响人亡(久经沙场)
+    public static double[] USP_QXRW_JJ_ST = {600, 0.17, 450};
     //USP 消音版（StatTrak™） | 力矩(崭新出厂)
+    public static double[] USP_LJ_ZX_ST = {35, 0.01, 20};
     //格洛克18（StatTrak™） | 水灵(崭新出厂)
+    public static double[] GLK_SL_ZX_ST = {250, 0.02, 180};
     //P250（StatTrak™） | 生化短尾鳄(崭新出厂)
     //P250（StatTrak™） | 生化短尾鳄(略有磨损)
+    //P250（StatTrak™） | 生化短尾鳄(久经沙场)
+    public static double[] GLK_SHDWE_JJ_ST = {100, 0.18, 75};
     //P250（StatTrak™） | 二西莫夫(略有磨损)
+    public static double[] P250_EXMF_LM_ST = {360, 0.11, 290};
     //P250（StatTrak™） | 二西莫夫(久经沙场)
+    public static double[] P250_EXMF_JJ_ST = {120, 0.18, 90};
     //M4A4（StatTrak™） | 黑色魅影 (久经沙场)
+    public static double[] M4A4_HSMY_JJ_ST = {400, 0.20, 300};
     //M4A4（StatTrak™） | 镁元素 (崭新出厂)
     //AK-47（StatTrak™） | 皇后 (崭新出厂)
     // AK-47（StatTrak™） | 霓虹骑士 (略有磨损)

@@ -1577,7 +1577,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 女火神之炽焰 (久经)
+    //M4A1 消音版 | 女火神之炽焰 (久经沙场)
     private void connect93() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/483598")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1594,7 +1594,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 赤红新星 (崭新)
+    //M4A1 消音版 | 赤红新星 (崭新出厂)
     private void connect94() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4464")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1611,7 +1611,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 毁灭者2000 (崭新)
+    //M4A1 消音版 | 毁灭者2000 (崭新出厂)
     private void connect95() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571649")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1628,7 +1628,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 机型工业 (崭新)
+    //M4A1 消音版 | 机型工业 (崭新出厂)
     private void connect96() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555163")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1645,7 +1645,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 机型工业 (略磨)
+    //M4A1 消音版 | 机型工业 (略有磨损)
     private void connect97() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555150")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1662,7 +1662,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 金蛇缠绕 (崭新)
+    //M4A1 消音版 | 金蛇缠绕 (崭新出厂)
     private void connect98() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/3806")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1679,7 +1679,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 金蛇缠绕 (略磨)
+    //M4A1 消音版 | 金蛇缠绕 (略有磨损)
     private void connect99() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4125")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1696,7 +1696,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 金蛇缠绕 (久经)
+    //M4A1 消音版 | 金蛇缠绕 (久经沙场)
     private void connect100() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4253")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1713,7 +1713,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 次时代 (崭新)
+    //M4A1 消音版 | 次时代 (崭新出厂)
     private void connect101() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4212")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -1730,7 +1730,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A1 消音版 | 守护者 (崭新)
+    //M4A1 消音版 | 守护者 (崭新出厂)
     private void connect102() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/3843")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -2348,7 +2348,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 4800, 0.08, 4100);
+                        handleDataIgxe3(response,M4A4_PX_LM);
                         connect154();
                     }
 
@@ -2620,7 +2620,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 95, 0.02, 60);
+                        handleDataIgxe3(response, P250_SHDWE_ZX);
                         connect155();
                     }
 
@@ -2637,7 +2637,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 35, 0.10, 25);
+                        handleDataIgxe3(response, P250_YZSG_LM);
                         connect156();
                     }
 
@@ -2654,7 +2654,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 300, 0.09, 250);
+                        handleDataIgxe3(response, SG553_YSLL_LM);
                         connect157();
                     }
 
@@ -2671,7 +2671,7 @@ public class IgxeGuns {
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 160, 0.20, 110);
+                        handleDataIgxe3(response, SG553_YSLL_JJ);
                         connect160();
                     }
 
@@ -2683,7 +2683,7 @@ public class IgxeGuns {
     }
 
     //计数器
-    //USP 消音版（StatTrak™） | 疯狂蔓延 (略磨)
+    //USP 消音版（StatTrak™） | 疯狂蔓延 (略有磨损)
     private void connect158() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/8106")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -2700,7 +2700,7 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 疯狂蔓延 (久经)
+    //USP 消音版（StatTrak™） | 疯狂蔓延 (久经沙场)
     private void connect159() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/16993")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -2717,13 +2717,13 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 脑洞大开 (崭新)
+    //USP 消音版（StatTrak™） | 脑洞大开 (崭新出厂)
     private void connect160() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610895")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 420, 0.02, 330);
+                        handleDataIgxe3(response, USP_NDDK_ZX_ST);
                         connect162();
                     }
 
@@ -2734,7 +2734,7 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 脑洞大开 (略磨)
+    //USP 消音版（StatTrak™） | 脑洞大开 (略有磨损)
     private void connect161() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610706")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -2751,13 +2751,13 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 次时代(崭新)
+    //USP 消音版（StatTrak™） | 次时代(崭新出厂)
     private void connect162() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/565638")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 100, 0.02, 70);
+                        handleDataIgxe3(response, USP_CSD_ZX_ST);
                         connect163();
                     }
 
@@ -2768,24 +2768,24 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 不锈钢(略磨)
+    //USP 消音版（StatTrak™） | 不锈钢(略有磨损)
     private void connect163() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6118")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 90, 0.08, 70);
-                        connect164();
+                        handleDataIgxe3(response, USP_BXG_LM_ST);
+                        connect167();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect164();
+                        connect167();
                     }
                 });
     }
 
-    //USP 消音版（StatTrak™） | 不锈钢(崭新)
+    //USP 消音版（StatTrak™） | 不锈钢(崭新出厂)
     private void connect164() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/11696")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -2802,7 +2802,7 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 蓝图(崭新)
+    //USP 消音版（StatTrak™） | 蓝图(崭新出厂)
     private void connect165() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/580967")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -2819,7 +2819,7 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 闪回(崭新)
+    //USP 消音版（StatTrak™） | 闪回(崭新出厂)
     private void connect166() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/618592")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -2836,13 +2836,13 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 黑色魅影(崭新)
+    //USP 消音版（StatTrak™） | 黑色魅影(崭新出厂)
     private void connect167() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571617")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 1000, 0.03, 800);
+                        handleDataIgxe3(response, USP_HSMY_ZX_ST);
                         connect168();
                     }
 
@@ -2853,13 +2853,13 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 黑色魅影(略磨)
+    //USP 消音版（StatTrak™） | 黑色魅影(略有磨损)
     private void connect168() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571635")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 555, 0.072, 440);
+                        handleDataIgxe3(response, USP_HSMY_LM_ST);
                         connect169();
                     }
 
@@ -2870,13 +2870,13 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 黑色魅影(久经)
+    //USP 消音版（StatTrak™） | 黑色魅影(久经沙场)
     private void connect169() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571992")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 300, 0.17, 260);
+                        handleDataIgxe3(response, USP_HSMY_JJ_ST);
                         connect170();
                     }
 
@@ -2887,13 +2887,13 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 枪响人亡(久经)
+    //USP 消音版（StatTrak™） | 枪响人亡(久经沙场)
     private void connect170() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/23605")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 600, 0.17, 450);
+                        handleDataIgxe3(response, USP_QXRW_JJ_ST);
                         connect171();
                     }
 
@@ -2904,13 +2904,13 @@ public class IgxeGuns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 力矩(崭新)
+    //USP 消音版（StatTrak™） | 力矩(崭新出厂)
     private void connect171() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5839")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 35, 0.02, 20);
+                        handleDataIgxe3(response, USP_LJ_ZX_ST);
                         connect172();
                     }
 
@@ -2921,24 +2921,24 @@ public class IgxeGuns {
                 });
     }
 
-    //格洛克18（StatTrak™） | 水灵(崭新)
+    //格洛克18（StatTrak™） | 水灵(崭新出厂)
     private void connect172() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4847")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 250, 0.02, 180);
-                        connect173();
+                        handleDataIgxe3(response, GLK_SL_ZX_ST);
+                        connect174_1();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect173();
+                        connect174_1();
                     }
                 });
     }
 
-    //P250（StatTrak™） | 生化短尾鳄(崭新)
+    //P250（StatTrak™） | 生化短尾鳄(崭新出厂)
     private void connect173() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/605652")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -2955,7 +2955,7 @@ public class IgxeGuns {
                 });
     }
 
-    //P250（StatTrak™） | 生化短尾鳄(略磨)
+    //P250（StatTrak™） | 生化短尾鳄(略有磨损)
     private void connect174() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/606203")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -2971,14 +2971,30 @@ public class IgxeGuns {
                     }
                 });
     }
+    //P250（StatTrak™） | 生化短尾鳄(久经沙场)
+    private void connect174_1() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/605635")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, GLK_SHDWE_JJ_ST);
+                        connect175();
+                    }
 
-    //P250（StatTrak™） | 二西莫夫(略磨)
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect175();
+                    }
+                });
+    }
+
+    //P250（StatTrak™） | 二西莫夫(略有磨损)
     private void connect175() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/554032")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 360, 0.11, 290);
+                        handleDataIgxe3(response, P250_EXMF_LM_ST);
                         connect176();
                     }
 
@@ -2989,13 +3005,13 @@ public class IgxeGuns {
                 });
     }
 
-    //P250（StatTrak™） | 二西莫夫(久经)
+    //P250（StatTrak™） | 二西莫夫(久经沙场)
     private void connect176() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/445663")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 120, 0.18, 80);
+                        handleDataIgxe3(response, P250_EXMF_JJ_ST);
                         connect196();
                     }
 
@@ -3006,7 +3022,7 @@ public class IgxeGuns {
                 });
     }
 
-    //P250（StatTrak™） | 超新星(崭新)
+    //P250（StatTrak™） | 超新星(崭新出厂)
     private void connect177() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6441")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3023,7 +3039,7 @@ public class IgxeGuns {
                 });
     }
 
-    //P250（StatTrak™） | 元素轮廓(崭新)
+    //P250（StatTrak™） | 元素轮廓(崭新出厂)
     private void connect178() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6276")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3040,7 +3056,7 @@ public class IgxeGuns {
                 });
     }
 
-    //CZ75（StatTrak™） | 经济(崭新)
+    //CZ75（StatTrak™） | 经济(崭新出厂)
     private void connect179() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/614082")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3057,7 +3073,7 @@ public class IgxeGuns {
                 });
     }
 
-    //CZ75（StatTrak™） | 战术高手(崭新)
+    //CZ75（StatTrak™） | 战术高手(崭新出厂)
     private void connect180() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/605709")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3074,7 +3090,7 @@ public class IgxeGuns {
                 });
     }
 
-    //CZ75（StatTrak™） | 猛虎(崭新)
+    //CZ75（StatTrak™） | 猛虎(崭新出厂)
     private void connect181() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4196")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3091,7 +3107,7 @@ public class IgxeGuns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 机械工业(崭新)
+    //沙漠之鹰（StatTrak™） | 机械工业(崭新出厂)
     private void connect182() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/618657")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3108,7 +3124,7 @@ public class IgxeGuns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 机械工业(略磨)
+    //沙漠之鹰（StatTrak™） | 机械工业(略有磨损)
     private void connect183() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/618663")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3125,7 +3141,7 @@ public class IgxeGuns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 指挥(略磨)
+    //沙漠之鹰（StatTrak™） | 指挥(略有磨损)
     private void connect184() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/559259")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3142,7 +3158,7 @@ public class IgxeGuns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 大佬龙(崭新)
+    //沙漠之鹰（StatTrak™） | 大佬龙(崭新出厂)
     private void connect185() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/188881")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3159,7 +3175,7 @@ public class IgxeGuns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 红色代号(略磨)
+    //沙漠之鹰（StatTrak™） | 红色代号(略有磨损)
     private void connect186() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/614983")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3176,7 +3192,7 @@ public class IgxeGuns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 红色代号(久经)
+    //沙漠之鹰（StatTrak™） | 红色代号(久经沙场)
     private void connect187() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/615407")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3193,7 +3209,7 @@ public class IgxeGuns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 阴谋者(崭新)
+    //沙漠之鹰（StatTrak™） | 阴谋者(崭新出厂)
     private void connect188() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7720")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3210,7 +3226,7 @@ public class IgxeGuns {
                 });
     }
 
-    //P90（StatTrak™） | 二西莫夫 (略磨)
+    //P90（StatTrak™） | 二西莫夫 (略有磨损)
     private void connect189() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7280")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3227,7 +3243,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 喧嚣杀戮 (崭新)
+    //M4A4（StatTrak™） | 喧嚣杀戮 (崭新出厂)
     private void connect190() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/566249")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3244,7 +3260,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 喧嚣杀戮 (略磨)
+    //M4A4（StatTrak™） | 喧嚣杀戮 (略有磨损)
     private void connect191() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/565805")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3261,7 +3277,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 喧嚣杀戮 (久经)
+    //M4A4（StatTrak™） | 喧嚣杀戮 (久经沙场)
     private void connect192() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/565880")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3278,7 +3294,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 死寂空间 (崭新)
+    //M4A4（StatTrak™） | 死寂空间 (崭新出厂)
     private void connect193() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555182")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3295,7 +3311,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 死寂空间 (略磨)
+    //M4A4（StatTrak™） | 死寂空间 (略有磨损)
     private void connect194() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555296")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3312,7 +3328,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 死寂空间 (久经)
+    //M4A4（StatTrak™） | 死寂空间 (久经沙场)
     private void connect195() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555325")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3329,13 +3345,13 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 黑色魅影 (久经)
+    //M4A4（StatTrak™） | 黑色魅影 (久经沙场)
     private void connect196() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610802")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe3(response, 510, 0.18, 330);
+                        handleDataIgxe3(response, M4A4_HSMY_JJ_ST);
                         connect197();
                     }
 
@@ -3346,7 +3362,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 镁元素 (崭新)
+    //M4A4（StatTrak™） | 镁元素 (崭新出厂)
     private void connect197() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/618842")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3363,7 +3379,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 镁元素 (略磨)
+    //M4A4（StatTrak™） | 镁元素 (略有磨损)
     private void connect198() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/618655")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3380,7 +3396,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 龙王 (崭新)
+    //M4A4（StatTrak™） | 龙王 (崭新出厂)
     private void connect199() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7062")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3397,7 +3413,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 杀意大名 (崭新)
+    //M4A4（StatTrak™） | 杀意大名 (崭新出厂)
     private void connect1000() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4145")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
@@ -3414,7 +3430,7 @@ public class IgxeGuns {
                 });
     }
 
-    //M4A4（StatTrak™） | 狮鹫 (崭新)
+    //M4A4（StatTrak™） | 狮鹫 (崭新出厂)
     private void connect1001() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4448")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {

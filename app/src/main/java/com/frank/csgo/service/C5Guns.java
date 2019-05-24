@@ -1579,7 +1579,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 女火神之炽焰 (久经)
+    //M4A1 消音版 | 女火神之炽焰 (久经沙场)
     private void connect93() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3022886&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1596,7 +1596,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 赤红新星 (崭新)
+    //M4A1 消音版 | 赤红新星 (崭新出厂)
     private void connect94() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3225405&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1613,7 +1613,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 毁灭者2000 (崭新)
+    //M4A1 消音版 | 毁灭者2000 (崭新出厂)
     private void connect95() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553386906&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1630,7 +1630,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 机型工业 (崭新)
+    //M4A1 消音版 | 机型工业 (崭新出厂)
     private void connect96() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=176161570&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1647,7 +1647,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 机型工业 (略磨)
+    //M4A1 消音版 | 机型工业 (略有磨损)
     private void connect97() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=92241231&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1664,7 +1664,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 金蛇缠绕 (崭新)
+    //M4A1 消音版 | 金蛇缠绕 (崭新出厂)
     private void connect98() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=965297&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1681,7 +1681,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 金蛇缠绕 (略磨)
+    //M4A1 消音版 | 金蛇缠绕 (略有磨损)
     private void connect99() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3004508&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1698,7 +1698,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 金蛇缠绕 (久经)
+    //M4A1 消音版 | 金蛇缠绕 (久经沙场)
     private void connect100() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/4253")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1715,7 +1715,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 次时代 (崭新)
+    //M4A1 消音版 | 次时代 (崭新出厂)
     private void connect101() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=1092592&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -1732,7 +1732,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A1 消音版 | 守护者 (崭新)
+    //M4A1 消音版 | 守护者 (崭新出厂)
     private void connect102() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2915205&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2350,7 +2350,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 4800, 0.08, 4300);
+                        handleDataC53(response, M4A4_PX_LM);
                         connect154();
                     }
 
@@ -2368,7 +2368,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 95, 0.02, 60);
+                        handleDataC53(response, P250_SHDWE_ZX);
                         connect155();
                     }
 
@@ -2385,7 +2385,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 35, 0.11, 25);
+                        handleDataC53(response, P250_YZSG_LM);
                         connect156();
                     }
 
@@ -2402,7 +2402,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 300, 0.09, 250);
+                        handleDataC53(response, SG553_YSLL_LM);
                         connect157();
                     }
 
@@ -2419,7 +2419,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 160, 0.20, 110);
+                        handleDataC53(response, SG553_YSLL_JJ);
                         connect160();
                     }
 
@@ -2431,13 +2431,13 @@ public class C5Guns {
     }
 
 
-    //USP 消音版（StatTrak™） | 脑洞大开 (崭新)
+    //USP 消音版（StatTrak™） | 脑洞大开 (崭新出厂)
     private void connect160() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553446806&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 420, 0.02, 330);
+                        handleDataC53(response, USP_NDDK_ZX_ST);
                         connect162();
                     }
 
@@ -2448,7 +2448,7 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 脑洞大开 (略磨)
+    //USP 消音版（StatTrak™） | 脑洞大开 (略有磨损)
     private void connect161() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553445942&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2465,13 +2465,13 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 次时代(崭新)
+    //USP 消音版（StatTrak™） | 次时代(崭新出厂)
     private void connect162() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=492402546&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 100, 0.02, 70);
+                        handleDataC53(response, USP_CSD_ZX_ST);
                         connect163();
                     }
 
@@ -2482,24 +2482,24 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 不锈钢(略磨)
+    //USP 消音版（StatTrak™） | 不锈钢(略有磨损)
     private void connect163() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=235600380&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 90, 0.08, 70);
-                        connect164();
+                        handleDataC53(response, USP_BXG_LM_ST);
+                        connect167();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect164();
+                        connect167();
                     }
                 });
     }
 
-    //USP 消音版（StatTrak™） | 不锈钢(崭新)
+    //USP 消音版（StatTrak™） | 不锈钢(崭新出厂)
     private void connect164() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=195129503&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2516,7 +2516,7 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 蓝图(崭新)
+    //USP 消音版（StatTrak™） | 蓝图(崭新出厂)
     private void connect165() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553402641&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2533,7 +2533,7 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 闪回(崭新)
+    //USP 消音版（StatTrak™） | 闪回(崭新出厂)
     private void connect166() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460606&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2550,13 +2550,13 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 黑色魅影(崭新)
+    //USP 消音版（StatTrak™） | 黑色魅影(崭新出厂)
     private void connect167() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553401286&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1000, 0.03, 780);
+                        handleDataC53(response, USP_HSMY_ZX_ST);
                         connect168();
                     }
 
@@ -2567,13 +2567,13 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 黑色魅影(略磨)
+    //USP 消音版（StatTrak™） | 黑色魅影(略有磨损)
     private void connect168() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553393319&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 555, 0.072, 440);
+                        handleDataC53(response, USP_HSMY_LM_ST);
                         connect169();
                     }
 
@@ -2584,13 +2584,13 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 黑色魅影(久经)
+    //USP 消音版（StatTrak™） | 黑色魅影(久经沙场)
     private void connect169() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553397961&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 300, 0.17, 260);
+                        handleDataC53(response, USP_HSMY_JJ_ST);
                         connect170();
                     }
 
@@ -2607,7 +2607,7 @@ public class C5Guns {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 850, 0.09, 750);
+                        handleDataC53(response, USP_QXRW_LM_ST);
                         connect171();
                     }
 
@@ -2618,13 +2618,13 @@ public class C5Guns {
                 });
     }
 
-    //USP 消音版（StatTrak™） | 力矩(崭新)
+    //USP 消音版（StatTrak™） | 力矩(崭新出厂)
     private void connect171() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2934261&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 35, 0.02, 20);
+                        handleDataC53(response, USP_LJ_ZX_ST);
                         connect172();
                     }
 
@@ -2635,24 +2635,24 @@ public class C5Guns {
                 });
     }
 
-    //格洛克18（StatTrak™） | 水灵(崭新)
+    //格洛克18（StatTrak™） | 水灵(崭新出厂)
     private void connect172() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=9765059&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 250, 0.02, 180);
-                        connect173();
+                        handleDataC53(response, GLK_SL_ZX_ST);
+                        connect174_1();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect173();
+                        connect174_1();
                     }
                 });
     }
 
-    //P250（StatTrak™） | 生化短尾鳄(崭新)
+    //P250（StatTrak™） | 生化短尾鳄(崭新出厂)
     private void connect173() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553426866&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2669,7 +2669,7 @@ public class C5Guns {
                 });
     }
 
-    //P250（StatTrak™） | 生化短尾鳄(略磨)
+    //P250（StatTrak™） | 生化短尾鳄(略有磨损)
     private void connect174() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/606203")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2685,14 +2685,30 @@ public class C5Guns {
                     }
                 });
     }
+    //P250（StatTrak™） | 生化短尾鳄(久经沙场)
+    private void connect174_1() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553424671&page=1&flag=&sort=&worn=&delivery=https://www.C5.cn/product/trade/730/606203")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, GLK_SHDWE_JJ_ST);
+                        connect175();
+                    }
 
-    //P250（StatTrak™） | 二西莫夫(略磨)
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect175();
+                    }
+                });
+    }
+
+    //P250（StatTrak™） | 二西莫夫(略有磨损)
     private void connect175() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/554032")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 360, 0.11, 290);
+                        handleDataC53(response, P250_EXMF_LM_ST);
                         connect176();
                     }
 
@@ -2703,13 +2719,13 @@ public class C5Guns {
                 });
     }
 
-    //P250（StatTrak™） | 二西莫夫(久经)
+    //P250（StatTrak™） | 二西莫夫(久经沙场)
     private void connect176() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/445663")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 120, 0.18, 90);
+                        handleDataC53(response, P250_EXMF_JJ_ST);
                         connect196();
                     }
 
@@ -2720,7 +2736,7 @@ public class C5Guns {
                 });
     }
 
-    //P250（StatTrak™） | 超新星(崭新)
+    //P250（StatTrak™） | 超新星(崭新出厂)
     private void connect177() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/6441")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2737,7 +2753,7 @@ public class C5Guns {
                 });
     }
 
-    //P250（StatTrak™） | 元素轮廓(崭新)
+    //P250（StatTrak™） | 元素轮廓(崭新出厂)
     private void connect178() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=7567702&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2754,7 +2770,7 @@ public class C5Guns {
                 });
     }
 
-    //CZ75（StatTrak™） | 经济(崭新)
+    //CZ75（StatTrak™） | 经济(崭新出厂)
     private void connect179() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553458264&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2771,7 +2787,7 @@ public class C5Guns {
                 });
     }
 
-    //CZ75（StatTrak™） | 战术高手(崭新)
+    //CZ75（StatTrak™） | 战术高手(崭新出厂)
     private void connect180() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553424082&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2788,7 +2804,7 @@ public class C5Guns {
                 });
     }
 
-    //CZ75（StatTrak™） | 猛虎(崭新)
+    //CZ75（StatTrak™） | 猛虎(崭新出厂)
     private void connect181() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=219848481&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2805,7 +2821,7 @@ public class C5Guns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 机械工业(崭新)
+    //沙漠之鹰（StatTrak™） | 机械工业(崭新出厂)
     private void connect182() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460806&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2822,7 +2838,7 @@ public class C5Guns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 机械工业(略磨)
+    //沙漠之鹰（StatTrak™） | 机械工业(略有磨损)
     private void connect183() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/618663")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2839,7 +2855,7 @@ public class C5Guns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 指挥(略磨)
+    //沙漠之鹰（StatTrak™） | 指挥(略有磨损)
     private void connect184() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/559259")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2856,7 +2872,7 @@ public class C5Guns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 大佬龙(崭新)
+    //沙漠之鹰（StatTrak™） | 大佬龙(崭新出厂)
     private void connect185() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/188881")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2873,7 +2889,7 @@ public class C5Guns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 红色代号(略磨)
+    //沙漠之鹰（StatTrak™） | 红色代号(略有磨损)
     private void connect186() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553457995&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2890,7 +2906,7 @@ public class C5Guns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 红色代号(久经)
+    //沙漠之鹰（StatTrak™） | 红色代号(久经沙场)
     private void connect187() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/615407")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2907,7 +2923,7 @@ public class C5Guns {
                 });
     }
 
-    //沙漠之鹰（StatTrak™） | 阴谋者(崭新)
+    //沙漠之鹰（StatTrak™） | 阴谋者(崭新出厂)
     private void connect188() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/7720")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2924,7 +2940,7 @@ public class C5Guns {
                 });
     }
 
-    //P90（StatTrak™） | 二西莫夫 (略磨)
+    //P90（StatTrak™） | 二西莫夫 (略有磨损)
     private void connect189() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2920119&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2941,7 +2957,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 喧嚣杀戮 (崭新)
+    //M4A4（StatTrak™） | 喧嚣杀戮 (崭新出厂)
     private void connect190() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553399058&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2958,7 +2974,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 喧嚣杀戮 (略磨)
+    //M4A4（StatTrak™） | 喧嚣杀戮 (略有磨损)
     private void connect191() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=488344775&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2975,7 +2991,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 喧嚣杀戮 (久经)
+    //M4A4（StatTrak™） | 喧嚣杀戮 (久经沙场)
     private void connect192() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/565880")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -2992,7 +3008,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 死寂空间 (崭新)
+    //M4A4（StatTrak™） | 死寂空间 (崭新出厂)
     private void connect193() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/555182")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -3009,7 +3025,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 死寂空间 (略磨)
+    //M4A4（StatTrak™） | 死寂空间 (略有磨损)
     private void connect194() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/555296")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -3026,7 +3042,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 死寂空间 (久经)
+    //M4A4（StatTrak™） | 死寂空间 (久经沙场)
     private void connect195() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/555325")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -3043,13 +3059,13 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 黑色魅影 (久经)
+    //M4A4（StatTrak™） | 黑色魅影 (久经沙场)
     private void connect196() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553446299&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 510, 0.18, 330);
+                        handleDataC53(response, M4A4_HSMY_JJ_ST);
                         connect197();
                     }
 
@@ -3060,7 +3076,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 镁元素 (崭新)
+    //M4A4（StatTrak™） | 镁元素 (崭新出厂)
     private void connect197() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460853&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -3077,7 +3093,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 镁元素 (略磨)
+    //M4A4（StatTrak™） | 镁元素 (略有磨损)
     private void connect198() {
         OkGo.<C5>get("https://www.C5.cn/product/trade/730/618655")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -3094,7 +3110,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 龙王 (崭新)
+    //M4A4（StatTrak™） | 龙王 (崭新出厂)
     private void connect199() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=56949938&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -3111,7 +3127,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 杀意大名 (崭新)
+    //M4A4（StatTrak™） | 杀意大名 (崭新出厂)
     private void connect1000() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=168412637&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
@@ -3128,7 +3144,7 @@ public class C5Guns {
                 });
     }
 
-    //M4A4（StatTrak™） | 狮鹫 (崭新)
+    //M4A4（StatTrak™） | 狮鹫 (崭新出厂)
     private void connect1001() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=221545531&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
