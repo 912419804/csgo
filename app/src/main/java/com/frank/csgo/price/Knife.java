@@ -64,7 +64,7 @@ public class Knife {
     public static double[] M9_SHZW_LM = {3000, 0.12, 2500};
 
     //   M9 刺刀（★） | 深红之网 (久经沙场)
-    public static double[] M9_SHZW_JJ = {1300, 0.25, 1100};
+    public static double[] M9_SHZW_JJ = {1300, 0.25, 1050};
 
     //   M9 刺刀（★） | 北方森林 (久经沙场)
     public static double[] M9_BFSL_JJ = {660, 0.16, 500};
