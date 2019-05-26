@@ -16,7 +16,7 @@ public class Gun {
     //   AK-47 | 燃料喷射器 (崭新出厂)
     public static double[] AK47_RLPSQ_ZX = {580, 0.03, 480};
     //   沙漠之鹰 | 炽烈之炎 (崭新出厂)
-    public static double[] SY_CLZY_ZX = {720,0.009,600};
+    public static double[] SMZY_CLZY_ZX = {720,0.009,600};
     //   AWP（StatTrak™） | 二西莫夫 (久经沙场)
     public static double[] AWP_EXMF_JJ_ST = {690, 0.25, 600};
     //   USP 消音版 | 枪响人亡 (略有磨损)
@@ -49,6 +49,8 @@ public class Gun {
 
     // USP 消音版 | 猎户 (崭新出厂)
     public static double[] USP_LH_ZX = {80, 0.02, 60};
+    //格洛克 18 型 | 水灵 (崭新出厂)
+    public static double[] GLK_SL_ZX = {64, 0.02, 45};
 
     // M4A4 | 二西莫夫 (破损不堪)
     public static double[] M4A4_EXMF_PS = {240, 0.39, 215};
@@ -243,34 +245,66 @@ public class Gun {
     //M4A4（StatTrak™） | 黑色魅影 (久经沙场)
     public static double[] M4A4_HSMY_JJ_ST = {400, 0.20, 300};
     //M4A4（StatTrak™） | 镁元素 (崭新出厂)
+    public static double[] M4A4_MYS_ZX_ST = {90, 0.01, 40};
     //AK-47（StatTrak™） | 皇后 (崭新出厂)
     // AK-47（StatTrak™） | 霓虹骑士 (略有磨损)
     // AK-47（StatTrak™） | 霓虹骑士 (久经沙场)
+    public static double[] AK47_NHQS_JJ_ST = {450, 0.18, 340};
     // AK-47（StatTrak™） | 燃料喷射器 (略有磨损)
+    public static double[] AK47_RLPSQ_LM_ST = {980, 0.09, 850};
     // AK-47（StatTrak™） | 燃料喷射器 (久经沙场)
+    public static double[] AK47_RLPSQ_JJ_ST = {630, 0.20, 450};
     // AK-47（StatTrak™） | 深海复仇 (崭新出厂)
+    public static double[] AK47_SHFC_ZX_ST = {630, 0.20, 450};
     // AK-47（StatTrak™） | 深海复仇 (略有磨损)
+    public static double[] AK47_SHFC_LM_ST = {630, 0.20, 450};
     // AK-47（StatTrak™） | 深海复仇 (久经沙场)
+    public static double[] AK47_SHFC_JJ_ST = {630, 0.20, 450};
     // AK-47（StatTrak™） | 血腥运动 (崭新出厂)
+    public static double[] AK47_XXYD_ZX_ST = {1000, 0.03, 800};
     // AK-47（StatTrak™） | 红线 (略有磨损)
+    public static double[] AK47_XXYD_LM_ST = {650, 0.12, 550};
     // AK-47（StatTrak™） | 红线 (久经沙场)
+    public static double[] AK47_XXYD_JJ_ST = {200, 0.17, 130};
     // AK-47（StatTrak™） | 混沌点阵 (崭新出厂)
+    public static double[] AK47_HDDZ_ZX_ST = {650, 0.03, 550};
     // AK-47（StatTrak™） | 混沌点阵 (略有磨损)
+    public static double[] AK47_HDDZ_LM_ST = {630, 0.20, 450};
     // AK-47（StatTrak™） | 精英之作 (崭新出厂)
+    public static double[] AK47_JYZZ_ZX_ST = {130, 0.01, 100};
     // M4A1 消音型（StatTrak™） | 次时代 (崭新出厂)
     // M4A4 | 皇帝 (崭新出厂)
+    public static double[] M4A4_HD_ZX = {1100, 0.04, 900};
     // M4A4 | 皇帝 (略有磨损)
+    public static double[] M4A4_HD_LM = {520, 0.08, 420};
     // M4A4 | 皇帝 (久经沙场)
+    public static double[] M4A4_HD_JJ = {250, 0.22, 170};
     // 沙漠之鹰 | 轻轨 (崭新出厂)
+    public static double[] SMZY_QG_ZX = {40, 0.01, 20};
     // 沙漠之鹰（StatTrak™） | 轻轨 (崭新出厂)
+    public static double[] SMZY_QG_ZX_ST = {170, 0.01, 100};
     // AWP | 树蝰 (崭新出厂)
+    public static double[] AWP_SK_ZX = {140, 0.01, 110};
     // AUG | 动量 (崭新出厂)
+    public static double[] AUG_DL_ZX = {360, 0.05, 250};
     // AUG | 动量 (略有磨损)
+    public static double[] AUG_DL_LM = {105, 0.09, 70};
     // AUG | 动量 (久经沙场)
+    public static double[] AUG_DL_JJ = {35, 0.17, 20};
     // AUG（StatTrak™） | 动量 (久经沙场)
     // AUG（StatTrak™） | 动量 (略有磨损)
     // AWP（StatTrak™） | 树蝰 (略有磨损)
+    //  UMP-45 | 动量 (崭新出厂)
+    public static double[] UMP_DL_ZX = {60, 0.02, 35};
+    //  加利尔 AR | 「经济」克鲁尔 (久经沙场)
+    public static double[] JLE_JJ_JJ = {16, 0.17, 8};
+    //  M4A4 | 杀意大名 (崭新出厂)
+    public static double[] M4A4_SYDM_ZX = {32, 0.01,20};
     // 格洛克 18 型 | 红苹果 (崭新出厂)
+    public static double[] GLK_HPG_ZX = {8, 0.01, 2};
+
+    // AUG | 燕群 (崭新出厂)
+    public static double[] AUG_YQ_ZX = {105, 0.03,70};
 
 
 }

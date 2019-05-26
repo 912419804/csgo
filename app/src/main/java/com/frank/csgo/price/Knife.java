@@ -19,7 +19,7 @@ public class Knife {
     public static double[] ZDD_CS_JJ = {1000, 0.19, 850};
 
     //   折叠刀（★） | 自动化 (略有磨损)
-    public static double[] ZDD_ZDH_LM = {1000, 0.10, 820};
+    public static double[] ZDD_ZDH_LM = {1000, 0.08, 820};
 
     //   折叠刀（★） | 自动化 (久经沙场)
     public static double[] ZDD_ZDH_JJ = {820, 0.17, 610};
@@ -37,10 +37,10 @@ public class Knife {
     public static double[] CD_ZDH_LM = {1800, 0.08, 1600};
 
     //   刺刀（★） | 深红之网 (略有磨损)
-    public static double[] CD_SHZW_LM = {1550, 0.13, 1300};
+    public static double[] CD_SHZW_LM = {1550, 0.12, 1300};
 
     //   刺刀（★） | 深红之网 (久经沙场)
-    public static double[] CD_SHZW_JJ = {780, 0.18, 650};
+    public static double[] CD_SHZW_JJ = {880, 0.20, 720};
 
     //   刺刀（★） | 多普勒 (崭新出厂)
     public static double[] CD_DPL_ZX = {1300, 0.01, 1200};
