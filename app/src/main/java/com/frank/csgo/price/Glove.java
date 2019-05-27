@@ -142,10 +142,10 @@ public class Glove {
     public static double[] ZY_YX_LM = {3000, 0.11, 2500};
 
     //  专业手套（★） | 元勋 (久经沙场)
-    public static double[] ZY_YX_JJ = {1400, 0.22, 1100};
+    public static double[] ZY_YX_JJ = {1500, 0.22, 1300};
 
     //  专业手套（★） | 渐变之色 (久经沙场)
-    public static double[] ZY_JBZS_JJ = {2200, 0.28, 1900};
+    public static double[] ZY_JBZS_JJ = {2450, 0.28, 1900};
 
     //  专业手套（★） | 翠绿之网 (久经沙场)
     public static double[] ZY_CLZW_JJ = {1950, 0.25, 1700};

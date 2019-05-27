@@ -73,7 +73,7 @@ public class Knife {
     public static double[] HDD_WTZ= {1800, 0.10, 1500};
 
     //   蝴蝶刀（★） | 深红之网 (久经沙场)
-    public static double[] HDD_SHZW_JJ = {1640, 0.25, 1400};
+    public static double[] HDD_SHZW_JJ = {1740, 0.25, 1500};
 
     //   蝴蝶刀（★） | 北方森林 (略有磨损)
     public static double[] HDD_BFSL_LM = {1200, 0.09, 980};
