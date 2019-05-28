@@ -118,10 +118,10 @@ public class Glove {
     public static double[] MT_DM_JJ = {1490, 0.25, 1200};
 
     //  摩托手套（★） | 日蚀 (略有磨损)
-    public static double[] MT_RS_LM = {1900, 0.10, 1500};
+    public static double[] MT_RS_LM = {2000, 0.12, 1700};
 
     //  摩托手套（★） | 日蚀 (久经沙场)
-    public static double[] MT_RS_JJ = {950, 0.25, 780};
+    public static double[] MT_RS_JJ = {1000, 0.25, 780};
 
     //  专业手套（★） | 深红和服 (久经沙场)
     public static double[] ZY_SHHF_JJ= {3000, 0.22, 2600};
