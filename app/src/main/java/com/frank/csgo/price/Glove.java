@@ -100,7 +100,7 @@ public class Glove {
     public static double[] MT_B_LM = {2400, 0.10, 2100};
 
     //  摩托手套（★） | *嘣！* (久经沙场)
-    public static double[] MT_B_JJ = {1150, 0.32, 950};
+    public static double[] MT_B_JJ = {1150, 0.30, 950};
 
     //  摩托手套（★） | 嘭！ (久经沙场)
     public static double[] MT_P_LM = {2200, 0.26, 1800};

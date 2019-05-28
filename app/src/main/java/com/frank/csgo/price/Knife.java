@@ -94,7 +94,7 @@ public class Knife {
     public static double[] ZZD_WTZ = {1600, 0.12, 1400};
 
     //爪子刀（★） | 自动化 (久经沙场)
-    public static double[] ZZD_ZDH_JJ = {2300, 0.25, 2100};
+    public static double[] ZZD_ZDH_JJ = {2400, 0.25, 2100};
 
     //爪子刀（★） | 虎牙 (崭新出厂)
     public static double[] ZZD_HY_ZX = {2000, 0.005, 1700};
@@ -103,7 +103,7 @@ public class Knife {
     public static double[] ZZD_CS_JJ = {2100, 0.21, 1800};
 
     //爪子刀（★） | 深红之网 (久经沙场)
-    public static double[] ZZD_SHZW_JJ = {1600, 0.22, 1400};
+    public static double[] ZZD_SHZW_JJ = {1630, 0.25, 1400};
 
     //爪子刀（★） | 森林 DDPAT (略有磨损)
     public static double[] ZZD_SLD_LM = {900, 0.08, 700};
