@@ -2,7 +2,7 @@ package com.frank.csgo.price;
 
 public class Gun {
     //  awp 二西莫夫 久经
-    public static double[] AWP_EXMF_JJ = {255, 0.25, 210};
+    public static double[] AWP_EXMF_JJ = {260, 0.25, 220};
     //  M4A4 | 二西莫夫 久经
     public static double[] M4A4_EXMF_JJ = {350, 0.29, 300};
     // AK-47 | 血腥运动 (崭新出厂)
