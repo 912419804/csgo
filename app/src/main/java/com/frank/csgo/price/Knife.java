@@ -43,7 +43,7 @@ public class Knife {
     public static double[] CD_SHZW_JJ = {880, 0.20, 720};
 
     //   刺刀（★） | 多普勒 (崭新出厂)
-    public static double[] CD_DPL_ZX = {1300, 0.01, 1200};
+    public static double[] CD_DPL_ZX = {1390, 0.01, 1250};
 
     //   刺刀（★） | 虎牙 (崭新出厂)
     public static double[] CD_HY_ZX = {1500, 0.01, 1300};
@@ -55,7 +55,7 @@ public class Knife {
     public static double[] M9_ZDH_JJ = {1800, 0.20, 1500};
 
     //   M9 刺刀（★） | 多普勒 (崭新出厂)
-    public static double[] M9_DPL_ZX = {1520, 0.01, 1400};
+    public static double[] M9_DPL_ZX = {1660, 0.01, 1500};
 
     //   M9 刺刀（★） | 传说 (久经沙场)
     public static double[] M9_CS_JJ = {2000, 0.25, 1800};
