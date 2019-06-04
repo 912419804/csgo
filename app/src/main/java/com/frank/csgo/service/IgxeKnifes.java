@@ -1381,6 +1381,125 @@ public class IgxeKnifes {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe3(response, JCZD_CS_JJ);
+                        connect1296();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1296();
+                        super.onError(response);
+                    }
+                });
+    }
+    //蝴蝶刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1296() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571795")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, HDD_ZMZLL_JJ);
+                        connect1297();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1297();
+                        super.onError(response);
+                    }
+                });
+    }
+    //刺刀（★） | 致命紫罗兰 (略有磨损)
+    private void connect1297() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/93154")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, CD_ZMZLL_LM);
+                        connect1298();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1298();
+                        super.onError(response);
+                    }
+                });
+    }
+    //M9刺刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1298() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15094")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, M9_ZMZLL_JJ);
+                        connect1299();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1299();
+                        super.onError(response);
+                    }
+                });
+    }
+    //爪子刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1299() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15402")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, ZZD_ZMZLL_JJ);
+                        connect1300();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1300();
+                        super.onError(response);
+                    }
+                });
+    }
+    //爪子刀（★） | 致命紫罗兰 (略有磨损)
+    private void connect1300() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/3794")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, ZZD_ZMZLL_LM);
+                        connect1301();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1301();
+                        super.onError(response);
+                    }
+                });
+    }
+    //熊刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1301() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/627089")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, XD_ZMZLL_JJ);
+                        connect1302();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1302();
+                        super.onError(response);
+                    }
+                });
+    }
+    //猎杀者匕首（★） | 致命紫罗兰 (略有磨损)
+    private void connect1302() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/573210")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe3(response, LSZ_ZMZLL_LM);
                         mService.startScan();
                     }
 

@@ -198,7 +198,7 @@ public class Gun {
     // M4A4（StatTrak™） | 二西莫夫 (久经沙场)
     public static double[] M4A4_EXMF_JJ_ST = {1250, 0.28, 1000};
     // M4A4 | 咆哮 (略有磨损)
-    public static double[] M4A4_PX_LM = {6000, 0.08, 5500};
+    public static double[] M4A4_PX_LM = {5300, 0.08, 4900};
 
     // P250 | 生化短吻鳄 (崭新出厂)
     public static double[] P250_SHDWE_ZX = {95, 0.02, 60};

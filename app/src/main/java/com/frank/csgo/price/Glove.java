@@ -91,7 +91,7 @@ public class Glove {
     public static double[] GS_BH_JJ = {3500, 0.32, 3000};
 
     //  摩托手套（★） | 清凉薄荷 (略有磨损)
-    public static double[] MT_QLBH_LM = {3400, 0.13, 3100};
+    public static double[] MT_QLBH_LM = {3400, 0.12, 3100};
 
     //  摩托手套（★） | 清凉薄荷 (久经沙场)
     public static double[] MT_QLBH_JJ = {1650, 0.29, 1400};
@@ -133,7 +133,7 @@ public class Glove {
     public static double[] ZY_SHZW_JJ = {1750, 0.25, 1500};
 
     //  专业手套（★） | 大腕 (略有磨损)
-    public static double[] ZY_DW_LM = {3200, 0.13, 2700};
+    public static double[] ZY_DW_LM = {3200, 0.12, 2700};
 
     //  专业手套（★） | 大腕 (久经沙场)
     public static double[] ZY_DW_JJ = {1500, 0.28, 1250};
@@ -163,13 +163,13 @@ public class Glove {
     public static double[] ZY_SLD_JJ = {620, 0.17, 500};
 
     //  运动手套（★） | 潘多拉之盒(久经沙场)
-    public static double[] YD_PDLZH_JJ = {5600, 0.33, 5000};
+    public static double[] YD_PDLZH_JJ = {5600, 0.31, 5000};
 
     //  运动手套（★） | 迈阿密风云(久经沙场)
     public static double[] YD_MAMFY_JJ = {5000, 0.30, 4400};
 
     //  运动手套（★） | 超导体(久经沙场)
-    public static double[] YD_CDT_JJ = {3100, 0.31, 2700};
+    public static double[] YD_CDT_JJ = {3100, 0.30, 2700};
 
     //  运动手套（★） | 树篱迷宫(久经沙场)
     public static double[] YD_SLMG_JJ = {3000, 0.30, 2650};

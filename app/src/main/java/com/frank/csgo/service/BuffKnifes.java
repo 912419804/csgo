@@ -8,6 +8,7 @@ import com.frank.csgo.Constant;
 import com.frank.csgo.Main2Activity;
 import com.frank.csgo.bean.Buff;
 import com.frank.csgo.bean.BuffWeapon;
+import com.frank.csgo.bean.Buff;
 import com.frank.csgo.https.JsonCallback;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
@@ -246,12 +247,12 @@ public class BuffKnifes {
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "折叠刀（★） | 自动化 (久经沙场)", Constant.JJSC);
                         handleDataForBuff(response, ZDD_ZDH_JJ);
-                        connect3207();
+                        connect3211();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect3207();
+                        connect3211();
                     }
                 });
             }
@@ -385,12 +386,12 @@ public class BuffKnifes {
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "刺刀（★） | 深红之网 (久经沙场)");
                                 handleDataForBuff(response, CD_SHZW_JJ);
-                                connect3217();
+                                connect3222();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect3217();
+                                connect3222();
                             }
                         });
             }
@@ -400,16 +401,16 @@ public class BuffKnifes {
 
 //    //   刺刀（★） | 多普勒 (崭新出厂)
 //    private void connect3216() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5563")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/5563")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1150, 0.01, 1000);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1150, 0.01, 1000);
 //                        connect3217();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        connect3217();
 //                    }
 //                });
@@ -581,16 +582,16 @@ public class BuffKnifes {
 //
 //    //   M9 刺刀（★） | 北方森林 (久经沙场)
 //    private void connect3227() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/11232")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/11232")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 600, 0.17, 500);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 600, 0.17, 500);
 //                        connect3231();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        connect3231();
 //                    }
 //                });
@@ -598,16 +599,16 @@ public class BuffKnifes {
 //
 //    //   蝴蝶刀（★）
 //    private void connect3231() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/3985")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/3985")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1450, 0.16, 1300);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1450, 0.16, 1300);
 //                        connect3232();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        connect3232();
 //                    }
 //                });
@@ -661,16 +662,16 @@ public class BuffKnifes {
 //
 //    //   蝴蝶刀（★） | 北方森林 (久经沙场)
 //    private void connect3234() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/18312")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/18312")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 800, 0.17, 700);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 800, 0.17, 700);
 //                        connect3235();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        connect3235();
 //                    }
 //                });
@@ -678,16 +679,16 @@ public class BuffKnifes {
 //
 //    //   蝴蝶刀（★） | 噩梦之夜 (略有磨损)
 //    private void connect3235() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/17636")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/17636")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1500, 0.10, 1200);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1500, 0.10, 1200);
 //                        connect3236();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        connect3236();
 //                    }
 //                });
@@ -695,16 +696,16 @@ public class BuffKnifes {
 //
 //    //   蝴蝶刀（★） | 噩梦之夜 (久经沙场)
 //    private void connect3236() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5566")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/5566")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 950, 0.18, 800);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 950, 0.18, 800);
 //                        connect3237();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        connect3237();
 //                    }
 //                });
@@ -712,16 +713,16 @@ public class BuffKnifes {
 //
 //    //   蝴蝶刀（★） | 森林DDPAT (略有磨损)
 //    private void connect3237() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4418")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/4418")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 900, 0.09, 750);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 900, 0.09, 750);
 //                        connect3240();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        connect3240();
 //                    }
 //                });
@@ -729,16 +730,16 @@ public class BuffKnifes {
 //
 //    //爪子刀 无涂装
 //    private void connect3240() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5211")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/5211")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1360, 0.12, 1200);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1360, 0.12, 1200);
 //                        connect3241();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3241();
 //                    }
@@ -770,16 +771,16 @@ public class BuffKnifes {
 //
 //    //爪子刀（★） | 虎牙 (崭新出厂)
 //    private void connect3242() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4003")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/4003")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 2000, 0.01, 1800);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 2000, 0.01, 1800);
 //                        connect3243();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3243();
 //                    }
@@ -857,16 +858,16 @@ public class BuffKnifes {
 //
 //    //爪子刀（★） | 森林 DDPAT (久经沙场)
 //    private void connect3246() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/11158")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/11158")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 750, 0.17, 600);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 750, 0.17, 600);
 //                        connect3247();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3247();
 //                    }
@@ -898,16 +899,16 @@ public class BuffKnifes {
 //
 //    //爪子刀（★） | 北方森林 (久经沙场)
 //    private void connect3248() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/8880")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/8880")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 750, 0.17, 600);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 750, 0.17, 600);
 //                        connect3250();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3250();
 //                    }
@@ -916,16 +917,16 @@ public class BuffKnifes {
 //
 //    //猎杀者匕首（★） | 渐变大理石 (崭新出厂)
 //    private void connect3250() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571592")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571592")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1150, 0.01, 1010);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1150, 0.01, 1010);
 //                        connect3251();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3251();
 //                    }
@@ -934,16 +935,16 @@ public class BuffKnifes {
 //
 //    //猎杀者匕首（★） | 多普勒 (崭新出厂)
 //    private void connect3251() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571856")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571856")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1050, 0.01, 900);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1050, 0.01, 900);
 //                        connect3252();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3252();
 //                    }
@@ -952,16 +953,16 @@ public class BuffKnifes {
 //
 //    //猎杀者匕首（★） | 多普勒 (崭新出厂)
 //    private void connect3252() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571856")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571856")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1050, 0.01, 900);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1050, 0.01, 900);
 //                        connect3253();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3253();
 //                    }
@@ -1016,16 +1017,16 @@ public class BuffKnifes {
 //
 //    //猎杀者匕首（★） | 渐变之色 (崭新出厂)
 //    private void connect3255() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15680")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/15680")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 620, 0.01, 500);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 620, 0.01, 500);
 //                        connect3256();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3256();
 //                    }
@@ -1034,16 +1035,16 @@ public class BuffKnifes {
 //
 //    //猎杀者匕首（★） | 虎牙 (渐变之色)
 //    private void connect3256() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571718")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571718")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 830, 0.01, 740);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 830, 0.01, 740);
 //                        connect3257();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3257();
 //                    }
@@ -1052,16 +1053,16 @@ public class BuffKnifes {
 //
 //    //猎杀者匕首（★）
 //    private void connect3257() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6964")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/6964")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 620, 0.16, 500);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 620, 0.16, 500);
 //                        connect3260();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3260();
 //                    }
@@ -1116,16 +1117,16 @@ public class BuffKnifes {
 //
 //    //鲍伊猎刀（★） | 多普勒 (崭新出厂)
 //    private void connect3271() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571703")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571703")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1000, 0.01, 900);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1000, 0.01, 900);
 //                        connect3272();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3272();
 //                    }
@@ -1134,16 +1135,16 @@ public class BuffKnifes {
 //
 //    //鲍伊猎刀（★） | 深红之网 (略有磨损)
 //    private void connect3272() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/103983")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/103983")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1300, 0.10, 1050);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1300, 0.10, 1050);
 //                        connect3273();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3273();
 //                    }
@@ -1152,16 +1153,16 @@ public class BuffKnifes {
 //
 //    //鲍伊猎刀（★） | 深红之网 (久经沙场)
 //    private void connect3273() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/121349")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/121349")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 770, 0.19, 600);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 770, 0.19, 600);
 //                        connect3274();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3274();
 //                    }
@@ -1170,16 +1171,16 @@ public class BuffKnifes {
 //
 //    //鲍伊猎刀（★） | 虎牙 (崭新出厂)
 //    private void connect3274() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571701")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571701")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 880, 0.01, 800);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 880, 0.01, 800);
 //                        connect3275();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3275();
 //                    }
@@ -1188,16 +1189,16 @@ public class BuffKnifes {
 //
 //    //弯刀（★） | 多普勒 (崭新出厂)
 //    private void connect3275() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571789")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571789")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 900, 0.01, 800);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 900, 0.01, 800);
 //                        connect3276();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3276();
 //                    }
@@ -1206,16 +1207,16 @@ public class BuffKnifes {
 //
 //    //弯刀（★） | 渐变大理石 (崭新出厂)
 //    private void connect3276() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571713")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571713")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 900, 0.01, 800);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 900, 0.01, 800);
 //                        connect3277();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3277();
 //                    }
@@ -1224,16 +1225,16 @@ public class BuffKnifes {
 //
 //    //弯刀（★） | 虎牙 (崭新出厂)
 //    private void connect3277() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571834")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571834")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 730, 0.01, 610);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 730, 0.01, 610);
 //                        connect3278();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3278();
 //                    }
@@ -1242,16 +1243,16 @@ public class BuffKnifes {
 //
 //    //弯刀（★） | 深红之网 (略有磨损)
 //    private void connect3278() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15690")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/15690")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 800, 0.11, 600);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 800, 0.11, 600);
 //                        connect3279();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3279();
 //                    }
@@ -1260,16 +1261,16 @@ public class BuffKnifes {
 //
 //    //弯刀（★） | 深红之网 (久经沙场)
 //    private void connect3279() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/9530")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/9530")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 520, 0.17, 400);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 520, 0.17, 400);
 //                        connect3280();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3280();
 //                    }
@@ -1278,16 +1279,16 @@ public class BuffKnifes {
 //
 //    //穿肠刀（★） | 自动化 (略有磨损)
 //    private void connect3280() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555287")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/555287")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 700, 0.08, 600);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 700, 0.08, 600);
 //                        connect3281();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3281();
 //                    }
@@ -1296,16 +1297,16 @@ public class BuffKnifes {
 //
 //    //穿肠刀（★） | 自动化 (久经沙场)
 //    private void connect3281() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555629")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/555629")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 600, 0.17, 500);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 600, 0.17, 500);
 //                        connect3282();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3282();
 //                    }
@@ -1314,16 +1315,16 @@ public class BuffKnifes {
 //
 //    //穿肠刀（★） | 伽玛多普勒 (崭新出厂)
 //    private void connect3282() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555181")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/555181")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 620, 0.01, 500);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 620, 0.01, 500);
 //                        connect3283();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3283();
 //                    }
@@ -1332,16 +1333,16 @@ public class BuffKnifes {
 //
 //    //穿肠刀（★） | 虎牙 (崭新出厂)
 //    private void connect3283() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7188")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/7188")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 500, 0.01, 400);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 500, 0.01, 400);
 //                        connect3284();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3284();
 //                    }
@@ -1349,16 +1350,16 @@ public class BuffKnifes {
 //    }
 //    //穿肠刀（★） | 传说 (崭新出厂)
 //    private void connect3284() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555624")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/555624")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1200, 0.03, 1020);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1200, 0.03, 1020);
 //                        connect3285();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3285();
 //                    }
@@ -1366,16 +1367,16 @@ public class BuffKnifes {
 //    }
 //    //穿肠刀（★） | 传说 (略有磨损)
 //    private void connect3285() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555630")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/555630")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 870, 0.08, 760);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 870, 0.08, 760);
 //                        connect3286();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3286();
 //                    }
@@ -1383,16 +1384,16 @@ public class BuffKnifes {
 //    }
 //    //穿肠刀（★） | 传说 (久经沙场)
 //    private void connect3286() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555751")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/555751")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 600, 0.17, 500);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 600, 0.17, 500);
 //                        connect3287();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3287();
 //                    }
@@ -1400,16 +1401,16 @@ public class BuffKnifes {
 //    }
 //    //穿肠刀（★） | 深红之网 (略有磨损)
 //    private void connect3287() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15688")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/15688")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 550, 0.09, 450);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 550, 0.09, 450);
 //                        connect3288();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3288();
 //                    }
@@ -1417,16 +1418,16 @@ public class BuffKnifes {
 //    }
 //    //穿肠刀（★） | 深红之网 (久经沙场)
 //    private void connect3288() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/19646")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/19646")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 400, 0.17, 300);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 400, 0.17, 300);
 //                        connect3289();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3289();
 //                    }
@@ -1434,16 +1435,16 @@ public class BuffKnifes {
 //    }
 //    //暗影双匕（★） | 渐变之色 (崭新出厂)
 //    private void connect3289() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/11396")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/11396")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 605, 0.01, 500);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 605, 0.01, 500);
 //                        connect3290();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3290();
 //                    }
@@ -1451,16 +1452,16 @@ public class BuffKnifes {
 //    }
 //    //暗影双匕（★） | 多普勒 (崭新出厂)
 //    private void connect3290() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571915")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571915")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 610, 0.01, 500);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 610, 0.01, 500);
 //                        connect3291();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3291();
 //                    }
@@ -1468,16 +1469,16 @@ public class BuffKnifes {
 //    }
 //    //暗影双匕（★） | 虎牙 (崭新出厂)
 //    private void connect3291() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571833")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/571833")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 600, 0.01, 500);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 600, 0.01, 500);
 //                        connect3292();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3292();
 //                    }
@@ -1485,16 +1486,16 @@ public class BuffKnifes {
 //    }
 //    //短剑（★） | 深红之网 (略有磨损)
 //    private void connect3292() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/615830")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/615830")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1800, 0.11, 1500);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1800, 0.11, 1500);
 //                        connect3293();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3293();
 //                    }
@@ -1524,16 +1525,16 @@ public class BuffKnifes {
     }
 //    //锯齿爪刀（★）
 //    private void connect3294() {
-//        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/615682")
-//                .execute(new JsonCallback<Igxe>(Igxe.class) {
+//        OkGo.<Buff>get("https://www.Buff.cn/product/trade/730/615682")
+//                .execute(new JsonCallback<Buff>(Buff.class) {
 //                    @Override
-//                    public void onSuccess(Response<Igxe> response) {
-//                        handleDataIgxe3(response, 1800, 0.16, 1600);
+//                    public void onSuccess(Response<Buff> response) {
+//                        handleDataBuff3(response, 1800, 0.16, 1600);
 //                        connect3295();
 //                    }
 //
 //                    @Override
-//                    public void onError(Response<Igxe> response) {
+//                    public void onError(Response<Buff> response) {
 //                        super.onError(response);
 //                        connect3295();
 //                    }
@@ -1550,16 +1551,136 @@ public class BuffKnifes {
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "锯齿爪刀（★）|深红之网 (久经沙场)");
                                 handleDataForBuff(response, JCZD_CS_JJ);
-                                mService.buffGloves.connect1100();
+                                connect1296();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                mService.buffGloves.connect1100();
+                                connect1296();
                             }
                         });
             }
         });
+    }
+
+    //蝴蝶刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1296() {
+        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42590&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559641890129")
+                .execute(new JsonCallback<Buff>(Buff.class) {
+                    @Override
+                    public void onSuccess(Response<Buff> response) {
+                        handleDataForBuff(response, HDD_ZMZLL_JJ);
+                        connect1297();
+                    }
+
+                    @Override
+                    public void onError(Response<Buff> response) {
+                        connect1297();
+                        super.onError(response);
+                    }
+                });
+    }
+    //刺刀（★） | 致命紫罗兰 (略有磨损)
+    private void connect1297() {
+        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42439&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559641943624")
+                .execute(new JsonCallback<Buff>(Buff.class) {
+                    @Override
+                    public void onSuccess(Response<Buff> response) {
+                        handleDataForBuff(response, CD_ZMZLL_LM);
+                        connect1298();
+                    }
+
+                    @Override
+                    public void onError(Response<Buff> response) {
+                        connect1298();
+                        super.onError(response);
+                    }
+                });
+    }
+    //M9刺刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1298() {
+        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43139&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559641968399")
+                .execute(new JsonCallback<Buff>(Buff.class) {
+                    @Override
+                    public void onSuccess(Response<Buff> response) {
+                        handleDataForBuff(response, M9_ZMZLL_JJ);
+                        connect1299();
+                    }
+
+                    @Override
+                    public void onError(Response<Buff> response) {
+                        connect1299();
+                        super.onError(response);
+                    }
+                });
+    }
+    //爪子刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1299() {
+        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43045&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559642010093")
+                .execute(new JsonCallback<Buff>(Buff.class) {
+                    @Override
+                    public void onSuccess(Response<Buff> response) {
+                        handleDataForBuff(response, ZZD_ZMZLL_JJ);
+                        connect1300();
+                    }
+
+                    @Override
+                    public void onError(Response<Buff> response) {
+                        connect1300();
+                        super.onError(response);
+                    }
+                });
+    }
+    //爪子刀（★） | 致命紫罗兰 (略有磨损)
+    private void connect1300() {
+        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43046&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559641997385")
+                .execute(new JsonCallback<Buff>(Buff.class) {
+                    @Override
+                    public void onSuccess(Response<Buff> response) {
+                        handleDataForBuff(response, ZZD_ZMZLL_LM);
+                        connect1301();
+                    }
+
+                    @Override
+                    public void onError(Response<Buff> response) {
+                        connect1301();
+                        super.onError(response);
+                    }
+                });
+    }
+    //熊刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1301() {
+        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769504&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559642034251")
+                .execute(new JsonCallback<Buff>(Buff.class) {
+                    @Override
+                    public void onSuccess(Response<Buff> response) {
+                        handleDataForBuff(response, XD_ZMZLL_JJ);
+                        connect1302();
+                    }
+
+                    @Override
+                    public void onError(Response<Buff> response) {
+                        connect1302();
+                        super.onError(response);
+                    }
+                });
+    }
+    //猎杀者匕首（★） | 致命紫罗兰 (略有磨损)
+    private void connect1302() {
+        OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42954&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559642054243")
+                .execute(new JsonCallback<Buff>(Buff.class) {
+                    @Override
+                    public void onSuccess(Response<Buff> response) {
+                        handleDataForBuff(response, LSZ_ZMZLL_LM);
+                        mService.buffGloves.connect1100();
+                    }
+
+                    @Override
+                    public void onError(Response<Buff> response) {
+                        mService.buffGloves.connect1100();
+                        super.onError(response);
+                    }
+                });
     }
 
 

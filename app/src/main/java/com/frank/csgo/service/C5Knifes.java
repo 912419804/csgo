@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.C5;
 import com.frank.csgo.bean.C5Weapon;
+import com.frank.csgo.bean.C5;
 import com.frank.csgo.https.JsonCallback;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
@@ -134,6 +135,49 @@ public class C5Knifes {
 
     }
     private void handleDataC53(Response<C5> response, double[] res) {
+        try {
+            double value = res[0];
+            double w = res[1];
+            double minMoney = res[2];
+            List<C5Weapon> weapons = response.body().getBody().getItems();
+            ArrayList<C5Weapon> list = new ArrayList<>();
+            for (C5Weapon weapon : weapons) {
+                String unit_price = weapon.getPrice();
+                double price = Double.valueOf(unit_price);
+                String exterior_wear = weapon.getWear();
+                Double wear_ = Double.valueOf(exterior_wear);
+                if (price <= value) {
+                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+                    if (price <= minMoney) {
+                        list.add(weapon);
+                    } else {
+                        if (!TextUtils.isEmpty(exterior_wear) && wear_>0) {
+                            Double wear = Double.valueOf(exterior_wear);
+                            if (wear <= w) {
+                                list.add(weapon);
+                            }
+//                        else {
+//                            List<C5Weapon.StickerBean> stickers = weapon.getSticker();
+//                            if (stickers != null && stickers.size() >= 3) {
+//                                list.add(weapon);
+//                            }
+//                        }
+                        }
+                    }
+                }
+
+            }
+            if (!list.isEmpty()) {
+                Intent intent = new Intent(Constant.C5_WEAPON);
+                intent.putExtra(Constant.C5_WEAPON, list);
+                mService.sendBroadcast(intent);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+    private void handleDataC54(Response<C5> response, double[] res,boolean isMin) {
         try {
             double value = res[0];
             double w = res[1];
@@ -1452,16 +1496,135 @@ public class C5Knifes {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC53(response, JCZD_CS_JJ);
-                        mService.c5Gloves.connect1100();
+                        connect1296();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
                         super.onError(response);
-                        mService.c5Gloves.connect1100();
+                        connect1296();
                     }
                 });
     }
 
+    //蝴蝶刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1296() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553382312&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, HDD_ZMZLL_JJ);
+                        connect1297();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1297();
+                        super.onError(response);
+                    }
+                });
+    }
+    //刺刀（★） | 致命紫罗兰 (略有磨损)
+    private void connect1297() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553379884&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, CD_ZMZLL_LM);
+                        connect1298();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1298();
+                        super.onError(response);
+                    }
+                });
+    }
+    //M9刺刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1298() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=972081&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, M9_ZMZLL_JJ);
+                        connect1299();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1299();
+                        super.onError(response);
+                    }
+                });
+    }
+    //爪子刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1299() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=158114591&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, ZZD_ZMZLL_JJ);
+                        connect1300();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1300();
+                        super.onError(response);
+                    }
+                });
+    }
+    //爪子刀（★） | 致命紫罗兰 (略有磨损)
+    private void connect1300() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=337111255&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, ZZD_ZMZLL_LM);
+                        connect1301();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1301();
+                        super.onError(response);
+                    }
+                });
+    }
+    //熊刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1301() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553465654&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, XD_ZMZLL_JJ);
+                        mService.c5Gloves.connect1100();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        mService.c5Gloves.connect1100();
+                        super.onError(response);
+                    }
+                });
+    }
+    //猎杀者匕首（★） | 致命紫罗兰 (略有磨损)
+    private void connect1302() {
+        OkGo.<C5>get("")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC53(response, LSZ_ZMZLL_LM);
+                        mService.c5Gloves.connect1100();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        mService.c5Gloves.connect1100();
+                        super.onError(response);
+                    }
+                });
+    }
 
 }

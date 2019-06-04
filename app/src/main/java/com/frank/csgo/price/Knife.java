@@ -73,7 +73,7 @@ public class Knife {
     public static double[] HDD_WTZ= {1800, 0.10, 1500};
 
     //   蝴蝶刀（★） | 深红之网 (久经沙场)
-    public static double[] HDD_SHZW_JJ = {1740, 0.25, 1500};
+    public static double[] HDD_SHZW_JJ = {1650, 0.25, 1500};
 
     //   蝴蝶刀（★） | 北方森林 (略有磨损)
     public static double[] HDD_BFSL_LM = {1200, 0.09, 980};
@@ -155,4 +155,25 @@ public class Knife {
 
     //锯齿爪刀（★）|深红之网 (久经沙场)
     public static double[] JCZD_CS_JJ = {1550, 0.24, 1340};
+
+    //蝴蝶刀（★） | 致命紫罗兰 (久经沙场)
+    public static double[] HDD_ZMZLL_JJ = {1350, 0.23, 1100};
+
+    //刺刀（★） | 致命紫罗兰 (略有磨损)
+    public static double[] CD_ZMZLL_LM = {950, 0.10, 800};
+
+    //M9刺刀（★） | 致命紫罗兰 (久经沙场)
+    public static double[] M9_ZMZLL_JJ = {800, 0.22, 680};
+
+    //爪子刀（★） | 致命紫罗兰 (久经沙场)
+    public static double[] ZZD_ZMZLL_JJ = {1150, 0.17, 1000};
+
+    //爪子刀（★） | 致命紫罗兰 (略有磨损)
+    public static double[] ZZD_ZMZLL_LM = {1650, 0.11, 1400};
+
+    //熊刀（★） | 致命紫罗兰 (久经沙场)
+    public static double[] XD_ZMZLL_JJ = {1200, 0.18, 1000};
+
+    //猎杀者匕首（★） | 致命紫罗兰 (略有磨损)
+    public static double[] LSZ_ZMZLL_LM = {750, 0.09, 600};
 }
