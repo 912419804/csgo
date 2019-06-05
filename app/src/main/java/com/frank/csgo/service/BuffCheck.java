@@ -27,11 +27,11 @@ public class BuffCheck {
             String unit_price = weapon.getPrice();
             double price = Double.valueOf(unit_price);
             if (price < p) {
-                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                 String exterior_wear = weapon.getAsset_info().getPaintwear();
                 if (!TextUtils.isEmpty(exterior_wear)) {
                     Double wear = Double.valueOf(exterior_wear);
                     if (wear < w) {
+                        weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                         list.add(weapon);
                     }
                 }

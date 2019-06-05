@@ -26,24 +26,23 @@ public class IgxeCheck {
             for (IgxeWeapon weapon : weapons) {
                 String unit_price = weapon.getUnit_price();
                 double price = Double.valueOf(unit_price);
-                if (price <= value) {
+                if (price <= minMoney) {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    if (price <= minMoney) {
-                        list.add(weapon);
-                    } else {
-                        String exterior_wear = weapon.getExterior_wear();
-                        if (!TextUtils.isEmpty(exterior_wear)) {
-                            Double wear = Double.valueOf(exterior_wear);
-                            if (wear <= w) {
-                                list.add(weapon);
-                            }
+                    list.add(weapon);
+                }else if (price <= value) {
+                    String exterior_wear = weapon.getExterior_wear();
+                    if (!TextUtils.isEmpty(exterior_wear)) {
+                        Double wear = Double.valueOf(exterior_wear);
+                        if (wear <= w) {
+                            weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+                            list.add(weapon);
+                        }
 //                        else {
 //                            List<IgxeWeapon.StickerBean> stickers = weapon.getSticker();
 //                            if (stickers != null && stickers.size() >= 3) {
 //                                list.add(weapon);
 //                            }
 //                        }
-                        }
                     }
                 }
 
@@ -68,15 +67,15 @@ public class IgxeCheck {
             for (IgxeWeapon weapon : weapons) {
                 String unit_price = weapon.getUnit_price();
                 double price = Double.valueOf(unit_price);
-                if (price <= value) {
+                if (price <= minMoney) {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    if (price <= minMoney) {
-                        list.add(weapon);
-                    } else {
+                    list.add(weapon);
+                }else if (price <= value) {
                         String exterior_wear = weapon.getExterior_wear();
                         if (!TextUtils.isEmpty(exterior_wear)) {
                             Double wear = Double.valueOf(exterior_wear);
                             if (wear <= w) {
+                                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                                 list.add(weapon);
                             }
 //                        else {
@@ -85,7 +84,6 @@ public class IgxeCheck {
 //                                list.add(weapon);
 //                            }
 //                        }
-                        }
                     }
                 }
 
@@ -111,18 +109,17 @@ public class IgxeCheck {
             for (IgxeWeapon weapon : weapons) {
                 String unit_price = weapon.getUnit_price();
                 double price = Double.valueOf(unit_price);
-                if (isMin){
-
-                }else {
-                    if (price <= value) {
+                    if (price <= minMoney) {
                         weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                        if (price <= minMoney) {
-                            list.add(weapon);
-                        } else {
+                        list.add(weapon);
+                    }
+                    if (isMin) continue;
+                    if (price <= value) {
                             String exterior_wear = weapon.getExterior_wear();
                             if (!TextUtils.isEmpty(exterior_wear)) {
                                 Double wear = Double.valueOf(exterior_wear);
                                 if (wear <= w) {
+                                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                                     list.add(weapon);
                                 }
 //                        else {
@@ -131,10 +128,8 @@ public class IgxeCheck {
 //                                list.add(weapon);
 //                            }
 //                        }
-                            }
                         }
                     }
-                }
 
             }
             if (!list.isEmpty()) {

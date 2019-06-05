@@ -28,24 +28,22 @@ public class C5Check {
                 String unit_price = weapon.getPrice();
                 double price = Double.valueOf(unit_price);
                 String exterior_wear = weapon.getWear();
-                Double wear_ = Double.valueOf(exterior_wear);
-                if (price <= value) {
+                if (price <= minMoney) {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    if (price <= minMoney) {
-                        list.add(weapon);
-                    } else {
-                        if (!TextUtils.isEmpty(exterior_wear) && wear_>0) {
-                            Double wear = Double.valueOf(exterior_wear);
-                            if (wear <= w && wear!=0) {
-                                list.add(weapon);
-                            }
+                    list.add(weapon);
+                }else if (price <= value) {
+                    if (!TextUtils.isEmpty(exterior_wear)) {
+                        double wear = Double.valueOf(exterior_wear);
+                        if (wear <= w && wear!=0) {
+                            weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+                            list.add(weapon);
+                        }
 //                        else {
 //                            List<C5Weapon.StickerBean> stickers = weapon.getSticker();
 //                            if (stickers != null && stickers.size() >= 3) {
 //                                list.add(weapon);
 //                            }
 //                        }
-                        }
                     }
                 }
 
@@ -71,15 +69,14 @@ public class C5Check {
                 String unit_price = weapon.getPrice();
                 double price = Double.valueOf(unit_price);
                 String exterior_wear = weapon.getWear();
-                Double wear_ = Double.valueOf(exterior_wear);
-                if (price <= value) {
+                if (price <= minMoney) {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    if (price <= minMoney) {
-                        list.add(weapon);
-                    } else {
-                        if (!TextUtils.isEmpty(exterior_wear) && wear_>0) {
+                    list.add(weapon);
+                }else if (price <= value) {
+                      if (!TextUtils.isEmpty(exterior_wear)) {
                             Double wear = Double.valueOf(exterior_wear);
                             if (wear <= w && wear!=0) {
+                                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                                 list.add(weapon);
                             }
 //                        else {
@@ -89,7 +86,6 @@ public class C5Check {
 //                            }
 //                        }
                         }
-                    }
                 }
 
             }
@@ -116,12 +112,11 @@ public class C5Check {
                 double price = Double.valueOf(unit_price);
                 String exterior_wear = weapon.getWear();
 
-                if (isMin){
                     if (price <= minMoney) {
                         weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                         list.add(weapon);
                     }
-                }else {
+                    if (isMin) continue;
                     if (price <= value) {
                         if (!TextUtils.isEmpty(exterior_wear)) {
                             Double wear = Double.valueOf(exterior_wear);
@@ -137,7 +132,6 @@ public class C5Check {
 //                        }
                         }
                     }
-                }
 
             }
             if (!list.isEmpty()) {
