@@ -22,119 +22,11 @@ import static com.frank.csgo.price.Knife.*;
  * @createTime 创建时间： 2019/2/15 15:32
  * 类说明：
  */
-public class BuffKnifes {
+public class BuffKnifes extends BuffCheck{
 
-    private BuffService mService;
 
-    public BuffKnifes(BuffService service) {
-        this.mService = service;
-    }
-
-    private void handleDataForBuff(Response<Buff> response, int p, double w) {
-        List<BuffWeapon> weapons = response.body().getData().getItems();
-        ArrayList<BuffWeapon> list = new ArrayList<>();
-        for (BuffWeapon weapon : weapons) {
-            String unit_price = weapon.getPrice();
-            double price = Double.valueOf(unit_price);
-            if (price < p) {
-                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                String exterior_wear = weapon.getAsset_info().getPaintwear();
-                if (!TextUtils.isEmpty(exterior_wear)) {
-                    Double wear = Double.valueOf(exterior_wear);
-                    if (wear < w) {
-                        list.add(weapon);
-                    }
-                }
-            }
-        }
-        if (!list.isEmpty()) {
-            Intent intent = new Intent(Constant.BUFF_WEAPON);
-            intent.putExtra(Constant.BUFF_WEAPON, list);
-            mService.sendBroadcast(intent);
-        }
-    }
-    private void handleDataForBuff(Response<Buff> response, double[] res) {
-        try {
-            double p = res[0];
-            double w = res[1];
-            List<BuffWeapon> weapons = response.body().getData().getItems();
-            ArrayList<BuffWeapon> list = new ArrayList<>();
-            for (BuffWeapon weapon : weapons) {
-                String unit_price = weapon.getPrice();
-                double price = Double.valueOf(unit_price);
-                if (price < p) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    String exterior_wear = weapon.getAsset_info().getPaintwear();
-                    if (!TextUtils.isEmpty(exterior_wear)) {
-                        Double wear = Double.valueOf(exterior_wear);
-                        if (wear < w) {
-                            list.add(weapon);
-                        }
-                    }
-                }
-            }
-            if (!list.isEmpty()) {
-                Intent intent = new Intent(Constant.BUFF_WEAPON);
-                intent.putExtra(Constant.BUFF_WEAPON, list);
-                mService.sendBroadcast(intent);
-            }
-        }catch (Exception e){
-
-        }
-
-    }
-
-    private void handleDataForBuff2(Response<Buff> response, int p, double w, int minMoney) {
-        List<BuffWeapon> weapons = response.body().getData().getItems();
-        ArrayList<BuffWeapon> list = new ArrayList<>();
-        for (BuffWeapon weapon : weapons) {
-            String unit_price = weapon.getPrice();
-            double price = Double.valueOf(unit_price);
-            if (price < p) {
-                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                String exterior_wear = weapon.getAsset_info().getPaintwear();
-                if (!TextUtils.isEmpty(exterior_wear)) {
-                    Double wear = Double.valueOf(exterior_wear);
-                    if (wear < w) {
-                        list.add(weapon);
-                    }
-                }
-            }
-        }
-        if (!list.isEmpty()) {
-            Intent intent = new Intent(Constant.BUFF_WEAPON);
-            intent.putExtra(Constant.BUFF_WEAPON, list);
-            mService.sendBroadcast(intent);
-        }
-    }
-
-    private void fillBuff(Response<Buff> response, String name, String exterior) {
-        Buff buff = response.body();
-        List<BuffWeapon> items = buff.getData().getItems();
-        for (BuffWeapon item : items) {
-            item.setTags_exterior(exterior);
-            item.setName(name);
-        }
-    }
-    private void fillBuff(Response<Buff> response, String name) {
-        Buff buff = response.body();
-        List<BuffWeapon> items = buff.getData().getItems();
-        for (BuffWeapon item : items) {
-            String exterior = "";
-            if (name.contains("崭新")){
-                exterior = Constant.ZXCC;
-            }else if (name.contains("略磨")){
-                exterior = Constant.LVMS;
-            }else if(name.contains("久经")){
-                exterior = Constant.JJSC;
-            }else if (name.contains("破损")){
-                exterior = Constant.PSBK;
-            }else {
-                exterior = Constant.ZHLL;
-            }
-            item.setTags_exterior(exterior);
-            item.setName(name);
-        }
+    public BuffKnifes(BuffService mService) {
+        super(mService);
     }
 
     // 折叠刀（★） | 深红之网 (略有磨损)
@@ -146,7 +38,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "折叠刀（★） | 深红之网 (略有磨损)", Constant.LVMS);
+                        fillBuff(response, "折叠刀（★） | 深红之网 (略有磨损)");
                         handleDataForBuff(response, ZDD_SHZW_LM);
                         connect3201();
                     }
@@ -169,7 +61,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "折叠刀（★） | 深红之网 (久经沙场)", Constant.JJSC);
+                        fillBuff(response, "折叠刀（★） | 深红之网 (久经沙场)");
                         handleDataForBuff(response, ZDD_SHZW_JJ);
                         connect3204();
                     }
@@ -200,7 +92,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "折叠刀（★） | 传说 (久经沙场)", Constant.JJSC);
+                        fillBuff(response, "折叠刀（★） | 传说 (久经沙场)");
                         handleDataForBuff(response, ZDD_CS_JJ);
                         connect3205();
                     }
@@ -223,7 +115,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "折叠刀（★） | 自动化 (略有磨损)", Constant.LVMS);
+                        fillBuff(response, "折叠刀（★） | 自动化 (略有磨损)");
                         handleDataForBuff(response, ZDD_ZDH_LM);
                         connect3206();
                     }
@@ -245,7 +137,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "折叠刀（★） | 自动化 (久经沙场)", Constant.JJSC);
+                        fillBuff(response, "折叠刀（★） | 自动化 (久经沙场)");
                         handleDataForBuff(response, ZDD_ZDH_JJ);
                         connect3211();
                     }
@@ -268,7 +160,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "折叠刀（★） | 虎牙 (崭新出厂)", Constant.ZXCC);
+                        fillBuff(response, "折叠刀（★） | 虎牙 (崭新出厂)");
                         handleDataForBuff(response, ZDD_HY_ZX);
                         connect3211();
                     }
@@ -291,7 +183,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
-                        fillBuff(response, "刺刀（★） | 传说 (久经沙场)", Constant.JJSC);
+                        fillBuff(response, "刺刀（★） | 传说 (久经沙场)");
                         handleDataForBuff(response, CD_CS_JJ);
                         connect3212();
                     }
@@ -1569,6 +1461,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
+                        fillBuff(response, "蝴蝶刀（★） | 致命紫罗兰 (久经沙场)");
                         handleDataForBuff(response, HDD_ZMZLL_JJ);
                         connect1297();
                     }
@@ -1586,6 +1479,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
+                        fillBuff(response, "刺刀（★） | 致命紫罗兰 (略有磨损)");
                         handleDataForBuff(response, CD_ZMZLL_LM);
                         connect1298();
                     }
@@ -1603,6 +1497,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
+                        fillBuff(response, "M9刺刀（★） | 致命紫罗兰 (久经沙场)");
                         handleDataForBuff(response, M9_ZMZLL_JJ);
                         connect1299();
                     }
@@ -1620,6 +1515,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
+                        fillBuff(response, "爪子刀（★） | 致命紫罗兰 (久经沙场)");
                         handleDataForBuff(response, ZZD_ZMZLL_JJ);
                         connect1300();
                     }
@@ -1637,6 +1533,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
+                        fillBuff(response, "爪子刀（★） | 致命紫罗兰 (略有磨损)");
                         handleDataForBuff(response, ZZD_ZMZLL_LM);
                         connect1301();
                     }
@@ -1654,6 +1551,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
+                        fillBuff(response, "熊刀（★） | 致命紫罗兰 (久经沙场)");
                         handleDataForBuff(response, XD_ZMZLL_JJ);
                         connect1302();
                     }
@@ -1671,6 +1569,7 @@ public class BuffKnifes {
                 .execute(new JsonCallback<Buff>(Buff.class) {
                     @Override
                     public void onSuccess(Response<Buff> response) {
+                        fillBuff(response, "猎杀者匕首（★） | 致命紫罗兰 (略有磨损)");
                         handleDataForBuff(response, LSZ_ZMZLL_LM);
                         mService.buffGloves.connect1100();
                     }

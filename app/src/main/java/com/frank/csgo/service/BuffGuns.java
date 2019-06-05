@@ -1,18 +1,9 @@
 package com.frank.csgo.service;
 
-import android.content.Intent;
-import android.text.TextUtils;
-
-import com.frank.csgo.Constant;
 import com.frank.csgo.bean.Buff;
-import com.frank.csgo.bean.BuffWeapon;
 import com.frank.csgo.https.JsonCallback;
-import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
-
-import java.util.ArrayList;
-import java.util.List;
 import static com.frank.csgo.price.Gun.*;
 
 /**
@@ -20,125 +11,11 @@ import static com.frank.csgo.price.Gun.*;
  * @createTime 创建时间： 2019/2/20 14:58
  * 类说明：
  */
-public class BuffGuns {
+public class BuffGuns extends BuffCheck{
 
-    private BuffService mService;
 
-    public BuffGuns(BuffService service) {
-        this.mService = service;
-    }
-
-    private void handleDataForBuff(Response<Buff> response, int p, double w) {
-        try {
-            List<BuffWeapon> weapons = response.body().getData().getItems();
-            ArrayList<BuffWeapon> list = new ArrayList<>();
-            for (BuffWeapon weapon : weapons) {
-                String unit_price = weapon.getPrice();
-                double price = Double.valueOf(unit_price);
-                if (price < p) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    String exterior_wear = weapon.getAsset_info().getPaintwear();
-                    if (!TextUtils.isEmpty(exterior_wear)) {
-                        Double wear = Double.valueOf(exterior_wear);
-                        if (wear < w) {
-                            list.add(weapon);
-                        }
-                    }
-                }
-            }
-            if (!list.isEmpty()) {
-                Intent intent = new Intent(Constant.BUFF_WEAPON);
-                intent.putExtra(Constant.BUFF_WEAPON, list);
-                mService.sendBroadcast(intent);
-            }
-        }catch (Exception e){
-
-        }
-
-    }
-    private void handleDataForBuff(Response<Buff> response, double[] res) {
-        try {
-            double p = res[0];
-            double w = res[1];
-            List<BuffWeapon> weapons = response.body().getData().getItems();
-            ArrayList<BuffWeapon> list = new ArrayList<>();
-            for (BuffWeapon weapon : weapons) {
-                String unit_price = weapon.getPrice();
-                double price = Double.valueOf(unit_price);
-                if (price < p) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    String exterior_wear = weapon.getAsset_info().getPaintwear();
-                    if (!TextUtils.isEmpty(exterior_wear)) {
-                        Double wear = Double.valueOf(exterior_wear);
-                        if (wear < w) {
-                            list.add(weapon);
-                        }
-                    }
-                }
-            }
-            if (!list.isEmpty()) {
-                Intent intent = new Intent(Constant.BUFF_WEAPON);
-                intent.putExtra(Constant.BUFF_WEAPON, list);
-                mService.sendBroadcast(intent);
-            }
-        }catch (Exception e){
-
-        }
-
-    }
-
-    private void fillBuff(Response<Buff> response, String name) {
-        Buff buff = response.body();
-        List<BuffWeapon> items = buff.getData().getItems();
-        for (BuffWeapon item : items) {
-            String exterior = "";
-            if (name.contains("崭新")){
-                exterior = Constant.ZXCC;
-            }else if (name.contains("略磨")){
-                exterior = Constant.LVMS;
-            }else if(name.contains("久经")){
-                exterior = Constant.JJSC;
-            }else if (name.contains("破损")){
-                exterior = Constant.PSBK;
-            }else {
-                exterior = Constant.ZHLL;
-            }
-            item.setTags_exterior(exterior);
-            item.setName(name);
-        }
-    }
-
-    private void handleDataForBuff2(Response<Buff> response, int p, double w, int minMoney) {
-        List<BuffWeapon> weapons = response.body().getData().getItems();
-        ArrayList<BuffWeapon> list = new ArrayList<>();
-        for (BuffWeapon weapon : weapons) {
-            String unit_price = weapon.getPrice();
-            double price = Double.valueOf(unit_price);
-            if (price < p) {
-                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                String exterior_wear = weapon.getAsset_info().getPaintwear();
-                if (!TextUtils.isEmpty(exterior_wear)) {
-                    Double wear = Double.valueOf(exterior_wear);
-                    if (wear < w) {
-                        list.add(weapon);
-                    }
-                }
-            }
-        }
-        if (!list.isEmpty()) {
-            Intent intent = new Intent(Constant.BUFF_WEAPON);
-            intent.putExtra(Constant.BUFF_WEAPON, list);
-            mService.sendBroadcast(intent);
-        }
-    }
-
-    private void fillBuff(Response<Buff> response, String name, String exterior) {
-        Buff buff = response.body();
-        List<BuffWeapon> items = buff.getData().getItems();
-        for (BuffWeapon item : items) {
-            item.setTags_exterior(exterior);
-            item.setName(name);
-        }
+    public BuffGuns(BuffService mService) {
+        super(mService);
     }
 
     //火灵（崭新出厂）
@@ -151,7 +28,7 @@ public class BuffGuns {
 //                        .execute(new JsonCallback<Buff>(Buff.class) {
 //                            @Override
 //                            public void onSuccess(Response<Buff> response) {
-//                                fillBuff(response, "P2000 | 火灵 (崭新出厂)", Constant.ZXCC);
+//                                fillBuff(response, "P2000 | 火灵 (崭新出厂)");
 //                                handleDataForBuff(response, 60, 0.02);
 //                                connect202();
 //                            }
@@ -175,7 +52,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 次时代 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "USP 消音版 | 次时代 (崭新出厂)");
                                 handleDataForBuff(response, USP_CSD_ZX);
                                 connect207();
                             }
@@ -198,7 +75,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 次时代 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "USP 消音版 | 次时代 (崭新出厂)");
                                 handleDataForBuff(response, 25, 0.01);
                                 connect204();
                             }
@@ -222,7 +99,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 枪响人亡 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "USP 消音版 | 枪响人亡 (崭新出厂)");
                                 handleDataForBuff(response, 430, 0.03);
                                 connect207();
                             }
@@ -246,7 +123,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 枪响人亡 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "USP 消音版 | 枪响人亡 (略有磨损)");
                                 handleDataForBuff(response, 300, 0.08);
                                 connect207();
                             }
@@ -270,7 +147,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 枪响人亡 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "USP 消音版 | 枪响人亡 (久经沙场)");
                                 handleDataForBuff(response, 200, 0.16);
                                 connect207();
                             }
@@ -294,7 +171,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 黑色魅影 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "USP 消音版 | 黑色魅影 (崭新出厂)");
                                 handleDataForBuff(response, USP_HSMY_ZX);
                                 connect211();
                             }
@@ -318,7 +195,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 黑色魅影 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "USP 消音版 | 黑色魅影 (略有磨损)");
                                 handleDataForBuff(response, 160, 0.08);
                                 connect211();
                             }
@@ -342,7 +219,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 黑色魅影 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "USP 消音版 | 黑色魅影 (久经沙场)");
                                 handleDataForBuff(response, 105, 0.17);
                                 connect211();
                             }
@@ -366,7 +243,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 黑色魅影 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "USP 消音版 | 黑色魅影 (久经沙场)");
                                 handleDataForBuff(response, 90, 0.17);
                                 connect211();
                             }
@@ -390,7 +267,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 脑洞大开 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "USP 消音版 | 脑洞大开 (崭新出厂)");
                                 handleDataForBuff(response, USP_NDDK_ZX);
                                 connect214();
                             }
@@ -414,7 +291,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 脑洞大开 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "USP 消音版 | 脑洞大开 (略有磨损)");
                                 handleDataForBuff(response, 56, 0.08);
                                 connect213();
                             }
@@ -438,7 +315,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 不锈钢 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "USP 消音版 | 不锈钢 (崭新出厂)");
                                 handleDataForBuff(response, 55, 0.01);
                                 connect214();
                             }
@@ -462,7 +339,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 猎户 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "USP 消音版 | 猎户 (崭新出厂)");
                                 handleDataForBuff(response, USP_LH_ZX);
                                 connect217();
                             }
@@ -486,7 +363,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 蓝图 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "USP 消音版 | 蓝图 (崭新出厂)");
                                 handleDataForBuff(response, 45, 0.01);
                                 connect217();
                             }
@@ -510,7 +387,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "USP 消音版 | 蓝图 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "USP 消音版 | 蓝图 (崭新出厂)");
                                 handleDataForBuff(response, 35, 0.01);
                                 connect217();
                             }
@@ -534,7 +411,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "格洛克 18 型 | 水灵 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "格洛克 18 型 | 水灵 (崭新出厂)");
                                 handleDataForBuff(response, GLK_SL_ZX);
                                 connect225();
                             }
@@ -558,7 +435,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "格洛克 18 型 | 荒野反叛 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "格洛克 18 型 | 荒野反叛 (崭新出厂)");
                                 handleDataForBuff(response, 65, 0.02);
                                 connect223();
                             }
@@ -582,7 +459,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "格洛克 18 型 | 暮光星系 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "格洛克 18 型 | 暮光星系 (崭新出厂)");
                                 handleDataForBuff(response, 80, 0.02);
                                 connect222();
                             }
@@ -606,7 +483,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "格洛克 18 型 | 暮光星系 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "格洛克 18 型 | 暮光星系 (崭新出厂)");
                                 handleDataForBuff(response, 65, 0.03);
                                 connect221();
                             }
@@ -630,7 +507,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "格洛克 18 型 | 核子反应 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "格洛克 18 型 | 核子反应 (崭新出厂)");
                                 handleDataForBuff(response, 35, 0.02);
                                 connect222();
                             }
@@ -654,7 +531,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "格洛克 18 型 | Nuclear Garden (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "格洛克 18 型 | Nuclear Garden (崭新出厂)");
                                 handleDataForBuff(response, 85, 0.02);
                                 connect223();
                             }
@@ -678,7 +555,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "P250 | 生化短吻鳄 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "P250 | 生化短吻鳄 (崭新出厂)");
                                 handleDataForBuff(response, 95, 0.02);
                                 connect225();
                             }
@@ -702,7 +579,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "P250 | 生化短吻鳄 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "P250 | 生化短吻鳄 (略有磨损)");
                                 handleDataForBuff(response, 55, 0.08);
                                 connect225();
                             }
@@ -726,7 +603,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "P250 | 二西莫夫 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "P250 | 二西莫夫 (略有磨损)");
                                 handleDataForBuff(response, P250_EXMF_LM);
                                 connect237();
                             }
@@ -750,7 +627,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "P250 | 二西莫夫 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "P250 | 二西莫夫 (久经沙场)");
                                 handleDataForBuff(response, 25, 0.17);
                                 connect237();
                             }
@@ -774,7 +651,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "P250 | 银装素裹 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "P250 | 银装素裹 (略有磨损)");
                                 handleDataForBuff(response, 35, 0.09);
                                 connect236();
                             }
@@ -798,7 +675,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "P250 | 暗潮 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "P250 | 暗潮 (崭新出厂)");
                                 handleDataForBuff(response, 39, 0.01);
                                 connect229();
                             }
@@ -822,7 +699,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "FN57 | 暴怒野兽 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "FN57 | 暴怒野兽 (崭新出厂)");
                                 handleDataForBuff(response, 300, 0.03);
                                 connect230();
                             }
@@ -846,7 +723,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "FN57 | 暴怒野兽 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "FN57 | 暴怒野兽 (略有磨损)");
                                 handleDataForBuff(response, 140, 0.10);
                                 connect232();
                             }
@@ -870,7 +747,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "FN57 | 暴怒野兽 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "FN57 | 暴怒野兽 (久经沙场)");
                                 handleDataForBuff(response, 85, 0.20);
                                 connect232();
                             }
@@ -894,7 +771,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "FN57 | 耍猴把戏 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "FN57 | 耍猴把戏 (略有磨损)");
                                 handleDataForBuff(response, 45, 0.11);
                                 connect233();
                             }
@@ -918,7 +795,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "CZ75 自动手枪 | 相柳 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "CZ75 自动手枪 | 相柳 (崭新出厂)");
                                 handleDataForBuff(response, 35, 0.02);
                                 connect234();
                             }
@@ -942,7 +819,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "CZ75 自动手枪 | 黄夹克 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "CZ75 自动手枪 | 黄夹克 (崭新出厂)");
                                 handleDataForBuff(response, 50, 0.01);
                                 connect235();
                             }
@@ -966,7 +843,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "Tec-9 | 燃料喷射器 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "Tec-9 | 燃料喷射器 (崭新出厂)");
                                 handleDataForBuff(response, 35, 0.02);
                                 connect236();
                             }
@@ -990,7 +867,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰 | 红色代号 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "沙漠之鹰 | 红色代号 (崭新出厂)");
                                 handleDataForBuff(response, 310, 0.02);
                                 connect237();
                             }
@@ -1014,7 +891,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰 | 红色代号 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "沙漠之鹰 | 红色代号 (略有磨损)");
                                 handleDataForBuff(response, SMZY_HSDH_LM);
                                 connect239();
                             }
@@ -1038,7 +915,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰 | 红色代号 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "沙漠之鹰 | 红色代号 (久经沙场)");
                                 handleDataForBuff(response, 100, 0.17);
                                 connect239();
                             }
@@ -1062,7 +939,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰 | 炽烈之炎 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "沙漠之鹰 | 炽烈之炎 (崭新出厂)");
                                 handleDataForBuff(response, SMZY_CLZY_ZX);
                                 connect248();
                             }
@@ -1086,7 +963,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰 | 大佬龙 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "沙漠之鹰 | 大佬龙 (崭新出厂)");
                                 handleDataForBuff(response, 85, 0.01);
                                 connect242();
                             }
@@ -1110,7 +987,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰 | 大佬龙 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "沙漠之鹰 | 大佬龙 (略有磨损)");
                                 handleDataForBuff(response, 45, 0.071);
                                 connect242();
                             }
@@ -1134,7 +1011,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰 | 飞行员 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "沙漠之鹰 | 飞行员 (崭新出厂)");
                                 handleDataForBuff(response, 256, 0.02);
                                 connect243();
                             }
@@ -1158,7 +1035,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰 | 飞行员 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "沙漠之鹰 | 飞行员 (略有磨损)");
                                 handleDataForBuff(response, 150, 0.08);
                                 connect245();
                             }
@@ -1182,7 +1059,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰 | 飞行员 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "沙漠之鹰 | 飞行员 (略有磨损)");
                                 handleDataForBuff(response, 150, 0.08);
                                 connect245();
                             }
@@ -1206,7 +1083,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "加利尔 AR | 地狱看门犬 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "加利尔 AR | 地狱看门犬 (崭新出厂)");
                                 handleDataForBuff(response, 85, 0.02);
                                 connect246();
                             }
@@ -1230,7 +1107,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "加利尔 AR | ~甜甜的~ (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "加利尔 AR | ~甜甜的~ (崭新出厂)");
                                 handleDataForBuff(response, 75, 0.01);
                                 connect247();
                             }
@@ -1254,7 +1131,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "加利尔 AR | 「经济」克鲁尔 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "加利尔 AR | 「经济」克鲁尔 (略有磨损)");
                                 handleDataForBuff(response, 55, 0.09);
                                 connect248();
                             }
@@ -1278,7 +1155,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "加利尔 AR | 「经济」克鲁尔 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "加利尔 AR | 「经济」克鲁尔 (久经沙场)");
                                 handleDataForBuff(response, JLE_JJ_JJ);
                                 connect249();
                             }
@@ -1302,7 +1179,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 二西莫夫 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "AWP | 二西莫夫 (久经沙场)");
                                 handleDataForBuff(response, AWP_EXMF_JJ);
                                 connect250();
                             }
@@ -1326,7 +1203,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 死神 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AWP | 死神 (崭新出厂)");
                                 handleDataForBuff(response, AWP_SS_ZX);
                                 connect252();
                             }
@@ -1350,7 +1227,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 死神 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AWP | 死神 (崭新出厂)");
                                 handleDataForBuff(response, 60, 0.02);
                                 connect252();
                             }
@@ -1374,7 +1251,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 暴怒野兽 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AWP | 暴怒野兽 (崭新出厂)");
                                 handleDataForBuff(response, AWP_BNYS_ZX);
                                 connect261();
                             }
@@ -1398,7 +1275,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 暴怒野兽 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AWP | 暴怒野兽 (略有磨损)");
                                 handleDataForBuff(response, 180, 0.08);
                                 connect255();
                             }
@@ -1422,7 +1299,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 暴怒野兽 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "AWP | 暴怒野兽 (久经沙场)");
                                 handleDataForBuff(response, 125, 0.17);
                                 connect261();
                             }
@@ -1446,7 +1323,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 浮生如梦 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AWP | 浮生如梦 (崭新出厂)");
                                 handleDataForBuff(response, 50, 0.02);
                                 connect261();
                             }
@@ -1470,7 +1347,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 鬼退治 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AWP | 鬼退治 (崭新出厂)");
                                 handleDataForBuff(response, 355, 0.02);
                                 connect260();
                             }
@@ -1494,7 +1371,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 鬼退治 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AWP | 鬼退治 (略有磨损)");
                                 handleDataForBuff(response, 280, 0.09);
                                 connect258();
                             }
@@ -1518,7 +1395,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 鬼退治 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "AWP | 鬼退治 (久经沙场)");
                                 handleDataForBuff(response, 200, 0.17);
                                 connect260();
                             }
@@ -1542,7 +1419,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 鬼退治 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "AWP | 鬼退治 (久经沙场)");
                                 handleDataForBuff(response, 180, 0.17);
                                 connect260();
                             }
@@ -1566,7 +1443,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 电子蜂巢 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AWP | 电子蜂巢 (崭新出厂)");
                                 handleDataForBuff(response, 75, 0.02);
                                 connect261();
                             }
@@ -1590,7 +1467,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 巨龙传说 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AWP | 巨龙传说 (崭新出厂)");
                                 handleDataForBuff(response, AWP_JLCS_ZX);
                                 connect266();
                             }
@@ -1614,7 +1491,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AWP | 巨龙传说 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AWP | 巨龙传说 (崭新出厂)");
                                 handleDataForBuff(response, 9300, 0.04);
                                 connect266();
                             }
@@ -1638,7 +1515,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 火神 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 火神 (崭新出厂)");
                                 handleDataForBuff(response, 510, 0.02);
                                 connect266();
                             }
@@ -1662,7 +1539,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 火神 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 火神 (略有磨损)");
                                 handleDataForBuff(response, 270, 0.08);
                                 connect265();
                             }
@@ -1686,7 +1563,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 火神 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "AK-47 | 火神 (久经沙场)");
                                 handleDataForBuff(response, 165, 0.17);
                                 connect266();
                             }
@@ -1710,7 +1587,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 霓虹革命 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 霓虹革命 (崭新出厂)");
                                 handleDataForBuff(response, AK47_NHGM_ZX);
                                 connect268();
                             }
@@ -1734,7 +1611,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 霓虹革命 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 霓虹革命 (略有磨损)");
                                 handleDataForBuff(response, 155, 0.08);
                                 connect268();
                             }
@@ -1758,7 +1635,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 皇后 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 皇后 (崭新出厂)");
                                 handleDataForBuff(response, AK47_HH_ZX);
                                 connect269();
                             }
@@ -1782,7 +1659,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 皇后 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 皇后 (略有磨损)");
                                 handleDataForBuff(response, AK47_HH_LM);
                                 connect270();
                             }
@@ -1806,7 +1683,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 皇后 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "AK-47 | 皇后 (久经沙场)");
                                 handleDataForBuff(response, AK47_HH_JJ);
                                 connect271();
                             }
@@ -1830,7 +1707,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 燃料喷射器 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 燃料喷射器 (崭新出厂)");
                                 handleDataForBuff(response, AK47_RLPSQ_ZX);
                                 connect276();
                             }
@@ -1854,7 +1731,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 燃料喷射器 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 燃料喷射器 (略有磨损)");
                                 handleDataForBuff(response, 260, 0.09);
                                 connect273();
                             }
@@ -1878,7 +1755,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 燃料喷射器 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "AK-47 | 燃料喷射器 (久经沙场)");
                                 handleDataForBuff(response, 175, 0.17);
                                 connect274();
                             }
@@ -1902,7 +1779,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 深海复仇 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 深海复仇 (崭新出厂)");
                                 handleDataForBuff(response, 215, 0.03);
                                 connect276();
                             }
@@ -1926,7 +1803,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 深海复仇 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 深海复仇 (略有磨损)");
                                 handleDataForBuff(response, 160, 0.08);
                                 connect276();
                             }
@@ -1950,7 +1827,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 血腥运动 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 血腥运动 (崭新出厂)");
                                 handleDataForBuff(response, AK47_XXYD_ZX);
                                 connect280();
                             }
@@ -1974,7 +1851,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 血腥运动 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 血腥运动 (略有磨损)");
                                 handleDataForBuff(response, 210, 0.08);
                                 connect280();
                             }
@@ -1998,7 +1875,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 前线迷雾 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 前线迷雾 (崭新出厂)");
                                 handleDataForBuff(response, 200, 0.03);
                                 connect280();
                             }
@@ -2022,7 +1899,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 前线迷雾 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 前线迷雾 (略有磨损)");
                                 handleDataForBuff(response, 100, 0.08);
                                 connect280();
                             }
@@ -2046,7 +1923,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 表面淬火 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 表面淬火 (崭新出厂)");
                                 handleDataForBuff(response, AK47_BMCH_ZX);
                                 connect282();
                             }
@@ -2070,7 +1947,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 表面淬火 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 表面淬火 (略有磨损)");
                                 handleDataForBuff(response, 210, 0.08);
                                 connect282();
                             }
@@ -2094,7 +1971,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 霓虹骑士 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 霓虹骑士 (崭新出厂)");
                                 handleDataForBuff(response, AK47_NHQS_ZX);
                                 connect289();
                             }
@@ -2118,7 +1995,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 霓虹骑士 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 霓虹骑士 (略有磨损)");
                                 handleDataForBuff(response, 300, 0.08);
                                 connect285();
                             }
@@ -2142,7 +2019,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 霓虹骑士 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "AK-47 | 霓虹骑士 (久经沙场)");
                                 handleDataForBuff(response, 170, 0.17);
                                 connect285();
                             }
@@ -2166,7 +2043,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 混沌点阵 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 混沌点阵 (崭新出厂)");
                                 handleDataForBuff(response, 190, 0.03);
                                 connect289();
                             }
@@ -2190,7 +2067,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 混沌点阵 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 混沌点阵 (略有磨损)");
                                 handleDataForBuff(response, 130, 0.08);
                                 connect287();
                             }
@@ -2214,7 +2091,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | Safety Net (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | Safety Net (崭新出厂)");
                                 handleDataForBuff(response, 90, 0.01);
                                 connect288();
                             }
@@ -2238,7 +2115,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 轨道 Mk01 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 轨道 Mk01 (崭新出厂)");
                                 handleDataForBuff(response, 70, 0.01);
                                 connect289();
                             }
@@ -2262,7 +2139,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 水栽竹 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "AK-47 | 水栽竹 (久经沙场)");
                                 handleDataForBuff(response, AK47_SZZ_JJ);
                                 connect289_1();
                             }
@@ -2285,7 +2162,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 水栽竹 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "AK-47 | 水栽竹 (略有磨损)");
                                 handleDataForBuff(response, AK47_SZZ_LM);
                                 connect289_2();
                             }
@@ -2308,7 +2185,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AK-47 | 水栽竹 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AK-47 | 水栽竹 (崭新出厂)");
                                 handleDataForBuff(response, AK47_SZZ_ZX);
                                 connect290();
                             }
@@ -2332,7 +2209,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "法玛斯 | 防滚架 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "法玛斯 | 防滚架 (崭新出厂)");
                                 handleDataForBuff(response, FMS_FGJ_ZX);
                                 connect293();
                             }
@@ -2356,7 +2233,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "法玛斯 | 防滚架 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "法玛斯 | 防滚架 (略有磨损)");
                                 handleDataForBuff(response, 35, 0.08);
                                 connect292();
                             }
@@ -2380,7 +2257,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "法玛斯 | 机械工业 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "法玛斯 | 机械工业 (崭新出厂)");
                                 handleDataForBuff(response, 29, 0.02);
                                 connect293();
                             }
@@ -2404,7 +2281,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 龙王 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 龙王 (崭新出厂)");
                                 handleDataForBuff(response, M4A4_LW_ZX);
                                 connect295();
                             }
@@ -2428,7 +2305,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 龙王 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 龙王 (略有磨损)");
                                 handleDataForBuff(response, 56, 0.08);
                                 connect295();
                             }
@@ -2452,7 +2329,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 杀意大名 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 杀意大名 (崭新出厂)");
                                 handleDataForBuff(response, M4A4_SYDM_ZX);
                                 connect298();
                             }
@@ -2476,7 +2353,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 杀意大名 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 杀意大名 (崭新出厂)");
                                 handleDataForBuff(response, 30, 0.03);
                                 connect297();
                             }
@@ -2500,7 +2377,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 黑色魅影 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 黑色魅影 (略有磨损)");
                                 handleDataForBuff(response, 400, 0.09);
                                 connect298();
                             }
@@ -2524,7 +2401,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 黑色魅影 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "M4A4 | 黑色魅影 (久经沙场)");
                                 handleDataForBuff(response, M4A4_HSMY_JJ);
                                 connect299();
                             }
@@ -2548,7 +2425,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 二西莫夫 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "M4A4 | 二西莫夫 (久经沙场)");
                                 handleDataForBuff(response, M4A4_EXMF_JJ);
                                 connect308();
                             }
@@ -2572,7 +2449,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 二西莫夫 (破损不堪)", Constant.PSBK);
+                                fillBuff(response, "M4A4 | 二西莫夫 (破损不堪)");
                                 handleDataForBuff(response, 220, 0.39);
                                 connect301();
                             }
@@ -2596,7 +2473,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 二西莫夫 (战痕累累)", Constant.ZHLL);
+                                fillBuff(response, "M4A4 | 二西莫夫 (战痕累累)");
                                 handleDataForBuff(response, 130, 0.46);
                                 connect302();
                             }
@@ -2620,7 +2497,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4（StatTrak™） | 二西莫夫 (战痕累累)", Constant.ZHLL);
+                                fillBuff(response, "M4A4（StatTrak™） | 二西莫夫 (战痕累累)");
                                 handleDataForBuff(response, 410, 0.46);
                                 connect308();
                             }
@@ -2644,7 +2521,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | X 光 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | X 光 (崭新出厂)");
                                 handleDataForBuff(response, 65, 0.01);
                                 connect304();
                             }
@@ -2668,7 +2545,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 皇家圣骑士 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 皇家圣骑士 (略有磨损)");
                                 handleDataForBuff(response, 140, 0.08);
                                 connect306();
                             }
@@ -2692,7 +2569,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 皇家圣骑士 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "M4A4 | 皇家圣骑士 (久经沙场)");
                                 handleDataForBuff(response, 55, 0.17);
                                 connect308();
                             }
@@ -2716,7 +2593,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 死寂空间 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 死寂空间 (崭新出厂)");
                                 handleDataForBuff(response, 165, 0.02);
                                 connect308();
                             }
@@ -2740,7 +2617,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 死寂空间 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 死寂空间 (略有磨损)");
                                 handleDataForBuff(response, 80, 0.08);
                                 connect308();
                             }
@@ -2764,7 +2641,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 喧嚣杀戮 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 喧嚣杀戮 (崭新出厂)");
                                 handleDataForBuff(response, M4A4_XXSL_ZX);
                                 connect325();
                             }
@@ -2788,7 +2665,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 喧嚣杀戮 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 喧嚣杀戮 (略有磨损)");
                                 handleDataForBuff(response, 100, 0.09);
                                 connect311();
                             }
@@ -2812,7 +2689,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 喧嚣杀戮 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "M4A4 | 喧嚣杀戮 (久经沙场)");
                                 handleDataForBuff(response, 74, 0.17);
                                 connect311();
                             }
@@ -2836,7 +2713,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 弹雨 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 弹雨 (崭新出厂)");
                                 handleDataForBuff(response, 125, 0.03);
                                 connect325();
                             }
@@ -2860,7 +2737,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 弹雨 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 弹雨 (略有磨损)");
                                 handleDataForBuff(response, 60, 0.08);
                             }
 
@@ -2883,7 +2760,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 弹雨 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 弹雨 (略有磨损)");
                                 handleDataForBuff(response, 58, 0.08);
                                 connect314();
                             }
@@ -2907,7 +2784,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 地狱烈焰 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 地狱烈焰 (崭新出厂)");
                                 handleDataForBuff(response, 140, 0.03);
                                 connect316();
                             }
@@ -2931,7 +2808,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 地狱烈焰 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 地狱烈焰 (略有磨损)");
                                 handleDataForBuff(response, 88, 0.09);
                                 connect316();
                             }
@@ -2955,7 +2832,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 战场之星 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 战场之星 (崭新出厂)");
                                 handleDataForBuff(response, 70, 0.01);
                                 connect319();
                             }
@@ -2979,7 +2856,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 都市 DDPAT (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 都市 DDPAT (崭新出厂)");
                                 handleDataForBuff(response, 25, 0.02);
                                 connect319();
                             }
@@ -3003,7 +2880,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 狮鹫 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 狮鹫 (崭新出厂)");
                                 handleDataForBuff(response, 42, 0.01);
                                 connect319();
                             }
@@ -3027,7 +2904,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 辐射危机 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 辐射危机 (略有磨损)");
                                 handleDataForBuff(response, 155, 0.10);
                                 connect325();
                             }
@@ -3051,7 +2928,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 辐射危机 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "M4A4 | 辐射危机 (久经沙场)");
                                 handleDataForBuff(response, 47, 0.20);
                                 connect321();
                             }
@@ -3075,7 +2952,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 星级 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 星级 (崭新出厂)");
                                 handleDataForBuff(response, 85, 0.02);
                                 connect325();
                             }
@@ -3099,7 +2976,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 星级 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 星级 (略有磨损)");
                                 handleDataForBuff(response, 30, 0.08);
                                 connect323();
                             }
@@ -3123,7 +3000,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 破晓 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 破晓 (崭新出厂)");
                                 handleDataForBuff(response, 110, 0.03);
                                 connect324();
                             }
@@ -3147,7 +3024,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 闪回 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 闪回 (崭新出厂)");
                                 handleDataForBuff(response, 25, 0.01);
                                 connect325();
                             }
@@ -3171,7 +3048,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 梦魇 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 梦魇 (崭新出厂)");
                                 handleDataForBuff(response, M4A4_MY_ZX);
                                 connect328();
                             }
@@ -3195,7 +3072,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 梦魇 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A1 消音型 | 梦魇 (略有磨损)");
                                 handleDataForBuff(response, 50, 0.08);
                                 connect328();
                             }
@@ -3219,7 +3096,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 梦魇 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "M4A1 消音型 | 梦魇 (久经沙场)");
                                 handleDataForBuff(response, 24, 0.17);
                                 connect328();
                             }
@@ -3243,7 +3120,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 金蛇缠绕 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 金蛇缠绕 (崭新出厂)");
                                 handleDataForBuff(response, M4A1_JSCR_ZX);
                                 connect330();
                             }
@@ -3267,7 +3144,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 金蛇缠绕 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A1 消音型 | 金蛇缠绕 (略有磨损)");
                                 handleDataForBuff(response, 110, 0.08);
                                 connect330();
                             }
@@ -3291,7 +3168,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 机械工业 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 机械工业 (崭新出厂)");
                                 handleDataForBuff(response, M4A1_JXGY_ZX);
                                 connect336_1();
                             }
@@ -3315,7 +3192,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 机械工业 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A1 消音型 | 机械工业 (略有磨损)");
                                 handleDataForBuff(response, 90, 0.072);
                                 connect332();
                             }
@@ -3339,7 +3216,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 暴怒野兽 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 暴怒野兽 (崭新出厂)");
                                 handleDataForBuff(response, 300, 0.01);
                                 connect335();
                             }
@@ -3363,7 +3240,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 暴怒野兽 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A1 消音型 | 暴怒野兽 (略有磨损)");
                                 handleDataForBuff(response, 90, 0.08);
                                 connect334();
                             }
@@ -3387,7 +3264,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 守护者 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 守护者 (崭新出厂)");
                                 handleDataForBuff(response, 40, 0.03);
                                 connect335();
                             }
@@ -3411,7 +3288,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 次时代 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 次时代 (崭新出厂)");
                                 handleDataForBuff(response, 75, 0.01);
                                 connect336();
                             }
@@ -3435,7 +3312,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 女火神之炽焰 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A1 消音型 | 女火神之炽焰 (略有磨损)");
                                 handleDataForBuff(response, 145, 0.08);
                                 connect336_1();
                             }
@@ -3458,7 +3335,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 女火神之炽焰 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 女火神之炽焰 (崭新出厂)");
                                 handleDataForBuff(response, M4A4_NHSZCY_ZX);
                                 connect339();
                             }
@@ -3482,7 +3359,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 毁灭者 2000 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 毁灭者 2000 (崭新出厂)");
                                 handleDataForBuff(response, 60, 0.02);
                                 connect338();
                             }
@@ -3506,7 +3383,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 原子合金 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 原子合金 (崭新出厂)");
                                 handleDataForBuff(response, 60, 0.01);
                                 connect339();
                             }
@@ -3531,7 +3408,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A1 消音型 | 赤红新星 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A1 消音型 | 赤红新星 (崭新出厂)");
                                 handleDataForBuff(response, M4A1_CHXX_ZX);
                                 connect1038();
                             }
@@ -3555,7 +3432,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "SG 553 | 次时代 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "SG 553 | 次时代 (崭新出厂)");
                                 handleDataForBuff(response, 75, 0.02);
                                 connect344();
                             }
@@ -3579,7 +3456,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "SG 553 | 次时代 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "SG 553 | 次时代 (略有磨损)");
                                 handleDataForBuff(response, 38, 0.08);
                                 connect343();
                             }
@@ -3603,7 +3480,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "SG 553 | 豹灯蛾 (崭新出厂)", Constant.LVMS);
+                                fillBuff(response, "SG 553 | 豹灯蛾 (崭新出厂)");
                                 handleDataForBuff(response, 40, 0.02);
                                 connect343();
                             }
@@ -3627,7 +3504,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "SSG 08 | 炎龙之焰 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "SSG 08 | 炎龙之焰 (崭新出厂)");
                                 handleDataForBuff(response, 105, 0.02);
                                 connect345();
                             }
@@ -3651,7 +3528,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AUG | 变色龙 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AUG | 变色龙 (崭新出厂)");
                                 handleDataForBuff(response, 40, 0.01);
                                 connect345();
                             }
@@ -3675,7 +3552,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AUG | 湖怪鸟 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AUG | 湖怪鸟 (崭新出厂)");
                                 handleDataForBuff(response, 65, 0.01);
                                 connect347();
                             }
@@ -3699,7 +3576,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AUG | 席德.米德 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AUG | 席德.米德 (崭新出厂)");
                                 handleDataForBuff(response, 95, 0.01);
                                 connect347();
                             }
@@ -3723,7 +3600,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "AUG | 燕群 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "AUG | 燕群 (崭新出厂)");
                                 handleDataForBuff(response, AUG_YQ_ZX);
                                 connect1038();
                             }
@@ -3747,7 +3624,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 皇帝 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "M4A4 | 皇帝 (崭新出厂)");
                                 handleDataForBuff(response, M4A4_HD_ZX);
                                 connect1039();
                             }
@@ -3769,7 +3646,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 皇帝 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4 | 皇帝 (略有磨损)");
                                 handleDataForBuff(response, M4A4_HD_LM);
                                 connect1040();
                             }
@@ -3791,7 +3668,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4 | 皇帝 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "M4A4 | 皇帝 (久经沙场)");
                                 handleDataForBuff(response, M4A4_HD_JJ);
                                 connect1043();
                             }
@@ -3813,7 +3690,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4（StatTrak™） | 皇帝 (久经沙场)", Constant.JJSC);
+                                fillBuff(response, "M4A4（StatTrak™） | 皇帝 (久经沙场)");
                                 handleDataForBuff(response, 610, 0.25);
                                 connect1042();
                             }
@@ -3835,7 +3712,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "M4A4（StatTrak™） | 皇帝 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "M4A4（StatTrak™） | 皇帝 (略有磨损)");
                                 handleDataForBuff(response, 1700, 0.08);
                                 connect1043();
                             }
@@ -3857,7 +3734,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰 | 轻轨 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "沙漠之鹰 | 轻轨 (崭新出厂)");
                                 handleDataForBuff(response, SMZY_QG_ZX);
                                 connect1045();
                             }
@@ -3879,7 +3756,7 @@ public class BuffGuns {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "沙漠之鹰（StatTrak™） | 轻轨 (崭新出厂)", Constant.ZXCC);
+                                fillBuff(response, "沙漠之鹰（StatTrak™） | 轻轨 (崭新出厂)");
                                 handleDataForBuff(response, 150, 0.01);
                                 connect1045();
                             }

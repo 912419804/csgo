@@ -1,21 +1,10 @@
 package com.frank.csgo.service;
 
-import android.content.Intent;
-import android.text.TextUtils;
-
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.Buff;
-import com.frank.csgo.bean.BuffWeapon;
-import com.frank.csgo.bean.C5;
-import com.frank.csgo.bean.C5Weapon;
 import com.frank.csgo.https.JsonCallback;
-import com.frank.csgo.price.Glove;
-import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static com.frank.csgo.price.Glove.*;
 
@@ -24,115 +13,11 @@ import static com.frank.csgo.price.Glove.*;
  * @createTime 创建时间： 2019/2/14 14:16
  * 类说明：
  */
-public class BuffGloves {
-
-    private BuffService mService;
-
-    public BuffGloves(BuffService service) {
-        this.mService = service;
-    }
+public class BuffGloves extends BuffCheck{
 
 
-    private void handleDataForBuff(Response<Buff> response, int p, double w) {
-        List<BuffWeapon> weapons = response.body().getData().getItems();
-        ArrayList<BuffWeapon> list = new ArrayList<>();
-        for (BuffWeapon weapon : weapons) {
-            String unit_price = weapon.getPrice();
-            double price = Double.valueOf(unit_price);
-            if (price < p) {
-                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                String exterior_wear = weapon.getAsset_info().getPaintwear();
-                if (!TextUtils.isEmpty(exterior_wear)) {
-                    Double wear = Double.valueOf(exterior_wear);
-                    if (wear < w) {
-                        list.add(weapon);
-                    }
-                }
-            }
-        }
-        if (!list.isEmpty()) {
-            Intent intent = new Intent(Constant.BUFF_WEAPON);
-            intent.putExtra(Constant.BUFF_WEAPON, list);
-            mService.sendBroadcast(intent);
-        }
-    }
-    private void handleDataForBuff(Response<Buff> response, double[] res) {
-        double p = res[0];
-        double w = res[1];
-        List<BuffWeapon> weapons = response.body().getData().getItems();
-        ArrayList<BuffWeapon> list = new ArrayList<>();
-        for (BuffWeapon weapon : weapons) {
-            String unit_price = weapon.getPrice();
-            double price = Double.valueOf(unit_price);
-            if (price < p) {
-                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                String exterior_wear = weapon.getAsset_info().getPaintwear();
-                if (!TextUtils.isEmpty(exterior_wear)) {
-                    Double wear = Double.valueOf(exterior_wear);
-                    if (wear < w) {
-                        list.add(weapon);
-                    }
-                }
-            }
-        }
-        if (!list.isEmpty()) {
-            Intent intent = new Intent(Constant.BUFF_WEAPON);
-            intent.putExtra(Constant.BUFF_WEAPON, list);
-            mService.sendBroadcast(intent);
-        }
-    }
-
-    private void handleDataForBuff2(Response<Buff> response, int p, double w, int minMoney) {
-        List<BuffWeapon> weapons = response.body().getData().getItems();
-        ArrayList<BuffWeapon> list = new ArrayList<>();
-        for (BuffWeapon weapon : weapons) {
-            String unit_price = weapon.getPrice();
-            double price = Double.valueOf(unit_price);
-            if (price < p) {
-                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                String exterior_wear = weapon.getAsset_info().getPaintwear();
-                if (!TextUtils.isEmpty(exterior_wear)) {
-                    Double wear = Double.valueOf(exterior_wear);
-                    if (wear < w) {
-                        list.add(weapon);
-                    }
-                }
-            }
-        }
-        if (!list.isEmpty()) {
-            Intent intent = new Intent(Constant.BUFF_WEAPON);
-            intent.putExtra(Constant.BUFF_WEAPON, list);
-            mService.sendBroadcast(intent);
-        }
-    }
-
-    private void fillBuff(Response<Buff> response, String name, String exterior) {
-        Buff buff = response.body();
-        List<BuffWeapon> items = buff.getData().getItems();
-        for (BuffWeapon item : items) {
-            item.setTags_exterior(exterior);
-            item.setName(name);
-        }
-    }
-    private void fillBuff(Response<Buff> response, String name) {
-        Buff buff = response.body();
-        List<BuffWeapon> items = buff.getData().getItems();
-        for (BuffWeapon item : items) {
-            String exterior = "";
-            if (name.contains("崭新")){
-                exterior = Constant.ZXCC;
-            }else if (name.contains("略磨")){
-                exterior = Constant.LVMS;
-            }else if(name.contains("久经")){
-                exterior = Constant.JJSC;
-            }else if (name.contains("破损")){
-                exterior = Constant.PSBK;
-            }else {
-                exterior = Constant.ZHLL;
-            }
-            item.setTags_exterior(exterior);
-            item.setName(name);
-        }
+    public BuffGloves(BuffService mService) {
+        super(mService);
     }
 
     // 血猎手套（★） | 焦炭 (略有磨损)
@@ -144,7 +29,7 @@ public class BuffGloves {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "血猎手套（★） | 焦炭 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "血猎手套（★） | 焦炭 (略有磨损)");
                                 handleDataForBuff(response, XL_JT_LM);
                                 connect1101();
                             }
@@ -190,7 +75,7 @@ public class BuffGloves {
                         .execute(new JsonCallback<Buff>(Buff.class) {
                             @Override
                             public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "血猎手套（★） | 蛇咬 (略有磨损)", Constant.LVMS);
+                                fillBuff(response, "血猎手套（★） | 蛇咬 (略有磨损)");
                                 handleDataForBuff(response, XL_SY_LM);
                                 connect1103();
                             }

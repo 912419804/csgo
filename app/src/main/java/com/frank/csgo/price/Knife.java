@@ -55,13 +55,13 @@ public class Knife {
     public static double[] M9_ZDH_JJ = {1800, 0.20, 1500};
 
     //   M9 刺刀（★） | 多普勒 (崭新出厂)
-    public static double[] M9_DPL_ZX = {1660, 0.01, 1500};
+    public static double[] M9_DPL_ZX = {1660, 0.01, 1400};
 
     //   M9 刺刀（★） | 传说 (久经沙场)
     public static double[] M9_CS_JJ = {2000, 0.25, 1800};
 
     //   M9 刺刀（★） | 深红之网 (略有磨损)
-    public static double[] M9_SHZW_LM = {3200, 0.13, 2800};
+    public static double[] M9_SHZW_LM = {3200, 0.12, 2800};
 
     //   M9 刺刀（★） | 深红之网 (久经沙场)
     public static double[] M9_SHZW_JJ = {1300, 0.25, 1050};

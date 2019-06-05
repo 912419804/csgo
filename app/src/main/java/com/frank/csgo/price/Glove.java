@@ -67,13 +67,13 @@ public class Glove {
     public static double[] GS_TF_JJ = {1630, 0.24, 1400};
 
     //  裹手（★） | 恶土 (略有磨损)
-    public static double[] GS_ET_LM = {1650, 0.122, 1350};
+    public static double[] GS_ET_LM = {1650, 0.12, 1350};
 
     //  裹手（★） | 恶土 (久经沙场)
     public static double[] GS_ET_JJ = {1030, 0.23, 820};
 
     //  裹手（★） | 皮革 (略有磨损)
-    public static double[] GS_PG_LM = {1500, 0.12, 1350};
+    public static double[] GS_PG_LM = {1500, 0.11, 1350};
 
     //  裹手（★） | 皮革 (久经沙场)
     public static double[] GS_PG_JJ = {900, 0.20, 750};

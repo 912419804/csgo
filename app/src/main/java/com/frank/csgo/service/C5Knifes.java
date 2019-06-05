@@ -1,19 +1,10 @@
 package com.frank.csgo.service;
 
-import android.content.Intent;
-import android.text.TextUtils;
-
-import com.frank.csgo.Constant;
-import com.frank.csgo.bean.C5;
-import com.frank.csgo.bean.C5Weapon;
 import com.frank.csgo.bean.C5;
 import com.frank.csgo.https.JsonCallback;
-import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
 
-import java.util.ArrayList;
-import java.util.List;
 import static com.frank.csgo.price.Knife.*;
 
 /**
@@ -21,204 +12,11 @@ import static com.frank.csgo.price.Knife.*;
  * @createTime 创建时间： 2019/2/15 15:32
  * 类说明：
  */
-public class C5Knifes {
+public class C5Knifes extends C5Check{
 
-    private C5Service mService;
 
     public C5Knifes(C5Service service) {
-        this.mService = service;
-    }
-
-    private void handleDataC5(Response<C5> response, int i) {
-        try {
-            List<C5Weapon> weapons = response.body().getBody().getItems();
-            ArrayList<C5Weapon> list = new ArrayList<>();
-            for (C5Weapon weapon : weapons) {
-                String unit_price = weapon.getPrice();
-                double price = Double.valueOf(unit_price);
-                if (price <= i) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    String exterior_wear = weapon.getWear();
-                    if (!TextUtils.isEmpty(exterior_wear)) {
-                        Double wear = Double.valueOf(exterior_wear);
-                        String name = weapon.getName();
-                        if (name.equals("崭新出厂") && wear < 0.03) {
-                            list.add(weapon);
-                        } else if (name.equals("略有磨损") && wear < 0.09) {
-                            list.add(weapon);
-                        } else if (name.equals("久经沙场") && wear < 0.26) {
-                            list.add(weapon);
-                        } else if (name.equals("破损不堪") && wear < 0.39) {
-                            list.add(weapon);
-                        } else if (name.equals("战痕累累") && wear < 0.46) {
-                            list.add(weapon);
-                        } else {
-                        }
-                    }
-
-                }
-            }
-            if (!list.isEmpty()) {
-                Intent intent = new Intent(Constant.C5_WEAPON);
-                intent.putExtra(Constant.C5_WEAPON, list);
-                mService.sendBroadcast(intent);
-            }
-        }catch (Exception e){
-
-        }
-
-    }
-
-    private void handleDataC52(Response<C5> response, int value, double w) {
-        List<C5Weapon> weapons = response.body().getBody().getItems();
-        ArrayList<C5Weapon> list = new ArrayList<>();
-        for (C5Weapon weapon : weapons) {
-            String unit_price = weapon.getPrice();
-            double price = Double.valueOf(unit_price);
-            if (price <= value) {
-                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                String exterior_wear = weapon.getWear();
-                if (!TextUtils.isEmpty(exterior_wear)) {
-                    Double wear = Double.valueOf(exterior_wear);
-                    if (wear <= w) {
-                        list.add(weapon);
-                    }
-                }
-
-            }
-        }
-        if (!list.isEmpty()) {
-            Intent intent = new Intent(Constant.C5_WEAPON);
-            intent.putExtra(Constant.C5_WEAPON, list);
-            mService.sendBroadcast(intent);
-        }
-    }
-
-    private void handleDataC53(Response<C5> response, int value, double w, int minMoney) {
-        try {
-            List<C5Weapon> weapons = response.body().getBody().getItems();
-            ArrayList<C5Weapon> list = new ArrayList<>();
-            for (C5Weapon weapon : weapons) {
-                String unit_price = weapon.getPrice();
-                double price = Double.valueOf(unit_price);
-                String exterior_wear = weapon.getWear();
-                Double wear_ = Double.valueOf(exterior_wear);
-                if (price <= value) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    if (price <= minMoney) {
-                        list.add(weapon);
-                    } else {
-                        if (!TextUtils.isEmpty(exterior_wear) && wear_>0) {
-                            Double wear = Double.valueOf(exterior_wear);
-                            if (wear <= w) {
-                                list.add(weapon);
-                            }
-//                        else {
-//                            List<C5Weapon.StickerBean> stickers = weapon.getSticker();
-//                            if (stickers != null && stickers.size() >= 3) {
-//                                list.add(weapon);
-//                            }
-//                        }
-                        }
-                    }
-                }
-
-            }
-            if (!list.isEmpty()) {
-                Intent intent = new Intent(Constant.C5_WEAPON);
-                intent.putExtra(Constant.C5_WEAPON, list);
-                mService.sendBroadcast(intent);
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-    }
-    private void handleDataC53(Response<C5> response, double[] res) {
-        try {
-            double value = res[0];
-            double w = res[1];
-            double minMoney = res[2];
-            List<C5Weapon> weapons = response.body().getBody().getItems();
-            ArrayList<C5Weapon> list = new ArrayList<>();
-            for (C5Weapon weapon : weapons) {
-                String unit_price = weapon.getPrice();
-                double price = Double.valueOf(unit_price);
-                String exterior_wear = weapon.getWear();
-                Double wear_ = Double.valueOf(exterior_wear);
-                if (price <= value) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    if (price <= minMoney) {
-                        list.add(weapon);
-                    } else {
-                        if (!TextUtils.isEmpty(exterior_wear) && wear_>0) {
-                            Double wear = Double.valueOf(exterior_wear);
-                            if (wear <= w) {
-                                list.add(weapon);
-                            }
-//                        else {
-//                            List<C5Weapon.StickerBean> stickers = weapon.getSticker();
-//                            if (stickers != null && stickers.size() >= 3) {
-//                                list.add(weapon);
-//                            }
-//                        }
-                        }
-                    }
-                }
-
-            }
-            if (!list.isEmpty()) {
-                Intent intent = new Intent(Constant.C5_WEAPON);
-                intent.putExtra(Constant.C5_WEAPON, list);
-                mService.sendBroadcast(intent);
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-    }
-    private void handleDataC54(Response<C5> response, double[] res,boolean isMin) {
-        try {
-            double value = res[0];
-            double w = res[1];
-            double minMoney = res[2];
-            List<C5Weapon> weapons = response.body().getBody().getItems();
-            ArrayList<C5Weapon> list = new ArrayList<>();
-            for (C5Weapon weapon : weapons) {
-                String unit_price = weapon.getPrice();
-                double price = Double.valueOf(unit_price);
-                String exterior_wear = weapon.getWear();
-                Double wear_ = Double.valueOf(exterior_wear);
-                if (price <= value) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    if (price <= minMoney) {
-                        list.add(weapon);
-                    } else {
-                        if (!TextUtils.isEmpty(exterior_wear) && wear_>0) {
-                            Double wear = Double.valueOf(exterior_wear);
-                            if (wear <= w) {
-                                list.add(weapon);
-                            }
-//                        else {
-//                            List<C5Weapon.StickerBean> stickers = weapon.getSticker();
-//                            if (stickers != null && stickers.size() >= 3) {
-//                                list.add(weapon);
-//                            }
-//                        }
-                        }
-                    }
-                }
-
-            }
-            if (!list.isEmpty()) {
-                Intent intent = new Intent(Constant.C5_WEAPON);
-                intent.putExtra(Constant.C5_WEAPON, list);
-                mService.sendBroadcast(intent);
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
+        super(service);
     }
 
     // 折叠刀（★） | 深红之网 (略有磨损)
@@ -227,7 +25,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZDD_SHZW_LM);
+                        handleDataC5(response, ZDD_SHZW_LM);
                         connect1201();
                     }
 
@@ -244,7 +42,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZDD_SHZW_JJ);
+                        handleDataC5(response, ZDD_SHZW_JJ);
                         connect1204();
                     }
 
@@ -261,7 +59,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 750, 0.09, 600);
+                        handleDataC5(response, 750, 0.09, 600);
                         connect1203();
                     }
 
@@ -278,7 +76,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZDD_CS_ZX);
+                        handleDataC5(response, ZDD_CS_ZX);
                         connect1204();
                     }
 
@@ -295,7 +93,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZDD_CS_JJ);
+                        handleDataC5(response, ZDD_CS_JJ);
                         connect1205();
                     }
 
@@ -312,7 +110,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZDD_ZDH_LM);
+                        handleDataC5(response, ZDD_ZDH_LM);
                         connect1206();
                     }
 
@@ -329,7 +127,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZDD_ZDH_JJ);
+                        handleDataC5(response, ZDD_ZDH_JJ);
                         connect1207();
                     }
 
@@ -346,7 +144,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZDD_HY_ZX);
+                        handleDataC5(response, ZDD_HY_ZX);
                         connect1211();
                     }
 
@@ -363,7 +161,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, CD_CS_JJ);
+                        handleDataC5(response, CD_CS_JJ);
                         connect1212();
                     }
 
@@ -380,7 +178,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, CD_ZDH_JJ);
+                        handleDataC5(response, CD_ZDH_JJ);
                         connect1213();
                     }
 
@@ -397,7 +195,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, CD_ZDH_LM);
+                        handleDataC5(response, CD_ZDH_LM);
                         connect1214();
                     }
 
@@ -414,7 +212,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, CD_SHZW_LM);
+                        handleDataC5(response, CD_SHZW_LM);
                         connect1215();
                     }
 
@@ -431,7 +229,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, CD_SHZW_JJ);
+                        handleDataC5(response, CD_SHZW_JJ);
                         connect1216();
                     }
 
@@ -448,7 +246,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, CD_DPL_ZX);
+                        handleDataC5(response, CD_DPL_ZX,true);
                         connect1217();
                     }
 
@@ -465,7 +263,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, CD_HY_ZX);
+                        handleDataC5(response, CD_HY_ZX);
                         connect1221();
                     }
 
@@ -482,7 +280,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, M9_HY_ZX);
+                        handleDataC5(response, M9_HY_ZX);
                         connect1222();
                     }
 
@@ -499,7 +297,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, M9_ZDH_JJ);
+                        handleDataC5(response, M9_ZDH_JJ);
                         connect1223();
                     }
 
@@ -517,7 +315,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, M9_DPL_ZX);
+                        handleDataC5(response, M9_DPL_ZX,true);
                         connect1224();
                     }
 
@@ -534,7 +332,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, M9_CS_JJ);
+                        handleDataC5(response, M9_CS_JJ);
                         connect1225();
                     }
 
@@ -551,7 +349,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, M9_SHZW_LM);
+                        handleDataC5(response, M9_SHZW_LM);
                         connect1226();
                     }
 
@@ -568,7 +366,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, M9_SHZW_JJ);
+                        handleDataC5(response, M9_SHZW_JJ);
                         connect1227();
                     }
 
@@ -585,7 +383,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, M9_BFSL_JJ);
+                        handleDataC5(response, M9_BFSL_JJ);
                         connect1231();
                     }
 
@@ -602,7 +400,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, HDD_WTZ);
+                        handleDataC5(response, HDD_WTZ);
                         connect1232();
                     }
 
@@ -619,7 +417,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, HDD_SHZW_JJ);
+                        handleDataC5(response, HDD_SHZW_JJ);
                         connect1233();
                     }
 
@@ -636,7 +434,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, HDD_BFSL_LM);
+                        handleDataC5(response, HDD_BFSL_LM);
                         connect1234();
                     }
 
@@ -653,7 +451,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, HDD_BFSL_JJ);
+                        handleDataC5(response, HDD_BFSL_JJ);
                         connect1235();
                     }
 
@@ -670,7 +468,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, HDD_EMZY_LM);
+                        handleDataC5(response, HDD_EMZY_LM);
                         connect1236();
                     }
 
@@ -687,7 +485,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, HDD_EMZY_JJ);
+                        handleDataC5(response, HDD_EMZY_JJ);
                         connect1237();
                     }
 
@@ -704,7 +502,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, HDD_SLD_LM);
+                        handleDataC5(response, HDD_SLD_LM);
                         connect1240();
                     }
 
@@ -721,7 +519,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_WTZ);
+                        handleDataC5(response, ZZD_WTZ);
                         connect1241();
                     }
 
@@ -739,7 +537,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_ZDH_JJ);
+                        handleDataC5(response, ZZD_ZDH_JJ);
                         connect1243();
                     }
 
@@ -757,7 +555,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_HY_ZX);
+                        handleDataC5(response, ZZD_HY_ZX);
                         connect1243();
                     }
 
@@ -775,7 +573,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_CS_JJ);
+                        handleDataC5(response, ZZD_CS_JJ);
                         connect1244();
                     }
 
@@ -793,7 +591,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_SHZW_JJ);
+                        handleDataC5(response, ZZD_SHZW_JJ);
                         connect1245();
                     }
 
@@ -811,7 +609,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_SLD_LM);
+                        handleDataC5(response, ZZD_SLD_LM);
                         connect1246();
                     }
 
@@ -829,7 +627,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_SLD_JJ);
+                        handleDataC5(response, ZZD_SLD_JJ);
                         connect1247();
                     }
 
@@ -847,7 +645,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_BFSL_LM);
+                        handleDataC5(response, ZZD_BFSL_LM);
                         connect1248();
                     }
 
@@ -865,7 +663,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_BFSL_JJ);
+                        handleDataC5(response, ZZD_BFSL_JJ);
                         connect1254();
                     }
 
@@ -883,7 +681,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, LSZ_JBDLS_ZX);
+                        handleDataC5(response, LSZ_JBDLS_ZX);
                         connect1254();
                     }
 
@@ -901,7 +699,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, LSZ_DPL_ZX);
+                        handleDataC5(response, LSZ_DPL_ZX,true);
                         connect1253();
                     }
 
@@ -919,7 +717,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, LSZ_DPL_ZX);
+                        handleDataC5(response, LSZ_DPL_ZX);
                         connect1253();
                     }
 
@@ -937,7 +735,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, LSZ_SHZW_LM);
+                        handleDataC5(response, LSZ_SHZW_LM);
                         connect1254();
                     }
 
@@ -955,7 +753,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, LSZ_SHZW_JJ);
+                        handleDataC5(response, LSZ_SHZW_JJ);
                         connect1260();
                     }
 
@@ -973,7 +771,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, LSZ_JBZS_ZX);
+                        handleDataC5(response, LSZ_JBZS_ZX);
                         connect1256();
                     }
 
@@ -991,7 +789,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, LSZ_HY_ZX);
+                        handleDataC5(response, LSZ_HY_ZX);
                         connect1257();
                     }
 
@@ -1009,7 +807,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, LSZ_WTZ);
+                        handleDataC5(response, LSZ_WTZ);
                         connect1260();
                     }
 
@@ -1027,7 +825,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, XD_SHZW_JJ);
+                        handleDataC5(response, XD_SHZW_JJ);
                         connect1261();
                     }
 
@@ -1051,7 +849,7 @@ public class C5Knifes {
                     @Override
                     public void onError(Response<C5> response) {
                         super.onError(response);
-                        handleDataC53(response, XD_WTZ);
+                        handleDataC5(response, XD_WTZ);
                         connect1293();
                     }
                 });
@@ -1063,7 +861,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1000, 0.01, 900);
+                        handleDataC5(response, 1000, 0.01, 900);
                         connect1272();
                     }
 
@@ -1081,7 +879,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1300, 0.10, 1050);
+                        handleDataC5(response, 1300, 0.10, 1050);
                         connect1273();
                     }
 
@@ -1099,7 +897,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 770, 0.19, 600);
+                        handleDataC5(response, 770, 0.19, 600);
                         connect1277();
                     }
 
@@ -1117,7 +915,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 850, 0.01, 750);
+                        handleDataC5(response, 850, 0.01, 750);
                         connect1277();
                     }
 
@@ -1135,7 +933,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 900, 0.01, 800);
+                        handleDataC5(response, 900, 0.01, 800);
                         connect1276();
                     }
 
@@ -1153,7 +951,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 900, 0.01, 800);
+                        handleDataC5(response, 900, 0.01, 800);
                         connect1280();
                     }
 
@@ -1171,7 +969,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 730, 0.003, 610);
+                        handleDataC5(response, 730, 0.003, 610);
                         connect1280();
                     }
 
@@ -1189,7 +987,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 800, 0.11, 600);
+                        handleDataC5(response, 800, 0.11, 600);
                         connect1279();
                     }
 
@@ -1207,7 +1005,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 520, 0.17, 400);
+                        handleDataC5(response, 520, 0.17, 400);
                         connect1280();
                     }
 
@@ -1225,7 +1023,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 700, 0.08, 600);
+                        handleDataC5(response, 700, 0.08, 600);
                         connect1281();
                     }
 
@@ -1243,7 +1041,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 600, 0.17, 500);
+                        handleDataC5(response, 600, 0.17, 500);
                         connect1283();
                     }
 
@@ -1261,7 +1059,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 620, 0.01, 500);
+                        handleDataC5(response, 620, 0.01, 500);
                         connect1283();
                     }
 
@@ -1279,7 +1077,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 500, 0.003, 400);
+                        handleDataC5(response, 500, 0.003, 400);
                         connect1284();
                     }
 
@@ -1297,7 +1095,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 1200, 0.02, 1020);
+                        handleDataC5(response, 1200, 0.02, 1020);
                         connect1285();
                     }
 
@@ -1315,7 +1113,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 830, 0.08, 760);
+                        handleDataC5(response, 830, 0.08, 760);
                         connect1286();
                     }
 
@@ -1333,7 +1131,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 600, 0.17, 500);
+                        handleDataC5(response, 600, 0.17, 500);
                         connect1287();
                     }
 
@@ -1351,7 +1149,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 550, 0.09, 450);
+                        handleDataC5(response, 550, 0.09, 450);
                         connect1289();
                     }
 
@@ -1369,7 +1167,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 400, 0.17, 300);
+                        handleDataC5(response, 400, 0.17, 300);
                         connect1289();
                     }
 
@@ -1387,7 +1185,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 605, 0.01, 500);
+                        handleDataC5(response, 605, 0.01, 500);
                         connect1292();
                     }
 
@@ -1405,7 +1203,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 610, 0.01, 500);
+                        handleDataC5(response, 610, 0.01, 500);
                         connect1292();
                     }
 
@@ -1423,7 +1221,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, 550, 0.003, 500);
+                        handleDataC5(response, 550, 0.003, 500);
                         connect1292();
                     }
 
@@ -1441,7 +1239,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, DJ_SHZW_LM);
+                        handleDataC5(response, DJ_SHZW_LM);
                         connect1293();
                     }
 
@@ -1459,7 +1257,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, DJ_SHZW_JJ);
+                        handleDataC5(response, DJ_SHZW_JJ);
                         connect1295();
                     }
 
@@ -1477,7 +1275,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, JCZD_WTZ);
+                        handleDataC5(response, JCZD_WTZ);
                         connect1295();
                     }
 
@@ -1495,7 +1293,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, JCZD_CS_JJ);
+                        handleDataC5(response, JCZD_CS_JJ);
                         connect1296();
                     }
 
@@ -1513,7 +1311,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, HDD_ZMZLL_JJ);
+                        handleDataC5(response, HDD_ZMZLL_JJ);
                         connect1297();
                     }
 
@@ -1530,7 +1328,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, CD_ZMZLL_LM);
+                        handleDataC5(response, CD_ZMZLL_LM);
                         connect1298();
                     }
 
@@ -1547,7 +1345,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, M9_ZMZLL_JJ);
+                        handleDataC5(response, M9_ZMZLL_JJ);
                         connect1299();
                     }
 
@@ -1564,7 +1362,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_ZMZLL_JJ);
+                        handleDataC5(response, ZZD_ZMZLL_JJ);
                         connect1300();
                     }
 
@@ -1581,7 +1379,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, ZZD_ZMZLL_LM);
+                        handleDataC5(response, ZZD_ZMZLL_LM);
                         connect1301();
                     }
 
@@ -1598,7 +1396,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, XD_ZMZLL_JJ);
+                        handleDataC5(response, XD_ZMZLL_JJ);
                         mService.c5Gloves.connect1100();
                     }
 
@@ -1615,7 +1413,7 @@ public class C5Knifes {
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC53(response, LSZ_ZMZLL_LM);
+                        handleDataC5(response, LSZ_ZMZLL_LM);
                         mService.c5Gloves.connect1100();
                     }
 
