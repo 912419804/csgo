@@ -65,7 +65,7 @@ public class Main2Activity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             String type = Constant.TYPE == 1 ? "铃声" : "振动";
-            String buff = "打开Buff(现在为关闭状态)";
+            String buff = "普通模式";
             if (Constant.TYPE == 1) {
                 type = "铃声+振动";
             }
@@ -76,7 +76,7 @@ public class Main2Activity extends AppCompatActivity {
                 type = "振动";
             }
             if(Constant.BUFF==1){
-                buff =  "关闭Buff(现在为打开状态)";
+                buff =  "快速模式";
             }
             AlertDialog dialog = new AlertDialog.Builder(this).setItems(new String[]{"开始服务", "结束服务", type,buff}, new DialogInterface.OnClickListener() {
                 @Override
@@ -122,10 +122,10 @@ public class Main2Activity extends AppCompatActivity {
                         case 3:
                             if (Constant.BUFF == 0) {
                                 Constant.BUFF = 1;
-                                Toast.makeText(Main2Activity.this, "buff打开", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Main2Activity.this, "快速模式", Toast.LENGTH_SHORT).show();
                             } else if (Constant.BUFF ==1 ) {
                                 Constant.BUFF = 0;
-                                Toast.makeText(Main2Activity.this, "buff关闭", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Main2Activity.this, "普通模式", Toast.LENGTH_SHORT).show();
                             }
                             break;
                         default:

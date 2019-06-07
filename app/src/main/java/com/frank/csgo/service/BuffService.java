@@ -17,6 +17,7 @@ import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
+import com.frank.csgo.Constant;
 import com.frank.csgo.Main2Activity;
 import com.frank.csgo.R;
 import com.frank.csgo.utils.NumUtils;
@@ -74,7 +75,11 @@ public class BuffService extends Service {
         public void run() {
             updateNotification();
             count++;
-            buffGuns.connect201();
+            if (Constant.BUFF == 0){
+                buffGuns.connect201();
+            }else {
+                buffKnifes.connect3200();
+            }
         }
     };
 
