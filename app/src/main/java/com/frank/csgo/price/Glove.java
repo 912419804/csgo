@@ -168,10 +168,10 @@ public class Glove {
     //  运动手套（★） | 迈阿密风云(久经沙场)
     public static double[] YD_MAMFY_JJ = {5000, 0.30, 4400};
 
-    //  运动手套（★） | 超导体(久经沙场)
+    //  运动手套（★） | 超导体 (久经沙场)
     public static double[] YD_CDT_JJ = {3100, 0.30, 2700};
 
-    //  运动手套（★） | 树篱迷宫(久经沙场)
+    //  运动手套（★） | 树篱迷宫 (久经沙场)
     public static double[] YD_SLMG_JJ = {3000, 0.30, 2650};
 
     //  运动手套（★） | 双栖(久经沙场)
