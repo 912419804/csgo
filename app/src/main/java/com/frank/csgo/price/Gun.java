@@ -2,7 +2,7 @@ package com.frank.csgo.price;
 
 public class Gun {
     //  awp 二西莫夫 久经
-    public static double[] AWP_EXMF_JJ = {260, 0.25, 220};
+    public static double[] AWP_EXMF_JJ = {267, 0.25, 220};
     //  M4A4 | 二西莫夫 久经
     public static double[] M4A4_EXMF_JJ = {350, 0.29, 300};
     // AK-47 | 血腥运动 (崭新出厂)
@@ -14,11 +14,11 @@ public class Gun {
     //   AK-47 | 燃料喷射器 (略有磨损)
     public static double[] AK47_RLPSQ_LM = {310, 0.09, 250};
     //   AK-47 | 燃料喷射器 (崭新出厂)
-    public static double[] AK47_RLPSQ_ZX = {580, 0.03, 480};
+    public static double[] AK47_RLPSQ_ZX = {600, 0.03, 480};
     //   沙漠之鹰 | 炽烈之炎 (崭新出厂)
     public static double[] SMZY_CLZY_ZX = {720,0.009,600};
     //   AWP（StatTrak™） | 二西莫夫 (久经沙场)
-    public static double[] AWP_EXMF_JJ_ST = {690, 0.25, 600};
+    public static double[] AWP_EXMF_JJ_ST = {700, 0.25, 600};
     //   USP 消音版 | 枪响人亡 (略有磨损)
     public static double[] USP_QXRW_LM = {300, 0.08, 230};
     //   USP 消音版 | 枪响人亡 (崭新出厂)
@@ -56,19 +56,19 @@ public class Gun {
     public static double[] M4A4_EXMF_PS = {240, 0.39, 215};
 
     // M4A4 | 二西莫夫(战痕累累)
-    public static double[] M4A4_EXMF_ZH = {130, 0.47, 110};
+    public static double[] M4A4_EXMF_ZH = {130, 0.47, 120};
 
     // USP 消音版 | 脑洞大开 (崭新出厂)
-    public static double[] USP_NDDK_ZX = {110, 0.02, 90};
+    public static double[] USP_NDDK_ZX = {115, 0.02, 90};
 
     // USP 消音版 | 枪响人亡 (久经沙场)
     public static double[] USP_QXRW_JJ = {180, 0.17, 140};
 
     // USP 消音版 | 不锈钢 (崭新出厂)
-    public static double[] USP_BXG_ZX = {55, 0.01, 40};
+    public static double[] USP_BXG_ZX = {62, 0.01, 40};
 
     //USP 消音版 | 次时代 (崭新出厂)
-    public static double[] USP_CSD_ZX = {24, 0.01, 18};
+    public static double[] USP_CSD_ZX = {28, 0.01, 18};
 
     //USP 消音版 | 蓝图 (崭新出厂)
     public static double[] USP_LT_ZX = {60, 0.01, 40};
@@ -77,13 +77,13 @@ public class Gun {
     public static double[] P90_EXMF_ZX = {170, 0.03, 130};
 
     //P90 | 二西莫夫 (略有磨损)
-    public static double[] P90_EXMF_LM = {68, 0.08, 50};
+    public static double[] P90_EXMF_LM = {80, 0.08, 50};
 
     //UMP-45 | 炽烈之炎 (崭新出厂)
     public static double[] UMP_CLZY_ZX = {68, 0.01, 50};
 
     //法玛斯 | 防滚架 (崭新出厂)
-    public static double[] FMS_FGJ_ZX = {115, 0.02, 90};
+    public static double[] FMS_FGJ_ZX = {150, 0.02, 90};
 
     //加利尔 AR | 地狱看门犬 (崭新出厂)
     public static double[] JLE_DYKMQ_ZX = {120, 0.01, 80};
@@ -131,7 +131,7 @@ public class Gun {
     public static double[] M4A4_NHSZCY_LM = {145, 0.08, 100};
 
     //M4A1 消音版 | 赤红新星 (崭新出厂)
-    public static double[] M4A1_CHXX_ZX = {399, 0.01, 300};
+    public static double[] M4A1_CHXX_ZX = {410, 0.01, 300};
 
     //M4A1 消音版 | 毁灭者2000 (崭新出厂)
     public static double[] M4A1_HMZ_ZX = {75, 0.01, 40};
@@ -139,22 +139,22 @@ public class Gun {
     //M4A1 消音版 | 机型工业 (崭新出厂)
     public static double[] M4A1_JXGY_ZX = {190, 0.02, 140};
     //M4A1 消音版 | 机型工业 (略有磨损)
-    public static double[] M4A1_JXGY_LM = {85, 0.08, 60};
+    public static double[] M4A1_JXGY_LM = {100, 0.08, 60};
     //M4A1 消音版 | 金蛇缠绕 (崭新出厂)
-    public static double[] M4A1_JSCR_ZX = {240, 0.02, 170};
+    public static double[] M4A1_JSCR_ZX = {260, 0.02, 170};
 
     //M4A1 消音版 | 金蛇缠绕 (略有磨损)
     public static double[] M4A1_JSCR_LM = {120, 0.08, 90};
     //M4A1 消音版 | 次时代 (崭新出厂)
     public static double[] M4A1_CSD_ZX = {75, 0.01, 40};
     //AWP | 巨龙传说 (崭新出厂)
-    public static double[] AWP_JLCS_ZX = {12500, 0.04, 10500};
+    public static double[] AWP_JLCS_ZX = {13600, 0.04, 10500};
     //AK-47 | 皇后 (略有磨损)
-    public static double[] AK47_HH_LM = {320, 0.09, 280};
+    public static double[] AK47_HH_LM = {350, 0.09, 280};
     //AK-47 | 皇后 (久经沙场)
-    public static double[] AK47_HH_JJ = {230, 0.18, 190};
+    public static double[] AK47_HH_JJ = {240, 0.18, 190};
     //AK-47 | 皇后 (崭新出厂)
-    public static double[] AK47_HH_ZX = {610, 0.04, 540};
+    public static double[] AK47_HH_ZX = {630, 0.04, 540};
     //AK-47 | 霓虹骑士 (崭新出厂)
     public static double[] AK47_NHQS_ZX = {530, 0.02, 400};
     //AK-47 | 霓虹骑士 (略有磨损)
@@ -168,13 +168,13 @@ public class Gun {
     //沙漠之鹰 | 红色代号 (略有磨损)
     public static double[] SMZY_HSDH_LM = {170, 0.08, 110};
     //AK-47 | 深海复仇 (崭新出厂)
-    public static double[] AK47_SHFC_ZX = {230, 0.02, 160};
+    public static double[] AK47_SHFC_ZX = {250, 0.02, 200};
     //AK-47 | 水栽竹 (崭新出厂)
-    public static double[] AK47_SZZ_ZX = {950, 0.03, 800};
+    public static double[] AK47_SZZ_ZX = {1000, 0.03, 800};
     //AK-47 | 水栽竹 (略有磨损)
-    public static double[] AK47_SZZ_LM = {650, 0.080, 550};
+    public static double[] AK47_SZZ_LM = {700, 0.080, 550};
     //AK-47 | 水栽竹 (久经沙场)
-    public static double[] AK47_SZZ_JJ = {450, 0.17, 370};
+    public static double[] AK47_SZZ_JJ = {500, 0.17, 370};
     //AK-47 | 二西莫夫 (久经沙场)
     public static double[] AK47_EXMF_JJ = {220, 0.18, 170};
     //AK-47 | 二西莫夫 (略有磨损)
@@ -206,9 +206,9 @@ public class Gun {
     // P250 | 银装素裹 (略有磨损)
     public static double[] P250_YZSG_LM = {35, 0.10, 25};
     // SG 553 | 意式拉力 (略有磨损)
-    public static double[] SG553_YSLL_LM = {300, 0.09, 250};
+    public static double[] SG553_YSLL_LM = {500, 0.09, 250};
     // SG 553 | 意式拉力 (久经沙场)
-    public static double[] SG553_YSLL_JJ = {160, 0.20, 110};
+    public static double[] SG553_YSLL_JJ = {220, 0.20, 110};
     //USP 消音版（StatTrak™） | 脑洞大开 (崭新出厂)
     public static double[] USP_NDDK_ZX_ST = {420, 0.02, 330};
     //USP 消音版（StatTrak™） | 脑洞大开(久经沙场)
