@@ -1,4 +1,4 @@
-package com.frank.csgo.goods;
+package com.frank.csgo.bean.goods;
 
 import java.io.Serializable;
 import java.util.List;

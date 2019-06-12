@@ -16,10 +16,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.frank.csgo.bean.Buff;
-import com.frank.csgo.goods.BuffGoods;
-import com.frank.csgo.goods.DataBean;
-import com.frank.csgo.goods.ItemsBean;
+import com.frank.csgo.bean.goods.BuffGoods;
+import com.frank.csgo.bean.goods.DataBean;
+import com.frank.csgo.bean.goods.ItemsBean;
 import com.frank.csgo.https.JsonCallback;
 import com.frank.csgo.service.BuffService;
 import com.frank.csgo.service.C5Service;
@@ -29,8 +28,6 @@ import com.lzy.okgo.model.Response;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.frank.csgo.price.Knife.ZDD_ZDH_LM;
 
 public class Main2Activity extends AppCompatActivity {
 

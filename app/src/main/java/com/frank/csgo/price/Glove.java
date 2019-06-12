@@ -5,27 +5,35 @@ public class Glove {
 
     // 血猎手套（★） | 焦炭 (略有磨损)
     public static double[] XL_JT_LM = {2000, 0.11,1810};
+    public static String[] XL_JT_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42452&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554954162295"};
 
     // 血猎手套（★） | 焦炭 (久经沙场)
     public static double[] XL_JT_JJ = {1050, 0.20, 800};
+    public static String[] XL_JT_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42451&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554954189139"};
 
     // 血猎手套（★） | 蛇咬 (略有磨损)
     public static double[] XL_SY_LM = {1850, 0.12, 1620};
+    public static String[] XL_SY_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42459&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554955219035"};
 
     // 血猎手套（★） | 蛇咬 (久经沙场)
     public static double[] XL_SY_JJ = {1000, 0.24, 850};
+    public static String[] XL_SY_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42458&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554963091066"};
 
     // 血猎手套（★） | 染铜 (略有磨损)
     public static double[] XL_RT_LM = {1450, 0.11, 1300};
+    public static String[] XL_RT_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42448&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554964002854"};
 
     // 血猎手套（★） | 染铜 (久经沙场)
     public static double[] XL_RT_JJ = {890, 0.21, 700};
+    public static String[] XL_RT_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42447&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554964331519"};
 
     // 血猎手套（★） | 游击队 (略有磨损)
     public static double[] XL_YJD_LM = {1550, 0.11, 1320};
+    public static String[] XL_YJD_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42456&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554967238015"};
 
     // 血猎手套（★） | 游击队 (久经沙场)
     public static double[] XL_YJD_JJ = {900, 0.21, 720};
+    public static String[] XL_YJD_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42455&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554968008907"};
 
     // 驾驶手套（★） | 深红织物 (久经沙场)
     public static double[] XL_SHZW_JJ = {2100, 0.25, 1720};
