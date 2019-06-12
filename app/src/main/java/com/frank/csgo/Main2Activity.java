@@ -77,6 +77,7 @@ public class Main2Activity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             String type = Constant.TYPE == 1 ? "铃声" : "振动";
             String buff = "普通模式";
+            String open = "开启Buff";
             if (Constant.TYPE == 1) {
                 type = "铃声+振动";
             }
@@ -90,7 +91,7 @@ public class Main2Activity extends AppCompatActivity {
                 buff =  "快速模式";
             }
             AlertDialog dialog = new AlertDialog.Builder(this).setItems(
-                    new String[]{"开始服务", "结束服务", type,buff,"测试"}, new DialogInterface.OnClickListener() {
+                    new String[]{"开始服务", "结束服务", type,buff,open,"测试"}, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     switch (which) {
@@ -99,8 +100,6 @@ public class Main2Activity extends AppCompatActivity {
                             startService(igxeService);
                             c5Service = new Intent(Main2Activity.this, C5Service.class);
                             startService(c5Service);
-                            buffService = new Intent(Main2Activity.this, BuffService.class);
-                            startService(buffService);
                             break;
                         case 1:
                             Toast.makeText(Main2Activity.this, "结束服务", Toast.LENGTH_SHORT).show();
@@ -141,6 +140,11 @@ public class Main2Activity extends AppCompatActivity {
                             }
                             break;
                         case 4:
+                                Toast.makeText(Main2Activity.this, "开启buff", Toast.LENGTH_SHORT).show();
+                                buffService = new Intent(Main2Activity.this, BuffService.class);
+                                startService(buffService);
+                            break;
+                        case 5:
                             test();
                             break;
                         default:
