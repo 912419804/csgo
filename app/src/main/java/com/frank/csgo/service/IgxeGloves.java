@@ -330,7 +330,7 @@ public class IgxeGloves extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, GS_GLKL_LM);
+                        handleDataIgxe(response, GS_GLKL_JJ);
                         connect1119();
                     }
 

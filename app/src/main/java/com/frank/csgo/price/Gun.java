@@ -299,12 +299,12 @@ public class Gun {
     //  加利尔 AR | 「经济」克鲁尔 (久经沙场)
     public static double[] JLE_JJ_JJ = {16, 0.17, 8};
     //  M4A4 | 杀意大名 (崭新出厂)
-    public static double[] M4A4_SYDM_ZX = {32, 0.01,20};
+    public static double[] M4A4_SYDM_ZX = {30, 0.01,20};
     // 格洛克 18 型 | 红苹果 (崭新出厂)
     public static double[] GLK_HPG_ZX = {8, 0.01, 2};
 
     // AUG | 燕群 (崭新出厂)
-    public static double[] AUG_YQ_ZX = {105, 0.03,70};
+    public static double[] AUG_YQ_ZX = {130, 0.03,90};
 
 
 }

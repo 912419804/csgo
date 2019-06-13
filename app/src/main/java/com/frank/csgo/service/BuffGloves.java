@@ -1,6 +1,5 @@
 package com.frank.csgo.service;
 
-import com.frank.csgo.Constant;
 import com.frank.csgo.bean.Buff;
 import com.frank.csgo.https.JsonCallback;
 import com.lzy.okgo.OkGo;
@@ -444,7 +443,7 @@ public class BuffGloves extends BuffCheck{
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 钴蓝骷髅 (久经沙场)");
-                                handleDataForBuff(response, GS_GLKL_LM);
+                                handleDataForBuff(response, GS_GLKL_JJ);
                                 connect1119();
                             }
 

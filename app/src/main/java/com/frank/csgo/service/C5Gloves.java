@@ -329,7 +329,7 @@ public class C5Gloves extends C5Check{
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, GS_GLKL_LM);
+                        handleDataC5(response, GS_GLKL_JJ);
                         connect1119();
                     }
 

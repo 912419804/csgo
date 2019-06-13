@@ -34,8 +34,11 @@ public class BuffService extends Service {
     public BuffGuns buffGuns;
     public BuffKnifes buffKnifes;
     public BuffGloves buffGloves;
+    public BuffLast buffLast;
 
     public Handler handler = new Handler();
+
+    public AlarmManager am;
 
 
     @Nullable
@@ -47,12 +50,15 @@ public class BuffService extends Service {
 
     @Override
     public void onCreate() {
-        Toast.makeText(this, "buff服务启动...", Toast.LENGTH_LONG).show();
         createScanner();
         super.onCreate();
     }
 
     private void createScanner() {
+        if (am == null){
+            am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        }
+
         if (this.buffGuns == null) {
             this.buffGuns = new BuffGuns(BuffService.this);
         }
@@ -62,11 +68,20 @@ public class BuffService extends Service {
         if (this.buffGloves == null) {
             this.buffGloves = new BuffGloves(BuffService.this);
         }
+        if (this.buffLast == null){
+            this.buffLast = new BuffLast(BuffService.this);
+        }
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        startScan();
+        if (Constant.LAST == 1){
+            Toast.makeText(this, "buff轮询访问...", Toast.LENGTH_LONG).show();
+            startlast();
+        }else {
+            Toast.makeText(this, "buff顺序访问...", Toast.LENGTH_LONG).show();
+            startScan();
+        }
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -82,9 +97,24 @@ public class BuffService extends Service {
             }
         }
     };
+    private Runnable lastTask = new Runnable() {
+        @Override
+        public void run() {
+            updateNotification();
+            count++;
+            if (Constant.BUFF == 0){
+                buffGuns.connect201();
+            }else {
+                buffKnifes.connect3200();
+            }
+        }
+    };
 
     public void startScan(){
         ThreadUtils.THREAD.execute(runnable);
+    }
+    public void startlast(){
+        buffLast.scann();
     }
 
     private void updateNotification() {

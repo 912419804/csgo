@@ -58,7 +58,7 @@ public class GloveName implements Serializable {
     public static String N_JS_MLSD_LM = "驾驶手套（★） | 墨绿色调 (略有磨损)";
 
     //  裹手（★） | 钴蓝骷髅 (久经沙场)
-    public static String N_GS_GLKL_LM = "裹手（★） | 钴蓝骷髅 (久经沙场)";
+    public static String N_GS_GLKL_JJ = "裹手（★） | 钴蓝骷髅 (久经沙场)";
 
     //  裹手（★） | 屠夫 (略有磨损)
     public static String N_GS_TF_LM = "裹手（★） | 屠夫 (略有磨损)";
