@@ -30,7 +30,11 @@ public class BuffLast extends BuffCheck {
                             DataBean data = body.getData();
                             List<ItemsBean> items = data.getItems();
                             if (items != null && !items.isEmpty()){
-                                handleList(items);
+                                try {
+                                    handleList(items);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }
 
@@ -44,7 +48,7 @@ public class BuffLast extends BuffCheck {
 
     }
 
-    private void handleList(List<ItemsBean> list){
+    private void handleList(List<ItemsBean> list) throws Exception{
         ArrayList<Object[]> goods = new ArrayList<>();
         for (ItemsBean bean : list) {
             Object[] objs = BuffMap.DATA.get(bean.getName());
@@ -58,6 +62,7 @@ public class BuffLast extends BuffCheck {
                 final String name = (String) good[0];//名称
                 String[] urls = (String[]) good[1];//地址
                 final double[] price = (double[]) good[2];//价格
+                if (urls.length == 0)return;
                 final String url = urls[0];
                 if (TextUtils.isEmpty(url)) return;
                 mService.post(new Runnable() {

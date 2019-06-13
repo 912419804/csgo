@@ -468,6 +468,11 @@ public class Glove {
     public static double[] JTS_HSL_LM = {1000, 0.09, 800};
     public static String[] JTS_HSL_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45512&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554977448300"};
     public static Object[] JTS_HSL_LM_MAP = {N_JTS_HSL_LM,JTS_HSL_LM_URL, JTS_HSL_LM};
-    static {
-        GLOVE_DATA.put(JTS_HSL_LM_MAP[0],JTS_HSL_LM_MAP);}
+    static {GLOVE_DATA.put(JTS_HSL_LM_MAP[0],JTS_HSL_LM_MAP);}
+
+    //裹手（★） | 套印(久经沙场)
+    public static double[] GS_TY_JJ = {2050, 0.25, 1800};
+    public static String[] GS_TY_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45578&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1560438864957"};
+    public static Object[] GS_TY_JJ_MAP = {N_GS_TY_JJ,GS_TY_JJ_URL, GS_TY_JJ};
+    static {GLOVE_DATA.put(GS_TY_JJ_MAP[0],GS_TY_JJ_MAP);}
 }

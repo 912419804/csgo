@@ -195,8 +195,10 @@ public class GloveName implements Serializable {
     // 九头蛇手套（★） | 响尾蛇(略有磨损)
     public static String N_JTS_XWS_LM = "九头蛇手套（★） | 响尾蛇 (略有磨损)";
 
-    // 九头蛇手套（★） | 响尾蛇(久经沙场)
+    // 九头蛇手套（★） | 响尾蛇 (久经沙场)
     public static String N_JTS_XWS_JJ = "九头蛇手套（★） | 响尾蛇 (久经沙场)";
-    //九头蛇手套（★） | 红树林(略有磨损)
+    //九头蛇手套（★） | 红树林 (略有磨损)
     public static String N_JTS_HSL_LM = "九头蛇手套（★） | 红树林 (略有磨损)";
+    //裹手（★） | 套印 (久经沙场)
+    public static String N_GS_TY_JJ = "裹手（★） | 套印 (久经沙场)";
         }
