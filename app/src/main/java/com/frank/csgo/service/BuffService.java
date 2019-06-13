@@ -13,6 +13,7 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
@@ -39,7 +40,8 @@ public class BuffService extends Service {
     public Handler handler = new Handler();
 
     public AlarmManager am;
-
+    private PendingIntent sender;
+    private BroadcastReceiver startActionReceiver;
 
     @Nullable
     @Override
@@ -55,10 +57,6 @@ public class BuffService extends Service {
     }
 
     private void createScanner() {
-        if (am == null){
-            am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        }
-
         if (this.buffGuns == null) {
             this.buffGuns = new BuffGuns(BuffService.this);
         }
@@ -77,7 +75,7 @@ public class BuffService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (Constant.LAST == 1){
             Toast.makeText(this, "buff轮询访问...", Toast.LENGTH_LONG).show();
-            startlast();
+            startLast();
         }else {
             Toast.makeText(this, "buff顺序访问...", Toast.LENGTH_LONG).show();
             startScan();
@@ -113,8 +111,32 @@ public class BuffService extends Service {
     public void startScan(){
         ThreadUtils.THREAD.execute(runnable);
     }
-    public void startlast(){
-        buffLast.scann();
+    public void startLast(){
+
+        //闹钟定时服务
+        if (startActionReceiver == null) {
+            startActionReceiver = new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    updateNotification();
+                    count++;
+                    buffLast.scann();
+                }
+            };
+        }
+        registerReceiver(startActionReceiver, new IntentFilter(Constant.START));
+        //启动闹钟服务
+        try {
+            Intent intent = new Intent(Constant.START);
+            sender = PendingIntent
+                    .getBroadcast(this, 1000, intent, 0);
+            //开始时间
+            am = (AlarmManager) getSystemService(ALARM_SERVICE);
+            am.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, 0, getInterval(), sender);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void updateNotification() {
@@ -152,6 +174,10 @@ public class BuffService extends Service {
     @Override
     public void onDestroy() {
         stopDataService();
+        if (startActionReceiver != null){
+            unregisterReceiver(startActionReceiver);
+        }
+
         super.onDestroy();
     }
 
@@ -164,6 +190,12 @@ public class BuffService extends Service {
     private static int MAX_DELAY = 3000;
     public void post(Runnable r){
         handler.postDelayed(r, Long.parseLong(NumUtils.getRandom(MIN_DELAY,MAX_DELAY)));
+    }
+
+    private static int MIN_DELAY_LAST = 10000;
+    private static int MAX_DELAY_LAST = 20000;
+    public long getInterval(){
+        return Long.parseLong(NumUtils.getRandom(MIN_DELAY_LAST,MAX_DELAY_LAST));
     }
 
 }
