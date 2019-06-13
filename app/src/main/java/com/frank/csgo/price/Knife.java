@@ -228,7 +228,7 @@ public class Knife {
     //猎杀者匕首（★）
     public static double[] LSZ_WTZ = {550, 0.16, 500};
     public static String[] LSZ_WTZ_URL = {""};
-    public static Object[] LSZ_WTZ_URL_MAP = {N_LSZ_WTZ,LSZ_WTZ_URL,LSZ_WTZ_URL};
+    public static Object[] LSZ_WTZ_URL_MAP = {N_LSZ_WTZ,LSZ_WTZ_URL,LSZ_WTZ};
     static {KNIFE_DATA.put(LSZ_WTZ_URL_MAP[0],LSZ_WTZ_URL_MAP);}
 
     //猎杀者匕首（★） | 渐变大理石 (崭新出厂)
