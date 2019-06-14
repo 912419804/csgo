@@ -1,6 +1,7 @@
 package com.frank.csgo.service;
 
 import com.frank.csgo.bean.C5;
+import com.frank.csgo.bean.C5;
 import com.frank.csgo.https.JsonCallback;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
@@ -1397,23 +1398,238 @@ public class C5Knifes extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, XD_ZMZLL_JJ);
-                        mService.c5Gloves.connect1100();
+                        connect1302();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        mService.c5Gloves.connect1100();
+                        connect1302();
                         super.onError(response);
                     }
                 });
     }
     //猎杀者匕首（★） | 致命紫罗兰 (略有磨损)
     private void connect1302() {
-        OkGo.<C5>get("")
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553404959&page=1&flag=&sort=&worn=&delivery=")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, LSZ_ZMZLL_LM);
+                        connect1303();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1303();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //   蝴蝶刀（★） | 噩梦之夜 (略有磨损)
+    private void connect1303() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=54290774&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, HDD_EMZY_LM);
+                        connect1304();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1304();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //   蝴蝶刀（★） | 噩梦之夜 (久经沙场)
+    private void connect1304() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=89492705&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, HDD_EMZY_JJ);
+                        connect1305();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1305();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //M9刺刀（★） | 噩梦之夜 (略有磨损)
+    private void connect1305() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553379748&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, M9_EMZY_LM);
+                        connect1306();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1306();
+                        super.onError(response);
+                    }
+                });
+    }
+    //M9刺刀（★） | 噩梦之夜 (久经沙场)
+    private void connect1306() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=470633930&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, M9_EMZY_JJ);
+                        connect1307();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1307();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //爪子刀（★） | 噩梦之夜 (久经沙场)
+    private void connect1307() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2925249&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, ZZD_EMZY_JJ);
+                        connect1308();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1308();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //爪子刀（★） | 噩梦之夜 (略有磨损)
+    private void connect1308() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=49315301&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, ZZD_EMZY_LM);
+                        connect1309();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1309();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //刺刀（★） | 噩梦之夜 (略有磨损)
+    private void connect1309() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553381353&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, CD_EMZY_LM);
+                        connect1310();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1310();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //刺刀（★） | 噩梦之夜 (久经沙场)
+    private void connect1310() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=11070474&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, CD_EMZY_JJ);
+                        connect1311();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1311();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //猎杀者匕首（★） | 噩梦之夜 (略有磨损)
+    private void connect1311() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553384054&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, LSZ_EMZY_LM);
+                        connect1312();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1312();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //猎杀者匕首（★） | 噩梦之夜 (久经沙场)
+    private void connect1312() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=26044759&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, LSZ_EMZY_JJ);
+                        connect1313();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1313();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //折叠刀（★） | 噩梦之夜 (略有磨损)
+    private void connect1313() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=268091170&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, ZDD_EMZY_LM);
+                        connect1314();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1314();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //折叠刀（★） | 噩梦之夜 (久经沙场)
+    private void connect1314() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=26044732&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, ZDD_EMZY_JJ);
                         mService.c5Gloves.connect1100();
                     }
 

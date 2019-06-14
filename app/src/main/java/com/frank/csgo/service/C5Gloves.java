@@ -1119,6 +1119,23 @@ public class C5Gloves extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, JTS_HSL_LM);
+                        connect1167();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1167();
+                    }
+                });
+    }
+
+    // 裹手（★） | 套印(久经沙场)
+    private void connect1167() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553446121&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, GS_TY_JJ);
                         mService.startScan();
                     }
 

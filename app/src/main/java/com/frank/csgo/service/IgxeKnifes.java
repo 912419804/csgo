@@ -6,6 +6,18 @@ import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
 
 import static com.frank.csgo.price.Knife.*;
+import static com.frank.csgo.price.KnifeName.N_CD_EMZY_JJ;
+import static com.frank.csgo.price.KnifeName.N_CD_EMZY_LM;
+import static com.frank.csgo.price.KnifeName.N_HDD_EMZY_JJ;
+import static com.frank.csgo.price.KnifeName.N_HDD_EMZY_LM;
+import static com.frank.csgo.price.KnifeName.N_LSZ_EMZY_JJ;
+import static com.frank.csgo.price.KnifeName.N_LSZ_EMZY_LM;
+import static com.frank.csgo.price.KnifeName.N_M9_EMZY_JJ;
+import static com.frank.csgo.price.KnifeName.N_M9_EMZY_LM;
+import static com.frank.csgo.price.KnifeName.N_ZDD_EMZY_JJ;
+import static com.frank.csgo.price.KnifeName.N_ZDD_EMZY_LM;
+import static com.frank.csgo.price.KnifeName.N_ZZD_EMZY_JJ;
+import static com.frank.csgo.price.KnifeName.N_ZZD_EMZY_LM;
 
 /**
  * @author 作者 hasee
@@ -1413,6 +1425,223 @@ public class IgxeKnifes extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, LSZ_ZMZLL_LM);
+                        connect1303();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1303();
+                        super.onError(response);
+                    }
+                });
+    }
+
+
+
+    //   蝴蝶刀（★） | 噩梦之夜 (略有磨损)
+    private void connect1303() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/17636")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, HDD_EMZY_LM);
+                        connect1304();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1304();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //   蝴蝶刀（★） | 噩梦之夜 (久经沙场)
+    private void connect1304() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5566")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, HDD_EMZY_JJ);
+                        connect1305();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1305();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //M9刺刀（★） | 噩梦之夜 (略有磨损)
+    private void connect1305() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/11760")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, M9_EMZY_LM);
+                        connect1306();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1306();
+                        super.onError(response);
+                    }
+                });
+    }
+    //M9刺刀（★） | 噩梦之夜 (久经沙场)
+    private void connect1306() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6149")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, M9_EMZY_JJ);
+                        connect1307();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1307();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //爪子刀（★） | 噩梦之夜 (久经沙场)
+    private void connect1307() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/11420")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, ZZD_EMZY_JJ);
+                        connect1308();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1308();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //爪子刀（★） | 噩梦之夜 (略有磨损)
+    private void connect1308() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/21361")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, ZZD_EMZY_LM);
+                        connect1309();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1309();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //刺刀（★） | 噩梦之夜 (略有磨损)
+    private void connect1309() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/36274")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, CD_EMZY_LM);
+                        connect1310();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1310();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //刺刀（★） | 噩梦之夜 (久经沙场)
+    private void connect1310() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7290")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, CD_EMZY_JJ);
+                        connect1311();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1311();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //猎杀者匕首（★） | 噩梦之夜 (略有磨损)
+    private void connect1311() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/124234")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, LSZ_EMZY_LM);
+                        connect1312();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1312();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //猎杀者匕首（★） | 噩梦之夜 (久经沙场)
+    private void connect1312() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/76391")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, LSZ_EMZY_JJ);
+                        connect1313();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1313();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //折叠刀（★） | 噩梦之夜 (略有磨损)
+    private void connect1313() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4803")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, ZDD_EMZY_LM);
+                        connect1314();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1314();
+                        super.onError(response);
+                    }
+                });
+    }
+
+    //折叠刀（★） | 噩梦之夜 (久经沙场)
+    private void connect1314() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/15118")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, ZDD_EMZY_JJ);
                         mService.startScan();
                     }
 

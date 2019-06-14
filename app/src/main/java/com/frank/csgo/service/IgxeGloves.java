@@ -1120,6 +1120,22 @@ public class IgxeGloves extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, JTS_HSL_LM);
+                        connect1167();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1167();
+                    }
+                });
+    }
+    // 裹手（★） | 套印(久经沙场)
+    private void connect1167() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/611006")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, GS_TY_JJ);
                         mService.igxeKnifes.connect1200();
                     }
 
