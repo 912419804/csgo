@@ -84,7 +84,7 @@ public class Knife {
     //   刺刀（★） | 深红之网 (久经沙场)
     public static double[] CD_SHZW_JJ = {880, 0.20, 720};
     public static String[] CD_SHZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42381&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887089740"};
-    public static Object[] CD_SHZW_JJ_MAP = {N_ZDD_SHZW_JJ,CD_SHZW_JJ_URL,CD_SHZW_JJ};
+    public static Object[] CD_SHZW_JJ_MAP = {N_CD_SHZW_JJ,CD_SHZW_JJ_URL,CD_SHZW_JJ};
     static {KNIFE_DATA.put(CD_SHZW_JJ_MAP[0],CD_SHZW_JJ_MAP);}
 
     //   刺刀（★） | 多普勒 (崭新出厂)

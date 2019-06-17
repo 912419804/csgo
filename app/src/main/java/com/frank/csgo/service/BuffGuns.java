@@ -3049,7 +3049,7 @@ public class BuffGuns extends BuffCheck{
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A1 消音型 | 梦魇 (崭新出厂)");
-                                handleDataForBuff(response, M4A4_MY_ZX);
+                                handleDataForBuff(response, M4A1_MY_ZX);
                                 connect328();
                             }
 
@@ -3336,7 +3336,7 @@ public class BuffGuns extends BuffCheck{
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A1 消音型 | 女火神之炽焰 (崭新出厂)");
-                                handleDataForBuff(response, M4A4_NHSZCY_ZX);
+                                handleDataForBuff(response, M4A1_NHSZCY_ZX);
                                 connect339();
                             }
 

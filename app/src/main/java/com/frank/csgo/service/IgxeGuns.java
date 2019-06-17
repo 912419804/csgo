@@ -1225,7 +1225,7 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, M4A4_MY_ZX);
+                        handleDataIgxe(response, M4A1_MY_ZX);
                         connect90();
                     }
 
@@ -1276,7 +1276,7 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, M4A4_YKLSYL_ZX);
+                        handleDataIgxe(response, M4A1_YKLSYL_ZX);
                         connect91();
                     }
 
@@ -1293,7 +1293,7 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, M4A4_PSQQ_ZX);
+                        handleDataIgxe(response, M4A1_PSQQ_ZX);
                         connect92_1();
                     }
 
@@ -1310,7 +1310,7 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, M4A4_NHSZCY_ZX);
+                        handleDataIgxe(response, M4A1_NHSZCY_ZX);
                         connect92();
                     }
 
@@ -1327,7 +1327,7 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, M4A4_NHSZCY_LM);
+                        handleDataIgxe(response, M4A1_NHSZCY_LM);
                         connect94();
                     }
 
@@ -2738,7 +2738,7 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, GLK_SHDWE_JJ_ST);
+                        handleDataIgxe(response, P250_SHDWE_JJ_ST);
                         connect175();
                     }
 

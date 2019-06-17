@@ -1,6 +1,8 @@
 package com.frank.csgo.service;
 
 import android.text.TextUtils;
+import android.util.Log;
+
 import com.frank.csgo.bean.Buff;
 import com.frank.csgo.bean.goods.BuffGoods;
 import com.frank.csgo.bean.goods.DataBean;
@@ -60,23 +62,25 @@ public class BuffLast extends BuffCheck {
         ArrayList<Object[]> goods = new ArrayList<>();
         for (ItemsBean bean : list) {
             Object[] objs = BuffMap.DATA.get(bean.getName());
+            Log.d("扫描>",bean.getName());
             if (objs != null){
                 goods.add(new Object[]{objs,bean});
             }
         }
+        Log.d("扫描>","------");
 //        public static Object[] XL_LZGZ_JJ_MAP = {N_XL_LZGZ_JJ,XL_LZGZ_JJ_URL,XL_LZGZ_JJ};
         if (!goods.isEmpty()){
             for (final Object[] g : goods) {
 
                 Object[] good = (Object[]) g[0];
                 final ItemsBean bean = (ItemsBean) g[1];
-
+                Log.d("扫描#",bean.getName());
                 final String name = (String) good[0];//名称
                 String[] urls = (String[]) good[1];//地址
                 final double[] price = (double[]) good[2];//价格
-                if (urls.length == 0)return;
+                if (urls.length == 0)continue;
                 final String url = urls[0];
-                if (TextUtils.isEmpty(url)) return;
+                if (TextUtils.isEmpty(url)) continue;
                 mService.post(new Runnable() {
                     @Override
                     public void run() {
@@ -100,7 +104,9 @@ public class BuffLast extends BuffCheck {
                                 });
                     }
                 });
+
             }
+            Log.d("扫描#","---------------------------------------------");
         }
     }
 }

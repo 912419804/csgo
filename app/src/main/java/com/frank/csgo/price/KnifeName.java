@@ -148,7 +148,7 @@ public class KnifeName implements Serializable {
     public static String N_JCZD_WTZ= "锯齿爪刀（★）";
 
     //锯齿爪刀（★）|深红之网 (久经沙场)
-    public static String N_JCZD_CS_JJ = "锯齿爪刀（★）|深红之网 (久经沙场)";
+    public static String N_JCZD_CS_JJ = "锯齿爪刀（★）| 深红之网 (久经沙场)";
 
     //蝴蝶刀（★） | 致命紫罗兰 (久经沙场)
     public static String N_HDD_ZMZLL_JJ = "蝴蝶刀（★） | 致命紫罗兰 (久经沙场)";
@@ -157,7 +157,7 @@ public class KnifeName implements Serializable {
     public static String N_CD_ZMZLL_LM = "刺刀（★） | 致命紫罗兰 (略有磨损)";
 
     //M9刺刀（★） | 致命紫罗兰 (久经沙场)
-    public static String N_M9_ZMZLL_JJ = "M9刺刀（★） | 致命紫罗兰 (久经沙场)";
+    public static String N_M9_ZMZLL_JJ = "M9 刺刀（★） | 致命紫罗兰 (久经沙场)";
 
     //爪子刀（★） | 致命紫罗兰 (久经沙场)
     public static String N_ZZD_ZMZLL_JJ = "爪子刀（★） | 致命紫罗兰 (久经沙场)";
@@ -179,10 +179,10 @@ public class KnifeName implements Serializable {
 
 
     //M9刺刀（★） | 噩梦之夜 (久经沙场)
-    public static String N_M9_EMZY_LM = "M9刺刀（★） | 噩梦之夜 (略有磨损)";
+    public static String N_M9_EMZY_LM = "M9 刺刀（★） | 噩梦之夜 (略有磨损)";
 
     //M9刺刀（★） | 噩梦之夜 (久经沙场)
-    public static String N_M9_EMZY_JJ = "M9刺刀（★） | 噩梦之夜 (久经沙场)";
+    public static String N_M9_EMZY_JJ = "M9 刺刀（★） | 噩梦之夜 (久经沙场)";
 
     //爪子刀（★） | 噩梦之夜 (久经沙场)
     public static String N_ZZD_EMZY_JJ = "爪子刀（★） | 噩梦之夜 (久经沙场)";
