@@ -2008,12 +2008,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, GLK_HYFP_ZX);
-                        connect134();
+                        connect133();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect134();
+                        connect133();
                     }
                 });
     }
@@ -2024,7 +2024,7 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, 900, 0.17, 800);
+                        handleDataIgxe(response, AK47_HS_JJ);
                         connect134();
                     }
 

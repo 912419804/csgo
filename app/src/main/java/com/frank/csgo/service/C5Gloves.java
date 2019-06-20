@@ -1,6 +1,7 @@
 package com.frank.csgo.service;
 
 import com.frank.csgo.bean.C5;
+import com.frank.csgo.bean.C5;
 import com.frank.csgo.https.JsonCallback;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
@@ -1136,6 +1137,55 @@ public class C5Gloves extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, GS_TY_JJ);
+                        connect1168();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1168();
+                    }
+                });
+    }
+
+    // 运动手套（★） | 青铜形态 (久经沙场)
+    private void connect1168() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553445944&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, YD_QTXT_JJ);
+                        connect1169();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1169();
+                    }
+                });
+    }
+    // 运动手套（★） | 干旱 (略有磨损)
+    private void connect1169() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553389065&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, YD_GH_LM);
+                        connect1170();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1170();
+                    }
+                });
+    }
+    // 运动手套（★） | 干旱 (久经沙场)
+    private void connect1170() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=514711683&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, YD_GH_JJ);
                         mService.startScan();
                     }
 

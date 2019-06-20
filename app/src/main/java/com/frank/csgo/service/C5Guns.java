@@ -2041,12 +2041,12 @@ public class C5Guns extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, GLK_HYFP_ZX);
-                        connect135();
+                        connect133();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect135();
+                        connect133();
                     }
                 });
     }
@@ -2057,7 +2057,7 @@ public class C5Guns extends C5Check{
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, 1000, 0.17, 850);
+                        handleDataC5(response, AK47_HS_JJ);
                         connect134();
                     }
 

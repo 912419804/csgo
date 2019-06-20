@@ -1136,6 +1136,54 @@ public class IgxeGloves extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, GS_TY_JJ);
+                        connect1168();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1168();
+                    }
+                });
+    }
+    // 运动手套（★） | 青铜形态 (久经沙场)
+    private void connect1168() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610824")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, YD_QTXT_JJ);
+                        connect1169();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1169();
+                    }
+                });
+    }
+    // 运动手套（★） | 干旱 (略有磨损)
+    private void connect1169() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/566251")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, YD_GH_LM);
+                        connect1170();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1170();
+                    }
+                });
+    }
+    // 运动手套（★） | 干旱 (久经沙场)
+    private void connect1170() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/566306")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, YD_GH_JJ);
                         mService.igxeKnifes.connect1200();
                     }
 

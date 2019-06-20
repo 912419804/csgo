@@ -416,4 +416,16 @@ public class Knife {
     public static String[] ZDD_EMZY_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42745&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1560441660097"};
     public static Object[] ZDD_EMZY_JJ_MAP = {N_ZDD_EMZY_JJ,ZDD_EMZY_JJ_URL,ZDD_EMZY_JJ};
     static {KNIFE_DATA.put(ZDD_EMZY_JJ_MAP[0],ZDD_EMZY_JJ_MAP);}
+
+    //弯刀（★） | 深红之网 (略有磨损)
+    public static double[] WD_SHZW_LM = {530, 0.17, 400};
+    public static String[] WD_SHZW_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42745&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1560441660097"};
+    public static Object[] WD_SHZW_LM_MAP = {N_ZDD_EMZY_JJ,ZDD_EMZY_JJ_URL,ZDD_EMZY_JJ};
+    static {KNIFE_DATA.put(ZDD_EMZY_JJ_MAP[0],ZDD_EMZY_JJ_MAP);}
+
+    //弯刀（★） | 深红之网 (久经沙场)
+    public static double[] WD_SHZW_JJ = {530, 0.17, 400};
+    public static String[] WD_SHZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42745&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1560441660097"};
+    public static Object[] WD_SHZW_JJ_MAP = {N_ZDD_EMZY_JJ,ZDD_EMZY_JJ_URL,ZDD_EMZY_JJ};
+    static {KNIFE_DATA.put(ZDD_EMZY_JJ_MAP[0],ZDD_EMZY_JJ_MAP);}
 }

@@ -180,6 +180,15 @@ public class GloveName implements Serializable {
     //  运动手套（★） | 欧米伽(久经沙场)
     public static String N_YD_OMJ_JJ = "运动手套（★） | 欧米伽 (久经沙场)";
 
+    //  运动手套（★） | 青铜形态 (久经沙场)
+    public static String N_YD_QTXT_JJ = "运动手套（★） | 青铜形态 (久经沙场)";
+
+    //  运动手套（★） | 干旱 (略有磨损)
+    public static String N_YD_GH_LM = "运动手套（★） | 干旱 (略有磨损)";
+
+    //  运动手套（★） | 干旱 (久经沙场)
+    public static String N_YD_GH_JJ = "运动手套（★） | 干旱 (久经沙场)";
+
     // 九头蛇手套（★） | 表面淬火(略有磨损)
     public static String N_JTS_BMCH_LM = "九头蛇手套（★） | 表面淬火 (略有磨损)";
 
