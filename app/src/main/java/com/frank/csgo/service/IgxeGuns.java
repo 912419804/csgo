@@ -3130,12 +3130,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, M4A4_MYS_ZX_ST);
-                        connect1010();
+                        connect199();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect1010();
+                        connect199();
                     }
                 });
     }
@@ -3163,7 +3163,7 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, 320, 0.03, 220);
+                        handleDataIgxe(response, M4A4_LW_ZX_ST);
                         connect1000();
                     }
 
@@ -3180,13 +3180,13 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, 110, 0.01, 80);
-                        connect1001();
+                        handleDataIgxe(response, M4A4_SYDM_ZX_ST);
+                        connect1009();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect1001();
+                        connect1009();
                     }
                 });
     }
@@ -3333,7 +3333,7 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, 800, 0.08, 650);
+                        handleDataIgxe(response, AK47_NHQS_LM_ST);
                         connect1010();
                     }
 

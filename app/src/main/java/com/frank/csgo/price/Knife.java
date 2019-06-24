@@ -94,13 +94,13 @@ public class Knife {
     static {KNIFE_DATA.put(CD_DPL_ZX_MAP[0],CD_DPL_ZX_MAP);}
 
     //   刺刀（★） | 虎牙 (崭新出厂)
-    public static double[] CD_HY_ZX = {1500, 0.01, 1300};
+    public static double[] CD_HY_ZX = {1500, 0.005, 1300};
     public static String[] CD_HY_ZX_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42434&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887393940"};
     public static Object[] CD_HY_ZX_MAP = {N_CD_HY_ZX,CD_HY_ZX_URL,CD_HY_ZX};
     static {KNIFE_DATA.put(CD_HY_ZX_MAP[0],CD_HY_ZX_MAP);}
 
     //    M9 刺刀（★） | 虎牙 (崭新出厂)
-    public static double[] M9_HY_ZX = {1720, 0.01, 1480};
+    public static double[] M9_HY_ZX = {1720, 0.005, 1480};
     public static String[] M9_HY_ZX_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43136&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887562915"};
     public static Object[] M9_HY_ZX_MAP = {N_M9_HY_ZX,M9_HY_ZX_URL,M9_HY_ZX};
     static {KNIFE_DATA.put(M9_HY_ZX_MAP[0],M9_HY_ZX_MAP);}

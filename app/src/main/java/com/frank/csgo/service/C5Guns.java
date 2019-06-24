@@ -2875,12 +2875,12 @@ public class C5Guns extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, 80, 0.01, 45);
-                        connect1010();
+                        connect199();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect1010();
+                        connect199();
                     }
                 });
     }
@@ -2908,7 +2908,7 @@ public class C5Guns extends C5Check{
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, 320, 0.03, 220);
+                        handleDataC5(response, M4A4_LW_ZX_ST);
                         connect1000();
                     }
 
@@ -2925,13 +2925,13 @@ public class C5Guns extends C5Check{
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, 110, 0.01, 80);
-                        connect1001();
+                        handleDataC5(response, M4A4_SYDM_ZX_ST);
+                        connect1009();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect1001();
+                        connect1009();
                     }
                 });
     }
@@ -3078,7 +3078,7 @@ public class C5Guns extends C5Check{
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, 800, 0.08, 650);
+                        handleDataC5(response, AK47_NHQS_LM_ST);
                         connect1010();
                     }
 
