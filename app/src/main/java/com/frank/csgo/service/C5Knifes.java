@@ -368,6 +368,7 @@ public class C5Knifes extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, M9_SHZW_JJ);
+                        handleDataC5(response, M9_SHZW_JJ_2);
                         connect1227();
                     }
 

@@ -379,6 +379,7 @@ public class IgxeKnifes extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, M9_SHZW_JJ);
+                        handleDataIgxe(response, M9_SHZW_JJ_2);
                         connect1227();
                     }
 
