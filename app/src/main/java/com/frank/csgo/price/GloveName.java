@@ -27,11 +27,20 @@ public class GloveName implements Serializable {
     // 血猎手套（★） | 游击队 (久经沙场)
     public static String N_XL_YJD_JJ = "血猎手套（★） | 游击队 (久经沙场)";
 
+    // 驾驶手套（★） | 深红织物 (略有磨损)
+    public static String N_XL_SHZW_LM = "驾驶手套（★） | 深红织物 (略有磨损)";
+
     // 驾驶手套（★） | 深红织物 (久经沙场)
     public static String N_XL_SHZW_JJ = "驾驶手套（★） | 深红织物 (久经沙场)";
 
     // 驾驶手套（★） | 紫蓝格子 (久经沙场)
     public static String N_XL_LZGZ_JJ = "驾驶手套（★） | 紫蓝格子 (久经沙场)";
+
+    // 驾驶手套（★） | 紫蓝格子 (略有磨损)
+    public static String N_XL_LZGZ_LM = "驾驶手套（★） | 紫蓝格子 (略有磨损)";
+
+    // 驾驶手套（★） | 王蛇 (略有磨损)
+    public static String N_XL_WS_LM = "驾驶手套（★） | 王蛇 (略有磨损)";
 
     // 驾驶手套（★） | 王蛇 (久经沙场)
     public static String N_XL_WS_JJ = "驾驶手套（★） | 王蛇 (久经沙场)";
@@ -86,6 +95,9 @@ public class GloveName implements Serializable {
 
     //  裹手（★） | 云杉DDPAT(略有磨损)
     public static String N_GS_YS_LM = "裹手（★） | 云杉DDPAT (略有磨损)";
+
+    //  裹手（★） | 云杉DDPAT (久经沙场)
+    public static String N_GS_YS_JJ = "裹手（★） | 云杉DDPAT (久经沙场)";
 
     //  摩托手套（★） | 薄荷 (久经沙场)
     public static String N_GS_BH_JJ = "摩托手套（★） | 薄荷 (久经沙场)";
