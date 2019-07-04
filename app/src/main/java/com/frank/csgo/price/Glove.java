@@ -293,7 +293,7 @@ public class Glove {
     static {GLOVE_DATA.put(ZY_SHZW_JJ_MAP[0],ZY_SHZW_JJ_MAP);}
 
     //  专业手套（★） | 大腕 (略有磨损)
-    public static double[] ZY_DW_LM = {3200, 0.12, 2700};
+    public static double[] ZY_DW_LM = {3200, 0.11, 2700};
     public static String[] ZY_DW_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45606&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975801052"};
     public static Object[] ZY_DW_LM_MAP = {N_ZY_DW_LM,ZY_DW_LM_URL, ZY_DW_LM};
     static {GLOVE_DATA.put(ZY_DW_LM_MAP[0],ZY_DW_LM_MAP);}

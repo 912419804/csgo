@@ -298,7 +298,7 @@ public class Gun {
     static {GUN_DATA.put(AWP_BNYS_ZX_MAP[0],AWP_BNYS_ZX_MAP);}
 
     //   AWP | 雷击 (崭新出厂)
-    public static double[] AWP_LJ_ZX = {420, 0.01, 340};
+    public static double[] AWP_LJ_ZX = {420, 0.005, 340};
     public static String   AWP_LJ_ZX_N = "AWP | 雷击 (崭新出厂)";
     public static String[] AWP_LJ_ZX_URL = {"0"};
     public static Object[] AWP_LJ_ZX_MAP = {AWP_LJ_ZX_N,AWP_LJ_ZX_URL, AWP_LJ_ZX};
@@ -987,14 +987,14 @@ public class Gun {
     static {GUN_DATA.put(AUG_DL_ZX_MAP[0],AUG_DL_ZX_MAP);}
     
     // AUG | 动量 (略有磨损)
-    public static double[] AUG_DL_LM = {105, 0.09, 70};
+    public static double[] AUG_DL_LM = {80, 0.09, 50};
     public static String   AUG_DL_LM_N = "AUG | 动量 (略有磨损)";
     public static String[] AUG_DL_LM_URL = {"0"};
     public static Object[] AUG_DL_LM_MAP = {AUG_DL_LM_N,AUG_DL_LM_URL, AUG_DL_LM};
     static {GUN_DATA.put(AUG_DL_LM_MAP[0],AUG_DL_LM_MAP);}
     
     // AUG | 动量 (久经沙场)
-    public static double[] AUG_DL_JJ = {35, 0.17, 20};
+    public static double[] AUG_DL_JJ = {27, 0.165, 15};
     public static String   AUG_DL_JJ_N = "AUG | 动量 (久经沙场)";
     public static String[] AUG_DL_JJ_URL = {"0"};
     public static Object[] AUG_DL_JJ_MAP = {AUG_DL_JJ_N,AUG_DL_JJ_URL, AUG_DL_JJ};
