@@ -611,7 +611,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_HSMY_LM_MAP[0],M4A4_HSMY_LM_MAP);}
 
     //M4A4 |黑色魅影 (久经沙场)
-    public static double[] M4A4_HSMY_JJ = {160, 0.20, 120};
+    public static double[] M4A4_HSMY_JJ = {160, 0.20, 100};
     public static String   M4A4_HSMY_JJ_N = "M4A4 | 黑色魅影 (久经沙场)";
     public static String[] M4A4_HSMY_JJ_URL = {"0"};
     public static Object[] M4A4_HSMY_JJ_MAP = {M4A4_HSMY_JJ_N,M4A4_HSMY_JJ_URL, M4A4_HSMY_JJ};
