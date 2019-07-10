@@ -502,7 +502,7 @@ public class Gun {
 
     //USP 消音版 | 闪回 (崭新出厂)
     //USP 消音版（StatTrak™） | 闪回 (崭新出厂)
-    public static double[] USP_SH_ZX_ST = {40, 0.03, 30};
+    public static double[] USP_SH_ZX_ST = {40, 0.03, 20};
     public static String   USP_SH_ZX_ST_N = "USP 消音版（StatTrak™） | 闪回 (崭新出厂)";
     public static String[] USP_SH_ZX_ST_URL = {"0"};
     public static Object[] USP_SH_ZX_ST_MAP = {USP_SH_ZX_ST_N,USP_SH_ZX_ST_URL, USP_SH_ZX_ST};
