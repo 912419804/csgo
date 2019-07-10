@@ -1,6 +1,7 @@
 package com.frank.csgo.service;
 
 import com.frank.csgo.bean.C5;
+import com.frank.csgo.bean.C5;
 import com.frank.csgo.https.JsonCallback;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
@@ -1548,6 +1549,39 @@ public class C5Guns extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, AWP_JLCS_ZX);
+                        connect103_1();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect103_1();
+                    }
+                });
+    }
+
+    //AWP | 巨龙传说 (略有磨损)
+    private void connect103_1() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=46877216&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, AWP_JLCS_LM);
+                        connect103_2();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect103_2();
+                    }
+                });
+    }
+    //AWP | 巨龙传说 (久经沙场)
+    private void connect103_2() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2325633&page=1&flag=&sort=&worn=&delivery=")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, AWP_JLCS_JJ);
                         connect104();
                     }
 

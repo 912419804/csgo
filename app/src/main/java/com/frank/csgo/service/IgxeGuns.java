@@ -1515,6 +1515,38 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, AWP_JLCS_ZX);
+                        connect103_1();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect103_1();
+                    }
+                });
+    }
+    //AWP | 巨龙传说 (略有磨损)
+    private void connect103_1() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/8088")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, AWP_JLCS_LM);
+                        connect103_2();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect103_2();
+                    }
+                });
+    }
+    //AWP | 巨龙传说 (久经沙场)
+    private void connect103_2() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/22781")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, AWP_JLCS_JJ);
                         connect104();
                     }
 
