@@ -2315,12 +2315,12 @@ public class C5Guns extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, USP_BXG_LM_ST);
-                        connect167();
+                        connect166();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect167();
+                        connect166();
                     }
                 });
     }

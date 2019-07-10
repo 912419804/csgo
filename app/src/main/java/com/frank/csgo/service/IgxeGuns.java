@@ -2568,12 +2568,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, USP_BXG_LM_ST);
-                        connect167();
+                        connect166();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect167();
+                        connect166();
                     }
                 });
     }
