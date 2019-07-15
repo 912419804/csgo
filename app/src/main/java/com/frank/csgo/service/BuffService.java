@@ -13,13 +13,12 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.IBinder;
-import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
 import com.frank.csgo.Constant;
-import com.frank.csgo.Main2Activity;
+import com.frank.csgo.MainActivity;
 import com.frank.csgo.R;
 import com.frank.csgo.utils.NumUtils;
 import com.frank.csgo.utils.ThreadUtils;
@@ -154,7 +153,7 @@ public class BuffService extends Service {
         //启用前台服务，主要是startForeground()
         Notification notification = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            Intent mainIntent = new Intent(this, Main2Activity.class);
+            Intent mainIntent = new Intent(this, MainActivity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mainIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             notification = new Notification.Builder(this, channel)
 //                    .setSmallIcon(R.mipmap.ic_launcher)

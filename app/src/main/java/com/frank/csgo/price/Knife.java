@@ -401,7 +401,7 @@ public class Knife {
     static {KNIFE_DATA.put(LSZ_EMZY_LM_MAP[0],LSZ_EMZY_LM_MAP);}
 
     //猎杀者匕首（★） | 噩梦之夜 (久经沙场)
-    public static double[] LSZ_EMZY_JJ = {500, 0.17, 400};
+    public static double[] LSZ_EMZY_JJ = {450, 0.16, 350};
     public static String[] LSZ_EMZY_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42929&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1560441140080"};
     public static Object[] LSZ_EMZY_JJ_MAP = {N_LSZ_EMZY_JJ,LSZ_EMZY_JJ_URL,LSZ_EMZY_JJ};
     static {KNIFE_DATA.put(LSZ_EMZY_JJ_MAP[0],LSZ_EMZY_JJ_MAP);}

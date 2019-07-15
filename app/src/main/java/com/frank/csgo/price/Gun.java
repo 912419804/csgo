@@ -138,14 +138,14 @@ public class Gun {
     static {GUN_DATA.put(AK47_HYFP_LM_MAP[0],AK47_HYFP_LM_MAP);}
 
     //AK-47 | 霓虹骑士 (崭新出厂)
-    public static double[] AK47_NHQS_ZX = {530, 0.02, 400};
+    public static double[] AK47_NHQS_ZX = {530, 0.02, 380};
     public static String   AK47_NHQS_ZX_N = "AK-47 | 霓虹骑士 (崭新出厂)";
     public static String[] AK47_NHQS_ZX_URL = {"0"};
     public static Object[] AK47_NHQS_ZX_MAP = {AK47_NHQS_ZX_N,AK47_NHQS_ZX_URL, AK47_NHQS_ZX};
     static {GUN_DATA.put(AK47_NHQS_ZX_MAP[0],AK47_NHQS_ZX_MAP);}
 
     //AK-47 | 霓虹骑士 (略有磨损)
-    public static double[] AK47_NHQS_LM = {290, 0.072, 230};
+    public static double[] AK47_NHQS_LM = {290, 0.078, 200};
     public static String   AK47_NHQS_LM_N = "AK-47 | 霓虹骑士 (略有磨损)";
     public static String[] AK47_NHQS_LM_URL = {"0"};
     public static Object[] AK47_NHQS_LM_MAP = {AK47_NHQS_LM_N,AK47_NHQS_LM_URL, AK47_NHQS_LM};
