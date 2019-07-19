@@ -23,7 +23,7 @@ public class Gun {
     static {GUN_DATA.put(AK47_XXYD_ZX_ST_MAP[0],AK47_XXYD_ZX_ST_MAP);}
 
     //   AK-47 | 燃料喷射器 (崭新出厂)
-    public static double[] AK47_RLPSQ_ZX = {600, 0.03, 480};
+    public static double[] AK47_RLPSQ_ZX = {630, 0.03, 550};
     public static String   AK47_RLPSQ_ZX_N = "AK-47 | 燃料喷射器 (崭新出厂)";
     public static String[] AK47_RLPSQ_ZX_URL = {"0"};
     public static Object[] AK47_RLPSQ_ZX_MAP = {AK47_RLPSQ_ZX_N,AK47_RLPSQ_ZX_URL, AK47_RLPSQ_ZX};
@@ -73,14 +73,14 @@ public class Gun {
     static {GUN_DATA.put(AK47_BMCH_ZX_MAP[0],AK47_BMCH_ZX_MAP);}
 
     //AK-47 | 水栽竹 (崭新出厂)
-    public static double[] AK47_SZZ_ZX = {1000, 0.03, 800};
+    public static double[] AK47_SZZ_ZX = {1250, 0.05, 1100};
     public static String   AK47_SZZ_ZX_N = "AK-47 | 水栽竹 (崭新出厂)";
     public static String[] AK47_SZZ_ZX_URL = {"0"};
     public static Object[] AK47_SZZ_ZX_MAP = {AK47_SZZ_ZX_N,AK47_SZZ_ZX_URL, AK47_SZZ_ZX};
     static {GUN_DATA.put(AK47_SZZ_ZX_MAP[0],AK47_SZZ_ZX_MAP);}
 
     //AK-47 | 水栽竹 (略有磨损)
-    public static double[] AK47_SZZ_LM = {750, 0.080, 550};
+    public static double[] AK47_SZZ_LM = {800, 0.080, 680};
     public static String   AK47_SZZ_LM_N = "AK-47 | 水栽竹 (略有磨损)";
     public static String[] AK47_SZZ_LM_URL = {"0"};
     public static Object[] AK47_SZZ_LM_MAP = {AK47_SZZ_LM_N,AK47_SZZ_LM_URL, AK47_SZZ_LM};
@@ -305,7 +305,7 @@ public class Gun {
     static {GUN_DATA.put(AWP_LJ_ZX_MAP[0],AWP_LJ_ZX_MAP);}
 
     //AWP | 巨龙传说 (崭新出厂)
-    public static double[] AWP_JLCS_ZX = {14500, 0.04, 13000};
+    public static double[] AWP_JLCS_ZX = {16000, 0.03, 13000};
     public static String   AWP_JLCS_ZX_N = "AWP | 巨龙传说 (崭新出厂)";
     public static String[] AWP_JLCS_ZX_URL = {"0"};
     public static Object[] AWP_JLCS_ZX_MAP = {AWP_JLCS_ZX_N,AWP_JLCS_ZX_URL, AWP_JLCS_ZX};
@@ -326,7 +326,7 @@ public class Gun {
     static {GUN_DATA.put(AWP_JLCS_JJ_MAP[0],AWP_JLCS_JJ_MAP);}
 
     //  AWP | 死神 (崭新出厂)
-    public static double[] AWP_SS_ZX = {65, 0.01, 38};
+    public static double[] AWP_SS_ZX = {65, 0.01, 30};
     public static String   AWP_SS_ZX_N = "AWP | 死神 (崭新出厂)";
     public static String[] AWP_SS_ZX_URL = {"0"};
     public static Object[] AWP_SS_ZX_MAP = {AWP_SS_ZX_N,AWP_SS_ZX_URL, AWP_SS_ZX};
@@ -674,7 +674,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_HD_ZX_MAP[0],M4A4_HD_ZX_MAP);}
 
     // M4A4 | 皇帝 (略有磨损)
-    public static double[] M4A4_HD_LM = {520, 0.08, 420};
+    public static double[] M4A4_HD_LM = {520, 0.08, 400};
     public static String   M4A4_HD_LM_N = "M4A4 | 皇帝 (略有磨损)";
     public static String[] M4A4_HD_LM_URL = {"0"};
     public static Object[] M4A4_HD_LM_MAP = {M4A4_HD_LM_N,M4A4_HD_LM_URL, M4A4_HD_LM};
@@ -892,7 +892,7 @@ public class Gun {
     static {GUN_DATA.put(SMZY_HSDH_LM_MAP[0],SMZY_HSDH_LM_MAP);}
 
     //   沙漠之鹰 | 炽烈之炎 (崭新出厂)
-    public static double[] SMZY_CLZY_ZX = {720,0.009,600};
+    public static double[] SMZY_CLZY_ZX = {766,0.009,600};
     public static String   SMZY_CLZY_ZX_N = "沙漠之鹰 | 炽烈之炎 (崭新出厂)";
     public static String[] SMZY_CLZY_ZX_URL = {"0"};
     public static Object[] SMZY_CLZY_ZX_MAP = {SMZY_CLZY_ZX_N,SMZY_CLZY_ZX_URL, SMZY_CLZY_ZX};
@@ -913,7 +913,7 @@ public class Gun {
     static {GUN_DATA.put(SMZY_QG_ZX_MAP[0],SMZY_QG_ZX_MAP);}
 
     // 沙漠之鹰（StatTrak™） | 轻轨 (崭新出厂)
-    public static double[] SMZY_QG_ZX_ST = {170, 0.01, 100};
+    public static double[] SMZY_QG_ZX_ST = {170, 0.01, 80};
     public static String   SMZY_QG_ZX_ST_N = "沙漠之鹰（StatTrak™） | 轻轨 (崭新出厂)";
     public static String[] SMZY_QG_ZX_ST_URL = {"0"};
     public static Object[] SMZY_QG_ZX_ST_MAP = {SMZY_QG_ZX_ST_N,SMZY_QG_ZX_ST_URL, SMZY_QG_ZX_ST};
@@ -994,7 +994,7 @@ public class Gun {
     /***********************AUG武器列表****************************/
 
     // AUG | 动量 (崭新出厂)
-    public static double[] AUG_DL_ZX = {360, 0.05, 250};
+    public static double[] AUG_DL_ZX = {300, 0.05, 220};
     public static String   AUG_DL_ZX_N = "AUG | 动量 (崭新出厂)";
     public static String[] AUG_DL_ZX_URL = {"0"};
     public static Object[] AUG_DL_ZX_MAP = {AUG_DL_ZX_N,AUG_DL_ZX_URL, AUG_DL_ZX};

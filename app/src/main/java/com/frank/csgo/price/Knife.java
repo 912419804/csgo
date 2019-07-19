@@ -275,7 +275,7 @@ public class Knife {
     static {KNIFE_DATA.put(XD_WTZ_MAP[0],XD_WTZ_MAP);}
 
     //熊刀（★） | 深红之网 (久经沙场)
-    public static double[] XD_SHZW_JJ = {1700, 0.24, 1500};
+    public static double[] XD_SHZW_JJ = {1650, 0.24, 1500};
     public static String[] XD_SHZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759405&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889684277"};
     public static Object[] XD_SHZW_JJ_MAP = {N_XD_SHZW_JJ,XD_SHZW_JJ_URL,XD_SHZW_JJ};
     static {KNIFE_DATA.put(XD_SHZW_JJ_MAP[0],XD_SHZW_JJ_MAP);}
