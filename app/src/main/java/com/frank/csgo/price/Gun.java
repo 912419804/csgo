@@ -73,7 +73,7 @@ public class Gun {
     static {GUN_DATA.put(AK47_BMCH_ZX_MAP[0],AK47_BMCH_ZX_MAP);}
 
     //AK-47 | 水栽竹 (崭新出厂)
-    public static double[] AK47_SZZ_ZX = {1250, 0.05, 1100};
+    public static double[] AK47_SZZ_ZX = {1250, 0.04, 1100};
     public static String   AK47_SZZ_ZX_N = "AK-47 | 水栽竹 (崭新出厂)";
     public static String[] AK47_SZZ_ZX_URL = {"0"};
     public static Object[] AK47_SZZ_ZX_MAP = {AK47_SZZ_ZX_N,AK47_SZZ_ZX_URL, AK47_SZZ_ZX};
@@ -667,7 +667,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_PX_LM_MAP[0],M4A4_PX_LM_MAP);}
 
     // M4A4 | 皇帝 (崭新出厂)
-    public static double[] M4A4_HD_ZX = {1100, 0.04, 900};
+    public static double[] M4A4_HD_ZX = {1000, 0.04, 900};
     public static String   M4A4_HD_ZX_N = "M4A4 | 皇帝 (崭新出厂)";
     public static String[] M4A4_HD_ZX_URL = {"0"};
     public static Object[] M4A4_HD_ZX_MAP = {M4A4_HD_ZX_N,M4A4_HD_ZX_URL, M4A4_HD_ZX};
@@ -846,7 +846,7 @@ public class Gun {
     static {GUN_DATA.put(M4A1_JXGY_ZX_MAP[0],M4A1_JXGY_ZX_MAP);}
 
     //M4A1 消音型 | 机型工业 (略有磨损)
-    public static double[] M4A1_JXGY_LM = {100, 0.08, 60};
+    public static double[] M4A1_JXGY_LM = {100, 0.075, 60};
     public static String   M4A1_JXGY_LM_N = "M4A1 消音型 | 机型工业 (略有磨损)";
     public static String[] M4A1_JXGY_LM_URL = {"0"};
     public static Object[] M4A1_JXGY_LM_MAP = {M4A1_JXGY_LM_N,M4A1_JXGY_LM_URL, M4A1_JXGY_LM};
@@ -906,7 +906,7 @@ public class Gun {
     static {GUN_DATA.put(SMZY_JXGY_ZX_MAP[0],SMZY_JXGY_ZX_MAP);}
 
     // 沙漠之鹰 | 轻轨 (崭新出厂)
-    public static double[] SMZY_QG_ZX = {40, 0.005, 20};
+    public static double[] SMZY_QG_ZX = {30, 0.005, 20};
     public static String   SMZY_QG_ZX_N = "沙漠之鹰 | 轻轨 (崭新出厂)";
     public static String[] SMZY_QG_ZX_URL = {"0"};
     public static Object[] SMZY_QG_ZX_MAP = {SMZY_QG_ZX_N,SMZY_QG_ZX_URL, SMZY_QG_ZX};
@@ -931,7 +931,7 @@ public class Gun {
     /***********************P250武器列表****************************/
 
     //P250 | 二西莫夫 (略有磨损)
-    public static double[] P250_EXMF_LM = {100, 0.11, 80};
+    public static double[] P250_EXMF_LM = {110, 0.11, 80};
     public static String   P250_EXMF_LM_N = "P250 | 二西莫夫 (略有磨损)";
     public static String[] P250_EXMF_LM_URL = {"0"};
     public static Object[] P250_EXMF_LM_MAP = {P250_EXMF_LM_N,P250_EXMF_LM_URL, P250_EXMF_LM};
@@ -962,7 +962,7 @@ public class Gun {
 
     //P250（StatTrak™） | 生化短尾鳄(略有磨损)
     //P250（StatTrak™） | 生化短尾鳄(久经沙场)
-    public static double[] P250_SHDWE_JJ_ST = {100, 0.18, 75};
+    public static double[] P250_SHDWE_JJ_ST = {90, 0.18, 60};
     public static String   P250_SHDWE_JJ_ST_N = "P250（StatTrak™） | 生化短尾鳄(久经沙场)";
     public static String[] P250_SHDWE_JJ_ST_URL = {"0"};
     public static Object[] P250_SHDWE_JJ_ST_MAP = {P250_SHDWE_JJ_ST_N,P250_SHDWE_JJ_ST_URL, P250_SHDWE_JJ_ST};
@@ -978,14 +978,14 @@ public class Gun {
     /***********************SG553武器列表****************************/
 
     // SG 553 | 意式拉力 (略有磨损)
-    public static double[] SG553_YSLL_LM = {450, 0.09, 250};
+    public static double[] SG553_YSLL_LM = {700, 0.09, 250};
     public static String   SG553_YSLL_LM_N = "SG 553 | 意式拉力 (略有磨损)";
     public static String[] SG553_YSLL_LM_URL = {"0"};
     public static Object[] SG553_YSLL_LM_MAP = {SG553_YSLL_LM_N,SG553_YSLL_LM_URL, SG553_YSLL_LM};
     static {GUN_DATA.put(SG553_YSLL_LM_MAP[0],SG553_YSLL_LM_MAP);}
 
     // SG 553 | 意式拉力 (久经沙场)
-    public static double[] SG553_YSLL_JJ = {220, 0.20, 110};
+    public static double[] SG553_YSLL_JJ = {400, 0.20, 110};
     public static String   SG553_YSLL_JJ_N = "SG 553 | 意式拉力 (久经沙场)";
     public static String[] SG553_YSLL_JJ_URL = {"0"};
     public static Object[] SG553_YSLL_JJ_MAP = {SG553_YSLL_JJ_N,SG553_YSLL_JJ_URL, SG553_YSLL_JJ};
@@ -994,7 +994,7 @@ public class Gun {
     /***********************AUG武器列表****************************/
 
     // AUG | 动量 (崭新出厂)
-    public static double[] AUG_DL_ZX = {300, 0.05, 220};
+    public static double[] AUG_DL_ZX = {250, 0.05, 180};
     public static String   AUG_DL_ZX_N = "AUG | 动量 (崭新出厂)";
     public static String[] AUG_DL_ZX_URL = {"0"};
     public static Object[] AUG_DL_ZX_MAP = {AUG_DL_ZX_N,AUG_DL_ZX_URL, AUG_DL_ZX};
