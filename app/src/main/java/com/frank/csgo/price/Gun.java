@@ -340,7 +340,7 @@ public class Gun {
     static {GUN_DATA.put(AWP_B_LM_MAP[0],AWP_B_LM_MAP);}
 
     //AWP | 黑色魅影 (崭新出厂)
-    public static double[] AWP_HSMY_ZX = {400, 0.02, 300};
+    public static double[] AWP_HSMY_ZX = {350, 0.02, 270};
     public static String   AWP_HSMY_ZX_N = "AWP | 黑色魅影 (崭新出厂)";
     public static String[] AWP_HSMY_ZX_URL = {"0"};
     public static Object[] AWP_HSMY_ZX_MAP = {AWP_HSMY_ZX_N,AWP_HSMY_ZX_URL, AWP_HSMY_ZX};
