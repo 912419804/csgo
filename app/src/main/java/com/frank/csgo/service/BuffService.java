@@ -191,10 +191,11 @@ public class BuffService extends Service {
         handler.postDelayed(r, Long.parseLong(NumUtils.getRandom(MIN_DELAY,MAX_DELAY)));
     }
 
-    private static int MIN_DELAY_LAST = 10000;
-    private static int MAX_DELAY_LAST = 20000;
+    private static int MIN_DELAY_LAST = 5000;
+    private static int MAX_DELAY_LAST = 15000;
     public long getInterval(){
-        return Long.parseLong(NumUtils.getRandom(MIN_DELAY_LAST,MAX_DELAY_LAST));
+        return 8;
+//        return Long.parseLong(NumUtils.getRandom(MIN_DELAY_LAST,MAX_DELAY_LAST));
     }
 
 }
