@@ -118,7 +118,7 @@ public class Knife {
     static {KNIFE_DATA.put(M9_DPL_ZX_MAP[0],M9_DPL_ZX_MAP);}
 
     //   M9 刺刀（★） | 传说 (久经沙场)
-    public static double[] M9_CS_JJ = {2000, 0.25, 1800};
+    public static double[] M9_CS_JJ = {2100, 0.25, 1800};
     public static String[] M9_CS_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43107&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887901126"};
     public static Object[] M9_CS_JJ_MAP = {N_M9_CS_JJ,M9_CS_JJ_URL,M9_CS_JJ};
     static {KNIFE_DATA.put(M9_CS_JJ_MAP[0],M9_CS_JJ_MAP);}
