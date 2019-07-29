@@ -377,7 +377,7 @@ public class Knife {
     static {KNIFE_DATA.put(ZZD_EMZY_JJ_MAP[0],ZZD_EMZY_JJ_MAP);}
 
     //爪子刀（★） | 噩梦之夜 (略有磨损)
-    public static double[] ZZD_EMZY_LM = {1550, 0.10, 1300};
+    public static double[] ZZD_EMZY_LM = {1500, 0.09, 1300};
     public static String[] ZZD_EMZY_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43021&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1560439956609"};
     public static Object[] ZZD_EMZY_LM_MAP = {N_ZZD_EMZY_LM,ZZD_EMZY_LM_URL,ZZD_EMZY_LM};
     static {KNIFE_DATA.put(ZZD_EMZY_LM_MAP[0],ZZD_EMZY_LM_MAP);}

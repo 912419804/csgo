@@ -632,7 +632,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_HSMY_JJ_MAP[0],M4A4_HSMY_JJ_MAP);}
 
     //M4A4（StatTrak™） | 黑色魅影 (久经沙场)
-    public static double[] M4A4_HSMY_JJ_ST = {400, 0.20, 300};
+    public static double[] M4A4_HSMY_JJ_ST = {400, 0.19, 300};
     public static String   M4A4_HSMY_JJ_ST_N = "M4A4（StatTrak™） | 黑色魅影 (久经沙场)";
     public static String[] M4A4_HSMY_JJ_ST_URL = {"0"};
     public static Object[] M4A4_HSMY_JJ_ST_MAP = {M4A4_HSMY_JJ_ST_N,M4A4_HSMY_JJ_ST_URL, M4A4_HSMY_JJ_ST};
@@ -646,7 +646,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_DY_ZX_MAP[0],M4A4_DY_ZX_MAP);}
 
     //M4A4 | 镁元素 (崭新出厂)
-    public static double[] M4A4_MYS_ZX = {22, 0.003, 8};
+    public static double[] M4A4_MYS_ZX = {15, 0.003, 6};
     public static String   M4A4_MYS_ZX_N = "M4A4 | 镁元素 (崭新出厂)";
     public static String[] M4A4_MYS_ZX_URL = {"0"};
     public static Object[] M4A4_MYS_ZX_MAP = {M4A4_MYS_ZX_N,M4A4_MYS_ZX_URL, M4A4_MYS_ZX};
@@ -674,7 +674,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_HD_ZX_MAP[0],M4A4_HD_ZX_MAP);}
 
     // M4A4 | 皇帝 (略有磨损)
-    public static double[] M4A4_HD_LM = {520, 0.08, 400};
+    public static double[] M4A4_HD_LM = {450, 0.08, 380};
     public static String   M4A4_HD_LM_N = "M4A4 | 皇帝 (略有磨损)";
     public static String[] M4A4_HD_LM_URL = {"0"};
     public static Object[] M4A4_HD_LM_MAP = {M4A4_HD_LM_N,M4A4_HD_LM_URL, M4A4_HD_LM};
