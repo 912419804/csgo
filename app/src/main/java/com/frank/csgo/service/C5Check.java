@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.C5;
 import com.frank.csgo.bean.C5Weapon;
+import com.frank.csgo.bean.IgxeWeapon;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.model.Response;
 
@@ -79,12 +80,24 @@ public class C5Check {
                                 weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                                 list.add(weapon);
                             }
-//                        else {
-//                            List<C5Weapon.StickerBean> stickers = weapon.getSticker();
-//                            if (stickers != null && stickers.size() >= 3) {
-//                                list.add(weapon);
-//                            }
-//                        }
+                        else {
+                            C5Weapon.GemBean gem = weapon.getGem();
+                                List<String> images = gem.getImage();
+                                if (gem.isHas_gem()&& images.size()>=3){
+
+                                    boolean isShow = true;
+                                    for (String sticker : images) {
+                                        boolean b = containSticke(sticker);
+                                        if (!b){
+                                            isShow = false;
+                                            break;
+                                        }
+                                    }
+                                    if (isShow){
+                                        list.add(weapon);
+                                    }
+                                }
+                            }
                         }
                 }
 
@@ -143,6 +156,15 @@ public class C5Check {
             e.printStackTrace();
         }
 
+    }
+
+    protected boolean containSticke(String title){
+        if (!TextUtils.isEmpty(title)){
+            if (title.contains("holo") | title.contains("foil") || title.contains("gold")){
+                return true;
+            }
+        }
+        return false;
     }
 
 }

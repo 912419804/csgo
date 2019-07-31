@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.Buff;
 import com.frank.csgo.bean.BuffWeapon;
+import com.frank.csgo.bean.IgxeWeapon;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.model.Response;
 
@@ -58,6 +59,22 @@ public class BuffCheck {
                     if (wear < w) {
                         weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                         list.add(weapon);
+                    }else {
+                        BuffWeapon.AssetInfoBean.InfoBean info = weapon.getAsset_info().getInfo();
+                        ArrayList<BuffWeapon.AssetInfoBean.StickersBean> stickers = info.getStickers();
+                        if (stickers!=null&&stickers.size()>=3){
+                            boolean isShow = true;
+                            for (BuffWeapon.AssetInfoBean.StickersBean sticker : stickers) {
+                                boolean b = containSticke(sticker.getNameX());
+                                if (!b){
+                                    isShow = false;
+                                    break;
+                                }
+                            }
+                            if (isShow){
+                                list.add(weapon);
+                            }
+                        }
                     }
                 }
             }
@@ -88,6 +105,15 @@ public class BuffCheck {
             item.setTags_exterior(exterior);
             item.setName(name);
         }
+    }
+
+    protected boolean containSticke(String title){
+        if (!TextUtils.isEmpty(title)){
+            if (title.contains("全息") | title.contains("闪亮") || title.contains("金色")){
+                return true;
+            }
+        }
+        return false;
     }
 
 }

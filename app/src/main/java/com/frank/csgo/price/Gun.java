@@ -66,14 +66,14 @@ public class Gun {
     static {GUN_DATA.put(AK47_XXYD_LM_ST_MAP[0],AK47_XXYD_LM_ST_MAP);}
 
     //  AK-47 | 表面淬火 (崭新出厂)
-    public static double[] AK47_BMCH_ZX = {380, 0.02, 280};
+    public static double[] AK47_BMCH_ZX = {425, 0.02, 350};
     public static String   AK47_BMCH_ZX_N = "AK-47 | 表面淬火 (崭新出厂)";
     public static String[] AK47_BMCH_ZX_URL = {"0"};
     public static Object[] AK47_BMCH_ZX_MAP = {AK47_BMCH_ZX_N,AK47_BMCH_ZX_URL, AK47_BMCH_ZX};
     static {GUN_DATA.put(AK47_BMCH_ZX_MAP[0],AK47_BMCH_ZX_MAP);}
 
     //AK-47 | 水栽竹 (崭新出厂)
-    public static double[] AK47_SZZ_ZX = {1250, 0.04, 1100};
+    public static double[] AK47_SZZ_ZX = {1250, 0.03, 1100};
     public static String   AK47_SZZ_ZX_N = "AK-47 | 水栽竹 (崭新出厂)";
     public static String[] AK47_SZZ_ZX_URL = {"0"};
     public static Object[] AK47_SZZ_ZX_MAP = {AK47_SZZ_ZX_N,AK47_SZZ_ZX_URL, AK47_SZZ_ZX};
@@ -117,7 +117,7 @@ public class Gun {
     //AK-47（StatTrak™） | 皇后 (崭新出厂)
 
     //AK-47 | 皇后 (略有磨损)
-    public static double[] AK47_HH_LM = {350, 0.09, 280};
+    public static double[] AK47_HH_LM = {330, 0.09, 280};
     public static String   AK47_HH_LM_N = "AK-47 | 皇后 (略有磨损)";
     public static String[] AK47_HH_LM_URL = {"0"};
     public static Object[] AK47_HH_LM_MAP = {AK47_HH_LM_N,AK47_HH_LM_URL, AK47_HH_LM};
@@ -138,14 +138,14 @@ public class Gun {
     static {GUN_DATA.put(AK47_HYFP_LM_MAP[0],AK47_HYFP_LM_MAP);}
 
     //AK-47 | 霓虹骑士 (崭新出厂)
-    public static double[] AK47_NHQS_ZX = {530, 0.02, 380};
+    public static double[] AK47_NHQS_ZX = {430, 0.02, 380};
     public static String   AK47_NHQS_ZX_N = "AK-47 | 霓虹骑士 (崭新出厂)";
     public static String[] AK47_NHQS_ZX_URL = {"0"};
     public static Object[] AK47_NHQS_ZX_MAP = {AK47_NHQS_ZX_N,AK47_NHQS_ZX_URL, AK47_NHQS_ZX};
     static {GUN_DATA.put(AK47_NHQS_ZX_MAP[0],AK47_NHQS_ZX_MAP);}
 
     //AK-47 | 霓虹骑士 (略有磨损)
-    public static double[] AK47_NHQS_LM = {290, 0.078, 200};
+    public static double[] AK47_NHQS_LM = {260, 0.078, 200};
     public static String   AK47_NHQS_LM_N = "AK-47 | 霓虹骑士 (略有磨损)";
     public static String[] AK47_NHQS_LM_URL = {"0"};
     public static Object[] AK47_NHQS_LM_MAP = {AK47_NHQS_LM_N,AK47_NHQS_LM_URL, AK47_NHQS_LM};

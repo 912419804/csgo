@@ -77,13 +77,22 @@ public class IgxeCheck {
                             if (wear <= w) {
                                 weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                                 list.add(weapon);
+                            }else {
+                            List<IgxeWeapon.StickerBean> stickers = weapon.getSticker();
+                            if (stickers != null && stickers.size() >= 3) {
+                                boolean isShow = true;
+                                for (IgxeWeapon.StickerBean sticker : stickers) {
+                                    boolean b = containSticke(sticker.getSticker_title());
+                                    if (!b){
+                                        isShow = false;
+                                        break;
+                                    }
+                                }
+                                if (isShow){
+                                    list.add(weapon);
+                                }
                             }
-//                        else {
-//                            List<IgxeWeapon.StickerBean> stickers = weapon.getSticker();
-//                            if (stickers != null && stickers.size() >= 3) {
-//                                list.add(weapon);
-//                            }
-//                        }
+                        }
                     }
                 }
 
@@ -141,5 +150,14 @@ public class IgxeCheck {
 
         }
 
+    }
+
+    protected boolean containSticke(String title){
+        if (!TextUtils.isEmpty(title)){
+            if (title.contains("全息") | title.contains("闪亮") || title.contains("金色")){
+                return true;
+            }
+        }
+        return false;
     }
 }
