@@ -101,7 +101,7 @@ public class Gun {
     static {GUN_DATA.put(AK47_EXMF_LM_MAP[0],AK47_EXMF_LM_MAP);}
 
     //AK-47 | 二西莫夫 (久经沙场)
-    public static double[] AK47_EXMF_JJ = {220, 0.18, 170};
+    public static double[] AK47_EXMF_JJ = {220, 0.18, 160};
     public static String   AK47_EXMF_JJ_N = "AK-47 | 二西莫夫 (久经沙场)";
     public static String[] AK47_EXMF_JJ_URL = {"0"};
     public static Object[] AK47_EXMF_JJ_MAP = {AK47_EXMF_JJ_N,AK47_EXMF_JJ_URL, AK47_EXMF_JJ};
@@ -667,7 +667,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_PX_LM_MAP[0],M4A4_PX_LM_MAP);}
 
     // M4A4 | 皇帝 (崭新出厂)
-    public static double[] M4A4_HD_ZX = {1000, 0.04, 900};
+    public static double[] M4A4_HD_ZX = {1000, 0.04, 870};
     public static String   M4A4_HD_ZX_N = "M4A4 | 皇帝 (崭新出厂)";
     public static String[] M4A4_HD_ZX_URL = {"0"};
     public static Object[] M4A4_HD_ZX_MAP = {M4A4_HD_ZX_N,M4A4_HD_ZX_URL, M4A4_HD_ZX};
