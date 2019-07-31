@@ -3025,7 +3025,7 @@ public class IgxeGuns extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, 240, 0.08, 190);
+                        handleDataIgxe(response, 270, 0.08, 200);
                         connect191();
                     }
 
