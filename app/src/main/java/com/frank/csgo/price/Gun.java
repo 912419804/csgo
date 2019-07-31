@@ -284,7 +284,7 @@ public class Gun {
     static {GUN_DATA.put(AWP_HX_LM_MAP[0],AWP_HX_LM_MAP);}
 
     //   AWP | 鬼退治 (崭新出厂)
-    public static double[] AWP_GTZ_ZX = {400, 0.02, 290};
+    public static double[] AWP_GTZ_ZX = {450, 0.02, 290};
     public static String   AWP_GTZ_ZX_N = "AWP | 鬼退治 (崭新出厂)";
     public static String[] AWP_GTZ_ZX_URL = {"0"};
     public static Object[] AWP_GTZ_ZX_MAP = {AWP_GTZ_ZX_N,AWP_GTZ_ZX_URL, AWP_GTZ_ZX};
@@ -974,6 +974,21 @@ public class Gun {
     public static String[] P250_YZSG_LM_URL = {"0"};
     public static Object[] P250_YZSG_LM_MAP = {P250_YZSG_LM_N,P250_YZSG_LM_URL, P250_YZSG_LM};
     static {GUN_DATA.put(P250_YZSG_LM_MAP[0],P250_YZSG_LM_MAP);}
+
+    /***********************FN57武器列表****************************/
+    // FN57 | 怒氓 (崭新出厂)
+    public static double[] FN57_NM_ZX = {100, 0.03, 60};
+    public static String   FN57_NM_ZX_N = "FN57 | 怒氓 (崭新出厂)";
+    public static String[] FN57_NM_ZX_URL = {"0"};
+    public static Object[] FN57_NM_ZX_MAP = {FN57_NM_ZX_N,FN57_NM_ZX_URL, FN57_NM_ZX};
+    static {GUN_DATA.put(FN57_NM_ZX_MAP[0],FN57_NM_ZX_MAP);}
+
+    // FN57 | 怒氓 (久经沙场)
+    public static double[] FN57_NM_JJ = {25, 0.18, 15};
+    public static String   FN57_NM_JJ_N = "FN57 | 怒氓 (久经沙场)";
+    public static String[] FN57_NM_JJ_URL = {"0"};
+    public static Object[] FN57_NM_JJ_MAP = {FN57_NM_JJ_N,FN57_NM_JJ_URL, FN57_NM_JJ};
+    static {GUN_DATA.put(FN57_NM_JJ_MAP[0],FN57_NM_JJ_MAP);}
 
     /***********************SG553武器列表****************************/
 

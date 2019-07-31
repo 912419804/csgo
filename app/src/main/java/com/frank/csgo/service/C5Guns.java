@@ -2,6 +2,7 @@ package com.frank.csgo.service;
 
 import com.frank.csgo.bean.C5;
 import com.frank.csgo.bean.C5;
+import com.frank.csgo.bean.C5;
 import com.frank.csgo.https.JsonCallback;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
@@ -3784,6 +3785,39 @@ public class C5Guns extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, AUG_DL_JJ);
+                        connect1057();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1057();
+                    }
+                });
+    }
+
+    // FN57 | 怒氓 (久经沙场)
+    public void connect1057() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/list?item_id=553482612&delivery=0&bargain=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&price_order=0&wear_order=0&paint=&page=1")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, FN57_NM_JJ);
+                        connect1058();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect1058();
+                    }
+                });
+    }
+    // FN57 | 怒氓 (崭新出厂)
+    public void connect1058() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/list?item_id=553482468&delivery=0&bargain=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&price_order=0&wear_order=0&paint=&page=1")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, FN57_NM_ZX);
                         connect2000();
                     }
 
@@ -3793,6 +3827,7 @@ public class C5Guns extends C5Check{
                     }
                 });
     }
+    
     // AUG（StatTrak™） | 动量 (久经沙场)
     private void connect1050() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464825&page=1&flag=&sort=&worn=&delivery=")

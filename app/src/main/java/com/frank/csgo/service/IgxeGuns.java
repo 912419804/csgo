@@ -4146,6 +4146,39 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, M4A4_SYDM_ZX);
+                        connect1057();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1057();
+                    }
+                });
+    }
+
+    // FN57 | 怒氓 (久经沙场)
+    public void connect1057() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621565")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, FN57_NM_JJ);
+                        connect1058();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1058();
+                    }
+                });
+    }
+    // FN57 | 怒氓 (崭新出厂)
+    public void connect1058() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621648")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, FN57_NM_ZX);
                         connect2000();
                     }
 
@@ -4155,7 +4188,6 @@ public class IgxeGuns extends IgxeCheck{
                     }
                 });
     }
-
     // 格洛克 18 型 | 红苹果 (崭新出厂)
     public void connect2000() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4419")
