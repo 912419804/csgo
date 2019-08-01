@@ -892,7 +892,7 @@ public class Gun {
     static {GUN_DATA.put(SMZY_HSDH_LM_MAP[0],SMZY_HSDH_LM_MAP);}
 
     //   沙漠之鹰 | 炽烈之炎 (崭新出厂)
-    public static double[] SMZY_CLZY_ZX = {766,0.009,600};
+    public static double[] SMZY_CLZY_ZX = {800,0.009,700};
     public static String   SMZY_CLZY_ZX_N = "沙漠之鹰 | 炽烈之炎 (崭新出厂)";
     public static String[] SMZY_CLZY_ZX_URL = {"0"};
     public static Object[] SMZY_CLZY_ZX_MAP = {SMZY_CLZY_ZX_N,SMZY_CLZY_ZX_URL, SMZY_CLZY_ZX};
