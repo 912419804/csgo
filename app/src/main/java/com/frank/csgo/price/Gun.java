@@ -263,7 +263,7 @@ public class Gun {
     /***********************AWP武器列表****************************/
 
     //AWP | 二西莫夫 (久经沙场)
-    public static double[] AWP_EXMF_JJ = {280, 0.25, 220};
+    public static double[] AWP_EXMF_JJ = {290, 0.25, 220};
     public static String   AWP_EXMF_JJ_N = "AWP | 二西莫夫 (久经沙场)";
     public static String[] AWP_EXMF_JJ_URL = {"0"};
     public static Object[] AWP_EXMF_JJ_MAP = {AWP_EXMF_JJ_N,AWP_EXMF_JJ_URL, AWP_EXMF_JJ};
@@ -548,7 +548,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_EXMF_JJ_MAP[0],M4A4_EXMF_JJ_MAP);}
 
     // M4A4（StatTrak™） | 二西莫夫 (久经沙场)
-    public static double[] M4A4_EXMF_JJ_ST = {1250, 0.28, 1000};
+    public static double[] M4A4_EXMF_JJ_ST = {1300, 0.28, 1100};
     public static String   M4A4_EXMF_JJ_ST_N = "M4A4（StatTrak™） | 二西莫夫 (久经沙场)";
     public static String[] M4A4_EXMF_JJ_ST_URL = {"0"};
     public static Object[] M4A4_EXMF_JJ_ST_MAP = {M4A4_EXMF_JJ_ST_N,M4A4_EXMF_JJ_ST_URL, M4A4_EXMF_JJ_ST};
