@@ -347,7 +347,7 @@ public class Gun {
     static {GUN_DATA.put(AWP_HSMY_ZX_MAP[0],AWP_HSMY_ZX_MAP);}
 
     // AWP | 树蝰 (崭新出厂)
-    public static double[] AWP_SK_ZX = {140, 0.01, 80};
+    public static double[] AWP_SK_ZX = {140, 0.01, 60};
     public static String   AWP_SK_ZX_N = "AWP | 树蝰 (崭新出厂)";
     public static String[] AWP_SK_ZX_URL = {"0"};
     public static Object[] AWP_SK_ZX_MAP = {AWP_SK_ZX_N,AWP_SK_ZX_URL, AWP_SK_ZX};
@@ -790,7 +790,7 @@ public class Gun {
     static {GUN_DATA.put(M4A1_BNYS_LM_MAP[0],M4A1_BNYS_LM_MAP);}
 
     //M4A1 消音型 | 梦魇 (崭新出厂)
-    public static double[] M4A1_MY_ZX = {125, 0.02, 90};
+    public static double[] M4A1_MY_ZX = {110, 0.02, 80};
     public static String   M4A1_MY_ZX_N = "M4A1 消音型 | 梦魇 (崭新出厂)";
     public static String[] M4A1_MY_ZX_URL = {"0"};
     public static Object[] M4A1_MY_ZX_MAP = {M4A1_MY_ZX_N,M4A1_MY_ZX_URL, M4A1_MY_ZX};

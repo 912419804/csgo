@@ -83,7 +83,7 @@ public class C5Check {
                         else {
                             C5Weapon.GemBean gem = weapon.getGem();
                                 List<String> images = gem.getImage();
-                                if (gem.isHas_gem()&& images.size()>=3){
+                                if (gem.isHas_gem()&& images.size()==4){
 
                                     boolean isShow = true;
                                     for (String sticker : images) {

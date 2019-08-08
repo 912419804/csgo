@@ -26,6 +26,6 @@ public class Constant {
     public static int TYPE = 1;
     public static int BUFF = 0;
     public static int OPEN = 1;
-    public static int LAST = 1;
+    public static int LAST = 0;
 
 }

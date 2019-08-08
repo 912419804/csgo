@@ -62,7 +62,7 @@ public class BuffCheck {
                     }else {
                         BuffWeapon.AssetInfoBean.InfoBean info = weapon.getAsset_info().getInfo();
                         ArrayList<BuffWeapon.AssetInfoBean.StickersBean> stickers = info.getStickers();
-                        if (stickers!=null&&stickers.size()>=3){
+                        if (stickers!=null&&stickers.size()==4){
                             boolean isShow = true;
                             for (BuffWeapon.AssetInfoBean.StickersBean sticker : stickers) {
                                 boolean b = containSticke(sticker.getNameX());

@@ -79,7 +79,7 @@ public class IgxeCheck {
                                 list.add(weapon);
                             }else {
                             List<IgxeWeapon.StickerBean> stickers = weapon.getSticker();
-                            if (stickers != null && stickers.size() >= 3) {
+                            if (stickers != null && stickers.size() == 4) {
                                 boolean isShow = true;
                                 for (IgxeWeapon.StickerBean sticker : stickers) {
                                     boolean b = containSticke(sticker.getSticker_title());
