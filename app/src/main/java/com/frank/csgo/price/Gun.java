@@ -667,7 +667,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_PX_LM_MAP[0],M4A4_PX_LM_MAP);}
 
     // M4A4 | 皇帝 (崭新出厂)
-    public static double[] M4A4_HD_ZX = {1000, 0.04, 870};
+    public static double[] M4A4_HD_ZX = {1000, 0.03, 870};
     public static String   M4A4_HD_ZX_N = "M4A4 | 皇帝 (崭新出厂)";
     public static String[] M4A4_HD_ZX_URL = {"0"};
     public static Object[] M4A4_HD_ZX_MAP = {M4A4_HD_ZX_N,M4A4_HD_ZX_URL, M4A4_HD_ZX};
