@@ -76,13 +76,13 @@ public class Knife {
     static {KNIFE_DATA.put(CD_ZDH_LM_MAP[0],CD_ZDH_LM_MAP);}
 
     //   刺刀（★） | 深红之网 (略有磨损)
-    public static double[] CD_SHZW_LM = {1550, 0.12, 1300};
+    public static double[] CD_SHZW_LM = {1650, 0.12, 1400};
     public static String[] CD_SHZW_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42382&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554886956228"};
     public static Object[] CD_SHZW_LM_MAP = {N_CD_SHZW_LM,CD_SHZW_LM_URL,CD_SHZW_LM};
     static {KNIFE_DATA.put(CD_SHZW_LM_MAP[0],CD_SHZW_LM_MAP);}
 
     //   刺刀（★） | 深红之网 (久经沙场)
-    public static double[] CD_SHZW_JJ = {860, 0.20, 720};
+    public static double[] CD_SHZW_JJ = {880, 0.20, 720};
     public static String[] CD_SHZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42381&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887089740"};
     public static Object[] CD_SHZW_JJ_MAP = {N_CD_SHZW_JJ,CD_SHZW_JJ_URL,CD_SHZW_JJ};
     static {KNIFE_DATA.put(CD_SHZW_JJ_MAP[0],CD_SHZW_JJ_MAP);}
@@ -275,7 +275,7 @@ public class Knife {
     static {KNIFE_DATA.put(XD_WTZ_MAP[0],XD_WTZ_MAP);}
 
     //熊刀（★） | 深红之网 (久经沙场)
-    public static double[] XD_SHZW_JJ = {1650, 0.24, 1500};
+    public static double[] XD_SHZW_JJ = {1660, 0.24, 1500};
     public static String[] XD_SHZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759405&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889684277"};
     public static Object[] XD_SHZW_JJ_MAP = {N_XD_SHZW_JJ,XD_SHZW_JJ_URL,XD_SHZW_JJ};
     static {KNIFE_DATA.put(XD_SHZW_JJ_MAP[0],XD_SHZW_JJ_MAP);}
@@ -317,7 +317,7 @@ public class Knife {
     static {KNIFE_DATA.put(CD_ZMZLL_LM_MAP[0],CD_ZMZLL_LM_MAP);}
 
     //M9刺刀（★） | 致命紫罗兰 (久经沙场)
-    public static double[] M9_ZMZLL_JJ = {800, 0.22, 680};
+    public static double[] M9_ZMZLL_JJ = {850, 0.22, 700};
     public static String[] M9_ZMZLL_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43139&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559641968399"};
     public static Object[] M9_ZMZLL_JJ_MAP = {N_M9_ZMZLL_JJ,M9_ZMZLL_JJ_URL,M9_ZMZLL_JJ};
     static {KNIFE_DATA.put(M9_ZMZLL_JJ_MAP[0],M9_ZMZLL_JJ_MAP);}

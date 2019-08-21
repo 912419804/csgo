@@ -263,14 +263,14 @@ public class Gun {
     /***********************AWP武器列表****************************/
 
     //AWP | 二西莫夫 (久经沙场)
-    public static double[] AWP_EXMF_JJ = {290, 0.25, 220};
+    public static double[] AWP_EXMF_JJ = {310, 0.25, 260};
     public static String   AWP_EXMF_JJ_N = "AWP | 二西莫夫 (久经沙场)";
     public static String[] AWP_EXMF_JJ_URL = {"0"};
     public static Object[] AWP_EXMF_JJ_MAP = {AWP_EXMF_JJ_N,AWP_EXMF_JJ_URL, AWP_EXMF_JJ};
     static {GUN_DATA.put(AWP_EXMF_JJ_MAP[0],AWP_EXMF_JJ_MAP);}
 
     //   AWP（StatTrak™） | 二西莫夫 (久经沙场)
-    public static double[] AWP_EXMF_JJ_ST = {750, 0.25, 600};
+    public static double[] AWP_EXMF_JJ_ST = {850, 0.25, 600};
     public static String   AWP_EXMF_JJ_ST_N = "AWP（StatTrak™） | 二西莫夫 (久经沙场)";
     public static String[] AWP_EXMF_JJ_ST_URL = {"0"};
     public static Object[] AWP_EXMF_JJ_ST_MAP = {AWP_EXMF_JJ_ST_N,AWP_EXMF_JJ_ST_URL, AWP_EXMF_JJ_ST};
@@ -541,7 +541,7 @@ public class Gun {
     /***********************M4A4武器列表****************************/
 
     //  M4A4 | 二西莫夫 (久经沙场)
-    public static double[] M4A4_EXMF_JJ = {350, 0.29, 300};
+    public static double[] M4A4_EXMF_JJ = {380, 0.29, 330};
     public static String   M4A4_EXMF_JJ_N = "M4A4 | 二西莫夫 (久经沙场)";
     public static String[] M4A4_EXMF_JJ_URL = {"0"};
     public static Object[] M4A4_EXMF_JJ_MAP = {M4A4_EXMF_JJ_N,M4A4_EXMF_JJ_URL, M4A4_EXMF_JJ};
@@ -562,7 +562,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_EXMF_PS_MAP[0],M4A4_EXMF_PS_MAP);}
 
     // M4A4 | 二西莫夫 (战痕累累)
-    public static double[] M4A4_EXMF_ZH = {130, 0.47, 120};
+    public static double[] M4A4_EXMF_ZH = {155, 0.47, 130};
     public static String   M4A4_EXMF_ZH_N = "M4A4 | 二西莫夫 (战痕累累)";
     public static String[] M4A4_EXMF_ZH_URL = {"0"};
     public static Object[] M4A4_EXMF_ZH_MAP = {M4A4_EXMF_ZH_N,M4A4_EXMF_ZH_URL, M4A4_EXMF_ZH};
@@ -597,7 +597,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_DYLY_ZX_MAP[0],M4A4_DYLY_ZX_MAP);}
 
     //M4A4 | 皇家圣骑士 (略有磨损)
-    public static double[] M4A4_HJSQS_LM = {145, 0.08, 110};
+    public static double[] M4A4_HJSQS_LM = {160, 0.08, 120};
     public static String   M4A4_HJSQS_LM_N = "M4A4 | 皇家圣骑士 (略有磨损)";
     public static String[] M4A4_HJSQS_LM_URL = {"0"};
     public static Object[] M4A4_HJSQS_LM_MAP = {M4A4_HJSQS_LM_N,M4A4_HJSQS_LM_URL, M4A4_HJSQS_LM};
@@ -611,7 +611,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_XG_ZX_MAP[0],M4A4_XG_ZX_MAP);}
 
     //M4A4 |死寂空间 (崭新出厂)
-    public static double[] M4A4_SJKJ_ZX = {170, 0.02, 120};
+    public static double[] M4A4_SJKJ_ZX = {180, 0.02, 150};
     public static String   M4A4_SJKJ_ZX_N = "M4A4 | 死寂空间 (崭新出厂)";
     public static String[] M4A4_SJKJ_ZX_URL = {"0"};
     public static Object[] M4A4_SJKJ_ZX_MAP = {M4A4_SJKJ_ZX_N,M4A4_SJKJ_ZX_URL, M4A4_SJKJ_ZX};
@@ -625,7 +625,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_HSMY_LM_MAP[0],M4A4_HSMY_LM_MAP);}
 
     //M4A4 |黑色魅影 (久经沙场)
-    public static double[] M4A4_HSMY_JJ = {160, 0.20, 100};
+    public static double[] M4A4_HSMY_JJ = {150, 0.20, 100};
     public static String   M4A4_HSMY_JJ_N = "M4A4 | 黑色魅影 (久经沙场)";
     public static String[] M4A4_HSMY_JJ_URL = {"0"};
     public static Object[] M4A4_HSMY_JJ_MAP = {M4A4_HSMY_JJ_N,M4A4_HSMY_JJ_URL, M4A4_HSMY_JJ};
@@ -931,7 +931,7 @@ public class Gun {
     /***********************P250武器列表****************************/
 
     //P250 | 二西莫夫 (略有磨损)
-    public static double[] P250_EXMF_LM = {110, 0.11, 80};
+    public static double[] P250_EXMF_LM = {110, 0.12, 80};
     public static String   P250_EXMF_LM_N = "P250 | 二西莫夫 (略有磨损)";
     public static String[] P250_EXMF_LM_URL = {"0"};
     public static Object[] P250_EXMF_LM_MAP = {P250_EXMF_LM_N,P250_EXMF_LM_URL, P250_EXMF_LM};
