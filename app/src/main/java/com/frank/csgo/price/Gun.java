@@ -1035,5 +1035,9 @@ public class Gun {
     public static String[] AUG_YQ_ZX_URL = {"0"};
     public static Object[] AUG_YQ_ZX_MAP = {AUG_YQ_ZX_N,AUG_YQ_ZX_URL, AUG_YQ_ZX};
     static {GUN_DATA.put(AUG_YQ_ZX_MAP[0],AUG_YQ_ZX_MAP);}
+    /***********************MAG-7武器列表****************************/
+
+    //    MAG-7 | 威吓者 (略有磨损)
+    //    MAG-7 | 威吓者 (久经沙场)
 
 }
