@@ -717,6 +717,13 @@ public class Gun {
     public static Object[] P90_EXMF_LM_MAP = {P90_EXMF_LM_N,P90_EXMF_LM_URL, P90_EXMF_LM};
     static {GUN_DATA.put(P90_EXMF_LM_MAP[0],P90_EXMF_LM_MAP);}
 
+    //P90 | 喵之萌杀 (略有磨损)
+    public static double[] P90_MZMS_LM = {250, 0.10, 200};
+    public static String   P90_MZMS_LM_N = "P90 | 喵之萌杀 (略有磨损)";
+    //P90 | 喵之萌杀 (久经沙场)
+    public static double[] P90_MZMS_JJ = {130, 0.19, 100};
+    public static String   P90_MZMS_JJ_N = "P90 | 喵之萌杀 (久经沙场)";
+
     /***********************UMP-45武器列表****************************/
 
     //UMP-45 | 炽烈之炎 (崭新出厂)
@@ -732,6 +739,20 @@ public class Gun {
     public static String[] UMP_DL_ZX_URL = {"0"};
     public static Object[] UMP_DL_ZX_MAP = {UMP_DL_ZX_N,UMP_DL_ZX_URL, UMP_DL_ZX};
     static {GUN_DATA.put(UMP_DL_ZX_MAP[0],UMP_DL_ZX_MAP);}
+
+    //  UMP-45 | 野蛮剑齿虎 (崭新出厂)
+    public static double[] UMP_YMJCH_ZX = {50, 0.03, 30};
+    public static String   UMP_YMJCH_ZX_N = "UMP-45 | 动量 (崭新出厂)";
+    public static String[] UMP_YMJCH_ZX_URL = {"0"};
+    public static Object[] UMP_YMJCH_ZX_MAP = {UMP_YMJCH_ZX_N,UMP_YMJCH_ZX_URL, UMP_YMJCH_ZX};
+    static {GUN_DATA.put(UMP_YMJCH_ZX_MAP[0],UMP_YMJCH_ZX_MAP);}
+
+    //  UMP-45 | 色如焦糖 (崭新出厂)
+    public static double[] UMP_SRJT_ZX = {50, 0.03, 30};
+    public static String   UMP_SRJT_ZX_N = "UMP-45 | 色如焦糖 (崭新出厂)";
+    public static String[] UMP_SRJT_ZX_URL = {"0"};
+    public static Object[] UMP_SRJT_ZX_MAP = {UMP_SRJT_ZX_N,UMP_SRJT_ZX_URL, UMP_SRJT_ZX};
+    static {GUN_DATA.put(UMP_SRJT_ZX_MAP[0],UMP_SRJT_ZX_MAP);}
 
     /***********************法玛斯武器列表****************************/
 
@@ -1039,5 +1060,19 @@ public class Gun {
 
     //    MAG-7 | 威吓者 (略有磨损)
     //    MAG-7 | 威吓者 (久经沙场)
+    /***********************MP7武器列表****************************/
+    
+    //   MP7 | 银装素裹 (略有磨损)
+    public static double[] AUG_YZSG_ZX = {100, 0.12,70};
+    public static String   AUG_YZSG_ZX_N = "MP7 | 银装素裹 (略有磨损)";
+    public static String[] AUG_YZSG_ZX_URL = {"0"};
+    public static Object[] AUG_YZSG_ZX_MAP = {AUG_YZSG_ZX_N,AUG_YZSG_ZX_URL, AUG_YZSG_ZX};
+    static {GUN_DATA.put(AUG_YZSG_ZX_MAP[0],AUG_YZSG_ZX_MAP);}
 
+    //    MP7 | 银装素裹 (久经沙场)
+    public static double[] AUG_YZSG_JJ = {20, 0.18,8};
+    public static String   AUG_YZSG_JJ_N = "MP7 | 银装素裹 (久经沙场)";
+    public static String[] AUG_YZSG_JJ_URL = {"0"};
+    public static Object[] AUG_YZSG_JJ_MAP = {AUG_YZSG_JJ_N,AUG_YZSG_JJ_URL, AUG_YZSG_JJ};
+    static {GUN_DATA.put(AUG_YZSG_JJ_MAP[0],AUG_YZSG_JJ_MAP);}
 }
