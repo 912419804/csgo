@@ -1306,7 +1306,7 @@ public class IgxeKnifes extends IgxeCheck{
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, JCZD_CS_JJ);
+                        handleDataIgxe(response, JCZD_SHZW_JJ);
                         connect1296();
                     }
 
@@ -1643,6 +1643,40 @@ public class IgxeKnifes extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, ZDD_EMZY_JJ);
+                        connect1315();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1315();
+                        super.onError(response);
+                    }
+                });
+    }
+    //锯齿爪刀（★） | 致命紫罗兰 (略有磨损)
+    private void connect1315() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/629858")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, JCZD_ZMZLL_LM);
+                        connect1316();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        mService.startScan();
+                        connect1316();
+                    }
+                });
+    }
+    //锯齿爪刀（★） | 致命紫罗兰 (久经沙场)
+    private void connect1316() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/621817")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, JCZD_ZMZLL_JJ);
                         mService.startScan();
                     }
 

@@ -89,6 +89,7 @@ public class IgxeCheck {
                                     }
                                 }
                                 if (isShow){
+                                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                                     list.add(weapon);
                                 }
                             }

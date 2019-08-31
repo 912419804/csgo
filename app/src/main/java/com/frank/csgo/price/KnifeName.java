@@ -148,7 +148,13 @@ public class KnifeName implements Serializable {
     public static String N_JCZD_WTZ= "锯齿爪刀（★）";
 
     //锯齿爪刀（★）|深红之网 (久经沙场)
-    public static String N_JCZD_CS_JJ = "锯齿爪刀（★）| 深红之网 (久经沙场)";
+    public static String N_JCZD_SHZW_JJ = "锯齿爪刀（★）| 深红之网 (久经沙场)";
+    
+    //锯齿爪刀（★）|致命紫罗兰 (略有磨损)
+    public static String N_JCZD_ZMZLL_LM = "锯齿爪刀（★）|致命紫罗兰 (略有磨损)";
+    
+    //锯齿爪刀（★）|致命紫罗兰 (久经沙场)
+    public static String N_JCZD_ZMZLL_JJ = "锯齿爪刀（★）|致命紫罗兰 (久经沙场)";
 
     //蝴蝶刀（★） | 致命紫罗兰 (久经沙场)
     public static String N_HDD_ZMZLL_JJ = "蝴蝶刀（★） | 致命紫罗兰 (久经沙场)";

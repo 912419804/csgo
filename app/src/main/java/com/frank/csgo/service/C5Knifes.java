@@ -1295,7 +1295,7 @@ public class C5Knifes extends C5Check{
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, JCZD_CS_JJ);
+                        handleDataC5(response, JCZD_SHZW_JJ);
                         connect1296();
                     }
 

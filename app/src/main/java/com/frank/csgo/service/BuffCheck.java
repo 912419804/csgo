@@ -72,6 +72,7 @@ public class BuffCheck {
                                 }
                             }
                             if (isShow){
+                                weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                                 list.add(weapon);
                             }
                         }

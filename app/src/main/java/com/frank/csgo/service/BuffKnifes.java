@@ -1431,7 +1431,7 @@ public class BuffKnifes extends BuffCheck{
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "锯齿爪刀（★）|深红之网 (久经沙场)");
-                                handleDataForBuff(response, JCZD_CS_JJ);
+                                handleDataForBuff(response, JCZD_SHZW_JJ);
                                 connect1296();
                             }
 

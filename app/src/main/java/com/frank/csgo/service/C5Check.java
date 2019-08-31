@@ -94,6 +94,7 @@ public class C5Check {
                                         }
                                     }
                                     if (isShow){
+                                        weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                                         list.add(weapon);
                                     }
                                 }

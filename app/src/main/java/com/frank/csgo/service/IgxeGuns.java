@@ -4179,6 +4179,296 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, FN57_NM_ZX);
+                        connect1059();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1059();
+                    }
+                });
+    }
+    // P90 | 喵之萌杀 (久经沙场)
+    public void connect1059() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7827")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, P90_MZMS_JJ);
+                        connect1060();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1060();
+                    }
+                });
+    }
+    // P90 | 喵之萌杀 (略有磨损)
+    public void connect1060() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5083")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, P90_MZMS_LM);
+                        connect1061();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1061();
+                    }
+                });
+    }
+    // UMP-45 | 野蛮剑齿虎 (崭新出厂)
+    public void connect1061() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/435903")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, UMP_YMJCH_ZX);
+                        connect1062();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1062();
+                    }
+                });
+    }
+    // UMP-45 | 色如焦糖 (略有磨损)
+    public void connect1062() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/435903")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, UMP_SRJT_LM);
+                        connect1063();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1063();
+                    }
+                });
+    }
+    // MP7 | 银装素裹 (略有磨损)
+    public void connect1063() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/58303")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MP7_YZSG_LM);
+                        connect1064();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1064();
+                    }
+                });
+    }
+
+    // MP7 | 银装素裹 (久经沙场)
+    public void connect1064() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7690")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MP7_YZSG_JJ);
+                        connect1065();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1065();
+                    }
+                });
+    }
+
+    // MP7 | 血腥运动 (崭新出厂)
+    public void connect1065() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610819")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MP7_XXYD_ZX);
+                        connect1066();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1066();
+                    }
+                });
+    }
+    // MP9 | 赤红新星 (崭新出厂)
+    public void connect1066() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6596")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MP9_CHXX_ZX);
+                        connect1067();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1067();
+                    }
+                });
+    }
+    // MP9 | 气密 (崭新出厂)
+    public void connect1067() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/559056")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MP9_QM_ZX);
+                        connect1068();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1068();
+                    }
+                });
+    }
+    // MP9（StatTrak™） | 气密 (崭新出厂)
+    public void connect1068() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/559560")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MP9_QM_ZX_ST);
+                        connect1069();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1069();
+                    }
+                });
+    }
+    // MP9 | 潘多拉魔盒 (崭新出厂)
+    public void connect1069() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/4027")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MP9_PDLMH_ZX);
+                        connect1070();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1070();
+                    }
+                });
+    }
+    // MP9 | 威吓者 (略有磨损)
+    public void connect1070() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/193407")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MP9_WHZ_LM);
+                        connect1071();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1071();
+                    }
+                });
+    }
+    // MP9 | 威吓者 (久经沙场)
+    public void connect1071() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/61867")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MP9_WHZ_JJ);
+                        connect1072();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1072();
+                    }
+                });
+    }
+    // MP5-SD（StatTrak™） | 磷光体 (崭新出厂)
+    public void connect1072() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/618922")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MP5_LGT_ZX_ST);
+                        connect1073();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1073();
+                    }
+                });
+    }
+    // 加利尔 AR | 「经济」克鲁尔 (略有磨损)
+    public void connect1073() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/8417")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, JLE_JJ_LM);
+                        connect1074();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1074();
+                    }
+                });
+    }
+    // 加利尔 AR（StatTrak™） | 「经济」克鲁尔 (略有磨损)
+    public void connect1074() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/46743")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, JLE_JJ_LM_ST);
+                        connect1075();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1075();
+                    }
+                });
+    }
+    // SG 553 | 威吓者 (略有磨损)
+    public void connect1075() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/23541")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, SG553_WHZ_LM);
+                        connect1076();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1076();
+                    }
+                });
+    }
+    // SG 553 | 威吓者 (久经沙场)
+    public void connect1076() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/46588")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, SG553_WHZ_JJ);
                         connect2000();
                     }
 
