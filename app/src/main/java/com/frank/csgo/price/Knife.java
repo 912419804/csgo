@@ -179,7 +179,7 @@ public class Knife {
     static {KNIFE_DATA.put(ZZD_WTZ_MAP[0],ZZD_WTZ_MAP);}
 
     //爪子刀（★） | 自动化 (久经沙场)
-    public static double[] ZZD_ZDH_JJ = {2950, 0.25, 2500};
+    public static double[] ZZD_ZDH_JJ = {2850, 0.20, 2500};
     public static String[] ZZD_ZDH_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42964&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554888716058"};
     public static Object[] ZZD_ZDH_JJ_MAP = {N_ZZD_ZDH_JJ,ZZD_ZDH_JJ_URL,ZZD_ZDH_JJ};
     static {KNIFE_DATA.put(ZZD_ZDH_JJ_MAP[0],ZZD_ZDH_JJ_MAP);}

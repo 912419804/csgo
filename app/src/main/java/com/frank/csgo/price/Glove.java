@@ -371,13 +371,13 @@ public class Glove {
     static {GLOVE_DATA.put(YD_CDT_JJ_MAP[0],YD_CDT_JJ_MAP);}
 
     //  运动手套（★） | 树篱迷宫 (久经沙场)
-    public static double[] YD_SLMG_JJ = {3900, 0.30, 3300};
+    public static double[] YD_SLMG_JJ = {3400, 0.30, 2900};
     public static String[] YD_SLMG_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43255&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976911891"};
     public static Object[] YD_SLMG_JJ_MAP = {N_YD_SLMG_JJ,YD_SLMG_JJ_URL, YD_SLMG_JJ};
     static {GLOVE_DATA.put(YD_SLMG_JJ_MAP[0],YD_SLMG_JJ_MAP);}
 
     //  运动手套（★） | 双栖(久经沙场)
-    public static double[] YD_SX_JJ = {3500, 0.27, 2700};
+    public static double[] YD_SX_JJ = {3100, 0.27, 2600};
     public static String[] YD_SX_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45451&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976963839"};
     public static Object[] YD_SX_JJ_MAP = {N_YD_SX_JJ,YD_SX_JJ_URL, YD_SX_JJ};
     static {GLOVE_DATA.put(YD_SX_JJ_MAP[0],YD_SX_JJ_MAP);}
