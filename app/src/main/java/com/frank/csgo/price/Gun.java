@@ -502,7 +502,7 @@ public class Gun {
 
     //USP 消音版 | 闪回 (崭新出厂)
     //USP 消音版（StatTrak™） | 闪回 (崭新出厂)
-    public static double[] USP_SH_ZX_ST = {40, 0.03, 20};
+    public static double[] USP_SH_ZX_ST = {40, 0.02, 20};
     public static String   USP_SH_ZX_ST_N = "USP 消音版（StatTrak™） | 闪回 (崭新出厂)";
     public static String[] USP_SH_ZX_ST_URL = {"0"};
     public static Object[] USP_SH_ZX_ST_MAP = {USP_SH_ZX_ST_N,USP_SH_ZX_ST_URL, USP_SH_ZX_ST};
@@ -1035,7 +1035,7 @@ public class Gun {
     /***********************SG553武器列表****************************/
 
     // SG 553 | 意式拉力 (略有磨损)
-    public static double[] SG553_YSLL_LM = {1100, 0.09, 700};
+    public static double[] SG553_YSLL_LM = {1020, 0.09, 800};
     public static String   SG553_YSLL_LM_N = "SG 553 | 意式拉力 (略有磨损)";
     public static String[] SG553_YSLL_LM_URL = {"0"};
     public static Object[] SG553_YSLL_LM_MAP = {SG553_YSLL_LM_N,SG553_YSLL_LM_URL, SG553_YSLL_LM};
@@ -1121,7 +1121,7 @@ public class Gun {
     /***********************MP9武器列表****************************/
 
     //    MP9 | 赤红新星 (崭新出厂)
-    public static double[] MP9_CHXX_ZX = {70, 0.02,50};
+    public static double[] MP9_CHXX_ZX = {70, 0.01,50};
     public static String   MP9_CHXX_ZX_N = "MP9 | 赤红新星 (崭新出厂)";
     public static String[] MP9_CHXX_ZX_URL = {"0"};
     public static Object[] MP9_CHXX_ZX_MAP = {MP9_CHXX_ZX_N,MP9_CHXX_ZX_URL, MP9_CHXX_ZX};
