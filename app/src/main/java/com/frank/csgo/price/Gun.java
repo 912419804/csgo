@@ -305,21 +305,21 @@ public class Gun {
     static {GUN_DATA.put(AWP_LJ_ZX_MAP[0],AWP_LJ_ZX_MAP);}
 
     //AWP | 巨龙传说 (崭新出厂)
-    public static double[] AWP_JLCS_ZX = {19000, 0.03, 16000};
+    public static double[] AWP_JLCS_ZX = {20500, 0.03, 16000};
     public static String   AWP_JLCS_ZX_N = "AWP | 巨龙传说 (崭新出厂)";
     public static String[] AWP_JLCS_ZX_URL = {"0"};
     public static Object[] AWP_JLCS_ZX_MAP = {AWP_JLCS_ZX_N,AWP_JLCS_ZX_URL, AWP_JLCS_ZX};
     static {GUN_DATA.put(AWP_JLCS_ZX_MAP[0],AWP_JLCS_ZX_MAP);}
 
     //AWP | 巨龙传说 (略有磨损)
-    public static double[] AWP_JLCS_LM = {15000, 0.08, 12000};
+    public static double[] AWP_JLCS_LM = {15500, 0.08, 12000};
     public static String   AWP_JLCS_LM_N = "AWP | 巨龙传说 (略有磨损)";
     public static String[] AWP_JLCS_LM_URL = {"0"};
     public static Object[] AWP_JLCS_LM_MAP = {AWP_JLCS_LM_N,AWP_JLCS_LM_URL, AWP_JLCS_LM};
     static {GUN_DATA.put(AWP_JLCS_LM_MAP[0],AWP_JLCS_LM_MAP);}
 
     //AWP | 巨龙传说 (久经沙场)
-    public static double[] AWP_JLCS_JJ = {8500, 0.24, 6800};
+    public static double[] AWP_JLCS_JJ = {8200, 0.24, 7400};
     public static String   AWP_JLCS_JJ_N = "AWP | 巨龙传说 (久经沙场)";
     public static String[] AWP_JLCS_JJ_URL = {"0"};
     public static Object[] AWP_JLCS_JJ_MAP = {AWP_JLCS_JJ_N,AWP_JLCS_JJ_URL, AWP_JLCS_JJ};
