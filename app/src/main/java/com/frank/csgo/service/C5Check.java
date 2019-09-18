@@ -73,12 +73,14 @@ public class C5Check {
                 if (price <= minMoney) {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                     list.add(weapon);
+                    break;
                 }else if (price <= value) {
                       if (!TextUtils.isEmpty(exterior_wear)) {
                             Double wear = Double.valueOf(exterior_wear);
                             if (wear <= w && wear!=0) {
                                 weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                                 list.add(weapon);
+                                break;
                             }
                         else {
                             C5Weapon.GemBean gem = weapon.getGem();

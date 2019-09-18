@@ -70,6 +70,7 @@ public class IgxeCheck {
                 if (price <= minMoney) {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                     list.add(weapon);
+                    break;
                 }else if (price <= value) {
                         String exterior_wear = weapon.getExterior_wear();
                         if (!TextUtils.isEmpty(exterior_wear)) {
@@ -77,6 +78,7 @@ public class IgxeCheck {
                             if (wear <= w) {
                                 weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                                 list.add(weapon);
+                                break;
                             }else {
                             List<IgxeWeapon.StickerBean> stickers = weapon.getSticker();
                             if (stickers != null && stickers.size() == 4) {

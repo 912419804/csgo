@@ -59,6 +59,7 @@ public class BuffCheck {
                     if (wear < w) {
                         weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                         list.add(weapon);
+                        break;
                     }else {
                         BuffWeapon.AssetInfoBean.InfoBean info = weapon.getAsset_info().getInfo();
                         ArrayList<BuffWeapon.AssetInfoBean.StickersBean> stickers = info.getStickers();
