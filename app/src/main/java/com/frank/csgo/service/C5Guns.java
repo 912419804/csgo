@@ -2366,7 +2366,7 @@ public class C5Guns extends C5Check{
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, 45, 0.01, 30);
+                        handleDataC5(response, USP_SH_ZX_ST);
                         connect167();
                     }
 

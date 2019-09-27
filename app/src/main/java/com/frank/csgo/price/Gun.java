@@ -94,14 +94,14 @@ public class Gun {
     static {GUN_DATA.put(AK47_SZZ_JJ_MAP[0],AK47_SZZ_JJ_MAP);}
 
     //AK-47 | 二西莫夫 (略有磨损)
-    public static double[] AK47_EXMF_LM = {340, 0.11, 280};
+    public static double[] AK47_EXMF_LM = {340, 0.11, 250};
     public static String   AK47_EXMF_LM_N = "AK-47 | 二西莫夫 (略有磨损)";
     public static String[] AK47_EXMF_LM_URL = {"0"};
     public static Object[] AK47_EXMF_LM_MAP = {AK47_EXMF_LM_N,AK47_EXMF_LM_URL, AK47_EXMF_LM};
     static {GUN_DATA.put(AK47_EXMF_LM_MAP[0],AK47_EXMF_LM_MAP);}
 
     //AK-47 | 二西莫夫 (久经沙场)
-    public static double[] AK47_EXMF_JJ = {200, 0.18, 160};
+    public static double[] AK47_EXMF_JJ = {200, 0.18, 150};
     public static String   AK47_EXMF_JJ_N = "AK-47 | 二西莫夫 (久经沙场)";
     public static String[] AK47_EXMF_JJ_URL = {"0"};
     public static Object[] AK47_EXMF_JJ_MAP = {AK47_EXMF_JJ_N,AK47_EXMF_JJ_URL, AK47_EXMF_JJ};
@@ -152,7 +152,7 @@ public class Gun {
     static {GUN_DATA.put(AK47_NHQS_LM_MAP[0],AK47_NHQS_LM_MAP);}
 
     // AK-47（StatTrak™） | 霓虹骑士 (略有磨损)
-    public static double[] AK47_NHQS_LM_ST = {780, 0.08, 650};
+    public static double[] AK47_NHQS_LM_ST = {800, 0.08, 650};
     public static String   AK47_NHQS_LM_ST_N = "AK-47（StatTrak™） | 霓虹骑士 (略有磨损)";
     public static String[] AK47_NHQS_LM_ST_URL = {"0"};
     public static Object[] AK47_NHQS_LM_ST_MAP = {AK47_NHQS_LM_ST_N,AK47_NHQS_LM_ST_URL, AK47_NHQS_LM_ST};
@@ -173,7 +173,7 @@ public class Gun {
     static {GUN_DATA.put(AK47_NHQS_JJ_ST_MAP[0],AK47_NHQS_JJ_ST_MAP);}
 
     //AK-47 | 霓虹革命 (崭新出厂)
-    public static double[] AK47_NHGM_ZX = {310, 0.01, 240};
+    public static double[] AK47_NHGM_ZX = {310, 0.02, 240};
     public static String   AK47_NHGM_ZX_N = "AK-47 | 霓虹革命 (崭新出厂)";
     public static String[] AK47_NHGM_ZX_URL = {"0"};
     public static Object[] AK47_NHGM_ZX_MAP = {AK47_NHGM_ZX_N,AK47_NHGM_ZX_URL, AK47_NHGM_ZX};
@@ -473,14 +473,14 @@ public class Gun {
     static {GUN_DATA.put(USP_BXG_LM_ST_MAP[0],USP_BXG_LM_ST_MAP);}
 
     //USP 消音版 | 次时代 (崭新出厂)
-    public static double[] USP_CSD_ZX = {28, 0.01, 18};
+    public static double[] USP_CSD_ZX = {25, 0.01, 15};
     public static String   USP_CSD_ZX_N = "USP 消音版 | 次时代 (崭新出厂)";
     public static String[] USP_CSD_ZX_URL = {"0"};
     public static Object[] USP_CSD_ZX_MAP = {USP_CSD_ZX_N,USP_CSD_ZX_URL, USP_CSD_ZX};
     static {GUN_DATA.put(USP_CSD_ZX_MAP[0],USP_CSD_ZX_MAP);}
 
     //USP 消音版（StatTrak™） | 次时代(崭新出厂)
-    public static double[] USP_CSD_ZX_ST = {100, 0.02, 70};
+    public static double[] USP_CSD_ZX_ST = {100, 0.02, 60};
     public static String   USP_CSD_ZX_ST_N = "USP 消音版（StatTrak™） | 次时代 (崭新出厂)";
     public static String[] USP_CSD_ZX_ST_URL = {"0"};
     public static Object[] USP_CSD_ZX_ST_MAP = {USP_CSD_ZX_ST_N,USP_CSD_ZX_ST_URL, USP_CSD_ZX_ST};
@@ -618,7 +618,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_SJKJ_ZX_MAP[0],M4A4_SJKJ_ZX_MAP);}
 
     //M4A4 |黑色魅影 (略有磨损)
-    public static double[] M4A4_HSMY_LM = {340, 0.08, 290};
+    public static double[] M4A4_HSMY_LM = {340, 0.08, 260};
     public static String   M4A4_HSMY_LM_N = "M4A4 | 黑色魅影 (略有磨损)";
     public static String[] M4A4_HSMY_LM_URL = {"0"};
     public static Object[] M4A4_HSMY_LM_MAP = {M4A4_HSMY_LM_N,M4A4_HSMY_LM_URL, M4A4_HSMY_LM};
@@ -711,7 +711,7 @@ public class Gun {
     static {GUN_DATA.put(P90_EXMF_ZX_MAP[0],P90_EXMF_ZX_MAP);}
 
     //P90 | 二西莫夫 (略有磨损)
-    public static double[] P90_EXMF_LM = {85, 0.08, 50};
+    public static double[] P90_EXMF_LM = {90, 0.08, 50};
     public static String   P90_EXMF_LM_N = "P90 | 二西莫夫 (略有磨损)";
     public static String[] P90_EXMF_LM_URL = {"0"};
     public static Object[] P90_EXMF_LM_MAP = {P90_EXMF_LM_N,P90_EXMF_LM_URL, P90_EXMF_LM};
@@ -934,14 +934,14 @@ public class Gun {
     static {GUN_DATA.put(SMZY_CLZY_ZX_MAP[0],SMZY_CLZY_ZX_MAP);}
 
     //沙漠之鹰 | 机械工业 (崭新出厂)
-    public static double[] SMZY_JXGY_ZX = {80, 0.010, 40};
+    public static double[] SMZY_JXGY_ZX = {80, 0.020, 40};
     public static String   SMZY_JXGY_ZX_N = "沙漠之鹰 | 机械工业 (崭新出厂)";
     public static String[] SMZY_JXGY_ZX_URL = {"0"};
     public static Object[] SMZY_JXGY_ZX_MAP = {SMZY_JXGY_ZX_N,SMZY_JXGY_ZX_URL, SMZY_JXGY_ZX};
     static {GUN_DATA.put(SMZY_JXGY_ZX_MAP[0],SMZY_JXGY_ZX_MAP);}
 
     // 沙漠之鹰 | 轻轨 (崭新出厂)
-    public static double[] SMZY_QG_ZX = {30, 0.005, 20};
+    public static double[] SMZY_QG_ZX = {30, 0.008, 17};
     public static String   SMZY_QG_ZX_N = "沙漠之鹰 | 轻轨 (崭新出厂)";
     public static String[] SMZY_QG_ZX_URL = {"0"};
     public static Object[] SMZY_QG_ZX_MAP = {SMZY_QG_ZX_N,SMZY_QG_ZX_URL, SMZY_QG_ZX};

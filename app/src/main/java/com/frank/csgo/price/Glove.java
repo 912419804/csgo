@@ -221,13 +221,13 @@ public class Glove {
     static {GLOVE_DATA.put(MT_QLBH_JJ_MAP[0],MT_QLBH_JJ_MAP);}
 
     //  摩托手套（★） | *嘣！* (略有磨损)
-    public static double[] MT_B_LM = {2650, 0.12, 2350};
+    public static double[] MT_B_LM = {2650, 0.12, 2300};
     public static String[] MT_B_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43148&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554973056441"};
     public static Object[] MT_B_LM_MAP = {N_MT_B_LM,MT_B_LM_URL, MT_B_LM};
     static {GLOVE_DATA.put(MT_B_LM_MAP[0],MT_B_LM_MAP);}
 
     //  摩托手套（★） | *嘣！* (久经沙场)
-    public static double[] MT_B_JJ = {1400, 0.30, 1210};
+    public static double[] MT_B_JJ = {1400, 0.30, 1100};
     public static String[] MT_B_JJ_URL ={"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43147&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554973267137"};
     public static Object[] MT_B_JJ_MAP = {N_MT_B_JJ,MT_B_JJ_URL, MT_B_JJ};
     static {GLOVE_DATA.put(MT_B_JJ_MAP[0],MT_B_JJ_MAP);}
@@ -347,7 +347,7 @@ public class Glove {
     static {GLOVE_DATA.put(ZY_SLD_LM_MAP[0],ZY_SLD_LM_MAP);}
 
     //  专业手套（★） | 森林 DDPAT (久经沙场)
-    public static double[] ZY_SLD_JJ = {680, 0.17, 550};
+    public static double[] ZY_SLD_JJ = {680, 0.17, 500};
     public static String[] ZY_SLD_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45411&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554973505858"};
     public static Object[] ZY_SLD_JJ_MAP = {N_ZY_SLD_JJ,ZY_SLD_JJ_URL, ZY_SLD_JJ};
     static {GLOVE_DATA.put(ZY_SLD_JJ_MAP[0],ZY_SLD_JJ_MAP);}
@@ -419,7 +419,7 @@ public class Glove {
     static {GLOVE_DATA.put(JTS_BMCH_JJ_MAP[0],JTS_BMCH_JJ_MAP);}
 
     // 九头蛇手套（★） | 翡翠色调(略有磨损)
-    public static double[] JTS_FCSD_LM = {1700, 0.12, 1450};
+    public static double[] JTS_FCSD_LM = {1700, 0.11, 1300};
     public static String[] JTS_FCSD_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45579&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554977262000"};
     public static Object[] JTS_FCSD_LM_MAP = {N_JTS_FCSD_LM,JTS_FCSD_LM_URL, JTS_FCSD_LM};
     static {GLOVE_DATA.put(JTS_FCSD_LM_MAP[0],JTS_FCSD_LM_MAP);}
