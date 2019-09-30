@@ -436,7 +436,7 @@ public class Gun {
     static {GUN_DATA.put(USP_NDDK_ZX_MAP[0],USP_NDDK_ZX_MAP);}
 
     //USP 消音版（StatTrak™） | 脑洞大开 (崭新出厂)
-    public static double[] USP_NDDK_ZX_ST = {420, 0.02, 330};
+    public static double[] USP_NDDK_ZX_ST = {420, 0.02, 300};
     public static String   USP_NDDK_ZX_ST_N = "USP 消音版（StatTrak™） | 脑洞大开 (崭新出厂)";
     public static String[] USP_NDDK_ZX_ST_URL = {"0"};
     public static Object[] USP_NDDK_ZX_ST_MAP = {USP_NDDK_ZX_ST_N,USP_NDDK_ZX_ST_URL, USP_NDDK_ZX_ST};
@@ -1072,7 +1072,7 @@ public class Gun {
     static {GUN_DATA.put(AUG_DL_ZX_MAP[0],AUG_DL_ZX_MAP);}
     
     // AUG | 动量 (略有磨损)
-    public static double[] AUG_DL_LM = {80, 0.09, 50};
+    public static double[] AUG_DL_LM = {80, 0.09, 30};
     public static String   AUG_DL_LM_N = "AUG | 动量 (略有磨损)";
     public static String[] AUG_DL_LM_URL = {"0"};
     public static Object[] AUG_DL_LM_MAP = {AUG_DL_LM_N,AUG_DL_LM_URL, AUG_DL_LM};
