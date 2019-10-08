@@ -1035,14 +1035,14 @@ public class Gun {
     /***********************SG553武器列表****************************/
 
     // SG 553 | 意式拉力 (略有磨损)
-    public static double[] SG553_YSLL_LM = {1020, 0.09, 800};
+    public static double[] SG553_YSLL_LM = {1030, 0.09, 800};
     public static String   SG553_YSLL_LM_N = "SG 553 | 意式拉力 (略有磨损)";
     public static String[] SG553_YSLL_LM_URL = {"0"};
     public static Object[] SG553_YSLL_LM_MAP = {SG553_YSLL_LM_N,SG553_YSLL_LM_URL, SG553_YSLL_LM};
     static {GUN_DATA.put(SG553_YSLL_LM_MAP[0],SG553_YSLL_LM_MAP);}
 
     // SG 553 | 意式拉力 (久经沙场)
-    public static double[] SG553_YSLL_JJ = {580, 0.20, 400};
+    public static double[] SG553_YSLL_JJ = {680, 0.20, 500};
     public static String   SG553_YSLL_JJ_N = "SG 553 | 意式拉力 (久经沙场)";
     public static String[] SG553_YSLL_JJ_URL = {"0"};
     public static Object[] SG553_YSLL_JJ_MAP = {SG553_YSLL_JJ_N,SG553_YSLL_JJ_URL, SG553_YSLL_JJ};
