@@ -68,7 +68,11 @@ public class C5Service extends Service {
         public void run() {
             updateNotification();
             count++;
-            c5Guns.connect();
+            try {
+                c5Guns.connect();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         }
     };
 

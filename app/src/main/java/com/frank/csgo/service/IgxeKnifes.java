@@ -6,18 +6,6 @@ import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
 
 import static com.frank.csgo.price.Knife.*;
-import static com.frank.csgo.price.KnifeName.N_CD_EMZY_JJ;
-import static com.frank.csgo.price.KnifeName.N_CD_EMZY_LM;
-import static com.frank.csgo.price.KnifeName.N_HDD_EMZY_JJ;
-import static com.frank.csgo.price.KnifeName.N_HDD_EMZY_LM;
-import static com.frank.csgo.price.KnifeName.N_LSZ_EMZY_JJ;
-import static com.frank.csgo.price.KnifeName.N_LSZ_EMZY_LM;
-import static com.frank.csgo.price.KnifeName.N_M9_EMZY_JJ;
-import static com.frank.csgo.price.KnifeName.N_M9_EMZY_LM;
-import static com.frank.csgo.price.KnifeName.N_ZDD_EMZY_JJ;
-import static com.frank.csgo.price.KnifeName.N_ZDD_EMZY_LM;
-import static com.frank.csgo.price.KnifeName.N_ZZD_EMZY_JJ;
-import static com.frank.csgo.price.KnifeName.N_ZZD_EMZY_LM;
 
 /**
  * @author 作者 hasee

@@ -87,11 +87,17 @@ public class BuffService extends Service {
         public void run() {
             updateNotification();
             count++;
-            if (Constant.BUFF == 0){
-                buffGuns.connect201();
-            }else {
-                buffKnifes.connect3200();
+            try {
+                if (Constant.BUFF == 0){
+                    buffGuns.connect201();
+                }else {
+                    buffKnifes.connect3200();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
             }
+
+
         }
     };
     private Runnable lastTask = new Runnable() {

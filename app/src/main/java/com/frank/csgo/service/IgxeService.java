@@ -69,7 +69,11 @@ public class IgxeService extends Service {
         public void run() {
             updateNotification();
             count++;
-            igxeGuns.connect();
+            try {
+                igxeGuns.connect();
+            }catch (Exception e){
+               e.printStackTrace();
+            }
         }
     };
 
