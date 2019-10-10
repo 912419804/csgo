@@ -3869,12 +3869,14 @@ public class BuffGuns extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AUG | 动量 (久经沙场)");
                                 handleDataForBuff(response, AUG_DL_JJ);
-                                mService.buffKnifes.connect3200();
+//                                mService.buffKnifes.connect3200();
+                                mService.startScan2();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                mService.buffKnifes.connect3200();
+//                                mService.buffKnifes.connect3200();
+                                mService.startScan2();
                             }
                         });
             }

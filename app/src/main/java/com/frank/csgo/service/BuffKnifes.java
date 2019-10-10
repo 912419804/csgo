@@ -1560,12 +1560,14 @@ public class BuffKnifes extends BuffCheck{
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "猎杀者匕首（★） | 致命紫罗兰 (略有磨损)");
                         handleDataForBuff(response, LSZ_ZMZLL_LM);
-                        mService.buffGloves.connect1100();
+//                        mService.buffGloves.connect1100();
+                        mService.startScan3();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        mService.buffGloves.connect1100();
+//                        mService.buffGloves.connect1100();
+                        mService.startScan3();
                         super.onError(response);
                     }
                 });

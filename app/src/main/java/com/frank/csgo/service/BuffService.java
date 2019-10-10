@@ -77,7 +77,9 @@ public class BuffService extends Service {
             startLast();
         }else {
             Toast.makeText(this, "buff顺序访问...", Toast.LENGTH_LONG).show();
-            startScan();
+            startScan2();
+            startScan3();
+            startScan4();
         }
         return super.onStartCommand(intent, flags, startId);
     }
@@ -100,6 +102,28 @@ public class BuffService extends Service {
 
         }
     };
+    private Runnable runnable2 = new Runnable() {
+        @Override
+        public void run() {
+            updateNotification();
+            count++;
+            buffGuns.connect201();
+        }
+    };
+    private Runnable runnable3 = new Runnable() {
+        @Override
+        public void run() {
+            updateNotification();
+            count++;
+            buffKnifes.connect3200();
+        }
+    };
+    private Runnable runnable4 = new Runnable() {
+        @Override
+        public void run() {
+            buffGloves.connect1100();
+        }
+    };
     private Runnable lastTask = new Runnable() {
         @Override
         public void run() {
@@ -115,6 +139,15 @@ public class BuffService extends Service {
 
     public void startScan(){
         ThreadUtils.THREAD.execute(runnable);
+    }
+    public void startScan2(){
+        ThreadUtils.THREAD.execute(runnable2);
+    }
+    public void startScan3(){
+        ThreadUtils.THREAD.execute(runnable3);
+    }
+    public void startScan4(){
+        ThreadUtils.THREAD.execute(runnable4);
     }
     public void startLast(){
 

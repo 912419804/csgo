@@ -1499,12 +1499,14 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 响尾蛇(久经沙场)");
                                 handleDataForBuff(response, JTS_XWS_JJ);
-                                mService.startScan();
+//                                mService.startScan();
+                                mService.startScan4();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                mService.startScan();
+//                                mService.startScan();
+                                mService.startScan4();
                             }
                         });
             }
