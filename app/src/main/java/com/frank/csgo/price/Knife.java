@@ -106,7 +106,7 @@ public class Knife {
     static {KNIFE_DATA.put(M9_HY_ZX_MAP[0],M9_HY_ZX_MAP);}
 
     //   M9 刺刀（★） | 自动化 (久经沙场)
-    public static double[] M9_ZDH_JJ = {2000, 0.20, 1600};
+    public static double[] M9_ZDH_JJ = {2000, 0.17, 1600};
     public static String[] M9_ZDH_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43055&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887726414"};
     public static Object[] M9_ZDH_JJ_MAP = {N_M9_ZDH_JJ,M9_ZDH_JJ_URL,M9_ZDH_JJ};
     static {KNIFE_DATA.put(M9_ZDH_JJ_MAP[0],M9_ZDH_JJ_MAP);}
@@ -130,7 +130,7 @@ public class Knife {
     static {KNIFE_DATA.put(M9_SHZW_LM_MAP[0],M9_SHZW_LM_MAP);}
 
     //   M9 刺刀（★） | 深红之网 (久经沙场)
-    public static double[] M9_SHZW_JJ = {1450, 0.25, 1250};
+    public static double[] M9_SHZW_JJ = {1450, 0.25, 1200};
     public static double[] M9_SHZW_JJ_2 = {1200, 0.31, 1050};
     public static String[] M9_SHZW_JJ_URL ={"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43083&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554888258479"};
     public static Object[] M9_SHZW_JJ_MAP = {N_M9_SHZW_JJ,M9_SHZW_JJ_URL,M9_SHZW_JJ};

@@ -258,7 +258,7 @@ public class IgxeWeapon implements Serializable {
 
         private String sticker_img;
         private String sticker_title;
-        private int wear;
+        private double wear;
 
         public String getSticker_img() {
             return sticker_img;
@@ -276,11 +276,11 @@ public class IgxeWeapon implements Serializable {
             this.sticker_title = sticker_title;
         }
 
-        public int getWear() {
+        public double getWear() {
             return wear;
         }
 
-        public void setWear(int wear) {
+        public void setWear(double wear) {
             this.wear = wear;
         }
     }

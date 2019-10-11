@@ -9,73 +9,73 @@ public class Glove {
     public static HashMap<Object,Object[]> GLOVE_DATA = new HashMap<>();
 
     // 血猎手套（★） | 焦炭 (略有磨损)
-    public static double[] XL_JT_LM = {2450, 0.10,2000};
+    public static double[] XL_JT_LM = {2450, 0.10,1600};
     public static String[] XL_JT_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42452&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554954162295"};
     public static Object[] XL_JT_LM_MAP = {N_XL_JT_LM,XL_JT_LM_URL,XL_JT_LM};
     static {GLOVE_DATA.put(XL_JT_LM_MAP[0],XL_JT_LM_MAP);}
 
     // 血猎手套（★） | 焦炭 (久经沙场)
-    public static double[] XL_JT_JJ = {1030, 0.22, 880};
+    public static double[] XL_JT_JJ = {1000, 0.21, 750};
     public static String[] XL_JT_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42451&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554954189139"};
     public static Object[] XL_JT_JJ_MAP = {N_XL_JT_JJ,XL_JT_JJ_URL,XL_JT_JJ};
     static {GLOVE_DATA.put(XL_JT_JJ_MAP[0],XL_JT_JJ_MAP);}
 
     // 血猎手套（★） | 蛇咬 (略有磨损)
-    public static double[] XL_SY_LM = {2200, 0.12, 1700};
+    public static double[] XL_SY_LM = {2200, 0.12, 1500};
     public static String[] XL_SY_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42459&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554955219035"};
     public static Object[] XL_SY_LM_MAP = {N_XL_SY_LM,XL_SY_LM_URL,XL_SY_LM};
     static {GLOVE_DATA.put(XL_SY_LM_MAP[0],XL_SY_LM_MAP);}
 
     // 血猎手套（★） | 蛇咬 (久经沙场)
-    public static double[] XL_SY_JJ = {1000, 0.23, 890};
+    public static double[] XL_SY_JJ = {1000, 0.23, 800};
     public static String[] XL_SY_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42458&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554963091066"};
     public static Object[] XL_SY_JJ_MAP = {N_XL_SY_JJ,XL_SY_JJ_URL,XL_SY_JJ};
     static {GLOVE_DATA.put(XL_SY_JJ_MAP[0],XL_SY_JJ_MAP);}
 
     // 血猎手套（★） | 染铜 (略有磨损)
-    public static double[] XL_RT_LM = {1500, 0.11, 1300};
+    public static double[] XL_RT_LM = {1500, 0.11, 1100};
     public static String[] XL_RT_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42448&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554964002854"};
     public static Object[] XL_RT_LM_MAP = {N_XL_RT_LM,XL_RT_LM_URL,XL_RT_LM};
     static {GLOVE_DATA.put(XL_RT_LM_MAP[0],XL_RT_LM_MAP);}
 
     // 血猎手套（★） | 染铜 (久经沙场)
-    public static double[] XL_RT_JJ = {890, 0.20, 700};
+    public static double[] XL_RT_JJ = {890, 0.20, 650};
     public static String[] XL_RT_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42447&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554964331519"};
     public static Object[] XL_RT_JJ_MAP = {N_XL_RT_JJ,XL_RT_JJ_URL,XL_RT_JJ};
     static {GLOVE_DATA.put(XL_RT_JJ_MAP[0],XL_RT_JJ_MAP);}
 
     // 血猎手套（★） | 游击队 (略有磨损)
-    public static double[] XL_YJD_LM = {1500, 0.11, 1200};
+    public static double[] XL_YJD_LM = {1500, 0.11, 1100};
     public static String[] XL_YJD_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42456&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554967238015"};
     public static Object[] XL_YJD_LM_MAP = {N_XL_YJD_LM,XL_YJD_LM_URL,XL_YJD_LM};
     static {GLOVE_DATA.put(XL_YJD_LM_MAP[0],XL_YJD_LM_MAP);}
 
     // 血猎手套（★） | 游击队 (久经沙场)
-    public static double[] XL_YJD_JJ = {960, 0.21, 800};
+    public static double[] XL_YJD_JJ = {960, 0.21, 700};
     public static String[] XL_YJD_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42455&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554968008907"};
     public static Object[] XL_YJD_JJ_MAP = {N_XL_YJD_JJ,XL_YJD_JJ_URL,XL_YJD_JJ};
     static {GLOVE_DATA.put(XL_YJD_JJ_MAP[0],XL_YJD_JJ_MAP);}
 
     // 驾驶手套（★） | 深红织物 (略有磨损)
-    public static double[] XL_SHZW_LM = {4300, 0.115, 3700};
+    public static double[] XL_SHZW_LM = {4300, 0.115, 3300};
     public static String[] XL_SHZW_LM_URL = {"0"};
     public static Object[] XL_SHZW_LM_MAP = {N_XL_SHZW_LM,XL_SHZW_LM_URL,XL_SHZW_LM};
     static {GLOVE_DATA.put(XL_SHZW_LM_MAP[0],XL_SHZW_LM_MAP);}
 
     // 驾驶手套（★） | 深红织物 (久经沙场)
-    public static double[] XL_SHZW_JJ = {2350, 0.28, 1820};
+    public static double[] XL_SHZW_JJ = {2350, 0.28, 1600};
     public static String[] XL_SHZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42602&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554968980127"};
     public static Object[] XL_SHZW_JJ_MAP = {N_XL_SHZW_JJ,XL_SHZW_JJ_URL,XL_SHZW_JJ};
     static {GLOVE_DATA.put(XL_SHZW_JJ_MAP[0],XL_SHZW_JJ_MAP);}
 
     // 驾驶手套（★） | 紫蓝格子 (略有磨损)
-    public static double[] XL_LZGZ_LM = {4400, 0.123, 3300};
+    public static double[] XL_LZGZ_LM = {4400, 0.123, 3100};
     public static String[] XL_LZGZ_LM_URL = {"0"};
     public static Object[] XL_LZGZ_LM_MAP = {N_XL_LZGZ_LM,XL_LZGZ_LM_URL,XL_LZGZ_LM};
     static {GLOVE_DATA.put(XL_LZGZ_LM_MAP[0],XL_LZGZ_LM_MAP);}
 
     // 驾驶手套（★） | 紫蓝格子 (久经沙场)
-    public static double[] XL_LZGZ_JJ = {2222, 0.27, 1700};
+    public static double[] XL_LZGZ_JJ = {2222, 0.27, 1500};
     public static String[] XL_LZGZ_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45549&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554969156076"};
     public static Object[] XL_LZGZ_JJ_MAP = {N_XL_LZGZ_JJ,XL_LZGZ_JJ_URL,XL_LZGZ_JJ};
     static {GLOVE_DATA.put(XL_LZGZ_JJ_MAP[0],XL_LZGZ_JJ_MAP);}
@@ -88,14 +88,14 @@ public class Glove {
     static {GLOVE_DATA.put(XL_WS_LM_MAP[0],XL_WS_LM_MAP);}
 
     // 驾驶手套（★） | 王蛇 (久经沙场)
-    public static double[] XL_WS_JJ = {2400, 0.25, 1900};
+    public static double[] XL_WS_JJ = {2200, 0.25, 1700};
     public static String[] XL_WS_JJ_URL =  {"0"};
     public static int[]    XL_WS_JJ_MB = {108,354,891,945,986};
     public static Object[] XL_WS_JJ_MAP = {N_XL_WS_JJ,XL_WS_JJ_URL,XL_WS_JJ};
     static {GLOVE_DATA.put(XL_WS_JJ_MAP[0],XL_WS_JJ_MAP);}
 
     // 驾驶手套（★） | 月色织物 (略有磨损)
-    public static double[] XL_YSZW_LM = {1900, 0.113, 1500};
+    public static double[] XL_YSZW_LM = {1700, 0.10, 1300};
     public static String[] XL_YSZW_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42612&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554969582539"};
     public static Object[] XL_YSZW_LM_MAP = {N_XL_YSZW_LM,XL_YSZW_LM_URL,XL_YSZW_LM};
     static {GLOVE_DATA.put(XL_YSZW_LM_MAP[0],XL_YSZW_LM_MAP);}
@@ -107,25 +107,25 @@ public class Glove {
     static {GLOVE_DATA.put(XL_YSZW_JJ_MAP[0],XL_YSZW_JJ_MAP);}
 
     //  驾驶手套（★） | 超越 (略有磨损)
-    public static double[] JS_CY_LM = {1730, 0.10, 1520};
+    public static double[] JS_CY_LM = {1730, 0.10, 1320};
     public static String[] JS_CY_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45533&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554969918026"};
     public static Object[] JS_CY_LM_MAP = {N_JS_CY_LM,JS_CY_LM_URL,JS_CY_LM};
     static {GLOVE_DATA.put(JS_CY_LM_MAP[0],JS_CY_LM_MAP);}
 
     //  驾驶手套（★） | 超越 (久经沙场)
-    public static double[] JS_CY_JJ = {850, 0.22, 680};
+    public static double[] JS_CY_JJ = {850, 0.22, 600};
     public static String[] JS_CY_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45492&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554969980079"};
     public static Object[] JS_CY_JJ_MAP = {N_JS_CY_JJ,JS_CY_JJ_URL,JS_CY_JJ};
     static {GLOVE_DATA.put(JS_CY_JJ_MAP[0],JS_CY_JJ_MAP);}
 
     //  驾驶手套（★） | 菱背蛇纹 (略有磨损)
-    public static double[] JS_LBSW_LM = {1100, 0.09, 900};
+    public static double[] JS_LBSW_LM = {1100, 0.09, 800};
     public static String[] JS_LBSW_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42608&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554970478588"};
     public static Object[] JS_LBSW_LM_MAP = {N_JS_LBSW_LM,JS_LBSW_LM_URL,JS_LBSW_LM};
     static {GLOVE_DATA.put(JS_LBSW_LM_MAP[0],JS_LBSW_LM_MAP);}
 
     //  驾驶手套（★） | 护卫 (略有磨损)
-    public static double[] JS_HW_LM = {850, 0.08, 600};
+    public static double[] JS_HW_LM = {850, 0.08, 500};
     public static String[] JS_HW_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42599&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554970616830"};
     public static Object[] JS_HW_LM_MAP = {N_JS_HW_LM,JS_HW_LM_URL,JS_HW_LM};
     static {GLOVE_DATA.put(JS_HW_LM_MAP[0],JS_HW_LM_MAP);}
@@ -137,13 +137,13 @@ public class Glove {
     static {GLOVE_DATA.put(JS_MLSD_LM_MAP[0],JS_MLSD_LM_MAP);}
 
     //  裹手（★） | 钴蓝骷髅 (久经沙场)
-    public static double[] GS_GLKL_JJ = {3250, 0.28, 2700};
+    public static double[] GS_GLKL_JJ = {3250, 0.28, 2500};
     public static String[] GS_GLKL_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45471&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554970803831"};
     public static Object[] GS_GLKL_JJ_MAP = {N_GS_GLKL_JJ,GS_GLKL_JJ_URL, GS_GLKL_JJ};
     static {GLOVE_DATA.put(GS_GLKL_JJ_MAP[0],GS_GLKL_JJ_MAP);}
 
     //  裹手（★） | 屠夫 (略有磨损)
-    public static double[] GS_TF_LM = {3600, 0.115, 3000};
+    public static double[] GS_TF_LM = {3600, 0.115, 2700};
     public static String[] GS_TF_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42884&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554970914561"};
     public static Object[] GS_TF_LM_MAP = {N_GS_TF_LM,GS_TF_LM_URL, GS_TF_LM};
     static {GLOVE_DATA.put(GS_TF_LM_MAP[0],GS_TF_LM_MAP);}
@@ -155,25 +155,25 @@ public class Glove {
     static {GLOVE_DATA.put(GS_TF_JJ_MAP[0],GS_TF_JJ_MAP);}
 
     //  裹手（★） | 恶土 (略有磨损)
-    public static double[] GS_ET_LM = {1950, 0.12, 1650};
+    public static double[] GS_ET_LM = {1950, 0.12, 1450};
     public static String[] GS_ET_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42876&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554971191720"};
     public static Object[] GS_ET_LM_MAP = {N_GS_ET_LM,GS_ET_LM_URL, GS_ET_LM};
     static {GLOVE_DATA.put(GS_ET_LM_MAP[0],GS_ET_LM_MAP);}
 
     //  裹手（★） | 恶土 (久经沙场)
-    public static double[] GS_ET_JJ = {1200, 0.23, 980};
+    public static double[] GS_ET_JJ = {1200, 0.23, 900};
     public static String[] GS_ET_JJ_URL = {"0"};
     public static Object[] GS_ET_JJ_MAP = {N_GS_ET_JJ,GS_ET_JJ_URL, GS_ET_JJ};
     static {GLOVE_DATA.put(GS_ET_JJ_MAP[0],GS_ET_JJ_MAP);}
 
     //  裹手（★） | 皮革 (略有磨损)
-    public static double[] GS_PG_LM = {1990, 0.11, 1700};
+    public static double[] GS_PG_LM = {1990, 0.11, 1500};
     public static String[] GS_PG_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42880&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554971410718"};
     public static Object[] GS_PG_LM_MAP = {N_GS_PG_LM,GS_PG_LM_URL, GS_PG_LM};
     static {GLOVE_DATA.put(GS_PG_LM_MAP[0],GS_PG_LM_MAP);}
 
     //  裹手（★） | 皮革 (久经沙场)
-    public static double[] GS_PG_JJ = {1100, 0.21, 900};
+    public static double[] GS_PG_JJ = {1100, 0.21, 850};
     public static String[] GS_PG_JJ_URL = {"0"};
     public static Object[] GS_PG_JJ_MAP = {N_GS_PG_JJ,GS_PG_JJ_URL, GS_PG_JJ};
     static {GLOVE_DATA.put(GS_PG_JJ_MAP[0],GS_PG_JJ_MAP);}
@@ -185,13 +185,13 @@ public class Glove {
     static {GLOVE_DATA.put(GS_SLSD_LM_MAP[0],GS_SLSD_LM_MAP);}
 
     //  裹手（★） | 森林色调 (久经沙场)
-    public static double[] GS_SLSD_JJ = {890, 0.21, 780};
+    public static double[] GS_SLSD_JJ = {890, 0.21, 710};
     public static String[] GS_SLSD_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45450&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554971989125"};
     public static Object[] GS_SLSD_JJ_MAP = {N_GS_SLSD_JJ,GS_SLSD_JJ_URL, GS_SLSD_JJ};
     static {GLOVE_DATA.put(GS_SLSD_JJ_MAP[0],GS_SLSD_JJ_MAP);}
 
     //  裹手（★） | 云杉DDPAT (略有磨损)
-    public static double[] GS_YS_LM = {1300, 0.11, 1000};
+    public static double[] GS_YS_LM = {1200, 0.09, 1000};
     public static String[] GS_YS_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42889&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554972053819"};
     public static Object[] GS_YS_LM_MAP = {N_GS_YS_LM,GS_YS_LM_URL, GS_YS_LM};
     static {GLOVE_DATA.put(GS_YS_LM_MAP[0],GS_YS_LM_MAP);}
@@ -203,25 +203,25 @@ public class Glove {
     static {GLOVE_DATA.put(GS_YS_JJ_MAP[0],GS_YS_JJ_MAP);}
 
     //  摩托手套（★） | 薄荷 (久经沙场)
-    public static double[] GS_BH_JJ = {4100, 0.32, 3500};
+    public static double[] GS_BH_JJ = {3900, 0.32, 3400};
     public static String[] GS_BH_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43159&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554972194963"};
     public static Object[] GS_BH_JJ_MAP = {N_GS_BH_JJ,GS_BH_JJ_URL, GS_BH_JJ};
     static {GLOVE_DATA.put(GS_BH_JJ_MAP[0],GS_BH_JJ_MAP);}
 
     //  摩托手套（★） | 清凉薄荷 (略有磨损)
-    public static double[] MT_QLBH_LM = {4000, 0.12, 3500};
+    public static double[] MT_QLBH_LM = {4000, 0.11, 3300};
     public static String[] MT_QLBH_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43152&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554972524257"};
     public static Object[] MT_QLBH_LM_MAP = {N_MT_QLBH_LM,MT_QLBH_LM_URL, MT_QLBH_LM};
     static {GLOVE_DATA.put(MT_QLBH_LM_MAP[0],MT_QLBH_LM_MAP);}
 
     //  摩托手套（★） | 清凉薄荷 (久经沙场)
-    public static double[] MT_QLBH_JJ = {1850, 0.29, 1500};
+    public static double[] MT_QLBH_JJ = {1750, 0.29, 1500};
     public static String[] MT_QLBH_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43151&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554972733525"};
     public static Object[] MT_QLBH_JJ_MAP = {N_MT_QLBH_JJ,MT_QLBH_JJ_URL, MT_QLBH_JJ};
     static {GLOVE_DATA.put(MT_QLBH_JJ_MAP[0],MT_QLBH_JJ_MAP);}
 
     //  摩托手套（★） | *嘣！* (略有磨损)
-    public static double[] MT_B_LM = {2650, 0.12, 2200};
+    public static double[] MT_B_LM = {2650, 0.11, 2200};
     public static String[] MT_B_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43148&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554973056441"};
     public static Object[] MT_B_LM_MAP = {N_MT_B_LM,MT_B_LM_URL, MT_B_LM};
     static {GLOVE_DATA.put(MT_B_LM_MAP[0],MT_B_LM_MAP);}
@@ -239,7 +239,7 @@ public class Glove {
     static {GLOVE_DATA.put(MT_P_LM_MAP[0],MT_P_LM_MAP);}
 
     //  摩托手套（★） | 交运 (略有磨损)
-    public static double[] MT_JY_LM = {1450, 0.12, 1200};
+    public static double[] MT_JY_LM = {1450, 0.12, 1100};
     public static String[] MT_JY_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45493&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554973453800"};
     public static Object[] MT_JY_LM_MAP = {N_MT_JY_LM,MT_JY_LM_URL, MT_JY_LM};
     static {GLOVE_DATA.put(MT_JY_LM_MAP[0],MT_JY_LM_MAP);}
@@ -251,25 +251,25 @@ public class Glove {
     static {GLOVE_DATA.put(MT_JY_JJ_MAP[0],MT_JY_JJ_MAP);}
 
     //  摩托手套（★） | 多边形 (久经沙场)
-    public static double[] MT_DBX_JJ = {1700, 0.25, 1400};
+    public static double[] MT_DBX_JJ = {1580, 0.25, 1300};
     public static String[] MT_DBX_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45473&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975231755"};
     public static Object[] MT_DBX_JJ_MAP = {N_MT_DBX_JJ,MT_DBX_JJ_URL, MT_DBX_JJ};
     static {GLOVE_DATA.put(MT_DBX_JJ_MAP[0],MT_DBX_JJ_MAP);}
 
     //  摩托手套（★） | 玳瑁 (久经沙场)
-    public static double[] MT_DM_JJ = {1700, 0.28, 1400};
+    public static double[] MT_DM_JJ = {1700, 0.28, 1350};
     public static String[] MT_DM_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45488&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975287147"};
     public static Object[] MT_DM_JJ_MAP = {N_MT_DM_JJ,MT_DM_JJ_URL, MT_DM_JJ};
     static {GLOVE_DATA.put(MT_DM_JJ_MAP[0],MT_DM_JJ_MAP);}
 
     //  摩托手套（★） | 日蚀 (略有磨损)
-    public static double[] MT_RS_LM = {2250, 0.12, 1900};
+    public static double[] MT_RS_LM = {2100, 0.11, 1600};
     public static String[] MT_RS_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43156&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975370979"};
     public static Object[] MT_RS_LM_MAP = {N_MT_RS_LM,MT_RS_LM_URL, MT_RS_LM};
     static {GLOVE_DATA.put(MT_RS_LM_MAP[0],MT_RS_LM_MAP);}
 
     //  摩托手套（★） | 日蚀 (久经沙场)
-    public static double[] MT_RS_JJ = {1150, 0.25, 900};
+    public static double[] MT_RS_JJ = {1100, 0.25, 850};
     public static String[] MT_RS_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43155&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975418874"};
     public static Object[] MT_RS_JJ_MAP = {N_MT_RS_JJ,MT_RS_JJ_URL, MT_RS_JJ};
     static {GLOVE_DATA.put(MT_RS_JJ_MAP[0],MT_RS_JJ_MAP);}
@@ -281,55 +281,55 @@ public class Glove {
     static {GLOVE_DATA.put(ZY_SHHF_JJ_MAP[0],ZY_SHHF_JJ_MAP);}
 
     //  专业手套（★） | 深红之网 (略有磨损)
-    public static double[] ZY_SHZW_LM = {3890, 0.11, 3400};
+    public static double[] ZY_SHZW_LM = {3890, 0.11, 3200};
     public static String[] ZY_SHZW_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=422853&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975679756"};
     public static Object[] ZY_SHZW_LM_MAP = {N_ZY_SHZW_LM,ZY_SHZW_LM_URL, ZY_SHZW_LM};
     static {GLOVE_DATA.put(ZY_SHZW_LM_MAP[0],ZY_SHZW_LM_MAP);}
 
     //  专业手套（★） | 深红之网 (久经沙场)
-    public static double[] ZY_SHZW_JJ = {1750, 0.26, 1500};
+    public static double[] ZY_SHZW_JJ = {1750, 0.26, 1400};
     public static String[] ZY_SHZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45412&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975733233"};
     public static Object[] ZY_SHZW_JJ_MAP = {N_ZY_SHZW_JJ,ZY_SHZW_JJ_URL, ZY_SHZW_JJ};
     static {GLOVE_DATA.put(ZY_SHZW_JJ_MAP[0],ZY_SHZW_JJ_MAP);}
 
     //  专业手套（★） | 大腕 (略有磨损)
-    public static double[] ZY_DW_LM = {3300, 0.11, 2800};
+    public static double[] ZY_DW_LM = {3300, 0.11, 2500};
     public static String[] ZY_DW_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45606&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975801052"};
     public static Object[] ZY_DW_LM_MAP = {N_ZY_DW_LM,ZY_DW_LM_URL, ZY_DW_LM};
     static {GLOVE_DATA.put(ZY_DW_LM_MAP[0],ZY_DW_LM_MAP);}
 
     //  专业手套（★） | 大腕 (久经沙场)
-    public static double[] ZY_DW_JJ = {1650, 0.25, 1350};
+    public static double[] ZY_DW_JJ = {1650, 0.25, 1250};
     public static String[] ZY_DW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45376&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975861228"};
     public static Object[] ZY_DW_JJ_MAP = {N_ZY_DW_JJ,ZY_DW_JJ_URL, ZY_DW_JJ};
     static {GLOVE_DATA.put(ZY_DW_JJ_MAP[0],ZY_DW_JJ_MAP);}
 
     //  专业手套（★） | 元勋 (略有磨损)
-    public static double[] ZY_YX_LM = {3500, 0.11, 2700};
+    public static double[] ZY_YX_LM = {3500, 0.11, 2500};
     public static String[] ZY_YX_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43247&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975925016"};
     public static Object[] ZY_YX_LM_MAP = {N_ZY_YX_LM,ZY_YX_LM_URL, ZY_YX_LM};
     static {GLOVE_DATA.put(ZY_YX_LM_MAP[0],ZY_YX_LM_MAP);}
 
     //  专业手套（★） | 元勋 (久经沙场)
-    public static double[] ZY_YX_JJ = {1550, 0.25, 1250};
+    public static double[] ZY_YX_JJ = {1550, 0.25, 1200};
     public static String[] ZY_YX_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43246&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975968513"};
     public static Object[] ZY_YX_JJ_MAP = {N_ZY_YX_JJ,ZY_YX_JJ_URL, ZY_YX_JJ};
     static {GLOVE_DATA.put(ZY_YX_JJ_MAP[0],ZY_YX_JJ_MAP);}
 
     //  专业手套（★） | 渐变之色 (久经沙场)
-    public static double[] ZY_JBZS_JJ = {2350, 0.27, 1900};
+    public static double[] ZY_JBZS_JJ = {2350, 0.27, 1800};
     public static String[] ZY_JBZS_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45508&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976006928"};
     public static Object[] ZY_JBZS_JJ_MAP = {N_ZY_JBZS_JJ,ZY_JBZS_JJ_URL, ZY_JBZS_JJ};
     static {GLOVE_DATA.put(ZY_JBZS_JJ_MAP[0],ZY_JBZS_JJ_MAP);}
 
     //  专业手套（★） | 翠绿之网 (久经沙场)
-    public static double[] ZY_CLZW_JJ = {2350, 0.25, 1800};
+    public static double[] ZY_CLZW_JJ = {2350, 0.25, 1700};
     public static String[] ZY_CLZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43237&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976048425"};
     public static Object[] ZY_CLZW_JJ_MAP = {N_ZY_CLZW_JJ,ZY_CLZW_JJ_URL, ZY_CLZW_JJ};
     static {GLOVE_DATA.put(ZY_CLZW_JJ_MAP[0],ZY_CLZW_JJ_MAP);}
 
     //  专业手套（★） | 狩鹿(略有磨损)
-    public static double[] ZY_SL_LM = {1100, 0.09, 800};
+    public static double[] ZY_SL_LM = {1100, 0.09, 700};
     public static String[] ZY_SL_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45565&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976119916"};
     public static Object[] ZY_SL_LM_MAP = {N_ZY_SL_LM,ZY_SL_LM_URL, ZY_SL_LM};
     static {GLOVE_DATA.put(ZY_SL_LM_MAP[0],ZY_SL_LM_MAP);}
@@ -341,7 +341,7 @@ public class Glove {
     static {GLOVE_DATA.put(ZY_SL_JJ_MAP[0],ZY_SL_JJ_MAP);}
 
     //  专业手套（★） | 森林 DDPAT (略有磨损)
-    public static double[] ZY_SLD_LM = {1110, 0.08, 800};
+    public static double[] ZY_SLD_LM = {1110, 0.08, 700};
     public static String[] ZY_SLD_LM_URL ={"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43243&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976180417"};
     public static Object[] ZY_SLD_LM_MAP = {N_ZY_SLD_LM,ZY_SLD_LM_URL, ZY_SLD_LM};
     static {GLOVE_DATA.put(ZY_SLD_LM_MAP[0],ZY_SLD_LM_MAP);}
@@ -353,43 +353,43 @@ public class Glove {
     static {GLOVE_DATA.put(ZY_SLD_JJ_MAP[0],ZY_SLD_JJ_MAP);}
 
     //  运动手套（★） | 潘多拉之盒(久经沙场)
-    public static double[] YD_PDLZH_JJ = {7200, 0.31, 6500};
+    public static double[] YD_PDLZH_JJ = {6900, 0.31, 6300};
     public static String[] YD_PDLZH_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43259&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976240458"};
     public static Object[] YD_PDLZH_JJ_MAP = {N_YD_PDLZH_JJ,YD_PDLZH_JJ_URL, YD_PDLZH_JJ};
     static {GLOVE_DATA.put(YD_PDLZH_JJ_MAP[0],YD_PDLZH_JJ_MAP);}
 
     //  运动手套（★） | 迈阿密风云(久经沙场)
-    public static double[] YD_MAMFY_JJ = {6200, 0.30, 5600};
+    public static double[] YD_MAMFY_JJ = {5900, 0.30, 5300};
     public static String[] YD_MAMFY_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45582&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976379943"};
     public static Object[] YD_MAMFY_JJ_MAP = {N_YD_MAMFY_JJ,YD_MAMFY_JJ_URL, YD_MAMFY_JJ};
     static {GLOVE_DATA.put(YD_MAMFY_JJ_MAP[0],YD_MAMFY_JJ_MAP);}
 
     //  运动手套（★） | 超导体 (久经沙场)
-    public static double[] YD_CDT_JJ = {3900, 0.30, 3300};
+    public static double[] YD_CDT_JJ = {3900, 0.30, 3200};
     public static String[] YD_CDT_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43262&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976864300"};
     public static Object[] YD_CDT_JJ_MAP = {N_YD_CDT_JJ,YD_CDT_JJ_URL, YD_CDT_JJ};
     static {GLOVE_DATA.put(YD_CDT_JJ_MAP[0],YD_CDT_JJ_MAP);}
 
     //  运动手套（★） | 树篱迷宫 (久经沙场)
-    public static double[] YD_SLMG_JJ = {3400, 0.30, 2800};
+    public static double[] YD_SLMG_JJ = {3400, 0.30, 2700};
     public static String[] YD_SLMG_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43255&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976911891"};
     public static Object[] YD_SLMG_JJ_MAP = {N_YD_SLMG_JJ,YD_SLMG_JJ_URL, YD_SLMG_JJ};
     static {GLOVE_DATA.put(YD_SLMG_JJ_MAP[0],YD_SLMG_JJ_MAP);}
 
     //  运动手套（★） | 双栖(久经沙场)
-    public static double[] YD_SX_JJ = {3100, 0.27, 2600};
+    public static double[] YD_SX_JJ = {2900, 0.26, 2300};
     public static String[] YD_SX_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45451&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554976963839"};
     public static Object[] YD_SX_JJ_MAP = {N_YD_SX_JJ,YD_SX_JJ_URL, YD_SX_JJ};
     static {GLOVE_DATA.put(YD_SX_JJ_MAP[0],YD_SX_JJ_MAP);}
 
     //  运动手套（★） | 欧米伽(久经沙场)
-    public static double[] YD_OMJ_JJ = {2700, 0.27, 2200};
+    public static double[] YD_OMJ_JJ = {2700, 0.27, 2100};
     public static String[] YD_OMJ_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45509&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554977093242"};
     public static Object[] YD_OMJ_JJ_MAP = {N_YD_OMJ_JJ,YD_OMJ_JJ_URL, YD_OMJ_JJ};
     static {GLOVE_DATA.put(YD_OMJ_JJ_MAP[0],YD_OMJ_JJ_MAP);}
 
     //  运动手套（★） | 青铜形态 (久经沙场)
-    public static double[] YD_QTXT_JJ = {1490, 0.20, 1100};
+    public static double[] YD_QTXT_JJ = {1400, 0.20, 1100};
     public static String[] YD_QTXT_JJ_URL = {"0"};
     public static Object[] YD_QTXT_JJ_MAP = {N_YD_QTXT_JJ,YD_QTXT_JJ_URL, YD_QTXT_JJ};
     static {GLOVE_DATA.put(YD_QTXT_JJ_MAP[0],YD_QTXT_JJ_MAP);}
@@ -401,37 +401,37 @@ public class Glove {
     static {GLOVE_DATA.put(YD_GH_LM_MAP[0],YD_GH_LM_MAP);}
 
     //  运动手套（★） | 干旱 (久经沙场)
-    public static double[] YD_GH_JJ = {1700, 0.25, 1450};
+    public static double[] YD_GH_JJ = {1650, 0.25, 1400};
     public static String[] YD_GH_JJ_URL = {"0"};
     public static Object[] YD_GH_JJ_MAP = {N_YD_GH_JJ,YD_GH_JJ_URL, YD_GH_JJ};
     static {GLOVE_DATA.put(YD_GH_JJ_MAP[0],YD_GH_JJ_MAP);}
 
     // 九头蛇手套（★） | 表面淬火(略有磨损)
-    public static double[] JTS_BMCH_LM = {1850, 0.09, 1500};
+    public static double[] JTS_BMCH_LM = {1750, 0.09, 1400};
     public static String[] JTS_BMCH_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45556&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554977150918"};
     public static Object[] JTS_BMCH_LM_MAP = {N_JTS_BMCH_LM,JTS_BMCH_LM_URL, JTS_BMCH_LM};
     static {GLOVE_DATA.put(JTS_BMCH_LM_MAP[0],JTS_BMCH_LM_MAP);}
 
     // 九头蛇手套（★） | 表面淬火(久经沙场)
-    public static double[] JTS_BMCH_JJ = {960, 0.20, 800};
+    public static double[] JTS_BMCH_JJ = {920, 0.20, 800};
     public static String[] JTS_BMCH_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45431&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554977202481"};
     public static Object[] JTS_BMCH_JJ_MAP = {N_JTS_BMCH_JJ,JTS_BMCH_JJ_URL, JTS_BMCH_JJ};
     static {GLOVE_DATA.put(JTS_BMCH_JJ_MAP[0],JTS_BMCH_JJ_MAP);}
 
     // 九头蛇手套（★） | 翡翠色调(略有磨损)
-    public static double[] JTS_FCSD_LM = {1600, 0.11, 1300};
+    public static double[] JTS_FCSD_LM = {1500, 0.10, 1200};
     public static String[] JTS_FCSD_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45579&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554977262000"};
     public static Object[] JTS_FCSD_LM_MAP = {N_JTS_FCSD_LM,JTS_FCSD_LM_URL, JTS_FCSD_LM};
     static {GLOVE_DATA.put(JTS_FCSD_LM_MAP[0],JTS_FCSD_LM_MAP);}
 
     // 九头蛇手套（★） | 翡翠色调(久经沙场)
-    public static double[] JTS_FCSD_JJ = {870, 0.19, 750};
+    public static double[] JTS_FCSD_JJ = {750, 0.19, 600};
     public static String[] JTS_FCSD_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45558&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554977309970"};
     public static Object[] JTS_FCSD_JJ_MAP = {N_JTS_FCSD_JJ,JTS_FCSD_JJ_URL, JTS_FCSD_JJ};
     static {GLOVE_DATA.put(JTS_FCSD_JJ_MAP[0],JTS_FCSD_JJ_MAP);}
 
     // 九头蛇手套（★） | 响尾蛇(略有磨损)
-    public static double[] JTS_XWS_LM = {1250, 0.10, 900};
+    public static double[] JTS_XWS_LM = {1250, 0.10, 800};
     public static String[] JTS_XWS_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45472&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554977351879"};
     public static Object[] JTS_XWS_LM_MAP = {N_JTS_XWS_LM,JTS_XWS_LM_URL, JTS_XWS_LM};
     static {GLOVE_DATA.put(JTS_XWS_LM_MAP[0],JTS_XWS_LM_MAP);}
@@ -443,13 +443,13 @@ public class Glove {
     static {GLOVE_DATA.put(JTS_XWS_JJ_MAP[0],JTS_XWS_JJ_MAP);}
 
     //九头蛇手套（★） | 红树林(略有磨损)
-    public static double[] JTS_HSL_LM = {1000, 0.09, 800};
+    public static double[] JTS_HSL_LM = {1000, 0.09, 700};
     public static String[] JTS_HSL_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45512&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554977448300"};
     public static Object[] JTS_HSL_LM_MAP = {N_JTS_HSL_LM,JTS_HSL_LM_URL, JTS_HSL_LM};
     static {GLOVE_DATA.put(JTS_HSL_LM_MAP[0],JTS_HSL_LM_MAP);}
 
     //裹手（★） | 套印(久经沙场)
-    public static double[] GS_TY_JJ = {2250, 0.25, 1800};
+    public static double[] GS_TY_JJ = {2250, 0.25, 1600};
     public static String[] GS_TY_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45578&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1560438864957"};
     public static Object[] GS_TY_JJ_MAP = {N_GS_TY_JJ,GS_TY_JJ_URL, GS_TY_JJ};
     static {GLOVE_DATA.put(GS_TY_JJ_MAP[0],GS_TY_JJ_MAP);}

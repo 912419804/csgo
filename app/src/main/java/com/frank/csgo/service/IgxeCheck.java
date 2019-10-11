@@ -62,7 +62,9 @@ public class IgxeCheck {
             double value = res[0];
             double w     = res[1];
             double minMoney = res[2];
-            List<IgxeWeapon> weapons = response.body().getD_list();
+            Igxe body = response.body();
+            if (body == null)return;
+            List<IgxeWeapon> weapons = body.getD_list();
             ArrayList<IgxeWeapon> list = new ArrayList<>();
             for (IgxeWeapon weapon : weapons) {
                 String unit_price = weapon.getUnit_price();

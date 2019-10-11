@@ -64,7 +64,9 @@ public class C5Check {
             double value = res[0];
             double w     = res[1];
             double minMoney = res[2];
-            List<C5Weapon> weapons = response.body().getBody().getItems();
+            C5.BodyBean body = response.body().getBody();
+            if (body == null) return;
+            List<C5Weapon> weapons = body.getItems();
             ArrayList<C5Weapon> list = new ArrayList<>();
             for (C5Weapon weapon : weapons) {
                 String unit_price = weapon.getPrice();
