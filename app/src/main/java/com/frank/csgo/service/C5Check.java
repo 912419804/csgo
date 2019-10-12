@@ -7,6 +7,7 @@ import com.frank.csgo.Constant;
 import com.frank.csgo.bean.C5;
 import com.frank.csgo.bean.C5Weapon;
 import com.frank.csgo.bean.IgxeWeapon;
+import com.frank.csgo.utils.SendUtils;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.model.Response;
 
@@ -52,7 +53,7 @@ public class C5Check {
             if (!list.isEmpty()) {
                 Intent intent = new Intent(Constant.C5_WEAPON);
                 intent.putExtra(Constant.C5_WEAPON, list);
-                mService.sendBroadcast(intent);
+                SendUtils.sendBroadcast(mService,intent);
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -110,7 +111,7 @@ public class C5Check {
             if (!list.isEmpty()) {
                 Intent intent = new Intent(Constant.C5_WEAPON);
                 intent.putExtra(Constant.C5_WEAPON, list);
-                mService.sendBroadcast(intent);
+                SendUtils.sendBroadcast(mService,intent);
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -155,7 +156,7 @@ public class C5Check {
             if (!list.isEmpty()) {
                 Intent intent = new Intent(Constant.C5_WEAPON);
                 intent.putExtra(Constant.C5_WEAPON, list);
-                mService.sendBroadcast(intent);
+                SendUtils.sendBroadcast(mService,intent);
             }
         }catch (Exception e){
             e.printStackTrace();

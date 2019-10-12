@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 public class Constant {
     public static final String C5_WEAPON = "c5_weapon";
+    public static final String _IGC5 = "IGC5";
+    public static final String _BUFF = "BUFF";
     public static String IGXE_WEAPON = "igxe_weapon";
     public static String BUFF_WEAPON = "buff_weapon";
     public static String STOP = "stop";

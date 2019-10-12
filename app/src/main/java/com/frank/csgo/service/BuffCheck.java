@@ -7,6 +7,7 @@ import com.frank.csgo.Constant;
 import com.frank.csgo.bean.Buff;
 import com.frank.csgo.bean.BuffWeapon;
 import com.frank.csgo.bean.IgxeWeapon;
+import com.frank.csgo.utils.SendUtils;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.model.Response;
 
@@ -41,7 +42,7 @@ public class BuffCheck {
         if (!list.isEmpty()) {
             Intent intent = new Intent(Constant.BUFF_WEAPON);
             intent.putExtra(Constant.BUFF_WEAPON, list);
-            mService.sendBroadcast(intent);
+            SendUtils.sendBroadcast(mService,intent);
         }
     }
     protected void handleDataForBuff(Response<Buff> response, double[] res) {
@@ -84,7 +85,7 @@ public class BuffCheck {
         if (!list.isEmpty()) {
             Intent intent = new Intent(Constant.BUFF_WEAPON);
             intent.putExtra(Constant.BUFF_WEAPON, list);
-            mService.sendBroadcast(intent);
+            SendUtils.sendBroadcast(mService,intent);
         }
     }
 

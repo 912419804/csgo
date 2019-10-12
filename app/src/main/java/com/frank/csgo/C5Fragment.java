@@ -24,6 +24,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.frank.csgo.bean.C5Weapon;
 import com.frank.csgo.utils.MediaUtils;
+import com.frank.csgo.utils.SendUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,7 +80,7 @@ public class C5Fragment extends Fragment {
 
     private void registerDataReceiver() {
         IntentFilter filter = new IntentFilter(Constant.C5_WEAPON);
-        mContex.registerReceiver(new BroadcastReceiver() {
+        SendUtils.getInstance(getActivity()).registerReceiver(new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 try {

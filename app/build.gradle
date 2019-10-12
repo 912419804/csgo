@@ -15,6 +15,21 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        flavorDimensions "CSGO"
+        productFlavors{
+            package_igc5_{
+                applicationId "com.frank.csgo"
+                manifestPlaceholders = [appName: "IGC5"]
+                buildConfigField "String", "APP_NAME", "\"IGC5\""
+
+            }
+            package_buff_{
+                applicationId "com.frank.buff"
+                manifestPlaceholders = [appName: "BUFF"]
+                buildConfigField "String", "APP_NAME", "\"BUFF\""
+            }
+        }
     }
 }
 

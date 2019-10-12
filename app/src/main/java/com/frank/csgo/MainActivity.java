@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,6 +16,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.frank.csgo.bean.goods.BuffGoods;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private Intent igxeService;
     private Intent c5Service;
     private Intent buffService;
+    private TabLayout tabs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +50,25 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle(BuildConfig.APP_NAME);
+        tabs = findViewById(R.id.tabs);
+        if (BuildConfig.APP_NAME.equals(Constant._IGC5)){
+            fragments.add(new IgxeFragment());
+            fragments.add(new C5Fragment());
+            tabs.addTab(tabs.newTab().setText("IGXE"));
+            tabs.addTab(tabs.newTab().setText("C5"));
+        }else if (BuildConfig.APP_NAME.equals(Constant._BUFF)){
+            fragments.add(new BuffFragment());
+            tabs.addTab(tabs.newTab().setText("BUFF"));
+        }else {
+            fragments.add(new IgxeFragment());
+            fragments.add(new C5Fragment());
+            fragments.add(new BuffFragment());
+            tabs.addTab(tabs.newTab().setText("IGXE"));
+            tabs.addTab(tabs.newTab().setText("C5"));
+            tabs.addTab(tabs.newTab().setText("BUFF"));
+        }
 
-        fragments.add(new IgxeFragment());
-        fragments.add(new C5Fragment());
-        fragments.add(new BuffFragment());
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         mViewPager = (ViewPager) findViewById(R.id.container);
@@ -193,6 +211,11 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
+            if (BuildConfig.APP_NAME.equals(Constant._IGC5)){
+                return 2;
+            }else if(BuildConfig.APP_NAME.equals(Constant._BUFF)){
+                return 1;
+            }
             return 3;
         }
     }

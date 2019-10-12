@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.Igxe;
 import com.frank.csgo.bean.IgxeWeapon;
+import com.frank.csgo.utils.SendUtils;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.model.Response;
 
@@ -50,7 +51,7 @@ public class IgxeCheck {
             if (!list.isEmpty()) {
                 Intent intent = new Intent(Constant.IGXE_WEAPON);
                 intent.putExtra(Constant.IGXE_WEAPON, list);
-                mService.sendBroadcast(intent);
+                SendUtils.sendBroadcast(mService,intent);
             }
         }catch (Exception e){
 
@@ -105,7 +106,7 @@ public class IgxeCheck {
             if (!list.isEmpty()) {
                 Intent intent = new Intent(Constant.IGXE_WEAPON);
                 intent.putExtra(Constant.IGXE_WEAPON, list);
-                mService.sendBroadcast(intent);
+                SendUtils.sendBroadcast(mService,intent);
             }
         }catch (Exception e){
 
@@ -149,7 +150,7 @@ public class IgxeCheck {
             if (!list.isEmpty()) {
                 Intent intent = new Intent(Constant.IGXE_WEAPON);
                 intent.putExtra(Constant.IGXE_WEAPON, list);
-                mService.sendBroadcast(intent);
+                SendUtils.sendBroadcast(mService,intent);
             }
         }catch (Exception e){
 

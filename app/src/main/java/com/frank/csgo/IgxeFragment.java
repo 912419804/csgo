@@ -23,6 +23,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.frank.csgo.bean.IgxeWeapon;
 import com.frank.csgo.utils.MediaUtils;
+import com.frank.csgo.utils.SendUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,7 +79,7 @@ public class IgxeFragment extends Fragment {
 
     private void registerDataReceiver() {
         IntentFilter filter = new IntentFilter(Constant.IGXE_WEAPON);
-        mContex.registerReceiver(new BroadcastReceiver() {
+        SendUtils.getInstance(getActivity()).registerReceiver(new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 try {
