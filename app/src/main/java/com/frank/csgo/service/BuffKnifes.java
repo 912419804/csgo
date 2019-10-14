@@ -1506,12 +1506,12 @@ public class BuffKnifes extends BuffCheck{
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "爪子刀（★） | 致命紫罗兰 (久经沙场)");
                         handleDataForBuff(response, ZZD_ZMZLL_JJ);
-                        connect1300();
+                        connect1301();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect1300();
+                        connect1301();
                         super.onError(response);
                     }
                 });
@@ -1560,14 +1560,14 @@ public class BuffKnifes extends BuffCheck{
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "猎杀者匕首（★） | 致命紫罗兰 (略有磨损)");
                         handleDataForBuff(response, LSZ_ZMZLL_LM);
-//                        mService.buffGloves.connect1100();
-                        mService.startScan3();
+                        mService.buffGloves.connect1100();
+//                        mService.startScan3();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-//                        mService.buffGloves.connect1100();
-                        mService.startScan3();
+                        mService.buffGloves.connect1100();
+//                        mService.startScan3();
                         super.onError(response);
                     }
                 });
