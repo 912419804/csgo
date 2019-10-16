@@ -3179,12 +3179,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, 50, 0.08, 30);
-                        connect199();
+                        connect1000();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect199();
+                        connect1000();
                     }
                 });
     }
