@@ -269,13 +269,13 @@ public class Knife {
     static {KNIFE_DATA.put(LSZ_HY_ZX_MAP[0],LSZ_HY_ZX_MAP);}
 
     //熊刀（★）
-    public static double[] XD_WTZ = {1400, 0.10, 1200};
+    public static double[] XD_WTZ = {1300, 0.10, 1050};
     public static String[] XD_WTZ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759460&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889773265"};
     public static Object[] XD_WTZ_MAP = {N_XD_WTZ,XD_WTZ_URL,XD_WTZ};
     static {KNIFE_DATA.put(XD_WTZ_MAP[0],XD_WTZ_MAP);}
 
     //熊刀（★） | 深红之网 (久经沙场)
-    public static double[] XD_SHZW_JJ = {1850, 0.20, 1500};
+    public static double[] XD_SHZW_JJ = {1750, 0.20, 1450};
     public static String[] XD_SHZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=759405&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554889684277"};
     public static Object[] XD_SHZW_JJ_MAP = {N_XD_SHZW_JJ,XD_SHZW_JJ_URL,XD_SHZW_JJ};
     static {KNIFE_DATA.put(XD_SHZW_JJ_MAP[0],XD_SHZW_JJ_MAP);}
@@ -299,7 +299,7 @@ public class Knife {
     static {KNIFE_DATA.put(JCZD_WTZ_MAP[0],JCZD_WTZ_MAP);}
 
     //锯齿爪刀（★）|深红之网 (久经沙场)
-    public static double[] JCZD_SHZW_JJ = {1550, 0.24, 1340};
+    public static double[] JCZD_SHZW_JJ = {1550, 0.24, 1300};
     public static String[] JCZD_SHZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=SHZWgo&goods_id=759327&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554890113928"};
     public static Object[] JCZD_SHZW_JJ_MAP = {N_JCZD_SHZW_JJ,JCZD_SHZW_JJ_URL,JCZD_SHZW_JJ};
     static {KNIFE_DATA.put(JCZD_SHZW_JJ_MAP[0],JCZD_SHZW_JJ_MAP);}
@@ -347,13 +347,13 @@ public class Knife {
     static {KNIFE_DATA.put(ZZD_ZMZLL_LM_MAP[0],ZZD_ZMZLL_LM_MAP);}
 
     //熊刀（★） | 致命紫罗兰 (久经沙场)
-    public static double[] XD_ZMZLL_JJ = {1190, 0.21, 950};
+    public static double[] XD_ZMZLL_JJ = {1050, 0.21, 850};
     public static String[] XD_ZMZLL_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769504&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559642034251"};
     public static Object[] XD_ZMZLL_JJ_MAP = {N_XD_ZMZLL_JJ,XD_ZMZLL_JJ_URL,XD_ZMZLL_JJ};
     static {KNIFE_DATA.put(XD_ZMZLL_JJ_MAP[0],ZDD_SHZW_LM_MAP);}
 
     //猎杀者匕首（★） | 致命紫罗兰 (略有磨损)
-    public static double[] LSZ_ZMZLL_LM = {750, 0.09, 600};
+    public static double[] LSZ_ZMZLL_LM = {710, 0.09, 600};
     public static String[] LSZ_ZMZLL_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42954&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559642054243"};
     public static Object[] LSZ_ZMZLL_LM_MAP = {N_LSZ_ZMZLL_LM,LSZ_ZMZLL_LM_URL,LSZ_ZMZLL_LM};
     static {KNIFE_DATA.put(LSZ_ZMZLL_LM_MAP[0],LSZ_ZMZLL_LM_MAP);}
@@ -401,7 +401,7 @@ public class Knife {
     static {KNIFE_DATA.put(CD_EMZY_LM_MAP[0],CD_EMZY_LM_MAP);}
 
     //刺刀（★） | 噩梦之夜 (久经沙场)
-    public static double[] CD_EMZY_JJ = {680, 0.17, 500};
+    public static double[] CD_EMZY_JJ = {680, 0.16, 450};
     public static String[] CD_EMZY_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42412&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1560440731025"};
     public static Object[] CD_EMZY_JJ_MAP = {N_CD_EMZY_JJ,CD_EMZY_JJ_URL,CD_EMZY_JJ};
     static {KNIFE_DATA.put(CD_EMZY_JJ_MAP[0],CD_EMZY_JJ_MAP);}
