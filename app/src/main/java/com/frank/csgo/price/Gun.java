@@ -16,7 +16,7 @@ public class Gun {
     static {GUN_DATA.put(AK47_XXYD_ZX_MAP[0],AK47_XXYD_ZX_MAP);}
 
     // AK-47（StatTrak™） | 血腥运动 (崭新出厂)
-    public static double[] AK47_XXYD_ZX_ST = {1000, 0.03, 800};
+    public static double[] AK47_XXYD_ZX_ST = {1000, 0.03, 700};
     public static String   AK47_XXYD_ZX_ST_N = "AK-47（StatTrak™） | 血腥运动 (崭新出厂)";
     public static String[] AK47_XXYD_ZX_ST_URL = {"0"};
     public static Object[] AK47_XXYD_ZX_ST_MAP = {AK47_XXYD_ZX_ST_N,AK47_XXYD_ZX_ST_URL, AK47_XXYD_ZX_ST};
@@ -734,7 +734,7 @@ public class Gun {
     static {GUN_DATA.put(UMP_CLZY_ZX_MAP[0],UMP_CLZY_ZX_MAP);}
 
     //  UMP-45 | 动量 (崭新出厂)
-    public static double[] UMP_DL_ZX = {60, 0.02, 35};
+    public static double[] UMP_DL_ZX = {60, 0.02, 25};
     public static String   UMP_DL_ZX_N = "UMP-45 | 动量 (崭新出厂)";
     public static String[] UMP_DL_ZX_URL = {"0"};
     public static Object[] UMP_DL_ZX_MAP = {UMP_DL_ZX_N,UMP_DL_ZX_URL, UMP_DL_ZX};
@@ -1065,28 +1065,28 @@ public class Gun {
     /***********************AUG武器列表****************************/
 
     // AUG | 动量 (崭新出厂)
-    public static double[] AUG_DL_ZX = {210, 0.05, 150};
+    public static double[] AUG_DL_ZX = {210, 0.05, 130};
     public static String   AUG_DL_ZX_N = "AUG | 动量 (崭新出厂)";
     public static String[] AUG_DL_ZX_URL = {"0"};
     public static Object[] AUG_DL_ZX_MAP = {AUG_DL_ZX_N,AUG_DL_ZX_URL, AUG_DL_ZX};
     static {GUN_DATA.put(AUG_DL_ZX_MAP[0],AUG_DL_ZX_MAP);}
     
     // AUG | 动量 (略有磨损)
-    public static double[] AUG_DL_LM = {80, 0.09, 30};
+    public static double[] AUG_DL_LM = {60, 0.09, 30};
     public static String   AUG_DL_LM_N = "AUG | 动量 (略有磨损)";
     public static String[] AUG_DL_LM_URL = {"0"};
     public static Object[] AUG_DL_LM_MAP = {AUG_DL_LM_N,AUG_DL_LM_URL, AUG_DL_LM};
     static {GUN_DATA.put(AUG_DL_LM_MAP[0],AUG_DL_LM_MAP);}
     
     // AUG | 动量 (久经沙场)
-    public static double[] AUG_DL_JJ = {27, 0.165, 15};
+    public static double[] AUG_DL_JJ = {20, 0.165, 10};
     public static String   AUG_DL_JJ_N = "AUG | 动量 (久经沙场)";
     public static String[] AUG_DL_JJ_URL = {"0"};
     public static Object[] AUG_DL_JJ_MAP = {AUG_DL_JJ_N,AUG_DL_JJ_URL, AUG_DL_JJ};
     static {GUN_DATA.put(AUG_DL_JJ_MAP[0],AUG_DL_JJ_MAP);}
     
     // AUG | 燕群 (崭新出厂)
-    public static double[] AUG_YQ_ZX = {130, 0.03,90};
+    public static double[] AUG_YQ_ZX = {100, 0.03,60};
     public static String   AUG_YQ_ZX_N = "AUG | 燕群 (崭新出厂)";
     public static String[] AUG_YQ_ZX_URL = {"0"};
     public static Object[] AUG_YQ_ZX_MAP = {AUG_YQ_ZX_N,AUG_YQ_ZX_URL, AUG_YQ_ZX};

@@ -209,13 +209,13 @@ public class Glove {
     static {GLOVE_DATA.put(GS_BH_JJ_MAP[0],GS_BH_JJ_MAP);}
 
     //  摩托手套（★） | 清凉薄荷 (略有磨损)
-    public static double[] MT_QLBH_LM = {4000, 0.11, 3300};
+    public static double[] MT_QLBH_LM = {3600, 0.11, 3000};
     public static String[] MT_QLBH_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43152&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554972524257"};
     public static Object[] MT_QLBH_LM_MAP = {N_MT_QLBH_LM,MT_QLBH_LM_URL, MT_QLBH_LM};
     static {GLOVE_DATA.put(MT_QLBH_LM_MAP[0],MT_QLBH_LM_MAP);}
 
     //  摩托手套（★） | 清凉薄荷 (久经沙场)
-    public static double[] MT_QLBH_JJ = {1750, 0.29, 1500};
+    public static double[] MT_QLBH_JJ = {1700, 0.29, 1400};
     public static String[] MT_QLBH_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43151&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554972733525"};
     public static Object[] MT_QLBH_JJ_MAP = {N_MT_QLBH_JJ,MT_QLBH_JJ_URL, MT_QLBH_JJ};
     static {GLOVE_DATA.put(MT_QLBH_JJ_MAP[0],MT_QLBH_JJ_MAP);}
@@ -257,7 +257,7 @@ public class Glove {
     static {GLOVE_DATA.put(MT_DBX_JJ_MAP[0],MT_DBX_JJ_MAP);}
 
     //  摩托手套（★） | 玳瑁 (久经沙场)
-    public static double[] MT_DM_JJ = {1700, 0.28, 1350};
+    public static double[] MT_DM_JJ = {1450, 0.28, 1200};
     public static String[] MT_DM_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45488&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975287147"};
     public static Object[] MT_DM_JJ_MAP = {N_MT_DM_JJ,MT_DM_JJ_URL, MT_DM_JJ};
     static {GLOVE_DATA.put(MT_DM_JJ_MAP[0],MT_DM_JJ_MAP);}
@@ -269,7 +269,7 @@ public class Glove {
     static {GLOVE_DATA.put(MT_RS_LM_MAP[0],MT_RS_LM_MAP);}
 
     //  摩托手套（★） | 日蚀 (久经沙场)
-    public static double[] MT_RS_JJ = {1100, 0.25, 850};
+    public static double[] MT_RS_JJ = {1050, 0.25, 800};
     public static String[] MT_RS_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43155&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554975418874"};
     public static Object[] MT_RS_JJ_MAP = {N_MT_RS_JJ,MT_RS_JJ_URL, MT_RS_JJ};
     static {GLOVE_DATA.put(MT_RS_JJ_MAP[0],MT_RS_JJ_MAP);}
