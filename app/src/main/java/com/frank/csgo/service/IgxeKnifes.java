@@ -629,13 +629,13 @@ public class IgxeKnifes extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, ZZD_SLD_JJ);
-                        connect1247();
+                        connect1248();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
                         super.onError(response);
-                        connect1247();
+                        connect1248();
                     }
                 });
     }
