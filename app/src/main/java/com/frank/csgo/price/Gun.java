@@ -401,7 +401,7 @@ public class Gun {
     static {GUN_DATA.put(USP_HSMY_ZX_MAP[0],USP_HSMY_ZX_MAP);}
 
     //USP 消音版（StatTrak™） | 黑色魅影(崭新出厂)
-    public static double[] USP_HSMY_ZX_ST = {1100, 0.04, 800};
+    public static double[] USP_HSMY_ZX_ST = {1000, 0.04, 700};
     public static String   USP_HSMY_ZX_ST_N = "USP 消音版（StatTrak™） | 黑色魅影(崭新出厂)";
     public static String[] USP_HSMY_ZX_ST_URL = {"0"};
     public static Object[] USP_HSMY_ZX_ST_MAP = {USP_HSMY_ZX_ST_N,USP_HSMY_ZX_ST_URL, USP_HSMY_ZX_ST};
@@ -541,7 +541,7 @@ public class Gun {
     /***********************M4A4武器列表****************************/
 
     //  M4A4 | 二西莫夫 (久经沙场)
-    public static double[] M4A4_EXMF_JJ = {420, 0.29, 350};
+    public static double[] M4A4_EXMF_JJ = {400, 0.29, 350};
     public static String   M4A4_EXMF_JJ_N = "M4A4 | 二西莫夫 (久经沙场)";
     public static String[] M4A4_EXMF_JJ_URL = {"0"};
     public static Object[] M4A4_EXMF_JJ_MAP = {M4A4_EXMF_JJ_N,M4A4_EXMF_JJ_URL, M4A4_EXMF_JJ};
