@@ -298,7 +298,7 @@ public class Gun {
     static {GUN_DATA.put(AWP_BNYS_ZX_MAP[0],AWP_BNYS_ZX_MAP);}
 
     //   AWP | 雷击 (崭新出厂)
-    public static double[] AWP_LJ_ZX = {750, 0.005, 680};
+    public static double[] AWP_LJ_ZX = {750, 0.005, 550};
     public static String   AWP_LJ_ZX_N = "AWP | 雷击 (崭新出厂)";
     public static String[] AWP_LJ_ZX_URL = {"0"};
     public static Object[] AWP_LJ_ZX_MAP = {AWP_LJ_ZX_N,AWP_LJ_ZX_URL, AWP_LJ_ZX};
@@ -326,7 +326,7 @@ public class Gun {
     static {GUN_DATA.put(AWP_JLCS_JJ_MAP[0],AWP_JLCS_JJ_MAP);}
 
     //  AWP | 死神 (崭新出厂)
-    public static double[] AWP_SS_ZX = {65, 0.01, 30};
+    public static double[] AWP_SS_ZX = {50, 0.01, 30};
     public static String   AWP_SS_ZX_N = "AWP | 死神 (崭新出厂)";
     public static String[] AWP_SS_ZX_URL = {"0"};
     public static Object[] AWP_SS_ZX_MAP = {AWP_SS_ZX_N,AWP_SS_ZX_URL, AWP_SS_ZX};
@@ -347,7 +347,7 @@ public class Gun {
     static {GUN_DATA.put(AWP_HSMY_ZX_MAP[0],AWP_HSMY_ZX_MAP);}
 
     // AWP | 树蝰 (崭新出厂)
-    public static double[] AWP_SK_ZX = {100, 0.01, 60};
+    public static double[] AWP_SK_ZX = {80, 0.01, 45};
     public static String   AWP_SK_ZX_N = "AWP | 树蝰 (崭新出厂)";
     public static String[] AWP_SK_ZX_URL = {"0"};
     public static Object[] AWP_SK_ZX_MAP = {AWP_SK_ZX_N,AWP_SK_ZX_URL, AWP_SK_ZX};
@@ -394,7 +394,7 @@ public class Gun {
     static {GUN_DATA.put(USP_QXRW_JJ_ST_MAP[0],USP_QXRW_JJ_ST_MAP);}
 
     // USP 消音版 | 黑色魅影 (崭新出厂)
-    public static double[] USP_HSMY_ZX = {320, 0.020, 240};
+    public static double[] USP_HSMY_ZX = {290, 0.020, 220};
     public static String   USP_HSMY_ZX_N = "USP 消音版 | 黑色魅影 (崭新出厂)";
     public static String[] USP_HSMY_ZX_URL = {"0"};
     public static Object[] USP_HSMY_ZX_MAP = {USP_HSMY_ZX_N,USP_HSMY_ZX_URL, USP_HSMY_ZX};
@@ -825,7 +825,7 @@ public class Gun {
     static {GUN_DATA.put(M4A1_BNYS_LM_MAP[0],M4A1_BNYS_LM_MAP);}
 
     //M4A1 消音型 | 梦魇 (崭新出厂)
-    public static double[] M4A1_MY_ZX = {110, 0.02, 80};
+    public static double[] M4A1_MY_ZX = {100, 0.02, 60};
     public static String   M4A1_MY_ZX_N = "M4A1 消音型 | 梦魇 (崭新出厂)";
     public static String[] M4A1_MY_ZX_URL = {"0"};
     public static Object[] M4A1_MY_ZX_MAP = {M4A1_MY_ZX_N,M4A1_MY_ZX_URL, M4A1_MY_ZX};
