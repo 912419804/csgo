@@ -429,7 +429,7 @@ public class Gun {
     static {GUN_DATA.put(USP_LH_ZX_MAP[0],USP_LH_ZX_MAP);}
 
     // USP 消音版 | 脑洞大开 (崭新出厂)
-    public static double[] USP_NDDK_ZX = {100, 0.012, 70};
+    public static double[] USP_NDDK_ZX = {100, 0.01, 70};
     public static String   USP_NDDK_ZX_N = "USP 消音版 | 脑洞大开 (崭新出厂)";
     public static String[] USP_NDDK_ZX_URL = {"0"};
     public static Object[] USP_NDDK_ZX_MAP = {USP_NDDK_ZX_N,USP_NDDK_ZX_URL, USP_NDDK_ZX};

@@ -42,7 +42,7 @@ public class BuffKnifes extends BuffCheck{
     }
 
     // 折叠刀（★） | 深红之网 (久经沙场)
-    private void connect3201() {
+    public void connect3201() {
          mService.post(new Runnable() {
             @Override
             public void run() {
@@ -106,12 +106,12 @@ public class BuffKnifes extends BuffCheck{
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "折叠刀（★） | 自动化 (略有磨损)");
                         handleDataForBuff(response, ZDD_ZDH_LM);
-                        connect3206();
+                        connect3211();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect3206();
+                        connect3211();
                     }
                 });
             }
@@ -174,12 +174,12 @@ public class BuffKnifes extends BuffCheck{
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "刺刀（★） | 传说 (久经沙场)");
                         handleDataForBuff(response, CD_CS_JJ);
-                        connect3212();
+                        connect3213();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect3212();
+                        connect3213();
                     }
                 });
             }
@@ -220,12 +220,12 @@ public class BuffKnifes extends BuffCheck{
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "刺刀（★） | 自动化 (略有磨损)");
                         handleDataForBuff(response, CD_ZDH_LM);
-                        connect3214();
+                        connect3215();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect3214();
+                        connect3215();
                     }
                 });
             }
@@ -506,12 +506,12 @@ public class BuffKnifes extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "蝴蝶刀（★） | 深红之网 (久经沙场)");
                                 handleDataForBuff(response, HDD_SHZW_JJ);
-                                connect3233();
+                                connect3241();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect3233();
+                                connect3241();
                             }
                         });
             }
@@ -702,12 +702,12 @@ public class BuffKnifes extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "爪子刀（★） | 深红之网 (久经沙场)");
                                 handleDataForBuff(response, ZZD_SHZW_JJ);
-                                connect3245();
+                                connect3247();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect3245();
+                                connect3247();
                             }
                         });
             }
@@ -766,12 +766,12 @@ public class BuffKnifes extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "爪子刀（★） | 北方森林 (略有磨损)");
                                 handleDataForBuff(response, ZZD_BFSL_LM);
-                                connect3253();
+                                connect3254();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect3253();
+                                connect3254();
                             }
                         });
             }
@@ -1452,12 +1452,12 @@ public class BuffKnifes extends BuffCheck{
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "蝴蝶刀（★） | 致命紫罗兰 (久经沙场)");
                         handleDataForBuff(response, HDD_ZMZLL_JJ);
-                        connect1297();
+                        connect1298();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect1297();
+                        connect1298();
                         super.onError(response);
                     }
                 });
@@ -1542,12 +1542,14 @@ public class BuffKnifes extends BuffCheck{
                     public void onSuccess(Response<Buff> response) {
                         fillBuff(response, "熊刀（★） | 致命紫罗兰 (久经沙场)");
                         handleDataForBuff(response, XD_ZMZLL_JJ);
-                        connect1302();
+//                        connect1302();
+                        mService.buffGloves.connect1100();
                     }
 
                     @Override
                     public void onError(Response<Buff> response) {
-                        connect1302();
+//                        connect1302();
+                        mService.buffGloves.connect1100();
                         super.onError(response);
                     }
                 });

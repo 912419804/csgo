@@ -115,7 +115,7 @@ public class BuffService extends Service {
         public void run() {
             updateNotification();
             count++;
-            buffKnifes.connect3200();
+            buffKnifes.connect3201();
         }
     };
     private Runnable runnable4 = new Runnable() {
@@ -132,7 +132,7 @@ public class BuffService extends Service {
             if (Constant.BUFF == 0){
                 buffGuns.connect201();
             }else {
-                buffKnifes.connect3200();
+                buffKnifes.connect3201();
             }
         }
     };

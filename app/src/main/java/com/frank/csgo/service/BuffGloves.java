@@ -21,25 +21,26 @@ public class BuffGloves extends BuffCheck{
 
     // 血猎手套（★） | 焦炭 (略有磨损)
     public void connect1100() {
-        mService.post(new Runnable() {
-            @Override
-            public void run() {
-                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42452&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554954162295")
-                        .execute(new JsonCallback<Buff>(Buff.class) {
-                            @Override
-                            public void onSuccess(Response<Buff> response) {
-                                fillBuff(response, "血猎手套（★） | 焦炭 (略有磨损)");
-                                handleDataForBuff(response, XL_JT_LM);
-                                connect1101();
-                            }
-
-                            @Override
-                            public void onError(Response<Buff> response) {
-                                connect1101();
-                            }
-                        });
-            }
-        });
+        connect1101();
+//        mService.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42452&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554954162295")
+//                        .execute(new JsonCallback<Buff>(Buff.class) {
+//                            @Override
+//                            public void onSuccess(Response<Buff> response) {
+//                                fillBuff(response, "血猎手套（★） | 焦炭 (略有磨损)");
+//                                handleDataForBuff(response, XL_JT_LM);
+//                                connect1101();
+//                            }
+//
+//                            @Override
+//                            public void onError(Response<Buff> response) {
+//                                connect1101();
+//                            }
+//                        });
+//            }
+//        });
     }
 
     // 血猎手套（★） | 焦炭 (久经沙场)
@@ -53,12 +54,12 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 焦炭 (久经沙场)");
                                 handleDataForBuff(response, XL_JT_JJ);
-                                connect1102();
+                                connect1103();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1102();
+                                connect1103();
                             }
                         });
             }
@@ -99,12 +100,12 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "血猎手套（★） | 蛇咬 (久经沙场)");
                                 handleDataForBuff(response, XL_SY_JJ);
-                                connect1104();
+                                connect1105();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1104();
+                                connect1105();
                             }
                         });
             }
@@ -260,12 +261,12 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 王蛇 (久经沙场)");
                                 handleDataForBuff(response, XL_WS_JJ);
-                                connect1111();
+                                connect1112();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1111();
+                                connect1112();
                             }
                         });
             }
@@ -306,12 +307,12 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "驾驶手套（★） | 月色织物 (久经沙场)");
                                 handleDataForBuff(response, XL_YSZW_JJ);
-                                connect1113();
+                                connect1119();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1113();
+                                connect1119();
                             }
                         });
             }
@@ -490,12 +491,12 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 屠夫 (久经沙场)");
                                 handleDataForBuff(response, GS_TF_JJ);
-                                connect1121();
+                                connect1122();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1121();
+                                connect1122();
                             }
                         });
             }
@@ -536,12 +537,12 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 恶土 (久经沙场)");
                                 handleDataForBuff(response, GS_ET_JJ);
-                                connect1123();
+                                connect1124();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1123();
+                                connect1124();
                             }
                         });
             }
@@ -628,12 +629,12 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "裹手（★） | 森林色调 (久经沙场)");
                                 handleDataForBuff(response, GS_SLSD_JJ);
-                                connect1127();
+                                connect1128();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1127();
+                                connect1128();
                             }
                         });
             }
@@ -789,12 +790,12 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "摩托手套（★） | 嘭！ (久经沙场)");
                                 handleDataForBuff(response, MT_P_LM);
-                                connect1134();
+                                connect1135();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1134();
+                                connect1135();
                             }
                         });
             }
@@ -1125,12 +1126,12 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "专业手套（★） | 翠绿之网 (久经沙场)");
                                 handleDataForBuff(response, ZY_CLZW_JJ);
-                                connect1150();
+                                connect1152();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1150();
+                                connect1152();
                             }
                         });
             }
@@ -1367,12 +1368,12 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "运动手套（★） | 欧米伽(久经沙场)");
                                 handleDataForBuff(response, YD_OMJ_JJ);
-                                connect1160();
+                                connect1162();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1160();
+                                connect1162();
                             }
                         });
             }
@@ -1411,12 +1412,14 @@ public class BuffGloves extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "九头蛇手套（★） | 表面淬火(久经沙场)");
                                 handleDataForBuff(response, JTS_BMCH_JJ);
-                                connect1162();
+//                                connect1163();
+                                mService.startScan4();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1162();
+//                                connect1163();
+                                mService.startScan4();
                             }
                         });
             }

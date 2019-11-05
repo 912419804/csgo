@@ -54,12 +54,12 @@ public class BuffGuns extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "USP 消音版 | 次时代 (崭新出厂)");
                                 handleDataForBuff(response, USP_CSD_ZX);
-                                connect207();
+                                connect211();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect207();
+                                connect211();
                             }
                         });
             }
@@ -1181,12 +1181,12 @@ public class BuffGuns extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AWP | 二西莫夫 (久经沙场)");
                                 handleDataForBuff(response, AWP_EXMF_JJ);
-                                connect250();
+                                connect252();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect250();
+                                connect252();
                             }
                         });
             }
@@ -2379,12 +2379,12 @@ public class BuffGuns extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4 | 黑色魅影 (略有磨损)");
                                 handleDataForBuff(response, 400, 0.09);
-                                connect298();
+                                connect299();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect298();
+                                connect299();
                             }
                         });
             }
