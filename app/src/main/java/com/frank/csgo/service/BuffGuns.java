@@ -3781,12 +3781,15 @@ public class BuffGuns extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "AWP | 树蝰 (崭新出厂)");
                                 handleDataForBuff(response, AWP_SK_ZX);
-                                connect1048();
+//                                connect1048();
+                                mService.startScan2();
+//                                mService.buffKnifes.connect3200();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1048();
+                                mService.startScan2();
+//                                mService.buffKnifes.connect3200();
                             }
                         });
             }

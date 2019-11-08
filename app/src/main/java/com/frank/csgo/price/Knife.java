@@ -10,13 +10,13 @@ public class Knife {
     public static HashMap<Object,Object[]> KNIFE_DATA = new HashMap<>();
 
     // 折叠刀（★） | 深红之网 (略有磨损)
-    public static double[] ZDD_SHZW_LM = {1850, 0.12, 1600};
+    public static double[] ZDD_SHZW_LM = {1850, 0.12, 1400};
     public static String[] ZDD_SHZW_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42713&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551061110945"};
     public static Object[] ZDD_SHZW_LM_MAP = {N_ZDD_SHZW_LM,ZDD_SHZW_LM_URL,ZDD_SHZW_LM};
     static {KNIFE_DATA.put(ZDD_SHZW_LM_MAP[0],ZDD_SHZW_LM_MAP);}
 
     // 折叠刀（★） | 深红之网 (久经沙场)
-    public static double[] ZDD_SHZW_JJ = {870, 0.25, 700};
+    public static double[] ZDD_SHZW_JJ = {840, 0.25, 700};
     public static String[] ZDD_SHZW_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42712&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551061367817"};
     public static Object[] ZDD_SHZW_JJMAP = {N_ZDD_SHZW_JJ,ZDD_SHZW_JJ_URL,ZDD_SHZW_JJ};
     static {KNIFE_DATA.put(ZDD_SHZW_JJMAP[0],ZDD_SHZW_JJMAP);}
@@ -34,7 +34,7 @@ public class Knife {
     static {KNIFE_DATA.put(ZDD_CS_ZX_MAP[0],ZDD_CS_ZX_MAP);}
 
     // 折叠刀（★） | 传说 (久经沙场)
-    public static double[] ZDD_CS_JJ = {1050, 0.19, 850};
+    public static double[] ZDD_CS_JJ = {1000, 0.19, 850};
     public static String[] ZDD_CS_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42738&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1551061756758"};
     public static Object[] ZDD_CS_JJ_MAP = {N_ZDD_CS_JJ,ZDD_CS_JJ_URL,ZDD_CS_JJ};
     static {KNIFE_DATA.put(ZDD_CS_JJ_MAP[0],ZDD_CS_JJ_MAP);}

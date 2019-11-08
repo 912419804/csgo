@@ -271,12 +271,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, AWP_HX_LM);
-                        connect29();
+                        connect32();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect29();
+                        connect32();
                     }
                 });
     }
@@ -526,12 +526,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, USP_LH_ZX);
-                        connect46();
+                        connect47();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect46();
+                        connect47();
                     }
                 });
     }
@@ -560,12 +560,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, 70, 0.16, 40);
-                        connect46();
+                        connect47();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect46();
+                        connect47();
                     }
                 });
     }
@@ -628,12 +628,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, USP_NDDK_ZX);
-                        connect50();
+                        connect55();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect50();
+                        connect55();
                     }
                 });
     }
@@ -885,12 +885,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, JLE_TTD_ZX);
-                        connect67();
+                        connect74();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect67();
+                        connect74();
                     }
                 });
     }
@@ -1141,12 +1141,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, M4A4_HSMY_LM);
-                        connect86();
+                        connect87();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect86();
+                        connect87();
                     }
                 });
     }
@@ -1632,12 +1632,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, AK47_NHQS_LM);
-                        connect109();
+                        connect110();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect109();
+                        connect110();
                     }
                 });
     }
@@ -2551,12 +2551,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, USP_CSD_ZX_ST);
-                        connect163();
+                        connect166();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect163();
+                        connect166();
                     }
                 });
     }
@@ -3427,57 +3427,6 @@ public class IgxeGuns extends IgxeCheck{
                 });
     }
 
-    // AK-47（StatTrak™） | 深海复仇 (崭新出厂)
-    private void connect1013() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/95746")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, 750, 0.02, 600);
-                        connect1014();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        connect1014();
-                    }
-                });
-    }
-
-    // AK-47（StatTrak™） | 深海复仇 (略有磨损)
-    private void connect1014() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/9842")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, 450, 0.09, 360);
-                        connect1015();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        connect1015();
-                    }
-                });
-    }
-
-    // AK-47（StatTrak™） | 深海复仇 (久经沙场)
-    private void connect1015() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6938")
-                .execute(new JsonCallback<Igxe>(Igxe.class) {
-                    @Override
-                    public void onSuccess(Response<Igxe> response) {
-                        handleDataIgxe(response, 280, 0.17, 220);
-                        connect1016();
-                    }
-
-                    @Override
-                    public void onError(Response<Igxe> response) {
-                        connect1016();
-                    }
-                });
-    }
-
     // AK-47（StatTrak™） | 血腥运动 (崭新出厂)
     private void connect1016() {
         OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/571688")
@@ -3536,12 +3485,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, AK47_XXYD_JJ_ST);
-                        connect1020();
+                        connect1025();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect1020();
+                        connect1025();
                     }
                 });
     }
@@ -4146,12 +4095,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, M4A4_SYDM_ZX);
-                        connect1057();
+                        connect1058();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect1057();
+                        connect1058();
                     }
                 });
     }
@@ -4179,12 +4128,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, FN57_NM_ZX);
-                        connect1059();
+                        connect1066();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect1059();
+                        connect1066();
                     }
                 });
     }
@@ -4325,12 +4274,12 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, MP9_QM_ZX);
-                        connect1068();
+                        connect1076();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect1068();
+                        connect1076();
                     }
                 });
     }
