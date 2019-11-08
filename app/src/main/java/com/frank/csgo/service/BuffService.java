@@ -78,8 +78,8 @@ public class BuffService extends Service {
         }else {
             Toast.makeText(this, "buff顺序访问...", Toast.LENGTH_LONG).show();
             startScan2();
-            startScan3();
-//            startScan4();
+//            startScan3();
+            startScan4();
         }
         return super.onStartCommand(intent, flags, startId);
     }
