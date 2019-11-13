@@ -2909,7 +2909,7 @@ public class C5Guns extends C5Check{
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, 80, 0.01, 45);
+                        handleDataC5(response, M4A4_MYS_ZX_ST);
                         connect199();
                     }
 
