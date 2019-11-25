@@ -94,13 +94,13 @@ public class Knife {
     static {KNIFE_DATA.put(CD_DPL_ZX_MAP[0],CD_DPL_ZX_MAP);}
 
     //   刺刀（★） | 虎牙 (崭新出厂)
-    public static double[] CD_HY_ZX = {1600, 0.005, 1350};
+    public static double[] CD_HY_ZX = {1500, 0.005, 1200};
     public static String[] CD_HY_ZX_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42434&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887393940"};
     public static Object[] CD_HY_ZX_MAP = {N_CD_HY_ZX,CD_HY_ZX_URL,CD_HY_ZX};
     static {KNIFE_DATA.put(CD_HY_ZX_MAP[0],CD_HY_ZX_MAP);}
 
     //    M9 刺刀（★） | 虎牙 (崭新出厂)
-    public static double[] M9_HY_ZX = {1780, 0.006, 1500};
+    public static double[] M9_HY_ZX = {1720, 0.006, 1450};
     public static String[] M9_HY_ZX_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43136&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554887562915"};
     public static Object[] M9_HY_ZX_MAP = {N_M9_HY_ZX,M9_HY_ZX_URL,M9_HY_ZX};
     static {KNIFE_DATA.put(M9_HY_ZX_MAP[0],M9_HY_ZX_MAP);}
@@ -130,8 +130,7 @@ public class Knife {
     static {KNIFE_DATA.put(M9_SHZW_LM_MAP[0],M9_SHZW_LM_MAP);}
 
     //   M9 刺刀（★） | 深红之网 (久经沙场)
-    public static double[] M9_SHZW_JJ = {1300, 0.25, 1050};
-    public static double[] M9_SHZW_JJ_2 = {1380, 0.25, 1100};
+    public static double[] M9_SHZW_JJ = {1250, 0.25, 1000};
     public static String[] M9_SHZW_JJ_URL ={"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=43083&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554888258479"};
     public static Object[] M9_SHZW_JJ_MAP = {N_M9_SHZW_JJ,M9_SHZW_JJ_URL,M9_SHZW_JJ};
     static {KNIFE_DATA.put(M9_SHZW_JJ_MAP[0],M9_SHZW_JJ_MAP);}
@@ -347,7 +346,7 @@ public class Knife {
     static {KNIFE_DATA.put(ZZD_ZMZLL_LM_MAP[0],ZZD_ZMZLL_LM_MAP);}
 
     //熊刀（★） | 致命紫罗兰 (久经沙场)
-    public static double[] XD_ZMZLL_JJ = {920, 0.21, 780};
+    public static double[] XD_ZMZLL_JJ = {890, 0.21, 780};
     public static String[] XD_ZMZLL_JJ_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=769504&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1559642034251"};
     public static Object[] XD_ZMZLL_JJ_MAP = {N_XD_ZMZLL_JJ,XD_ZMZLL_JJ_URL,XD_ZMZLL_JJ};
     static {KNIFE_DATA.put(XD_ZMZLL_JJ_MAP[0],ZDD_SHZW_LM_MAP);}
