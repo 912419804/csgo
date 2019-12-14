@@ -8,6 +8,9 @@ public class Gun {
 
     /***********************AK47武器列表****************************/
 
+    // AK-47（StatTrak™） | 复古浪潮 (崭新出厂)
+    public static double[] AK47_FGLC_ZX_ST = {210, 0.01, 140};
+
     // AK-47 | 血腥运动 (崭新出厂)
     public static double[] AK47_XXYD_ZX = {295, 0.025, 220};
     public static String   AK47_XXYD_ZX_N = "AK-47 | 血腥运动 (崭新出厂)";
@@ -16,7 +19,7 @@ public class Gun {
     static {GUN_DATA.put(AK47_XXYD_ZX_MAP[0],AK47_XXYD_ZX_MAP);}
 
     // AK-47（StatTrak™） | 血腥运动 (崭新出厂)
-    public static double[] AK47_XXYD_ZX_ST = {810, 0.03, 680};
+    public static double[] AK47_XXYD_ZX_ST = {860, 0.03, 680};
     public static String   AK47_XXYD_ZX_ST_N = "AK-47（StatTrak™） | 血腥运动 (崭新出厂)";
     public static String[] AK47_XXYD_ZX_ST_URL = {"0"};
     public static Object[] AK47_XXYD_ZX_ST_MAP = {AK47_XXYD_ZX_ST_N,AK47_XXYD_ZX_ST_URL, AK47_XXYD_ZX_ST};
@@ -262,6 +265,9 @@ public class Gun {
 
     /***********************AWP武器列表****************************/
 
+    //AWP | 野火 (崭新出厂)
+    public static double[] AWP_YH_ZX = {900, 0.03, 600};
+
     //AWP | 二西莫夫 (久经沙场)
     public static double[] AWP_EXMF_JJ = {300, 0.24, 250};
     public static String   AWP_EXMF_JJ_N = "AWP | 二西莫夫 (久经沙场)";
@@ -359,35 +365,35 @@ public class Gun {
 
 
     //   USP 消音版 | 枪响人亡 (崭新出厂)
-    public static double[] USP_QXRW_ZX = {560, 0.02, 450};
+    public static double[] USP_QXRW_ZX = {650, 0.02, 450};
     public static String   USP_QXRW_ZX_N = "USP 消音版 | 枪响人亡 (崭新出厂)";
     public static String[] USP_QXRW_ZX_URL = {"0"};
     public static Object[] USP_QXRW_ZX_MAP = {USP_QXRW_ZX_N,USP_QXRW_ZX_URL, USP_QXRW_ZX};
     static {GUN_DATA.put(USP_QXRW_ZX_MAP[0],USP_QXRW_ZX_MAP);}
 
     //   USP 消音版 | 枪响人亡 (略有磨损)
-    public static double[] USP_QXRW_LM = {310, 0.08, 250};
+    public static double[] USP_QXRW_LM = {340, 0.09, 250};
     public static String   USP_QXRW_LM_N = "USP 消音版 | 枪响人亡 (略有磨损)";
     public static String[] USP_QXRW_LM_URL = {"0"};
     public static Object[] USP_QXRW_LM_MAP = {USP_QXRW_LM_N,USP_QXRW_LM_URL, USP_QXRW_LM};
     static {GUN_DATA.put(USP_QXRW_LM_MAP[0],USP_QXRW_LM_MAP);}
 
     //USP 消音版（StatTrak™） | 枪响人亡(略有磨损)
-    public static double[] USP_QXRW_LM_ST = {1100, 0.10, 900};
+    public static double[] USP_QXRW_LM_ST = {1100, 0.103, 900};
     public static String   USP_QXRW_LM_ST_N = "USP 消音版（StatTrak™） | 枪响人亡(略有磨损)";
     public static String[] USP_QXRW_LM_ST_URL = {"0"};
     public static Object[] USP_QXRW_LM_ST_MAP = {USP_QXRW_LM_ST_N,USP_QXRW_LM_ST_URL, USP_QXRW_LM_ST};
     static {GUN_DATA.put(USP_QXRW_LM_ST_MAP[0],USP_QXRW_LM_ST_MAP);}
 
     // USP 消音版 | 枪响人亡 (久经沙场)
-    public static double[] USP_QXRW_JJ = {200, 0.17, 150};
+    public static double[] USP_QXRW_JJ = {220, 0.17, 150};
     public static String   USP_QXRW_JJ_N = "USP 消音版 | 枪响人亡 (久经沙场)";
     public static String[] USP_QXRW_JJ_URL = {"0"};
     public static Object[] USP_QXRW_JJ_MAP = {USP_QXRW_JJ_N,USP_QXRW_JJ_URL, USP_QXRW_JJ};
     static {GUN_DATA.put(USP_QXRW_JJ_MAP[0],USP_QXRW_JJ_MAP);}
 
     //USP 消音版（StatTrak™） | 枪响人亡(久经沙场)
-    public static double[] USP_QXRW_JJ_ST = {620, 0.17, 450};
+    public static double[] USP_QXRW_JJ_ST = {700, 0.17, 450};
     public static String   USP_QXRW_JJ_ST_N = "USP 消音版（StatTrak™） | 枪响人亡(久经沙场)";
     public static String[] USP_QXRW_JJ_ST_URL = {"0"};
     public static Object[] USP_QXRW_JJ_ST_MAP = {USP_QXRW_JJ_ST_N,USP_QXRW_JJ_ST_URL, USP_QXRW_JJ_ST};
@@ -624,6 +630,9 @@ public class Gun {
     public static Object[] M4A4_HSMY_LM_MAP = {M4A4_HSMY_LM_N,M4A4_HSMY_LM_URL, M4A4_HSMY_LM};
     static {GUN_DATA.put(M4A4_HSMY_LM_MAP[0],M4A4_HSMY_LM_MAP);}
 
+    //M4A4（StatTrak™） | 黑色魅影 (略有磨损)
+    public static double[] M4A4_HSMY_LM_ST = {600, 0.09, 500};
+
     //M4A4 |黑色魅影 (久经沙场)
     public static double[] M4A4_HSMY_JJ = {95, 0.19, 70};
     public static String   M4A4_HSMY_JJ_N = "M4A4 | 黑色魅影 (久经沙场)";
@@ -632,7 +641,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_HSMY_JJ_MAP[0],M4A4_HSMY_JJ_MAP);}
 
     //M4A4（StatTrak™） | 黑色魅影 (久经沙场)
-    public static double[] M4A4_HSMY_JJ_ST = {260, 0.19, 180};
+    public static double[] M4A4_HSMY_JJ_ST = {267, 0.19, 180};
     public static String   M4A4_HSMY_JJ_ST_N = "M4A4（StatTrak™） | 黑色魅影 (久经沙场)";
     public static String[] M4A4_HSMY_JJ_ST_URL = {"0"};
     public static Object[] M4A4_HSMY_JJ_ST_MAP = {M4A4_HSMY_JJ_ST_N,M4A4_HSMY_JJ_ST_URL, M4A4_HSMY_JJ_ST};
@@ -680,12 +689,21 @@ public class Gun {
     public static Object[] M4A4_HD_LM_MAP = {M4A4_HD_LM_N,M4A4_HD_LM_URL, M4A4_HD_LM};
     static {GUN_DATA.put(M4A4_HD_LM_MAP[0],M4A4_HD_LM_MAP);}
 
+    // M4A4（StatTrak™） | 皇帝 (略有磨损)
+    public static double[] M4A4_HD_LM_ST = {850, 0.10, 700};
     // M4A4 | 皇帝 (久经沙场)
     public static double[] M4A4_HD_JJ = {130, 0.20, 90};
     public static String   M4A4_HD_JJ_N = "M4A4 | 皇帝 (久经沙场)";
     public static String[] M4A4_HD_JJ_URL = {"0"};
     public static Object[] M4A4_HD_JJ_MAP = {M4A4_HD_JJ_N,M4A4_HD_JJ_URL, M4A4_HD_JJ};
     static {GUN_DATA.put(M4A4_HD_JJ_MAP[0],M4A4_HD_JJ_MAP);}
+
+    // M4A4（StatTrak™） | 皇帝 (久经沙场)
+    public static double[] M4A4_HD_JJ_ST = {360, 0.22, 260};
+    public static String   M4A4_HD_JJ_ST_N = "M4A4（StatTrak™） | 皇帝 (久经沙场)";
+    public static String[] M4A4_HD_JJ_ST_URL = {"0"};
+    public static Object[] M4A4_HD_JJ_ST_MAP = {M4A4_HD_JJ_ST_N,M4A4_HD_JJ_ST_URL, M4A4_HD_JJ_ST};
+    static {GUN_DATA.put(M4A4_HD_JJ_ST_MAP[0],M4A4_HD_JJ_ST_MAP);}
 
     //  M4A4 | 杀意大名 (崭新出厂)
     public static double[] M4A4_SYDM_ZX = {35, 0.01,20};

@@ -80,6 +80,8 @@ public class BuffCheck {
                         }
                     }
                 }
+            }else {
+                break;
             }
         }
         if (!list.isEmpty()) {
