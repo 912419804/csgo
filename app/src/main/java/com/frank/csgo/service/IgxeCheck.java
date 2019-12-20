@@ -66,15 +66,22 @@ public class IgxeCheck {
             Igxe body = response.body();
             if (body == null)return;
             List<IgxeWeapon> weapons = body.getD_list();
+            int size = weapons.size();
+            int max = size>10?5:3;
             ArrayList<IgxeWeapon> list = new ArrayList<>();
-            for (IgxeWeapon weapon : weapons) {
+            for (int i=0;i<size;i++) {
+                IgxeWeapon weapon = weapons.get(i);
+                if (i>=max)break;
                 String unit_price = weapon.getUnit_price();
                 double price = Double.valueOf(unit_price);
                 if (price <= minMoney) {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                     list.add(weapon);
                     break;
-                }else if (price <= value) {
+                }else
+//                    if (price <= value)
+
+                {
                         String exterior_wear = weapon.getExterior_wear();
                         if (!TextUtils.isEmpty(exterior_wear)) {
                             Double wear = Double.valueOf(exterior_wear);

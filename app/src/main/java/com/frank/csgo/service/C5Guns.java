@@ -3232,7 +3232,7 @@ public class C5Guns extends C5Check{
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, AK47_SHFC_JJ_ST);
+                        handleDataC5(response, AK47_XXYD_ZX_ST);
                         connect1018();
                     }
 

@@ -68,8 +68,12 @@ public class C5Check {
             C5.BodyBean body = response.body().getBody();
             if (body == null) return;
             List<C5Weapon> weapons = body.getItems();
+            int size = weapons.size();
+            int max = size>10?5:3;
             ArrayList<C5Weapon> list = new ArrayList<>();
-            for (C5Weapon weapon : weapons) {
+            for (int i=0;i<size;i++) {
+                C5Weapon weapon = weapons.get(i);
+                if (i>=max)break;
                 String unit_price = weapon.getPrice();
                 double price = Double.valueOf(unit_price);
                 String exterior_wear = weapon.getWear();
@@ -77,7 +81,9 @@ public class C5Check {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                     list.add(weapon);
                     break;
-                }else if (price <= value) {
+                }else
+//                    if (price <= value)
+                    {
                       if (!TextUtils.isEmpty(exterior_wear)) {
                             Double wear = Double.valueOf(exterior_wear);
                             if (wear <= w && wear!=0) {

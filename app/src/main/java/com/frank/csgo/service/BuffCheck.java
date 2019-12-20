@@ -49,11 +49,15 @@ public class BuffCheck {
         double p = res[0];
         double w = res[1];
         List<BuffWeapon> weapons = response.body().getData().getItems();
+        int size = weapons.size();
+        int max = size>10?5:3;
         ArrayList<BuffWeapon> list = new ArrayList<>();
-        for (BuffWeapon weapon : weapons) {
-            String unit_price = weapon.getPrice();
-            double price = Double.valueOf(unit_price);
-            if (price < p) {
+        for (int i=0;i<size;i++) {
+            if (i>=max)break;
+            BuffWeapon weapon = weapons.get(i);
+//            String unit_price = weapon.getPrice();
+//            double price = Double.valueOf(unit_price);
+//            if (price < p) {
                 String exterior_wear = weapon.getAsset_info().getPaintwear();
                 if (!TextUtils.isEmpty(exterior_wear)) {
                     Double wear = Double.valueOf(exterior_wear);
@@ -80,7 +84,7 @@ public class BuffCheck {
                         }
                     }
                 }
-            }
+//            }
         }
         if (!list.isEmpty()) {
             Intent intent = new Intent(Constant.BUFF_WEAPON);
