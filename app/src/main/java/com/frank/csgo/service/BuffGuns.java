@@ -2331,12 +2331,12 @@ public class BuffGuns extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4 | 杀意大名 (崭新出厂)");
                                 handleDataForBuff(response, M4A4_SYDM_ZX);
-                                connect298();
+                                connect297();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect298();
+                                connect297();
                             }
                         });
             }
@@ -2378,7 +2378,30 @@ public class BuffGuns extends BuffCheck{
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4 | 黑色魅影 (略有磨损)");
-                                handleDataForBuff(response, 400, 0.09);
+                                handleDataForBuff(response, M4A4_HSMY_LM);
+                                connect297_1();
+                            }
+
+                            @Override
+                            public void onError(Response<Buff> response) {
+                                connect297_1();
+                            }
+                        });
+            }
+        });
+
+    }
+    //M4A4（StatTrak™） | 黑色魅影 (略有磨损)
+    private void connect297_1() {
+        mService.post(new Runnable() {
+            @Override
+            public void run() {
+                OkGo.<Buff>get("https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=45501&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1576307682887")
+                        .execute(new JsonCallback<Buff>(Buff.class) {
+                            @Override
+                            public void onSuccess(Response<Buff> response) {
+                                fillBuff(response, "M4A4（StatTrak™） | 黑色魅影 (略有磨损)");
+                                handleDataForBuff(response, M4A4_HSMY_LM_ST);
                                 connect299();
                             }
 
@@ -3670,12 +3693,12 @@ public class BuffGuns extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4 | 皇帝 (久经沙场)");
                                 handleDataForBuff(response, M4A4_HD_JJ);
-                                connect1043();
+                                connect1041();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1043();
+                                connect1041();
                             }
                         });
             }
@@ -3691,7 +3714,7 @@ public class BuffGuns extends BuffCheck{
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4（StatTrak™） | 皇帝 (久经沙场)");
-                                handleDataForBuff(response, 610, 0.25);
+                                handleDataForBuff(response, M4A4_HD_JJ_ST);
                                 connect1042();
                             }
 
@@ -3713,13 +3736,13 @@ public class BuffGuns extends BuffCheck{
                             @Override
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4（StatTrak™） | 皇帝 (略有磨损)");
-                                handleDataForBuff(response, 1700, 0.08);
-                                connect1043();
+                                handleDataForBuff(response, M4A4_HD_LM_ST);
+                                connect1045();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect1043();
+                                connect1045();
                             }
                         });
             }

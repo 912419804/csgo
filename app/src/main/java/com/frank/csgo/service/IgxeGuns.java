@@ -4418,6 +4418,38 @@ public class IgxeGuns extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, SG553_WHZ_JJ);
+                        connect1077();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1077();
+                    }
+                });
+    }
+    // AWP | 野火 (崭新出厂)
+    public void connect1077() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/649870")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, AWP_YH_ZX);
+                        connect1078();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1078();
+                    }
+                });
+    }
+    // AK-47（StatTrak™） | 复古浪潮 (崭新出厂)
+    public void connect1078() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/651009")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, AK47_FGLC_ZX_ST);
                         connect2000();
                     }
 

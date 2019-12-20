@@ -3228,7 +3228,7 @@ public class C5Guns extends C5Check{
 
     // AK-47（StatTrak™） | 血腥运动 (崭新出厂)
     private void connect1016() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553401259&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/api/product/list?item_id=553417070&delivery=0&bargain=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&price_order=0&wear_order=0&paint=&page=1")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3721,12 +3721,12 @@ public class C5Guns extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, AWP_SK_ZX);
-                        connect1047();
+                        connect1048();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect1047();
+                        connect1048();
                     }
                 });
     }
@@ -3818,16 +3818,17 @@ public class C5Guns extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, FN57_NM_ZX);
-                        connect2000();
+                        connect1077();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect2000();
+                        connect1077();
                     }
                 });
     }
-    
+
+
     // AUG（StatTrak™） | 动量 (久经沙场)
     private void connect1050() {
         OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464825&page=1&flag=&sort=&worn=&delivery=")
@@ -3894,6 +3895,38 @@ public class C5Guns extends C5Check{
                 });
     }
 
+    // AWP | 野火 (崭新出厂)
+    public void connect1077() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/list?item_id=553485855&delivery=0&bargain=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&price_order=0&wear_order=0&paint=&page=1")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, AWP_YH_ZX);
+                        connect2000();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect2000();
+                    }
+                });
+    }
+    // AK-47（StatTrak™） | 复古浪潮 (崭新出厂)
+    public void connect1078() {
+        OkGo.<C5>get("https://www.c5game.com/api/product/list?item_id=553487641&delivery=0&bargain=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&price_order=0&wear_order=0&paint=&page=1")
+                .execute(new JsonCallback<C5>(C5.class) {
+                    @Override
+                    public void onSuccess(Response<C5> response) {
+                        handleDataC5(response, AK47_FGLC_ZX_ST);
+                        connect2000();
+                    }
+
+                    @Override
+                    public void onError(Response<C5> response) {
+                        connect2000();
+                    }
+                });
+    }
 
     // 格洛克 18 型 | 红苹果 (崭新出厂)
     public void connect2000() {
