@@ -2331,12 +2331,13 @@ public class BuffGuns extends BuffCheck{
                             public void onSuccess(Response<Buff> response) {
                                 fillBuff(response, "M4A4 | 杀意大名 (崭新出厂)");
                                 handleDataForBuff(response, M4A4_SYDM_ZX);
-                                connect297();
+//                                connect297();
+                                connect297_1();
                             }
 
                             @Override
                             public void onError(Response<Buff> response) {
-                                connect297();
+                                connect297_1();
                             }
                         });
             }
