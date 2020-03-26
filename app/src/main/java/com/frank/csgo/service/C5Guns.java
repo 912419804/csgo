@@ -664,12 +664,12 @@ public class C5Guns extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, USP_NDDK_ZX);
-                        connect50();
+                        connect55();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect50();
+                        connect55();
                     }
                 });
     }
