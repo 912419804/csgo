@@ -1053,28 +1053,28 @@ public class Gun {
     /***********************SG553武器列表****************************/
 
     // SG 553 | 意式拉力 (略有磨损)
-    public static double[] SG553_YSLL_LM = {960, 0.08, 700};
+    public static double[] SG553_YSLL_LM = {750, 0.08, 600};
     public static String   SG553_YSLL_LM_N = "SG 553 | 意式拉力 (略有磨损)";
     public static String[] SG553_YSLL_LM_URL = {"0"};
     public static Object[] SG553_YSLL_LM_MAP = {SG553_YSLL_LM_N,SG553_YSLL_LM_URL, SG553_YSLL_LM};
     static {GUN_DATA.put(SG553_YSLL_LM_MAP[0],SG553_YSLL_LM_MAP);}
 
     // SG 553 | 意式拉力 (久经沙场)
-    public static double[] SG553_YSLL_JJ = {560, 0.20, 420};
+    public static double[] SG553_YSLL_JJ = {450, 0.20, 330};
     public static String   SG553_YSLL_JJ_N = "SG 553 | 意式拉力 (久经沙场)";
     public static String[] SG553_YSLL_JJ_URL = {"0"};
     public static Object[] SG553_YSLL_JJ_MAP = {SG553_YSLL_JJ_N,SG553_YSLL_JJ_URL, SG553_YSLL_JJ};
     static {GUN_DATA.put(SG553_YSLL_JJ_MAP[0],SG553_YSLL_JJ_MAP);}
     
     // SG 553 | 威吓者 (略有磨损)
-    public static double[] SG553_WHZ_LM = {310, 0.10, 240};
+    public static double[] SG553_WHZ_LM = {310, 0.10, 100};
     public static String   SG553_WHZ_LM_N = "SG 553 | 威吓者 (略有磨损)";
     public static String[] SG553_WHZ_LM_URL = {"0"};
     public static Object[] SG553_WHZ_LM_MAP = {SG553_WHZ_LM_N,SG553_WHZ_LM_URL, SG553_WHZ_LM};
     static {GUN_DATA.put(SG553_WHZ_LM_MAP[0],SG553_WHZ_LM_MAP);}
 
     // SG 553 | 威吓者 (久经沙场)
-    public static double[] SG553_WHZ_JJ = {200, 0.19, 120};
+    public static double[] SG553_WHZ_JJ = {200, 0.19, 80};
     public static String   SG553_WHZ_JJ_N = "SG 553 | 威吓者 (久经沙场)";
     public static String[] SG553_WHZ_JJ_URL = {"0"};
     public static Object[] SG553_WHZ_JJ_MAP = {SG553_WHZ_JJ_N,SG553_WHZ_JJ_URL, SG553_WHZ_JJ};
