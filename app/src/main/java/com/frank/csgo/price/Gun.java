@@ -266,7 +266,7 @@ public class Gun {
     /***********************AWP武器列表****************************/
 
     //AWP | 野火 (崭新出厂)
-    public static double[] AWP_YH_ZX = {900, 0.03, 600};
+    public static double[] AWP_YH_ZX = {600, 0.03, 400};
 
     //AWP | 二西莫夫 (久经沙场)
     public static double[] AWP_EXMF_JJ = {300, 0.24, 250};
@@ -624,7 +624,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_SJKJ_ZX_MAP[0],M4A4_SJKJ_ZX_MAP);}
 
     //M4A4 |黑色魅影 (略有磨损)
-    public static double[] M4A4_HSMY_LM = {240, 0.08, 180};
+    public static double[] M4A4_HSMY_LM = {220, 0.08, 160};
     public static String   M4A4_HSMY_LM_N = "M4A4 | 黑色魅影 (略有磨损)";
     public static String[] M4A4_HSMY_LM_URL = {"0"};
     public static Object[] M4A4_HSMY_LM_MAP = {M4A4_HSMY_LM_N,M4A4_HSMY_LM_URL, M4A4_HSMY_LM};
@@ -775,7 +775,7 @@ public class Gun {
     /***********************法玛斯武器列表****************************/
 
     //法玛斯 | 防滚架 (崭新出厂)
-    public static double[] FMS_FGJ_ZX = {160, 0.02, 90};
+    public static double[] FMS_FGJ_ZX = {130, 0.01, 90};
     public static String   FMS_FGJ_ZX_N = "法玛斯 | 防滚架 (崭新出厂)";
     public static String[] FMS_FGJ_ZX_URL = {"0"};
     public static Object[] FMS_FGJ_ZX_MAP = {FMS_FGJ_ZX_N,FMS_FGJ_ZX_URL, FMS_FGJ_ZX};
