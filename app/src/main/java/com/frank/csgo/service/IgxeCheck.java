@@ -78,10 +78,7 @@ public class IgxeCheck {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                     list.add(weapon);
                     break;
-                }else
-//                    if (price <= value)
-
-                {
+                }else {
                         String exterior_wear = weapon.getExterior_wear();
                         if (!TextUtils.isEmpty(exterior_wear)) {
                             Double wear = Double.valueOf(exterior_wear);
