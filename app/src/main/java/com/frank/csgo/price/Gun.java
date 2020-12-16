@@ -624,7 +624,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_SJKJ_ZX_MAP[0],M4A4_SJKJ_ZX_MAP);}
 
     //M4A4 |黑色魅影 (略有磨损)
-    public static double[] M4A4_HSMY_LM = {220, 0.08, 160};
+    public static double[] M4A4_HSMY_LM = {180, 0.08, 140};
     public static String   M4A4_HSMY_LM_N = "M4A4 | 黑色魅影 (略有磨损)";
     public static String[] M4A4_HSMY_LM_URL = {"0"};
     public static Object[] M4A4_HSMY_LM_MAP = {M4A4_HSMY_LM_N,M4A4_HSMY_LM_URL, M4A4_HSMY_LM};
@@ -634,7 +634,7 @@ public class Gun {
     public static double[] M4A4_HSMY_LM_ST = {600, 0.09, 500};
 
     //M4A4 |黑色魅影 (久经沙场)
-    public static double[] M4A4_HSMY_JJ = {95, 0.19, 70};
+    public static double[] M4A4_HSMY_JJ = {95, 0.19, 50};
     public static String   M4A4_HSMY_JJ_N = "M4A4 | 黑色魅影 (久经沙场)";
     public static String[] M4A4_HSMY_JJ_URL = {"0"};
     public static Object[] M4A4_HSMY_JJ_MAP = {M4A4_HSMY_JJ_N,M4A4_HSMY_JJ_URL, M4A4_HSMY_JJ};

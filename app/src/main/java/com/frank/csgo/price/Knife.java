@@ -280,7 +280,7 @@ public class Knife {
     static {KNIFE_DATA.put(XD_SHZW_JJ_MAP[0],XD_SHZW_JJ_MAP);}
 
     //短剑（★） | 深红之网 (略有磨损)
-    public static double[] DJ_SHZW_LM = {1750, 0.10, 1400};
+    public static double[] DJ_SHZW_LM = {1750, 0.10, 1200};
     public static String[] DJ_SHZW_LM_URL = {"0"};
     public static Object[] DJ_SHZW_LM_MAP = {N_DJ_SHZW_LM,DJ_SHZW_LM_URL,DJ_SHZW_LM};
     static {KNIFE_DATA.put(DJ_SHZW_LM_MAP[0],DJ_SHZW_LM_MAP);}

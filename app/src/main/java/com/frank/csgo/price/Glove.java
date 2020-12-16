@@ -21,7 +21,7 @@ public class Glove {
     static {GLOVE_DATA.put(XL_JT_JJ_MAP[0],XL_JT_JJ_MAP);}
 
     // 血猎手套（★） | 蛇咬 (略有磨损)
-    public static double[] XL_SY_LM = {1800, 0.11, 1500};
+    public static double[] XL_SY_LM = {1800, 0.11, 1300};
     public static String[] XL_SY_LM_URL = {"https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=42459&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1554955219035"};
     public static Object[] XL_SY_LM_MAP = {N_XL_SY_LM,XL_SY_LM_URL,XL_SY_LM};
     static {GLOVE_DATA.put(XL_SY_LM_MAP[0],XL_SY_LM_MAP);}
