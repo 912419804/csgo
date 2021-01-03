@@ -74,6 +74,12 @@ public class Gun {
     public static String[] AK47_BMCH_ZX_URL = {"0"};
     public static Object[] AK47_BMCH_ZX_MAP = {AK47_BMCH_ZX_N,AK47_BMCH_ZX_URL, AK47_BMCH_ZX};
     static {GUN_DATA.put(AK47_BMCH_ZX_MAP[0],AK47_BMCH_ZX_MAP);}
+    //  AK-47 | 表面淬火 (略有磨损)
+    public static double[] AK47_BMCH_LM = {459, 0.02, 380};
+    public static String   AK47_BMCH_LM_N = "AK-47 | 表面淬火 (略有磨损)";
+    public static String[] AK47_BMCH_LM_URL = {"0"};
+    public static Object[] AK47_BMCH_LM_MAP = {AK47_BMCH_LM_N,AK47_BMCH_LM_URL, AK47_BMCH_LM};
+    static {GUN_DATA.put(AK47_BMCH_LM_MAP[0],AK47_BMCH_LM_MAP);}
 
     //AK-47 | 水栽竹 (崭新出厂)
     public static double[] AK47_SZZ_ZX = {1620, 0.03, 1450};
@@ -120,7 +126,7 @@ public class Gun {
     //AK-47（StatTrak™） | 皇后 (崭新出厂)
 
     //AK-47 | 皇后 (略有磨损)
-    public static double[] AK47_HH_LM = {270, 0.09, 200};
+    public static double[] AK47_HH_LM = {270, 0.08, 200};
     public static String   AK47_HH_LM_N = "AK-47 | 皇后 (略有磨损)";
     public static String[] AK47_HH_LM_URL = {"0"};
     public static Object[] AK47_HH_LM_MAP = {AK47_HH_LM_N,AK47_HH_LM_URL, AK47_HH_LM};
@@ -633,6 +639,12 @@ public class Gun {
     //M4A4（StatTrak™） | 黑色魅影 (略有磨损)
     public static double[] M4A4_HSMY_LM_ST = {600, 0.09, 500};
 
+    //M4A4 |黑色魅影 (崭新出厂)
+    public static double[] M4A4_HSMY_ZX = {390, 0.03, 300};
+    public static String   M4A4_HSMY_ZX_N = "M4A4 | 黑色魅影 (崭新出厂)";
+    public static String[] M4A4_HSMY_ZX_URL = {"0"};
+    public static Object[] M4A4_HSMY_ZX_MAP = {M4A4_HSMY_ZX_N,M4A4_HSMY_ZX_URL, M4A4_HSMY_ZX};
+    static {GUN_DATA.put(M4A4_HSMY_ZX_MAP[0],M4A4_HSMY_ZX_MAP);}
     //M4A4 |黑色魅影 (久经沙场)
     public static double[] M4A4_HSMY_JJ = {95, 0.19, 50};
     public static String   M4A4_HSMY_JJ_N = "M4A4 | 黑色魅影 (久经沙场)";
@@ -856,7 +868,7 @@ public class Gun {
     public static Object[] M4A1_YKLSYL_ZX_MAP = {M4A1_YKLSYL_ZX_N,M4A1_YKLSYL_ZX_URL, M4A1_YKLSYL_ZX};
     static {GUN_DATA.put(M4A1_YKLSYL_ZX_MAP[0],M4A1_YKLSYL_ZX_MAP);}
 
-    //M4A1 消音型 | 破碎千秋 (崭新出厂)
+    //M4A1 消音型 | 破碎铅秋 (崭新出厂)
     public static double[] M4A1_PSQQ_ZX = {50, 0.01, 30};
     public static String   M4A1_PSQQ_ZX_N = "M4A1 消音型 | 破碎千秋 (崭新出厂)";
     public static String[] M4A1_PSQQ_ZX_URL = {"0"};

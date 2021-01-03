@@ -93,12 +93,13 @@ public class C5Fragment extends Fragment {
                         }
                     }
                     if (isUpdate) {
-                        if (Constant.TYPE==1){
+                        if (Constant.TYPE == 1) {
                             MediaUtils.playRing((Activity) mContex);
                             MediaUtils.vibrate((Activity) mContex, new long[]{100L, 200L, 300L, 400L}, -1);
-                        }if (Constant.TYPE==2){
+                        }
+                        if (Constant.TYPE == 2) {
                             MediaUtils.playRing((Activity) mContex);
-                        }else {
+                        } else {
                             MediaUtils.vibrate((Activity) mContex, new long[]{100L, 200L, 300L, 400L}, -1);
                         }
                         adapter.notifyDataSetChanged();
@@ -117,22 +118,22 @@ public class C5Fragment extends Fragment {
         adapter = new BaseQuickAdapter<C5Weapon, BaseViewHolder>(R.layout.item_weapon, weapons) {
             @Override
             protected void convert(BaseViewHolder helper, C5Weapon item) {
-                helper.setText(R.id.tv_name, item.getName());
-                helper.setText(R.id.tv_price, item.getPrice());
-                String exterior_wear = item.getWear();
+                helper.setText(R.id.tv_name, item.getItemName());
+                helper.setText(R.id.tv_price, item.getPrice() + "");
+                String exterior_wear = item.getAssetInfo().getWear();
                 helper.setText(R.id.tv_degree, exterior_wear);
                 TextView view = helper.getView(R.id.tv_degree);
                 if (!TextUtils.isEmpty(exterior_wear)) {
                     Double wear = Double.valueOf(exterior_wear);
-                    if (item.getName().contains("崭新出厂") && wear < 0.01) {
+                    if (item.getItemName().contains("崭新出厂") && wear < 0.01) {
                         view.setTextColor(getResources().getColor(R.color.red));
-                    } else if (item.getName().contains("略有磨损") && wear < 0.09) {
+                    } else if (item.getItemName().contains("略有磨损") && wear < 0.09) {
                         view.setTextColor(getResources().getColor(R.color.red));
-                    } else if (item.getName().contains("久经沙场") && wear < 0.18) {
+                    } else if (item.getItemName().contains("久经沙场") && wear < 0.18) {
                         view.setTextColor(getResources().getColor(R.color.red));
-                    } else if (item.getName().contains("破损不堪") && wear < 0.39) {
+                    } else if (item.getItemName().contains("破损不堪") && wear < 0.39) {
                         view.setTextColor(getResources().getColor(R.color.red));
-                    } else if (item.getName().contains("战痕累累") && wear < 0.46) {
+                    } else if (item.getItemName().contains("战痕累累") && wear < 0.46) {
                         view.setTextColor(getResources().getColor(R.color.red));
                     } else {
                         view.setTextColor(getResources().getColor(R.color.black));
@@ -141,42 +142,39 @@ public class C5Fragment extends Fragment {
                     view.setTextColor(getResources().getColor(R.color.black));
                 }
                 helper.setText(R.id.tv_date, item.getTime());
-                Glide.with(mContex).load(item.getImage()).into((ImageView) helper.getView(R.id.iv_weapon));
-                C5Weapon.GemBean gem = item.getGem();
-                if (gem != null){
-                    List<String> list = gem.getImage();
-                    if (list!=null && list.size()>0){
-                        int size = list.size();
-                        if (size == 1){
-                            Glide.with(mContex).load(list.get(0)).into((ImageView) helper.getView(R.id.st_1));
-                            Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_2));
-                            Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
-                            Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
-                        }
-                        if (size == 2){
-                            Glide.with(mContex).load(list.get(0)).into((ImageView) helper.getView(R.id.st_1));
-                            Glide.with(mContex).load(list.get(1)).into((ImageView) helper.getView(R.id.st_2));
-                            Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
-                            Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
-                        }
-                        if (size == 3){
-                            Glide.with(mContex).load(list.get(0)).into((ImageView) helper.getView(R.id.st_1));
-                            Glide.with(mContex).load(list.get(1)).into((ImageView) helper.getView(R.id.st_2));
-                            Glide.with(mContex).load(list.get(2)).into((ImageView) helper.getView(R.id.st_3));
-                            Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
-                        }
-                        if (size == 4){
-                            Glide.with(mContex).load(list.get(0)).into((ImageView) helper.getView(R.id.st_1));
-                            Glide.with(mContex).load(list.get(1)).into((ImageView) helper.getView(R.id.st_2));
-                            Glide.with(mContex).load(list.get(2)).into((ImageView) helper.getView(R.id.st_3));
-                            Glide.with(mContex).load(list.get(3)).into((ImageView) helper.getView(R.id.st_4));
-                        }
-                    }else {
-                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_1));
+                Glide.with(mContex).load(item.getImageUrl()).into((ImageView) helper.getView(R.id.iv_weapon));
+                List<C5Weapon.AssetInfoBean.StickersBean> list = item.getAssetInfo().getStickers();
+                if (list != null && list.size() > 0) {
+                    int size = list.size();
+                    if (size == 1) {
+                        Glide.with(mContex).load(list.get(0)).into((ImageView) helper.getView(R.id.st_1));
                         Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_2));
                         Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
                         Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
                     }
+                    if (size == 2) {
+                        Glide.with(mContex).load(list.get(0).getImage()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1).getImage()).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 3) {
+                        Glide.with(mContex).load(list.get(0).getImage()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1).getImage()).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(list.get(2).getImage()).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                    if (size == 4) {
+                        Glide.with(mContex).load(list.get(0).getImage()).into((ImageView) helper.getView(R.id.st_1));
+                        Glide.with(mContex).load(list.get(1).getImage()).into((ImageView) helper.getView(R.id.st_2));
+                        Glide.with(mContex).load(list.get(2).getImage()).into((ImageView) helper.getView(R.id.st_3));
+                        Glide.with(mContex).load(list.get(3).getImage()).into((ImageView) helper.getView(R.id.st_4));
+                    }
+                } else {
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_1));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_2));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_3));
+                    Glide.with(mContex).load(R.drawable.bg_transparent).into((ImageView) helper.getView(R.id.st_4));
                 }
             }
         };

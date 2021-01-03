@@ -24,12 +24,11 @@ public class C5Check {
 
     protected void handleDataC5(Response<C5> response, int value, double w, int minMoney) {
         try {
-            List<C5Weapon> weapons = response.body().getBody().getItems();
+            List<C5Weapon> weapons = response.body().getData().getList();
             ArrayList<C5Weapon> list = new ArrayList<>();
             for (C5Weapon weapon : weapons) {
-                String unit_price = weapon.getPrice();
-                double price = Double.valueOf(unit_price);
-                String exterior_wear = weapon.getWear();
+                double price = weapon.getPrice();
+                String exterior_wear = weapon.getAssetInfo().getWear();
                 if (price <= minMoney) {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                     list.add(weapon);
@@ -65,18 +64,17 @@ public class C5Check {
             double value = res[0];
             double w     = res[1];
             double minMoney = res[2];
-            C5.BodyBean body = response.body().getBody();
+            C5 body = response.body();
             if (body == null) return;
-            List<C5Weapon> weapons = body.getItems();
+            List<C5Weapon> weapons = body.getData().getList();
             int size = weapons.size();
-            int max = size>10?5:3;
+            int max = size>=10?3:2;
             ArrayList<C5Weapon> list = new ArrayList<>();
             for (int i=0;i<size;i++) {
                 C5Weapon weapon = weapons.get(i);
                 if (i>=max)break;
-                String unit_price = weapon.getPrice();
-                double price = Double.valueOf(unit_price);
-                String exterior_wear = weapon.getWear();
+                double price = weapon.getPrice();
+                String exterior_wear = weapon.getAssetInfo().getWear();
                 if (price <= minMoney) {
                     weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
                     list.add(weapon);
@@ -92,13 +90,12 @@ public class C5Check {
                                 break;
                             }
                         else {
-                            C5Weapon.GemBean gem = weapon.getGem();
-                                List<String> images = gem.getImage();
-                                if (gem.isHas_gem()&& images.size()==4){
+                                List<C5Weapon.AssetInfoBean.StickersBean> stickers = weapon.getAssetInfo().getStickers();
+                                if (stickers != null&& stickers.size()==4){
 
                                     boolean isShow = true;
-                                    for (String sticker : images) {
-                                        boolean b = containSticke(sticker);
+                                    for (C5Weapon.AssetInfoBean.StickersBean sticker : stickers) {
+                                        boolean b = containSticke(sticker.getName());
                                         if (!b){
                                             isShow = false;
                                             break;
@@ -130,12 +127,11 @@ public class C5Check {
             double value = res[0];
             double w = res[1];
             double minMoney = res[2];
-            List<C5Weapon> weapons = response.body().getBody().getItems();
+            List<C5Weapon> weapons = response.body().getData().getList();
             ArrayList<C5Weapon> list = new ArrayList<>();
             for (C5Weapon weapon : weapons) {
-                String unit_price = weapon.getPrice();
-                double price = Double.valueOf(unit_price);
-                String exterior_wear = weapon.getWear();
+                double price = weapon.getPrice();
+                String exterior_wear = weapon.getAssetInfo().getWear();
 
                     if (price <= minMoney) {
                         weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
@@ -172,7 +168,7 @@ public class C5Check {
 
     protected boolean containSticke(String title){
         if (!TextUtils.isEmpty(title)){
-            if (title.contains("holo") | title.contains("foil") || title.contains("gold")){
+            if (title.contains("金色") | title.contains("全息") || title.contains("闪亮")){
                 return true;
             }
         }

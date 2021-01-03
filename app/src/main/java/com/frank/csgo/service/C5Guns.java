@@ -23,7 +23,7 @@ public class C5Guns extends C5Check{
 
     //awp 二西莫夫 久经
     public void connect() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=450860&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22554&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096743807232799998")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -41,7 +41,7 @@ public class C5Guns extends C5Check{
 
     //    M4A4 | 二西莫夫 久经
     private void connect2() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2640100&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22720&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096744132892718146")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -52,7 +52,7 @@ public class C5Guns extends C5Check{
                     @Override
                     public void onError(Response<C5> response) {
                         super.onError(response);
-                        connect4();
+//                        connect4();
                     }
                 });
     }
@@ -60,7 +60,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 血腥运动 (崭新出厂)
     private void connect4() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553389296&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553370749&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096797893293251240")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -114,7 +114,7 @@ public class C5Guns extends C5Check{
 
     //   M4A4 | 喧嚣杀戮 (崭新出厂)
     private void connect13() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=488231038&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=295893123&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096798339012401778")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -131,7 +131,7 @@ public class C5Guns extends C5Check{
 
     //   M4A4 | 龙王 (崭新出厂)
     private void connect14() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3344373&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22934&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096798698527906134")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -148,7 +148,7 @@ public class C5Guns extends C5Check{
 
     //   AK-47 | 燃料喷射器 (略有磨损)
     private void connect15() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2910560&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=27150&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096799349234450956")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -165,28 +165,28 @@ public class C5Guns extends C5Check{
 
     //   AK-47 | 燃料喷射器 (崭新出厂)
     private void connect15_1() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3022897&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=27166&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096799538885461330")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, AK47_RLPSQ_ZX);
-                        connect17();
+                        connect16();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect17();
+                        connect16();
                     }
                 });
     }
 
     //   AK-47 | 表面淬火 (略有磨损)
     private void connect16() {
-        OkGo.<C5>get("https://www.C5.cn/product/trade/730/6437?page_no=1&cur_page=1&sort_rule=0&buy_method=0&status_locked=0&product_id=6437&is_sticker=0&gem_attribute_id=&gem_id=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22538&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096800077434597665")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, 170, 0.08, 150);
+                        handleDataC5(response, AK47_BMCH_LM);
                         connect17();
                     }
 
@@ -199,7 +199,7 @@ public class C5Guns extends C5Check{
 
     //   沙漠之鹰 | 炽烈之炎 (崭新出厂)
     private void connect17() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2991442&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22787&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096802442905245505")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -216,7 +216,7 @@ public class C5Guns extends C5Check{
 
     //   AWP（StatTrak™） | 二西莫夫 (久经沙场)
     private void connect18() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2821576&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24633&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096802813246859343")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -250,7 +250,7 @@ public class C5Guns extends C5Check{
 
     //   USP 消音版 | 枪响人亡 (略有磨损)
     private void connect20() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=1040270&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24379&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096803361275853603")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -267,7 +267,7 @@ public class C5Guns extends C5Check{
 
     //   USP 消音版 | 枪响人亡 (崭新出厂)
     private void connect21() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=166004563&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=26032&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096803510831795916")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -285,7 +285,7 @@ public class C5Guns extends C5Check{
 
     //   AK-47 | 红线 (略有磨损)
     private void connect27() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3344374&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24339&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096803931773635927")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -302,7 +302,7 @@ public class C5Guns extends C5Check{
 
     //   AWP | 红线 (略有磨损)
     private void connect28() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3925612&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22548&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096804101372613874")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -319,7 +319,7 @@ public class C5Guns extends C5Check{
 
     //   AWP | 鬼退治 (崭新出厂)
     private void connect29() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553395929&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553427239&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096804343875067730")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -370,7 +370,7 @@ public class C5Guns extends C5Check{
 
     //   AWP | 暴怒野兽 (崭新出厂)
     private void connect32() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=74940165&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24262&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096804621487246537")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -387,7 +387,7 @@ public class C5Guns extends C5Check{
 
     //  M4A1 消音版 | 暴怒野兽 (略有磨损)
     private void connect33() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=450898&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=23705&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096804818628599472")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -404,7 +404,7 @@ public class C5Guns extends C5Check{
 
     //  M4A1 消音版 | 暴怒野兽 (崭新出厂)
     private void connect34() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=62794001&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24433&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096804953374568092")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -421,7 +421,7 @@ public class C5Guns extends C5Check{
 
     //  AK-47 | 表面淬火 (崭新出厂)
     private void connect35() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3022901&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=25009&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096805212976082965")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -489,7 +489,7 @@ public class C5Guns extends C5Check{
 
     //  AWP | Mortis (崭新出厂) 死神
     private void connect39() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553445828&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553465828&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096805477863981787")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -506,7 +506,7 @@ public class C5Guns extends C5Check{
 
     //  AWP | *嘣* (略有磨损)
     private void connect40() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3344375&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22508&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096805705361093780")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -540,7 +540,7 @@ public class C5Guns extends C5Check{
 
     // USP 消音版 | 黑色魅影 (崭新出厂)
     private void connect42() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553382761&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553370742&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096806066653363750")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -557,7 +557,7 @@ public class C5Guns extends C5Check{
 
     // USP 消音版 | 猎户 (崭新出厂)
     private void connect43() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3025226&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22560&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096806301023558080")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -608,7 +608,7 @@ public class C5Guns extends C5Check{
 
     // M4A4 | 二西莫夫 (破损不堪)
     private void connect46() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=82285335&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24796&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096806598194649493")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -625,7 +625,7 @@ public class C5Guns extends C5Check{
 
     // M4A4 | 二西莫夫 (战痕累累)
     private void connect47() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3344372&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22561&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096806759525283353")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -659,7 +659,7 @@ public class C5Guns extends C5Check{
 
     // USP 消音版 | 脑洞大开 (崭新出厂)
     private void connect49() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553446119&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553466028&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096807017369668839")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -745,7 +745,7 @@ public class C5Guns extends C5Check{
 
     // "USP 消音版 | 不锈钢 (崭新出厂)
     private void connect55() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=144902242&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=23977&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096807223763699513")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -762,7 +762,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版 | 次时代 (崭新出厂)
     private void connect56() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=352874619&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=293069649&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096807450553388392")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -797,7 +797,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版 | 蓝图 (崭新出厂)
     private void connect59() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553398626&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553429651&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096807698772731038")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -814,7 +814,7 @@ public class C5Guns extends C5Check{
 
     //P90 | 二西莫夫 (崭新出厂)
     private void connect60() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3011039&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22558&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096808054026557150")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -831,7 +831,7 @@ public class C5Guns extends C5Check{
 
     //P90 | 二西莫夫 (略有磨损)
     private void connect61() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2777065&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=23837&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096808227167360583")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -848,7 +848,7 @@ public class C5Guns extends C5Check{
 
     //UMP-45 | 炽烈之炎 (崭新出厂)
     private void connect62() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2991441&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=25002&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096808463241910330")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -865,7 +865,7 @@ public class C5Guns extends C5Check{
 
     //法玛斯 | 防滚架 (崭新出厂)
     private void connect63() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553382200&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=217516856&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096808658689976264")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -882,7 +882,7 @@ public class C5Guns extends C5Check{
 
     //加利尔 AR | 地狱看门犬 (崭新出厂)
     private void connect64() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=220002371&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=25293&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096808940486472293")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -899,7 +899,7 @@ public class C5Guns extends C5Check{
 
     //加利尔 AR | 喧闹骷髅 (破损不堪)
     private void connect65() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=176162044&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22788&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096809238784098077")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -916,7 +916,7 @@ public class C5Guns extends C5Check{
 
     //加利尔 AR | ~甜甜的~ (崭新出厂)
     private void connect66() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553395948&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553426873&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096809537331107702")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -933,7 +933,7 @@ public class C5Guns extends C5Check{
 
     //M4A4 | 地狱烈焰 (崭新出厂)
     private void connect67() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553395894&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553427241&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096809749091710586")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1052,7 +1052,7 @@ public class C5Guns extends C5Check{
 
     //M4A4 | 皇家圣骑士 (略有磨损)
     private void connect74() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3023216&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=26666&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096809939472603812")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1086,7 +1086,7 @@ public class C5Guns extends C5Check{
 
     //M4A4 | X光 (崭新出厂)
     private void connect76() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2914656&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22565&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096810169086537489")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1103,7 +1103,7 @@ public class C5Guns extends C5Check{
 
     //M4A4 |死寂空间 (崭新出厂)
     private void connect77() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=7424865&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=5094472&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096810402137729889")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1152,14 +1152,14 @@ public class C5Guns extends C5Check{
                 });
     }
 
-    //M4A4 |黑色魅影 (久经沙场)
+    //M4A4 |黑色魅影 (崭新出厂)
     private void connect81() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553445891&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553465900&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096813785406103777")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
-                        handleDataC5(response, M4A4_HSMY_JJ);
-                        connect82();
+                        handleDataC5(response, M4A4_HSMY_ZX);
+                        connect86();
                     }
 
                     @Override
@@ -1239,7 +1239,7 @@ public class C5Guns extends C5Check{
 
     //M4A4 |弹雨 (崭新出厂)
     private void connect86() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=156213218&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=25698&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096814167523977733")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1256,7 +1256,7 @@ public class C5Guns extends C5Check{
 
     //M4A1 消音型 | 梦魇 (崭新出厂)
     private void connect87() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553453516&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553468129&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096814380127488270")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1307,7 +1307,7 @@ public class C5Guns extends C5Check{
 
     //M4A1 消音版 | 伊卡洛斯殒落 (崭新出厂)
     private void connect90() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2913091&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24476&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096814598243874194")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1322,9 +1322,9 @@ public class C5Guns extends C5Check{
                 });
     }
 
-    //M4A1 消音版 | 破碎千秋 (崭新出厂)
+    //M4A1 消音版 | 破碎铅秋 (崭新出厂)
     private void connect91() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553421575&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553455054&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096814877147402969")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1341,7 +1341,7 @@ public class C5Guns extends C5Check{
 
     //M4A1 消音版 | 女火神之炽焰 (崭新出厂)
     private void connect92_1() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=291084193&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=2918699&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096815569947379222")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1358,7 +1358,7 @@ public class C5Guns extends C5Check{
 
     //M4A1 消音版 | 女火神之炽焰 (略有磨损)
     private void connect92() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=85476444&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=3531008&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096815745883817503")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1392,7 +1392,7 @@ public class C5Guns extends C5Check{
 
     //M4A1 消音版 | 赤红新星 (崭新出厂)
     private void connect94() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3225405&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24693&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096815949614636524")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1409,7 +1409,7 @@ public class C5Guns extends C5Check{
 
     //M4A1 消音版 | 毁灭者2000 (崭新出厂)
     private void connect95() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553386906&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553370879&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096816153892991935")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1426,17 +1426,17 @@ public class C5Guns extends C5Check{
 
     //M4A1 消音版 | 机型工业 (崭新出厂)
     private void connect96() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=176161570&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=28628306&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096816459195855360")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, M4A1_JXGY_ZX);
-                        connect97();
+                        connect98();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect97();
+                        connect98();
                     }
                 });
     }
@@ -1460,7 +1460,7 @@ public class C5Guns extends C5Check{
 
     //M4A1 消音版 | 金蛇缠绕 (崭新出厂)
     private void connect98() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=965297&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=25885&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096816761619663192")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1477,7 +1477,7 @@ public class C5Guns extends C5Check{
 
     //M4A1 消音版 | 金蛇缠绕 (略有磨损)
     private void connect99() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3004508&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=23556&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096816931438236514")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1511,7 +1511,7 @@ public class C5Guns extends C5Check{
 
     //M4A1 消音版 | 次时代 (崭新出厂)
     private void connect101() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=1092592&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24282&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096817452749437356")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1545,7 +1545,7 @@ public class C5Guns extends C5Check{
 
     //AWP | 巨龙传说 (崭新出厂)
     private void connect103() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2964080&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=25036&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096817823748161468")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1562,7 +1562,7 @@ public class C5Guns extends C5Check{
 
     //AWP | 巨龙传说 (略有磨损)
     private void connect103_1() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=46877216&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=27434&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096817967579452654")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1578,7 +1578,7 @@ public class C5Guns extends C5Check{
     }
     //AWP | 巨龙传说 (久经沙场)
     private void connect103_2() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2325633&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24483&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096818114905027109")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1595,7 +1595,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 皇后 (略有磨损)
     private void connect104() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553420995&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553454763&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096818758773125484")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1612,7 +1612,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 皇后 (久经沙场)
     private void connect105() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553421182&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553454936&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096819187738564360")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1629,7 +1629,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 皇后 (崭新出厂)
     private void connect106() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553421077&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553454872&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096819301292182897")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1646,17 +1646,17 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 霓虹骑士 (崭新出厂)
     private void connect107() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553455806&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553468213&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096819584577617199")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, AK47_NHQS_ZX);
-                        connect108();
+                        connect110();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect108();
+                        connect110();
                     }
                 });
     }
@@ -1697,7 +1697,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 霓虹革命 (崭新出厂)
     private void connect110() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=105863825&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=87809662&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096820065982391735")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1731,7 +1731,7 @@ public class C5Guns extends C5Check{
 
     //沙漠之鹰 | 红色代号 (崭新出厂)
     private void connect112() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553457614&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553468201&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096820290055258498")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1748,7 +1748,7 @@ public class C5Guns extends C5Check{
 
     //沙漠之鹰 | 红色代号 (略有磨损)
     private void connect113() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553453577&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553468217&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096820429665099487")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1765,7 +1765,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 深海复仇 (崭新出厂)
     private void connect114() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2881710&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24721&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096820729088930961")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1799,7 +1799,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 水栽竹 (崭新出厂)
     private void connect116() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3022904&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=26422&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096820932399105278")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1816,7 +1816,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 水栽竹 (略有磨损)
     private void connect117() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2921387&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=26570&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096821094813975068")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1833,7 +1833,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 水栽竹 (久经沙场)
     private void connect118() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3006407&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24283&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096821210436953812")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1867,7 +1867,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 二西莫夫 (久经沙场)
     private void connect120() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460590&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553480459&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096821543107418543")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1884,7 +1884,7 @@ public class C5Guns extends C5Check{
 
     //AK-47 | 二西莫夫 (略有磨损)
     private void connect121() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460664&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553480506&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096821708263549715")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1918,7 +1918,7 @@ public class C5Guns extends C5Check{
 
     //M4A4 | 镁元素 (崭新出厂)
     private void connect123() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460647&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553480498&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096821940185098083")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1935,7 +1935,7 @@ public class C5Guns extends C5Check{
 
     //沙漠之鹰 | 机械工业 (崭新出厂)
     private void connect124() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460597&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553480462&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096822151712427254")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1969,7 +1969,7 @@ public class C5Guns extends C5Check{
 
     //MP5 | 磷光体(崭新出厂)
     private void connect126() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460659&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553480505&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096822333494569017")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -1986,7 +1986,7 @@ public class C5Guns extends C5Check{
 
     //P250 | 二西莫夫(略有磨损)
     private void connect127() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=224589334&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=1228744&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096822626523716703")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2003,7 +2003,7 @@ public class C5Guns extends C5Check{
 
     //AWP | 黑色魅影（崭新出厂）
     private void connect128() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460591&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553480460&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096822883205925783")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2054,7 +2054,7 @@ public class C5Guns extends C5Check{
 
     //    AK47 | 荒野反叛（略有磨损）
     private void connect131() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=162587166&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22980&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096823103822906667")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2071,7 +2071,7 @@ public class C5Guns extends C5Check{
 
     //    格洛克18 | 荒野反叛（崭新出厂）
     private void connect132() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=226063881&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=10908373&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096823245831087310")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2088,7 +2088,7 @@ public class C5Guns extends C5Check{
 
     //    AK-47 | 火蛇 (久经沙场)
     private void connect133() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2821575&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24485&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096823467326276476")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2105,7 +2105,7 @@ public class C5Guns extends C5Check{
 
     //    AK-47 | 火蛇 (略有磨损)
     private void connect134() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=4001444&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=25615&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096823734215286129")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2122,7 +2122,7 @@ public class C5Guns extends C5Check{
 
     // M4A4（StatTrak™） | 二西莫夫 (久经沙
     private void connect135() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=135504917&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=26883&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096824061951577149")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2173,7 +2173,7 @@ public class C5Guns extends C5Check{
 
     // M4A4 | 咆哮 (略有磨损)
     private void connect138() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=3000164&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=25910&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096824344474069582")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2191,7 +2191,7 @@ public class C5Guns extends C5Check{
 
     // P250 | 生化短吻鳄 (崭新出厂)
     private void connect154() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553421993&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553455826&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096824579644882972")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2208,7 +2208,7 @@ public class C5Guns extends C5Check{
 
     // P250 | 银装素裹 (略有磨损)
     private void connect155() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=212405541&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22523&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096824826574946052")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2225,7 +2225,7 @@ public class C5Guns extends C5Check{
 
     // SG 553 | 意式拉力 (略有磨损)
     private void connect156() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553458406&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553479395&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096825091721587717")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2242,7 +2242,7 @@ public class C5Guns extends C5Check{
 
     // SG 553 | 意式拉力 (久经沙场)
     private void connect157() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553459179&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553479726&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096825179775808085")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2260,7 +2260,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版（StatTrak™） | 脑洞大开 (崭新出厂)
     private void connect160() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553446806&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553466358&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096825409868485193")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2294,7 +2294,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版（StatTrak™） | 次时代(崭新出厂)
     private void connect162() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=492402546&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=334739957&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096825754357174393")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2311,7 +2311,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版（StatTrak™） | 不锈钢(略有磨损)
     private void connect163() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=235600380&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24846&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096826116774898341")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2362,7 +2362,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版（StatTrak™） | 闪回(崭新出厂)
     private void connect166() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460606&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553480473&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096826364197899187")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2379,7 +2379,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版（StatTrak™） | 黑色魅影(崭新出厂)
     private void connect167() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553401286&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553412856&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096826705072077017")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2396,7 +2396,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版（StatTrak™） | 黑色魅影(略有磨损)
     private void connect168() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553393319&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553414252&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096826831815796545")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2413,7 +2413,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版（StatTrak™） | 黑色魅影(久经沙场)
     private void connect169() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553397961&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553418052&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096826958442563491")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2430,7 +2430,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版（StatTrak™） | 枪响人亡(略有磨损)
     private void connect170() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=9765056&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24460&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096827180927925933")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2447,7 +2447,7 @@ public class C5Guns extends C5Check{
 
     //USP 消音版（StatTrak™） | 力矩(崭新出厂)
     private void connect171() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2934261&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=23350&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096827435704698760")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2464,7 +2464,7 @@ public class C5Guns extends C5Check{
 
     //格洛克18（StatTrak™） | 水灵(崭新出厂)
     private void connect172() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=9765059&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22522&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096827744323393270")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2514,7 +2514,7 @@ public class C5Guns extends C5Check{
     }
     //P250（StatTrak™） | 生化短尾鳄(久经沙场)
     private void connect174_1() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553424671&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553457137&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096828078922789316")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2531,7 +2531,7 @@ public class C5Guns extends C5Check{
 
     //P250（StatTrak™） | 二西莫夫(略有磨损)
     private void connect175() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553380395&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=38946446&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096828445447347167")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2548,7 +2548,7 @@ public class C5Guns extends C5Check{
 
     //P250（StatTrak™） | 二西莫夫(久经沙场)
     private void connect176() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=271640726&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=2616565&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096828579667598472")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2888,7 +2888,7 @@ public class C5Guns extends C5Check{
 
     //M4A4（StatTrak™） | 黑色魅影 (久经沙场)
     private void connect196() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553446299&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553466063&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096828925952498333")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2905,7 +2905,7 @@ public class C5Guns extends C5Check{
 
     //M4A4（StatTrak™） | 镁元素 (崭新出厂)
     private void connect197() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553460853&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553480603&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096829197791789417")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2939,7 +2939,7 @@ public class C5Guns extends C5Check{
 
     //M4A4（StatTrak™） | 龙王 (崭新出厂)
     private void connect199() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=56949938&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=25398&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096829465022521992")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -2956,7 +2956,7 @@ public class C5Guns extends C5Check{
 
     //M4A4（StatTrak™） | 杀意大名 (崭新出厂)
     private void connect1000() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=168412637&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=25961&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096829701504176177")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3109,7 +3109,7 @@ public class C5Guns extends C5Check{
 
     // AK-47（StatTrak™） | 霓虹骑士 (略有磨损)
     private void connect1009() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553453815&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553468429&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096829953238635085")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3126,7 +3126,7 @@ public class C5Guns extends C5Check{
 
     // AK-47（StatTrak™） | 霓虹骑士 (久经沙场)
     private void connect1010() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553453515&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553468128&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096830094611175562")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3143,7 +3143,7 @@ public class C5Guns extends C5Check{
 
     // AK-47（StatTrak™） | 燃料喷射器 (略有磨损)
     private void connect1011() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=326790835&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=3012038&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096830412165968721")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3160,7 +3160,7 @@ public class C5Guns extends C5Check{
 
     // AK-47（StatTrak™） | 燃料喷射器 (久经沙场)
     private void connect1012() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=248282386&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=27242&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096830527413017595")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3228,7 +3228,7 @@ public class C5Guns extends C5Check{
 
     // AK-47（StatTrak™） | 血腥运动 (崭新出厂)
     private void connect1016() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/list?item_id=553417070&delivery=0&bargain=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&price_order=0&wear_order=0&paint=&page=1")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553417070&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096830784136909739")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3262,7 +3262,7 @@ public class C5Guns extends C5Check{
 
     // AK-47（StatTrak™） | 红线 (略有磨损)
     private void connect1018() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=12153022&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=24726&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096831178997009773")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3279,7 +3279,7 @@ public class C5Guns extends C5Check{
 
     // AK-47（StatTrak™） | 红线 (久经沙场)
     private void connect1019() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=450896&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22780&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096831306874924580")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3381,7 +3381,7 @@ public class C5Guns extends C5Check{
 
     // AK-47（StatTrak™） | 精英之作 (崭新出厂)
     private void connect1025() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=6014030&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22532&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096831640564179352")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3603,7 +3603,7 @@ public class C5Guns extends C5Check{
 
     // M4A4 | 皇帝 (崭新出厂)
     private void connect1038() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464834&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553482639&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096831918106239785")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3619,7 +3619,7 @@ public class C5Guns extends C5Check{
     }
     // M4A4 | 皇帝 (略有磨损)
     private void connect1039() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464752&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553482576&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096832060691633108")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3635,7 +3635,7 @@ public class C5Guns extends C5Check{
     }
     // M4A4 | 皇帝 (久经沙场)
     private void connect1040() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464746&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553482575&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096832159306429583")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3683,7 +3683,7 @@ public class C5Guns extends C5Check{
     }
     // 沙漠之鹰 | 轻轨 (崭新出厂)
     private void connect1043() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464726&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553482444&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096832602214539337")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3699,7 +3699,7 @@ public class C5Guns extends C5Check{
     }
     // 沙漠之鹰（StatTrak™） | 轻轨 (崭新出厂)
     private void connect1044() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464950&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553482670&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096832462346384286")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3716,7 +3716,7 @@ public class C5Guns extends C5Check{
 
     // AWP | 树蝰 (崭新出厂)
     private void connect1045() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553464784&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553482610&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096832827754954913")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3748,17 +3748,17 @@ public class C5Guns extends C5Check{
     }
     // AUG | 动量 (崭新出厂)
     private void connect1047() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=553465433&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553482660&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096833263825269590")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, AUG_DL_ZX);
-                        connect1048();
+                        connect1057();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect1048();
+                        connect1057();
                     }
                 });
     }
@@ -3797,7 +3797,7 @@ public class C5Guns extends C5Check{
 
     // FN57 | 怒氓 (久经沙场)
     public void connect1057() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/list?item_id=553482612&delivery=0&bargain=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&price_order=0&wear_order=0&paint=&page=1")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553482612&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096833702532670101")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3813,7 +3813,7 @@ public class C5Guns extends C5Check{
     }
     // FN57 | 怒氓 (崭新出厂)
     public void connect1058() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/list?item_id=553482468&delivery=0&bargain=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&price_order=0&wear_order=0&paint=&page=1")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553482468&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096833874863971008")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3897,7 +3897,7 @@ public class C5Guns extends C5Check{
 
     // AWP | 野火 (崭新出厂)
     public void connect1077() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/list?item_id=553485855&delivery=0&bargain=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&sticker_ids%5B%5D=0&price_order=0&wear_order=0&paint=&page=1")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=553485855&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096834091918327078")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {
@@ -3930,7 +3930,7 @@ public class C5Guns extends C5Check{
 
     // 格洛克 18 型 | 红苹果 (崭新出厂)
     public void connect2000() {
-        OkGo.<C5>get("https://www.c5game.com/api/product/sale.json?id=2900481&page=1&flag=&sort=&worn=&delivery=")
+        OkGo.<C5>get("https://www.c5game.com/gw/steamtrade/sga/sell/v1/list?itemId=22575&delivery=0&bargain=0&levelName=&slotStickerIds=&sort=0&paintSeed=&page=1&reqId=16096834328949401710")
                 .execute(new JsonCallback<C5>(C5.class) {
                     @Override
                     public void onSuccess(Response<C5> response) {

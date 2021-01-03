@@ -6,372 +6,542 @@ import java.io.Serializable;
 import java.util.List;
 
 public class C5Weapon implements Serializable {
-        /**
-         * app_name : csgo
-         * appid : 730
-         * asset_id : 15575032653
-         * bargain_url : https://www.c5game.com/api/sell/bargain.json?id=723514361
-         * bot : {"type":"local"}
-         * classid : 3206920621
-         * comfirm :
-         * create_time : 1552201343
-         * currency : ￥
-         * flag : 0
-         * gem : {"has_gem":true,"image":["https://gem.c5game.com/apps/730/icons/econ/stickers/london2018/sig_kvik_foil.590292d23549e71e8fc5779700240190e8e3b705.png","https://gem.c5game.com/apps/730/icons/econ/stickers/london2018/sig_kvik_foil.590292d23549e71e8fc5779700240190e8e3b705.png"]}
-         * has_wear : 1
-         * id : 723514361
-         * image : https://i.c5game.com/economy/730/2019/03/09/6eb4cd85a318a0412e3e5e271e7c4d72.png@180w.png
-         * inspect : steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198111224428A15575032653D11539357537317435013
-         * inspect_image : https://csgo-java-prod.oss-cn-shanghai.aliyuncs.com/76561198111224428/15575032653.jpg
-         * instanceid : 480085569
-         * is_bargain : N
-         * is_self_sell : 1
-         * is_vip :
-         * item_id : 22554
-         * last_style :
-         * memo :
-         * name : AWP | 二西莫夫 (久经沙场)
-         * owner : {"avatar":"https://i.c5game.com/avatar/u-57bef53fa534b.png@100w_100h_1e_1c","avg_time":"0小时2分","id":"39444050","level":9,"nickname":"COCO","success_rate":"100%"}
-         * price : 246
-         * quick_url : https://www.c5game.com/api/order/quick.json?id=723514361
-         * rarity : ancient
-         * rarity_name : 非凡
-         * store_url : /store/39444050.html
-         * trade_after_day : 0
-         * trade_after_day_text :
-         * type : csgo_type_sniperrifle
-         * update_time : 0
-         * url : https://www.c5game.com/default/order/quick.html?id=723514361
-         * wear : 0.36234626173973
-         * wearArrow : 3
-         */
-        private String time;
-        private String app_name;
-        private String appid;
-        private String asset_id;
-        private String bargain_url;
-        private BotBean bot;
-        private String classid;
-        private String comfirm;
-        private String create_time;
-        private String currency;
-        private int flag;
-        private GemBean gem;
-        private int has_wear;
-        private String id;
-        private String image;
-        private String inspect;
-        private String inspect_image;
-        private String instanceid;
-        private String is_bargain;
-        private String is_self_sell;
-        private String is_vip;
-        private String item_id;
-        private String last_style;
-        private String memo;
-        private String name;
-        private OwnerBean owner;
-        private String price;
-        private String quick_url;
-        private String rarity;
-        private String rarity_name;
-        private String store_url;
-        private String trade_after_day;
-        private String trade_after_day_text;
-        private String type;
-        private String update_time;
-        private String url;
-        private String wear;
-        private int wearArrow;
+    /**
+     * id : 819787995760033792
+     * sellerInfo : {"userId":"693559471165669376","platformId":2,"thirdUserId":"556373709","nickname":"Ioc.dre","avatar":"https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/bf/bfbb6d0c701e758d8a7d67c04d4fb6a150c40a63_full.jpg","lastActive":0,"deliveryInfo":{"day7":{"deliverySuccessRate":"0%","deliveryAvgTime":"0","deliveryNoneNum":0},"day15":{"deliverySuccessRate":"0%","deliveryAvgTime":"0","deliveryNoneNum":0}}}
+     * systemTime : 1609666285
+     * appId : 730
+     * appName : CS:GO
+     * itemId : 22720
+     * itemName : M4A4 | 二西莫夫 (久经沙场)
+     * marketHashName : M4A4 | Asiimov (Field-Tested)
+     * price : 687.5
+     * sellerPrice : 687.5
+     * cnyPrice : 687.5
+     * imageUrl : https://game-aesy.c5game.com/steam/730/5968e890efd51b94afafac962a3b9acc.png?x-oss-process=image/resize,w_480,h_360
+     * compensateType : 0
+     * delivery : 1
+     * acceptBargain : 0
+     * description :
+     * classInfoId : null
+     * inspectUrl : steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561198214836005A20222188706D5515889516287822062
+     * inspectViewable : 1
+     * inspectable : null
+     * inspectImageUrl : null
+     * assetInfo : {"classInfoId":711478067419828224,"classId":2127286603,"instanceId":480085569,"assetId":20222188706,"styleId":"0","lastStyle":null,"styleProgress":null,"wear":"0.3602060675621032","paintIndex":255,"paintSeed":196,"levelName":null,"levelColor":null,"gradient":0,"fraudwarning":null,"inspectImageUrl":null,"gems":[],"stickers":[{"id":"678782062966755328","stickerId":0,"itemId":505225156,"name":"Virtus.Pro | 2017年亚特兰大锦标赛","image":"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/vp.4cc5e6800c1d8f08d0465ad37f1a46ad85051aef.png","slot":0,"wear":"","price":0}],"styles":[],"ext":""}
+     * inspect3dViewable : 1
+     * inspect3dUrl : https://3d.c5game.com?s=YIxaeLvcnqsHC1wZKQG6OmGsk2rd3Pzp&a=20222188706&c=GkpSCv%2Fq2AwAqxT1m%2Fm4Zg%3D%3D&i=EjkNWqY%2F%2BI9THWLlVcoMMg%3D%3D&isShowBuy=1
+     * token : GBn+92KjryU8OpgQgRUgs3GU9r89AOWDhntf6QX2OR32m4HcmYsiv9OX5jfYtpMGdHqw2ILYnkkLy4ROhtTtTQ==
+     * itemInfo : {"quality":"normal","qualityName":"普通","qualityColor":"#B2B2B2","rarity":"Rarity_Ancient_Weapon","rarityName":"隐秘","rarityColor":"#eb4b4b","type":"CSGO_Type_Rifle","typeName":"步枪","slot":"","slotName":"","hero":"","heroName":"","heroAvatar":"","exterior":"WearCategory2","exteriorName":"久经沙场","exteriorColor":"#f0ad4e","weapon":"weapon_m4a1","weaponName":"M4A4"}
+     */
+
+    private String id;
+    private SellerInfoBean sellerInfo;
+    private int systemTime;
+    private int appId;
+    private String appName;
+    private String itemId;
+    private String itemName;
+    private String marketHashName;
+    private double price;
+    private double sellerPrice;
+    private double cnyPrice;
+    private String imageUrl;
+    private int compensateType;
+    private int delivery;
+    private int acceptBargain;
+    private String description;
+    private Object classInfoId;
+    private String inspectUrl;
+    private int inspectViewable;
+    private Object inspectable;
+    private Object inspectImageUrl;
+    private AssetInfoBean assetInfo;
+    private int inspect3dViewable;
+    private String inspect3dUrl;
+    private String token;
+    private ItemInfoBean itemInfo;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public SellerInfoBean getSellerInfo() {
+        return sellerInfo;
+    }
+
+    public void setSellerInfo(SellerInfoBean sellerInfo) {
+        this.sellerInfo = sellerInfo;
+    }
+
+    public int getSystemTime() {
+        return systemTime;
+    }
+
+    public void setSystemTime(int systemTime) {
+        this.systemTime = systemTime;
+    }
+
+    public int getAppId() {
+        return appId;
+    }
+
+    public void setAppId(int appId) {
+        this.appId = appId;
+    }
+
+    public String getAppName() {
+        return appName;
+    }
+
+    public void setAppName(String appName) {
+        this.appName = appName;
+    }
+
+    public String getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(String itemId) {
+        this.itemId = itemId;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public String getMarketHashName() {
+        return marketHashName;
+    }
+
+    public void setMarketHashName(String marketHashName) {
+        this.marketHashName = marketHashName;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getSellerPrice() {
+        return sellerPrice;
+    }
+
+    public void setSellerPrice(double sellerPrice) {
+        this.sellerPrice = sellerPrice;
+    }
+
+    public double getCnyPrice() {
+        return cnyPrice;
+    }
+
+    public void setCnyPrice(double cnyPrice) {
+        this.cnyPrice = cnyPrice;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public int getCompensateType() {
+        return compensateType;
+    }
+
+    public void setCompensateType(int compensateType) {
+        this.compensateType = compensateType;
+    }
+
+    public int getDelivery() {
+        return delivery;
+    }
+
+    public void setDelivery(int delivery) {
+        this.delivery = delivery;
+    }
+
+    public int getAcceptBargain() {
+        return acceptBargain;
+    }
+
+    public void setAcceptBargain(int acceptBargain) {
+        this.acceptBargain = acceptBargain;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Object getClassInfoId() {
+        return classInfoId;
+    }
+
+    public void setClassInfoId(Object classInfoId) {
+        this.classInfoId = classInfoId;
+    }
+
+    public String getInspectUrl() {
+        return inspectUrl;
+    }
+
+    public void setInspectUrl(String inspectUrl) {
+        this.inspectUrl = inspectUrl;
+    }
+
+    public int getInspectViewable() {
+        return inspectViewable;
+    }
+
+    public void setInspectViewable(int inspectViewable) {
+        this.inspectViewable = inspectViewable;
+    }
+
+    public Object getInspectable() {
+        return inspectable;
+    }
+
+    public void setInspectable(Object inspectable) {
+        this.inspectable = inspectable;
+    }
+
+    public Object getInspectImageUrl() {
+        return inspectImageUrl;
+    }
+
+    public void setInspectImageUrl(Object inspectImageUrl) {
+        this.inspectImageUrl = inspectImageUrl;
+    }
+
+    public AssetInfoBean getAssetInfo() {
+        return assetInfo;
+    }
+
+    public void setAssetInfo(AssetInfoBean assetInfo) {
+        this.assetInfo = assetInfo;
+    }
+
+    public int getInspect3dViewable() {
+        return inspect3dViewable;
+    }
+
+    public void setInspect3dViewable(int inspect3dViewable) {
+        this.inspect3dViewable = inspect3dViewable;
+    }
+
+    public String getInspect3dUrl() {
+        return inspect3dUrl;
+    }
+
+    public void setInspect3dUrl(String inspect3dUrl) {
+        this.inspect3dUrl = inspect3dUrl;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public ItemInfoBean getItemInfo() {
+        return itemInfo;
+    }
+
+    public void setItemInfo(ItemInfoBean itemInfo) {
+        this.itemInfo = itemInfo;
+    }
+
+    public String time;
+    public void setTime(String timeString) {
+        this.time = timeString;
+    }
 
     public String getTime() {
         return time;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public static class SellerInfoBean {
+        /**
+         * userId : 693559471165669376
+         * platformId : 2
+         * thirdUserId : 556373709
+         * nickname : Ioc.dre
+         * avatar : https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/bf/bfbb6d0c701e758d8a7d67c04d4fb6a150c40a63_full.jpg
+         * lastActive : 0
+         * deliveryInfo : {"day7":{"deliverySuccessRate":"0%","deliveryAvgTime":"0","deliveryNoneNum":0},"day15":{"deliverySuccessRate":"0%","deliveryAvgTime":"0","deliveryNoneNum":0}}
+         */
+
+        private String userId;
+        private int platformId;
+        private String thirdUserId;
+        private String nickname;
+        private String avatar;
+        private int lastActive;
+        private SellerInfoBean.DeliveryInfoBean deliveryInfo;
+
+        public String getUserId() {
+            return userId;
+        }
+
+        public void setUserId(String userId) {
+            this.userId = userId;
+        }
+
+        public int getPlatformId() {
+            return platformId;
+        }
+
+        public void setPlatformId(int platformId) {
+            this.platformId = platformId;
+        }
+
+        public String getThirdUserId() {
+            return thirdUserId;
+        }
+
+        public void setThirdUserId(String thirdUserId) {
+            this.thirdUserId = thirdUserId;
+        }
+
+        public String getNickname() {
+            return nickname;
+        }
+
+        public void setNickname(String nickname) {
+            this.nickname = nickname;
+        }
+
+        public String getAvatar() {
+            return avatar;
+        }
+
+        public void setAvatar(String avatar) {
+            this.avatar = avatar;
+        }
+
+        public int getLastActive() {
+            return lastActive;
+        }
+
+        public void setLastActive(int lastActive) {
+            this.lastActive = lastActive;
+        }
+
+        public SellerInfoBean.DeliveryInfoBean getDeliveryInfo() {
+            return deliveryInfo;
+        }
+
+        public void setDeliveryInfo(SellerInfoBean.DeliveryInfoBean deliveryInfo) {
+            this.deliveryInfo = deliveryInfo;
+        }
+
+        public static class DeliveryInfoBean {
+            /**
+             * day7 : {"deliverySuccessRate":"0%","deliveryAvgTime":"0","deliveryNoneNum":0}
+             * day15 : {"deliverySuccessRate":"0%","deliveryAvgTime":"0","deliveryNoneNum":0}
+             */
+
+            private SellerInfoBean.DeliveryInfoBean.Day7Bean day7;
+            private SellerInfoBean.DeliveryInfoBean.Day15Bean day15;
+
+            public SellerInfoBean.DeliveryInfoBean.Day7Bean getDay7() {
+                return day7;
+            }
+
+            public void setDay7(SellerInfoBean.DeliveryInfoBean.Day7Bean day7) {
+                this.day7 = day7;
+            }
+
+            public SellerInfoBean.DeliveryInfoBean.Day15Bean getDay15() {
+                return day15;
+            }
+
+            public void setDay15(SellerInfoBean.DeliveryInfoBean.Day15Bean day15) {
+                this.day15 = day15;
+            }
+
+            public static class Day7Bean {
+                /**
+                 * deliverySuccessRate : 0%
+                 * deliveryAvgTime : 0
+                 * deliveryNoneNum : 0
+                 */
+
+                private String deliverySuccessRate;
+                private String deliveryAvgTime;
+                private int deliveryNoneNum;
+
+                public String getDeliverySuccessRate() {
+                    return deliverySuccessRate;
+                }
+
+                public void setDeliverySuccessRate(String deliverySuccessRate) {
+                    this.deliverySuccessRate = deliverySuccessRate;
+                }
+
+                public String getDeliveryAvgTime() {
+                    return deliveryAvgTime;
+                }
+
+                public void setDeliveryAvgTime(String deliveryAvgTime) {
+                    this.deliveryAvgTime = deliveryAvgTime;
+                }
+
+                public int getDeliveryNoneNum() {
+                    return deliveryNoneNum;
+                }
+
+                public void setDeliveryNoneNum(int deliveryNoneNum) {
+                    this.deliveryNoneNum = deliveryNoneNum;
+                }
+            }
+
+            public static class Day15Bean {
+                /**
+                 * deliverySuccessRate : 0%
+                 * deliveryAvgTime : 0
+                 * deliveryNoneNum : 0
+                 */
+
+                private String deliverySuccessRate;
+                private String deliveryAvgTime;
+                private int deliveryNoneNum;
+
+                public String getDeliverySuccessRate() {
+                    return deliverySuccessRate;
+                }
+
+                public void setDeliverySuccessRate(String deliverySuccessRate) {
+                    this.deliverySuccessRate = deliverySuccessRate;
+                }
+
+                public String getDeliveryAvgTime() {
+                    return deliveryAvgTime;
+                }
+
+                public void setDeliveryAvgTime(String deliveryAvgTime) {
+                    this.deliveryAvgTime = deliveryAvgTime;
+                }
+
+                public int getDeliveryNoneNum() {
+                    return deliveryNoneNum;
+                }
+
+                public void setDeliveryNoneNum(int deliveryNoneNum) {
+                    this.deliveryNoneNum = deliveryNoneNum;
+                }
+            }
+        }
     }
 
-    public String getPrice() {
-        return price;
-    }
+    public static class AssetInfoBean {
+        /**
+         * classInfoId : 711478067419828224
+         * classId : 2127286603
+         * instanceId : 480085569
+         * assetId : 20222188706
+         * styleId : 0
+         * lastStyle : null
+         * styleProgress : null
+         * wear : 0.3602060675621032
+         * paintIndex : 255
+         * paintSeed : 196
+         * levelName : null
+         * levelColor : null
+         * gradient : 0
+         * fraudwarning : null
+         * inspectImageUrl : null
+         * gems : []
+         * stickers : [{"id":"678782062966755328","stickerId":0,"itemId":505225156,"name":"Virtus.Pro | 2017年亚特兰大锦标赛","image":"https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/vp.4cc5e6800c1d8f08d0465ad37f1a46ad85051aef.png","slot":0,"wear":"","price":0}]
+         * styles : []
+         * ext :
+         */
 
-    public void setPrice(String price) {
-        this.price = price;
-    }
+        private long classInfoId;
+        private int instanceId;
+        private long assetId;
+        private String styleId;
+        private Object lastStyle;
+        private Object styleProgress;
+        private String wear;
+        private int paintIndex;
+        private int paintSeed;
+        private Object levelName;
+        private Object levelColor;
+        private int gradient;
+        private Object fraudwarning;
+        private Object inspectImageUrl;
+        private String ext;
+        private List<?> gems;
+        private List<StickersBean> stickers;
+        private List<?> styles;
 
-    public String getTrade_after_day() {
-        return trade_after_day;
-    }
-
-    public void setTrade_after_day(String trade_after_day) {
-        this.trade_after_day = trade_after_day;
-    }
-
-    public String getApp_name() {
-            return app_name;
-        }
-
-        public void setApp_name(String app_name) {
-            this.app_name = app_name;
-        }
-
-        public String getAppid() {
-            return appid;
-        }
-
-        public void setAppid(String appid) {
-            this.appid = appid;
-        }
-
-        public String getAsset_id() {
-            return asset_id;
-        }
-
-        public void setAsset_id(String asset_id) {
-            this.asset_id = asset_id;
-        }
-
-        public String getBargain_url() {
-            return bargain_url;
-        }
-
-        public void setBargain_url(String bargain_url) {
-            this.bargain_url = bargain_url;
-        }
-
-        public BotBean getBot() {
-            return bot;
-        }
-
-        public void setBot(BotBean bot) {
-            this.bot = bot;
-        }
-
-        public String getClassid() {
-            return classid;
-        }
-
-        public void setClassid(String classid) {
-            this.classid = classid;
-        }
-
-        public String getComfirm() {
-            return comfirm;
-        }
-
-        public void setComfirm(String comfirm) {
-            this.comfirm = comfirm;
-        }
-
-        public String getCreate_time() {
-            return create_time;
-        }
-
-        public void setCreate_time(String create_time) {
-            this.create_time = create_time;
-        }
-
-        public String getCurrency() {
-            return currency;
-        }
-
-        public void setCurrency(String currency) {
-            this.currency = currency;
-        }
-
-        public int getFlag() {
-            return flag;
-        }
-
-        public void setFlag(int flag) {
-            this.flag = flag;
-        }
-
-        public GemBean getGem() {
-            return gem;
-        }
-
-        public void setGem(GemBean gem) {
-            this.gem = gem;
-        }
-
-        public int getHas_wear() {
-            return has_wear;
-        }
-
-        public void setHas_wear(int has_wear) {
-            this.has_wear = has_wear;
-        }
-
-        public String getId() {
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
-
-        public String getImage() {
-            return image;
-        }
-
-        public void setImage(String image) {
-            this.image = image;
-        }
-
-        public String getInspect() {
-            return inspect;
-        }
-
-        public void setInspect(String inspect) {
-            this.inspect = inspect;
-        }
-
-        public String getInspect_image() {
-            return inspect_image;
-        }
-
-        public void setInspect_image(String inspect_image) {
-            this.inspect_image = inspect_image;
-        }
-
-        public String getInstanceid() {
-            return instanceid;
-        }
-
-        public void setInstanceid(String instanceid) {
-            this.instanceid = instanceid;
-        }
-
-        public String getIs_bargain() {
-            return is_bargain;
-        }
-
-        public void setIs_bargain(String is_bargain) {
-            this.is_bargain = is_bargain;
-        }
-
-        public String getIs_self_sell() {
-            return is_self_sell;
-        }
-
-        public void setIs_self_sell(String is_self_sell) {
-            this.is_self_sell = is_self_sell;
-        }
-
-        public String getIs_vip() {
-            return is_vip;
-        }
-
-        public void setIs_vip(String is_vip) {
-            this.is_vip = is_vip;
-        }
-
-        public String getItem_id() {
-            return item_id;
-        }
-
-        public void setItem_id(String item_id) {
-            this.item_id = item_id;
-        }
-
-        public String getLast_style() {
-            return last_style;
-        }
-
-        public void setLast_style(String last_style) {
-            this.last_style = last_style;
-        }
-
-        public String getMemo() {
-            return memo;
-        }
-
-        public void setMemo(String memo) {
-            this.memo = memo;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public OwnerBean getOwner() {
-            return owner;
-        }
-
-        public void setOwner(OwnerBean owner) {
-            this.owner = owner;
-        }
-
-
-    public String getQuick_url() {
-            return quick_url;
-        }
-
-        public void setQuick_url(String quick_url) {
-            this.quick_url = quick_url;
-        }
-
-        public String getRarity() {
-            return rarity;
+        public long getClassInfoId() {
+            return classInfoId;
         }
 
-        public void setRarity(String rarity) {
-            this.rarity = rarity;
+        public void setClassInfoId(long classInfoId) {
+            this.classInfoId = classInfoId;
         }
 
-        public String getRarity_name() {
-            return rarity_name;
-        }
-
-        public void setRarity_name(String rarity_name) {
-            this.rarity_name = rarity_name;
-        }
 
-        public String getStore_url() {
-            return store_url;
+        public int getInstanceId() {
+            return instanceId;
         }
 
-        public void setStore_url(String store_url) {
-            this.store_url = store_url;
+        public void setInstanceId(int instanceId) {
+            this.instanceId = instanceId;
         }
-
 
-        public String getTrade_after_day_text() {
-            return trade_after_day_text;
+        public long getAssetId() {
+            return assetId;
         }
 
-        public void setTrade_after_day_text(String trade_after_day_text) {
-            this.trade_after_day_text = trade_after_day_text;
+        public void setAssetId(long assetId) {
+            this.assetId = assetId;
         }
 
-        public String getType() {
-            return type;
+        public String getStyleId() {
+            return styleId;
         }
 
-        public void setType(String type) {
-            this.type = type;
+        public void setStyleId(String styleId) {
+            this.styleId = styleId;
         }
 
-        public String getUpdate_time() {
-            return update_time;
+        public Object getLastStyle() {
+            return lastStyle;
         }
 
-        public void setUpdate_time(String update_time) {
-            this.update_time = update_time;
+        public void setLastStyle(Object lastStyle) {
+            this.lastStyle = lastStyle;
         }
 
-        public String getUrl() {
-            return url;
+        public Object getStyleProgress() {
+            return styleProgress;
         }
 
-        public void setUrl(String url) {
-            this.url = url;
+        public void setStyleProgress(Object styleProgress) {
+            this.styleProgress = styleProgress;
         }
 
         public String getWear() {
@@ -382,88 +552,114 @@ public class C5Weapon implements Serializable {
             this.wear = wear;
         }
 
-        public int getWearArrow() {
-            return wearArrow;
+        public int getPaintIndex() {
+            return paintIndex;
         }
 
-        public void setWearArrow(int wearArrow) {
-            this.wearArrow = wearArrow;
+        public void setPaintIndex(int paintIndex) {
+            this.paintIndex = paintIndex;
         }
 
-        public static class BotBean implements Serializable{
+        public int getPaintSeed() {
+            return paintSeed;
+        }
+
+        public void setPaintSeed(int paintSeed) {
+            this.paintSeed = paintSeed;
+        }
+
+        public Object getLevelName() {
+            return levelName;
+        }
+
+        public void setLevelName(Object levelName) {
+            this.levelName = levelName;
+        }
+
+        public Object getLevelColor() {
+            return levelColor;
+        }
+
+        public void setLevelColor(Object levelColor) {
+            this.levelColor = levelColor;
+        }
+
+        public int getGradient() {
+            return gradient;
+        }
+
+        public void setGradient(int gradient) {
+            this.gradient = gradient;
+        }
+
+        public Object getFraudwarning() {
+            return fraudwarning;
+        }
+
+        public void setFraudwarning(Object fraudwarning) {
+            this.fraudwarning = fraudwarning;
+        }
+
+        public Object getInspectImageUrl() {
+            return inspectImageUrl;
+        }
+
+        public void setInspectImageUrl(Object inspectImageUrl) {
+            this.inspectImageUrl = inspectImageUrl;
+        }
+
+        public String getExt() {
+            return ext;
+        }
+
+        public void setExt(String ext) {
+            this.ext = ext;
+        }
+
+        public List<?> getGems() {
+            return gems;
+        }
+
+        public void setGems(List<?> gems) {
+            this.gems = gems;
+        }
+
+        public List<StickersBean> getStickers() {
+            return stickers;
+        }
+
+        public void setStickers(List<StickersBean> stickers) {
+            this.stickers = stickers;
+        }
+
+        public List<?> getStyles() {
+            return styles;
+        }
+
+        public void setStyles(List<?> styles) {
+            this.styles = styles;
+        }
+
+        public static class StickersBean {
             /**
-             * type : local
+             * id : 678782062966755328
+             * stickerId : 0
+             * itemId : 505225156
+             * name : Virtus.Pro | 2017年亚特兰大锦标赛
+             * image : https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/atlanta2017/vp.4cc5e6800c1d8f08d0465ad37f1a46ad85051aef.png
+             * slot : 0
+             * wear :
+             * price : 0
              */
 
-            private String type;
-
-            public String getType() {
-                return type;
-            }
-
-            public void setType(String type) {
-                this.type = type;
-            }
-        }
-
-        public static class GemBean implements Serializable{
-            /**
-             * has_gem : true
-             * image : ["https://gem.c5game.com/apps/730/icons/econ/stickers/london2018/sig_kvik_foil.590292d23549e71e8fc5779700240190e8e3b705.png","https://gem.c5game.com/apps/730/icons/econ/stickers/london2018/sig_kvik_foil.590292d23549e71e8fc5779700240190e8e3b705.png"]
-             */
-
-            private boolean has_gem;
-            private List<String> image;
-
-            public boolean isHas_gem() {
-                return has_gem;
-            }
-
-            public void setHas_gem(boolean has_gem) {
-                this.has_gem = has_gem;
-            }
-
-            public List<String> getImage() {
-                return image;
-            }
-
-            public void setImage(List<String> image) {
-                this.image = image;
-            }
-        }
-
-        public static class OwnerBean implements Serializable{
-            /**
-             * avatar : https://i.c5game.com/avatar/u-57bef53fa534b.png@100w_100h_1e_1c
-             * avg_time : 0小时2分
-             * id : 39444050
-             * level : 9
-             * nickname : COCO
-             * success_rate : 100%
-             */
-
-            private String avatar;
-            private String avg_time;
             private String id;
-            private int level;
-            private String nickname;
-            private String success_rate;
-
-            public String getAvatar() {
-                return avatar;
-            }
-
-            public void setAvatar(String avatar) {
-                this.avatar = avatar;
-            }
-
-            public String getAvg_time() {
-                return avg_time;
-            }
-
-            public void setAvg_time(String avg_time) {
-                this.avg_time = avg_time;
-            }
+            private int stickerId;
+            private int itemId;
+            private String name;
+            private String image;
+            private int slot;
+            private String wear;
+            private int price;
 
             public String getId() {
                 return id;
@@ -473,40 +669,258 @@ public class C5Weapon implements Serializable {
                 this.id = id;
             }
 
-            public int getLevel() {
-                return level;
+            public int getStickerId() {
+                return stickerId;
             }
 
-            public void setLevel(int level) {
-                this.level = level;
+            public void setStickerId(int stickerId) {
+                this.stickerId = stickerId;
             }
 
-            public String getNickname() {
-                return nickname;
+            public int getItemId() {
+                return itemId;
             }
 
-            public void setNickname(String nickname) {
-                this.nickname = nickname;
+            public void setItemId(int itemId) {
+                this.itemId = itemId;
             }
 
-            public String getSuccess_rate() {
-                return success_rate;
+            public String getName() {
+                return name;
             }
 
-            public void setSuccess_rate(String success_rate) {
-                this.success_rate = success_rate;
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public String getImage() {
+                return image;
+            }
+
+            public void setImage(String image) {
+                this.image = image;
+            }
+
+            public int getSlot() {
+                return slot;
+            }
+
+            public void setSlot(int slot) {
+                this.slot = slot;
+            }
+
+            public String getWear() {
+                return wear;
+            }
+
+            public void setWear(String wear) {
+                this.wear = wear;
+            }
+
+            public int getPrice() {
+                return price;
+            }
+
+            public void setPrice(int price) {
+                this.price = price;
             }
         }
+    }
 
+    public static class ItemInfoBean {
+        /**
+         * quality : normal
+         * qualityName : 普通
+         * qualityColor : #B2B2B2
+         * rarity : Rarity_Ancient_Weapon
+         * rarityName : 隐秘
+         * rarityColor : #eb4b4b
+         * type : CSGO_Type_Rifle
+         * typeName : 步枪
+         * slot :
+         * slotName :
+         * hero :
+         * heroName :
+         * heroAvatar :
+         * exterior : WearCategory2
+         * exteriorName : 久经沙场
+         * exteriorColor : #f0ad4e
+         * weapon : weapon_m4a1
+         * weaponName : M4A4
+         */
+
+        private String quality;
+        private String qualityName;
+        private String qualityColor;
+        private String rarity;
+        private String rarityName;
+        private String rarityColor;
+        private String type;
+        private String typeName;
+        private String slot;
+        private String slotName;
+        private String hero;
+        private String heroName;
+        private String heroAvatar;
+        private String exterior;
+        private String exteriorName;
+        private String exteriorColor;
+        private String weapon;
+        private String weaponName;
+
+        public String getQuality() {
+            return quality;
+        }
+
+        public void setQuality(String quality) {
+            this.quality = quality;
+        }
+
+        public String getQualityName() {
+            return qualityName;
+        }
+
+        public void setQualityName(String qualityName) {
+            this.qualityName = qualityName;
+        }
+
+        public String getQualityColor() {
+            return qualityColor;
+        }
+
+        public void setQualityColor(String qualityColor) {
+            this.qualityColor = qualityColor;
+        }
+
+        public String getRarity() {
+            return rarity;
+        }
+
+        public void setRarity(String rarity) {
+            this.rarity = rarity;
+        }
+
+        public String getRarityName() {
+            return rarityName;
+        }
+
+        public void setRarityName(String rarityName) {
+            this.rarityName = rarityName;
+        }
+
+        public String getRarityColor() {
+            return rarityColor;
+        }
+
+        public void setRarityColor(String rarityColor) {
+            this.rarityColor = rarityColor;
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public void setType(String type) {
+            this.type = type;
+        }
+
+        public String getTypeName() {
+            return typeName;
+        }
+
+        public void setTypeName(String typeName) {
+            this.typeName = typeName;
+        }
+
+        public String getSlot() {
+            return slot;
+        }
+
+        public void setSlot(String slot) {
+            this.slot = slot;
+        }
+
+        public String getSlotName() {
+            return slotName;
+        }
+
+        public void setSlotName(String slotName) {
+            this.slotName = slotName;
+        }
+
+        public String getHero() {
+            return hero;
+        }
+
+        public void setHero(String hero) {
+            this.hero = hero;
+        }
+
+        public String getHeroName() {
+            return heroName;
+        }
+
+        public void setHeroName(String heroName) {
+            this.heroName = heroName;
+        }
+
+        public String getHeroAvatar() {
+            return heroAvatar;
+        }
+
+        public void setHeroAvatar(String heroAvatar) {
+            this.heroAvatar = heroAvatar;
+        }
+
+        public String getExterior() {
+            return exterior;
+        }
+
+        public void setExterior(String exterior) {
+            this.exterior = exterior;
+        }
+
+        public String getExteriorName() {
+            return exteriorName;
+        }
+
+        public void setExteriorName(String exteriorName) {
+            this.exteriorName = exteriorName;
+        }
+
+        public String getExteriorColor() {
+            return exteriorColor;
+        }
+
+        public void setExteriorColor(String exteriorColor) {
+            this.exteriorColor = exteriorColor;
+        }
+
+        public String getWeapon() {
+            return weapon;
+        }
+
+        public void setWeapon(String weapon) {
+            this.weapon = weapon;
+        }
+
+        public String getWeaponName() {
+            return weaponName;
+        }
+
+        public void setWeaponName(String weaponName) {
+            this.weaponName = weaponName;
+        }
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj != null && obj instanceof C5Weapon) {
             C5Weapon o = (C5Weapon) obj;
-            String exterior_wear = o.getWear();
+            String exterior_wear = o.getAssetInfo().getWear();
             if (!TextUtils.isEmpty(exterior_wear)){
-                return exterior_wear.equals(this.wear)
+                return exterior_wear.equals(this.getAssetInfo().getWear())
                         && o.getId().equals(this.id);
-            }else return TextUtils.isEmpty(this.wear);
+            }else return TextUtils.isEmpty(this.getAssetInfo().getWear());
         }
         return false;
     }
