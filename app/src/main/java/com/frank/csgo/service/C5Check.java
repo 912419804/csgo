@@ -29,10 +29,10 @@ public class C5Check {
             for (C5Weapon weapon : weapons) {
                 double price = weapon.getPrice();
                 String exterior_wear = weapon.getAssetInfo().getWear();
-                if (price <= minMoney) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    list.add(weapon);
-                }else if (price <= value) {
+//                if (price <= minMoney) {
+//                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+//                    list.add(weapon);
+//                }else if (price <= value) {
                     if (!TextUtils.isEmpty(exterior_wear)) {
                         double wear = Double.valueOf(exterior_wear);
                         if (wear <= w && wear!=0) {
@@ -46,7 +46,7 @@ public class C5Check {
 //                            }
 //                        }
                     }
-                }
+//                }
 
             }
             if (!list.isEmpty()) {
@@ -75,13 +75,13 @@ public class C5Check {
                 if (i>=max)break;
                 double price = weapon.getPrice();
                 String exterior_wear = weapon.getAssetInfo().getWear();
-                if (price <= minMoney) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    list.add(weapon);
-                    break;
-                }else
-//                    if (price <= value)
-                    {
+//                if (price <= minMoney) {
+//                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+//                    list.add(weapon);
+//                    break;
+//                }else
+////                    if (price <= value)
+//                    {
                       if (!TextUtils.isEmpty(exterior_wear)) {
                             Double wear = Double.valueOf(exterior_wear);
                             if (wear <= w && wear!=0) {
@@ -107,7 +107,7 @@ public class C5Check {
                                     }
                                 }
                             }
-                        }
+//                        }
                 }
 
             }

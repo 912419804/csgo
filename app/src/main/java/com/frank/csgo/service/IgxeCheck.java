@@ -25,12 +25,12 @@ public class IgxeCheck {
             List<IgxeWeapon> weapons = response.body().getD_list();
             ArrayList<IgxeWeapon> list = new ArrayList<>();
             for (IgxeWeapon weapon : weapons) {
-                String unit_price = weapon.getUnit_price();
-                double price = Double.valueOf(unit_price);
-                if (price <= minMoney) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    list.add(weapon);
-                }else if (price <= value) {
+//                String unit_price = weapon.getUnit_price();
+//                double price = Double.valueOf(unit_price);
+//                if (price <= minMoney) {
+//                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+//                    list.add(weapon);
+//                }else if (price <= value) {
                     String exterior_wear = weapon.getExterior_wear();
                     if (!TextUtils.isEmpty(exterior_wear)) {
                         Double wear = Double.valueOf(exterior_wear);
@@ -45,7 +45,7 @@ public class IgxeCheck {
 //                            }
 //                        }
                     }
-                }
+//                }
 
             }
             if (!list.isEmpty()) {
@@ -72,13 +72,13 @@ public class IgxeCheck {
             for (int i=0;i<size;i++) {
                 IgxeWeapon weapon = weapons.get(i);
                 if (i>=max)break;
-                String unit_price = weapon.getUnit_price();
-                double price = Double.valueOf(unit_price);
-                if (price <= minMoney) {
-                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                    list.add(weapon);
-                    break;
-                }else {
+//                String unit_price = weapon.getUnit_price();
+//                double price = Double.valueOf(unit_price);
+//                if (price <= minMoney) {
+//                    weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+//                    list.add(weapon);
+//                    break;
+//                }else {
                         String exterior_wear = weapon.getExterior_wear();
                         if (!TextUtils.isEmpty(exterior_wear)) {
                             Double wear = Double.valueOf(exterior_wear);
@@ -104,7 +104,7 @@ public class IgxeCheck {
                             }
                         }
                     }
-                }
+//                }
 
             }
             if (!list.isEmpty()) {
@@ -126,14 +126,14 @@ public class IgxeCheck {
             List<IgxeWeapon> weapons = response.body().getD_list();
             ArrayList<IgxeWeapon> list = new ArrayList<>();
             for (IgxeWeapon weapon : weapons) {
-                String unit_price = weapon.getUnit_price();
-                double price = Double.valueOf(unit_price);
-                    if (price <= minMoney) {
-                        weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                        list.add(weapon);
-                    }
-                    if (isMin) continue;
-                    if (price <= value) {
+//                String unit_price = weapon.getUnit_price();
+//                double price = Double.valueOf(unit_price);
+//                    if (price <= minMoney) {
+//                        weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+//                        list.add(weapon);
+//                    }
+//                    if (isMin) continue;
+//                    if (price <= value) {
                             String exterior_wear = weapon.getExterior_wear();
                             if (!TextUtils.isEmpty(exterior_wear)) {
                                 Double wear = Double.valueOf(exterior_wear);
@@ -148,7 +148,7 @@ public class IgxeCheck {
 //                            }
 //                        }
                         }
-                    }
+//                    }
 
             }
             if (!list.isEmpty()) {
