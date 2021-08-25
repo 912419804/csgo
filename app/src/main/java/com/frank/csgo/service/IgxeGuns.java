@@ -214,7 +214,7 @@ public class IgxeGuns extends IgxeCheck{
 
     //   USP 消音版 | 枪响人亡 (略有磨损)
     private void connect20() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5535")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/660405")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
@@ -231,7 +231,7 @@ public class IgxeGuns extends IgxeCheck{
 
     //   USP 消音版 | 枪响人亡 (崭新出厂)
     private void connect21() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/5287")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/660430")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
@@ -334,7 +334,7 @@ public class IgxeGuns extends IgxeCheck{
 
     //   AWP | 暴怒野兽 (崭新出厂)
     private void connect32() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/7089")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/651028")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
@@ -623,7 +623,7 @@ public class IgxeGuns extends IgxeCheck{
 
     // USP 消音版 | 脑洞大开 (崭新出厂)
     private void connect49() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610726")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/660442")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
@@ -863,7 +863,7 @@ public class IgxeGuns extends IgxeCheck{
 
     //加利尔 AR | 喧闹骷髅 (破损不堪)
     private void connect65() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/6584")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/660444")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
@@ -1067,7 +1067,7 @@ public class IgxeGuns extends IgxeCheck{
 
     //M4A4 |死寂空间 (崭新出厂)
     private void connect77() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/555129")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/660433")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
@@ -1306,7 +1306,7 @@ public class IgxeGuns extends IgxeCheck{
 
     //M4A1 消音版 | 女火神之炽焰 (崭新出厂)
     private void connect92_1() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/458002")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610452")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
@@ -1323,7 +1323,7 @@ public class IgxeGuns extends IgxeCheck{
 
     //M4A1 消音版 | 女火神之炽焰 (略有磨损)
     private void connect92() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/448689")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610454")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
@@ -2512,7 +2512,7 @@ public class IgxeGuns extends IgxeCheck{
 
     //USP 消音版（StatTrak™） | 脑洞大开 (崭新出厂)
     private void connect160() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/610895")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/660549")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {
@@ -2682,7 +2682,7 @@ public class IgxeGuns extends IgxeCheck{
 
     //USP 消音版（StatTrak™） | 枪响人亡(久经沙场)
     private void connect170() {
-        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/23605")
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/660541")
                 .execute(new JsonCallback<Igxe>(Igxe.class) {
                     @Override
                     public void onSuccess(Response<Igxe> response) {

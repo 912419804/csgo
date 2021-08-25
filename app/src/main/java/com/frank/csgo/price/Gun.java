@@ -623,7 +623,7 @@ public class Gun {
     static {GUN_DATA.put(M4A4_XG_ZX_MAP[0],M4A4_XG_ZX_MAP);}
 
     //M4A4 |死寂空间 (崭新出厂)
-    public static double[] M4A4_SJKJ_ZX = {160, 0.02, 110};
+    public static double[] M4A4_SJKJ_ZX = {160, 0.01, 110};
     public static String   M4A4_SJKJ_ZX_N = "M4A4 | 死寂空间 (崭新出厂)";
     public static String[] M4A4_SJKJ_ZX_URL = {"0"};
     public static Object[] M4A4_SJKJ_ZX_MAP = {M4A4_SJKJ_ZX_N,M4A4_SJKJ_ZX_URL, M4A4_SJKJ_ZX};
