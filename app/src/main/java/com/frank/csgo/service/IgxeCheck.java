@@ -164,7 +164,7 @@ public class IgxeCheck {
 
     protected boolean containSticke(String title){
         if (!TextUtils.isEmpty(title)){
-            if (title.contains("全息") | title.contains("闪亮") || title.contains("金色")){
+            if ((title.contains("全息") || title.contains("闪亮") || title.contains("金色"))&&!title.contains(("RMR"))){
                 return true;
             }
         }

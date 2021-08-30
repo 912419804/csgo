@@ -1012,12 +1012,12 @@ public class C5Gloves extends C5Check{
                     @Override
                     public void onSuccess(Response<C5> response) {
                         handleDataC5(response, JTS_BMCH_LM);
-                        connect1161();
+                        connect1167();
                     }
 
                     @Override
                     public void onError(Response<C5> response) {
-                        connect1161();
+                        connect1167();
                     }
                 });
     }
