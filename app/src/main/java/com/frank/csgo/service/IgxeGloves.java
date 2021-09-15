@@ -1312,6 +1312,310 @@ public class IgxeGloves extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, XL_FHLZ_LM);
+                        connect1179();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1179();
+                    }
+                });
+    }
+    //  摩托手套（★） | 第三特种兵连 (久经沙场)
+    private void connect1179() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659035")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MT_DSTZBL_JJ);
+                        connect1180();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1180();
+                    }
+                });
+    }
+    //  摩托手套（★） | 第三特种兵连 (略有磨损)
+    private void connect1180() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659193")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MT_DSTZBL_LM);
+                        connect1181();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1181();
+                    }
+                });
+    }
+    //  摩托手套（★） | 血压 (久经沙场)
+    private void connect1181() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659019")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MT_XY_JJ);
+                        connect1182();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1182();
+                    }
+                });
+    }
+    //  摩托手套（★） | 终点线 (久经沙场)
+    private void connect1182() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659044")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MT_ZDX_JJ);
+                        connect1183();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1183();
+                    }
+                });
+    }
+    //  摩托手套（★） | 小心烟幕弹 (久经沙场)
+    private void connect1183() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659052")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, MT_XXYMD_JJ);
+                        connect1184();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1184();
+                    }
+                });
+    }
+    //  裹手（★） | 长颈鹿 (久经沙场)
+    private void connect1184() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/658906")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, GS_CJL_JJ);
+                        connect1185();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1185();
+                    }
+                });
+    }
+    //  裹手（★） | 长颈鹿 (略有磨损)
+    private void connect1185() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659295")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, GS_CJL_LM);
+                        connect1186();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1186();
+                    }
+                });
+    }
+    //  裹手（★） | 沙漠头巾 (久经沙场)
+    private void connect1186() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659016")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, GS_SMTJ_JJ);
+                        connect1187();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1187();
+                    }
+                });
+    }
+    //  裹手（★） | 蟒蛇 (久经沙场)
+    private void connect1187() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659047")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, GS_MS_JJ);
+                        connect1188();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1188();
+                    }
+                });
+    }
+    //  裹手（★） | 警告！ (久经沙场)
+    private void connect1188() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659033")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, GS_JG_JJ);
+                        connect1189();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1189();
+                    }
+                });
+    }
+    //  裹手（★） | 警告！ (略有磨损)
+    private void connect1189() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/658733")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, GS_JG_LM);
+                        connect1190();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1190();
+                    }
+                });
+    }
+    //  专业手套（★） | 一线特工 (久经沙场)
+    private void connect1190() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/658955")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, ZY_YXTG_JJ);
+                        connect1191();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1191();
+                    }
+                });
+    }
+    //  专业手套（★） | 老虎精英 (久经沙场)
+    private void connect1191() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659038")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, ZY_LHJY_JJ);
+                        connect1192();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1192();
+                    }
+                });
+    }
+    //  专业手套（★） | 陆军少尉长官 (久经沙场)
+    private void connect1192() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659050")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, ZY_LJSWZG_JJ);
+                        connect1193();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1193();
+                    }
+                });
+    }
+    //  专业手套（★） | 渐变大理石 (久经沙场)
+    private void connect1193() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659024")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, ZY_JBDLS_JJ);
+                        connect1194();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1194();
+                    }
+                });
+    }
+    //  运动手套（★） | 大型猎物 (久经沙场)
+    private void connect1194() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/658995")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, YD_DXLW_JJ);
+                        connect1195();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1195();
+                    }
+                });
+    }
+    //  运动手套（★） | 弹弓 (久经沙场)
+    private void connect1195() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659014")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, YD_DG_JJ);
+                        connect1196();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1196();
+                    }
+                });
+    }
+    //  运动手套（★） | 夜行衣 (久经沙场)
+    private void connect1196() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/658950")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, YD_YXY_JJ);
+                        connect1197();
+                    }
+
+                    @Override
+                    public void onError(Response<Igxe> response) {
+                        connect1197();
+                    }
+                });
+    }
+    //  运动手套（★） | 猩红头巾 (久经沙场)
+    private void connect1197() {
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/659055")
+                .execute(new JsonCallback<Igxe>(Igxe.class) {
+                    @Override
+                    public void onSuccess(Response<Igxe> response) {
+                        handleDataIgxe(response, YD_XHTJ_JJ);
                         mService.igxeKnifes.connect1200();
                     }
 
