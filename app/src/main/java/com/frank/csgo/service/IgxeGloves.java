@@ -1040,12 +1040,12 @@ public class IgxeGloves extends IgxeCheck{
                     @Override
                     public void onSuccess(Response<Igxe> response) {
                         handleDataIgxe(response, JTS_BMCH_JJ);
-                        connect1162();
+                        connect1168();
                     }
 
                     @Override
                     public void onError(Response<Igxe> response) {
-                        connect1162();
+                        connect1168();
                     }
                 });
     }

@@ -76,6 +76,18 @@ public class IgxeService extends Service {
             }
         }
     };
+    private Runnable runnable2 = new Runnable() {
+        @Override
+        public void run() {
+            updateNotification();
+            count++;
+            try {
+                igxeGuns.connect();
+            }catch (Exception e){
+               e.printStackTrace();
+            }
+        }
+    };
 
     public void startScan(){
         ThreadUtils.THREAD.execute(runnable);

@@ -5,5 +5,5 @@ import java.util.concurrent.Executors;
 
 public class ThreadUtils {
 
-    public static ExecutorService THREAD =  Executors.newFixedThreadPool(8);
+    public static ExecutorService THREAD =  Executors.newFixedThreadPool(100);
 }
