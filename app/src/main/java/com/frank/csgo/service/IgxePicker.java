@@ -1,14 +1,22 @@
 package com.frank.csgo.service;
 
+import android.text.TextUtils;
+
+import com.frank.csgo.bean.Igxe;
+import com.frank.csgo.https.JsonCallback;
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.model.Response;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.lang.reflect.Type;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class IgxePicker {
+public class IgxePicker extends IgxeCheck{
     public static ArrayList<String> IP_BS = new ArrayList<>();//匕首
     public static ArrayList<String> IP_ST = new ArrayList<>();//手套
     public static ArrayList<String> IP_BQ = new ArrayList<>();//步枪
@@ -22,6 +30,15 @@ public class IgxePicker {
     public static final int IP_SQ_SORT = 4;//手枪
     public static final int IP_CFQ_SORT = 5;//微型冲锋枪
     public static final int IP_XDQ_SORT = 6;//霰弹枪
+
+    public static final String IP_ZXCC = "崭新出厂";
+    public static final String IP_LYMS = "略有磨损";
+    public static final String IP_JJSC = "久经沙场";
+    public static final String IP_PSBK = "破损不堪";
+    public static final String IP_ZHLL = "战痕累累";
+
+    public static ArrayList<String> IP_MSD = new ArrayList<>();//磨损度
+
     static {
         IP_BS.add("刀");
         IP_BS.add("匕首");
@@ -64,63 +81,179 @@ public class IgxePicker {
         IP_XDQ.add("M249");
         IP_XDQ.add("内格夫");
 
-    }
-    public static ArrayList<String>[] WEAPONS = new ArrayList[]{IP_BS,IP_ST,IP_BQ,IP_SQ,IP_CFQ,IP_XDQ};
+        IP_MSD.add(IP_ZXCC);
+        IP_MSD.add(IP_LYMS);
+        IP_MSD.add(IP_JJSC);
+        IP_MSD.add(IP_PSBK);
+        IP_MSD.add(IP_ZHLL);
 
-    public void start(){
+    }
+
+    public static ArrayList<String>[] WEAPONS = new ArrayList[]{IP_BS, IP_ST, IP_BQ, IP_SQ, IP_CFQ, IP_XDQ};
+
+    public static  URL IGXE_URL;
+
+    static {
         try {
-            URL url = new URL("https://www.igxe.cn/csgo/730?is_buying=0&is_stattrak%5B%5D=0&is_stattrak%5B%5D=0&sort=3&ctg_id=0&type_id=0&page_no=2&page_size=20&rarity_id=0&exterior_id=0&quality_id=0&capsule_id=0&is_suit=0&_t=1632921435062");
-            Document doc = Jsoup.parse(url, 3000);
+            IGXE_URL = new URL("https://www.igxe.cn/csgo/730?is_buying=0&is_stattrak%5B%5D=0&is_stattrak%5B%5D=0&sort=3&ctg_id=0&type_id=0&page_no=2&page_size=20&rarity_id=0&exterior_id=0&quality_id=0&capsule_id=0&is_suit=0&_t=1632921435062");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public IgxePicker(IgxeService service) {
+        super(service);
+    }
+
+    public void start() {
+        try {
+            Document doc = Jsoup.parse(IGXE_URL, 3000);
             Elements dataList = doc.getElementsByClass("dataList");
             Elements aaa = dataList.get(0).getElementsByTag("a");
-            for(Element a : aaa){
+            int x = 0;
+            for (Element a : aaa) {
+                if (x == 10) return;
                 String href = a.attr("href");
                 //获取名称
                 String name = a.getElementsByClass("name").get(0).attr("title");
-                int sort = check(name);
-                if (sort>0){
+                String xjd = checkNewOld(IP_MSD, name);//获取磨损度
+                if (TextUtils.isEmpty(xjd)) {
+                    return;
+                }//没有磨损度就舍弃
+                int sort = check(name);//检查类别
+                if (sort > 0) {
                     int index = href.lastIndexOf("/");
                     //获取id
-                    String id = href.substring(index+1);
-                    switch (sort){
-                        case IP_BS_SORT:
-                            break;
-                        case IP_ST_SORT:
-                            break;
-                        case IP_BQ_SORT:
-                            break;
-                        case IP_SQ_SORT:
-                            break;
-                        case IP_CFQ_SORT:
-                            break;
-                        case IP_XDQ_SORT:
-                            break;
-                    }
+                    String id = href.substring(index + 1);
+                    Element eee = a.getElementsByClass("price").get(0);
+                    double price = Double.valueOf(eee.child(1).html()+eee.child(2).html());
+                    getWeapon(xjd, sort, id,price);
                 }
+                x++;
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
     }
-    public int  check(String name){
+
+    public int check(String name) {
         for (int i = 0; i < WEAPONS.length; i++) {
-            int sort = checkStr(WEAPONS[i],name,i+1);
-            if(sort>0){
+            int sort = checkSort(WEAPONS[i], name, i + 1);
+            if (sort > 0) {
                 return sort;
             }
         }
         return -1;
     }
-    public int checkStr(ArrayList<String>list,String name,int sort){
-        for (String bs : list) {
-            if(name.contains(bs)){
-                return sort;
-            }
-        }
-        return -1;
-    }
-    public void getWeapon(int sort,String id){
 
+    public int checkSort(ArrayList<String> list, String name, int sort) {
+        for (String bs : list) {
+            if (name.contains(bs)) {
+                return sort;
+            }
+        }
+        return -1;
+    }
+
+    public String checkNewOld(ArrayList<String> list, String name) {
+        for (String bs : list) {
+            if (name.contains(bs)) {
+                return bs;
+            }
+        }
+        return "";
+    }
+
+    public void getWeapon(String xdj, int sort, String id,double price) {
+        switch (sort) {
+            case IP_BS_SORT://匕首
+                getDataBs(xdj,id,price);
+                break;
+            case IP_ST_SORT://手套
+                getDataSt(xdj,id,price);
+                break;
+            case IP_BQ_SORT://步枪
+                break;
+            case IP_SQ_SORT://手枪
+                break;
+            case IP_CFQ_SORT://冲锋枪
+                break;
+            case IP_XDQ_SORT://霰弹枪 重武器
+                break;
+        }
+    }
+
+    //匕首
+    public void getDataBs(String xjd,String id,double price) {
+        switch (xjd) {
+            case IP_ZXCC:
+                break;
+            case IP_LYMS:
+                getData(id,0.09);
+                break;
+            case IP_JJSC:
+                if(price<1000){
+                    getData(id,0.16);
+                }else{
+                    getData(id,0.27);
+                }
+               
+                break;
+            case IP_PSBK:
+                break;
+            case IP_ZHLL:
+                break;
+        }
+    }
+    //手套
+    public void getDataSt(String xjd,String id,double price) {
+        switch (xjd) {
+            case IP_ZXCC:
+                break;
+            case IP_LYMS:
+                getData(id,0.09);
+                break;
+            case IP_JJSC:
+                if(price<1000){
+                    getData(id,0.24);
+                }else{
+                    getData(id,0.27);
+                }
+               
+                break;
+            case IP_PSBK:
+                break;
+            case IP_ZHLL:
+                break;
+        }
+    }
+    
+    public void getData(String id,double ms){
+        OkGo.<Igxe>get("https://www.igxe.cn/product/trade/730/"+id)
+                .execute(new JsonBc<Igxe>(Igxe.class,ms));
+    }
+
+    class JsonBc<T> extends  JsonCallback<T>{
+        double ms = 0;
+        public JsonBc(Type type,double ms) {
+            super(type);
+            this.ms = ms;
+        }
+
+        public JsonBc(Class clazz,double ms) {
+            super(clazz);
+            this.ms = ms;
+        }
+
+        @Override
+        public void onSuccess(Response response) {
+            handleDataIgxe(response, this.ms);
+        }
+
+        @Override
+        public void onError(Response<T> response) {
+            super.onError(response);
+        }
     }
 }

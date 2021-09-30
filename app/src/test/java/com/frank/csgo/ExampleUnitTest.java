@@ -56,7 +56,9 @@ public class ExampleUnitTest {
               String name = a.getElementsByClass("name").get(0).attr("title");
               int index = href.lastIndexOf("/");
               String substring = href.substring(index+1);
-              System.out.println(substring+"--"+name);
+              Element eee = a.getElementsByClass("price").get(0);
+              String price = eee.child(1).html()+eee.child(2).html();
+              System.out.println(substring+"--"+name+"---"+price);
 
           }
 
