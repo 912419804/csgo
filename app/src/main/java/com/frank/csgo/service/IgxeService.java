@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.frank.csgo.MainActivity;
 import com.frank.csgo.R;
+import com.frank.csgo.bean.Igxe;
 import com.frank.csgo.utils.ThreadUtils;
 import com.frank.csgo.utils.TimeUtil;
 
@@ -30,6 +31,7 @@ public class IgxeService extends Service {
     public IgxeGloves igxeGloves;
     public IgxeKnifes igxeKnifes;
     public IgxeGuns igxeGuns;
+    public IgxePicker igxePicker;
 
     public Handler handler = new Handler();
 
@@ -56,11 +58,15 @@ public class IgxeService extends Service {
         if (this.igxeGuns == null) {
             this.igxeGuns = new IgxeGuns(IgxeService.this);
         }
+        if (this.igxePicker == null) {
+            this.igxePicker = new IgxePicker(IgxeService.this);
+        }
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        startScan();
+//        startScan();
+        startScan2();
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -82,7 +88,8 @@ public class IgxeService extends Service {
             updateNotification();
             count++;
             try {
-                igxeGuns.connect();
+                igxePicker.start();
+                handler.postDelayed(this,2000);
             }catch (Exception e){
                e.printStackTrace();
             }
@@ -91,6 +98,10 @@ public class IgxeService extends Service {
 
     public void startScan(){
         ThreadUtils.THREAD.execute(runnable);
+    }
+    public void startScan2(){
+//        ThreadUtils.THREAD.execute(runnable);
+        handler.postDelayed(runnable2,2000);
     }
 
     private void updateNotification() {

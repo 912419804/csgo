@@ -168,6 +168,29 @@ public class IgxeCheck {
             List<IgxeWeapon> weapons = response.body().getD_list();
             int size = weapons.size();
             int max = size > 10 ? 5 : 3;
+            for (int i = 0; i < max; i++) {
+                IgxeWeapon weapon = weapons.get(i);
+                String exterior_wear = weapon.getExterior_wear();
+                if (!TextUtils.isEmpty(exterior_wear)) {
+                    Double wear = Double.valueOf(exterior_wear);
+                    if (wear <= w) {
+                        send(weapon);
+                        break;
+                    }
+                }
+
+            }
+        } catch (Exception e) {
+
+        }
+
+    }
+
+    protected void handleDataIgxe(Response<Igxe> response, double w,int tag) {
+        try {
+            List<IgxeWeapon> weapons = response.body().getD_list();
+            int size = weapons.size();
+            int max = size > 10 ? 5 : 3;
             ArrayList<IgxeWeapon> list = new ArrayList<>();
             for (int i = 0; i < max; i++) {
                 IgxeWeapon weapon = weapons.get(i);
@@ -175,10 +198,26 @@ public class IgxeCheck {
                 if (!TextUtils.isEmpty(exterior_wear)) {
                     Double wear = Double.valueOf(exterior_wear);
                     if (wear <= w) {
-                        weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
-                        list.add(weapon);
+                        send(weapon);
+                        break;
+                    } else {
+                        List<IgxeWeapon.StickerBean> stickers = weapon.getSticker();
+                        if (stickers != null && stickers.size() == 4) {
+                            boolean isShow = true;
+                            for (IgxeWeapon.StickerBean sticker : stickers) {
+                                boolean b = containSticke(sticker.getSticker_title());
+                                if (!b) {
+                                    isShow = false;
+                                    break;
+                                }
+                            }
+                            if (isShow) {
+                                send(weapon);
+                            }
+                        }
                     }
                 }
+//                }
 
             }
             if (!list.isEmpty()) {
@@ -190,6 +229,13 @@ public class IgxeCheck {
 
         }
 
+    }
+
+    protected void send(IgxeWeapon weapon){
+        weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
+        Intent intent = new Intent(Constant.IGXE_WEAPON_ONE);
+        intent.putExtra(Constant.IGXE_WEAPON_ONE, weapon);
+        SendUtils.sendBroadcast(mService, intent);
     }
 
     protected boolean containSticke(String title) {

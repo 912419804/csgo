@@ -6,7 +6,6 @@ import android.text.TextUtils;
 import com.frank.csgo.Constant;
 import com.frank.csgo.bean.Buff;
 import com.frank.csgo.bean.BuffWeapon;
-import com.frank.csgo.bean.IgxeWeapon;
 import com.frank.csgo.utils.SendUtils;
 import com.frank.csgo.utils.TimeUtil;
 import com.lzy.okgo.model.Response;
@@ -101,7 +100,7 @@ public class BuffCheck {
             if (name.contains("崭新")){
                 exterior = Constant.ZXCC;
             }else if (name.contains("略磨")){
-                exterior = Constant.LVMS;
+                exterior = Constant.LYMS;
             }else if(name.contains("久经")){
                 exterior = Constant.JJSC;
             }else if (name.contains("破损")){

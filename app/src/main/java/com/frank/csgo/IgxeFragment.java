@@ -79,18 +79,31 @@ public class IgxeFragment extends Fragment {
 
     private void registerDataReceiver() {
         IntentFilter filter = new IntentFilter(Constant.IGXE_WEAPON);
+        filter.addAction(Constant.IGXE_WEAPON_ONE);
+        filter.addAction(Constant.IGXE_WEAPON);
         SendUtils.getInstance(getActivity()).registerReceiver(new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 try {
                     boolean isUpdate = false;
-                    ArrayList<IgxeWeapon> list = (ArrayList<IgxeWeapon>) intent.getSerializableExtra(Constant.IGXE_WEAPON);
-                    for (IgxeWeapon w : list) {
+                    String action = intent.getAction();
+                    if(action == Constant.IGXE_WEAPON){
+                        ArrayList<IgxeWeapon> list = (ArrayList<IgxeWeapon>) intent.getSerializableExtra(Constant.IGXE_WEAPON);
+                        for (IgxeWeapon w : list) {
+                            if (!weapons.contains(w)) {
+                                weapons.add(0, w);
+                                isUpdate = true;
+                                break;
+                            }
+                        }
+                    }else if(action == Constant.IGXE_WEAPON_ONE){
+                        IgxeWeapon w = (IgxeWeapon) intent.getSerializableExtra(Constant.IGXE_WEAPON_ONE);
                         if (!weapons.contains(w)) {
                             weapons.add(0, w);
                             isUpdate = true;
                         }
                     }
+
                     if (isUpdate) {
                         if (Constant.TYPE==1){
                             MediaUtils.playRing((Activity) mContex);

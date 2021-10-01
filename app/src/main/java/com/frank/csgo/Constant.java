@@ -7,15 +7,16 @@ public class Constant {
     public static final String _IGC5 = "IGC5";
     public static final String _BUFF = "BUFF";
     public static String IGXE_WEAPON = "igxe_weapon";
+    public static String IGXE_WEAPON_ONE = "igxe_weapon_one";
     public static String BUFF_WEAPON = "buff_weapon";
     public static String STOP = "stop";
     public static String START = "start";
 
-    public static String ZXCC = "崭新出厂";
-    public static String LVMS = "略有磨损";
-    public static String JJSC = "久经沙场";
-    public static String PSBK = "破损不堪";
-    public static String ZHLL = "战痕累累";
+    public static final String ZXCC = "崭新出厂";
+    public static final String LYMS = "略有磨损";
+    public static final String JJSC = "久经沙场";
+    public static final String PSBK = "破损不堪";
+    public static final String ZHLL = "战痕累累";
 
 
     public static HashMap<String,Integer> STICKERS = new HashMap<>(3);
