@@ -176,6 +176,21 @@ public class IgxeCheck {
                     if (wear <= w) {
                         send(weapon);
                         break;
+                    } else {
+                        List<IgxeWeapon.StickerBean> stickers = weapon.getSticker();
+                        if (stickers != null && stickers.size() == 4) {
+                            boolean isShow = true;
+                            for (IgxeWeapon.StickerBean sticker : stickers) {
+                                boolean b = containSticke(sticker.getSticker_title());
+                                if (!b) {
+                                    isShow = false;
+                                    break;
+                                }
+                            }
+                            if (isShow) {
+                                send(weapon);
+                            }
+                        }
                     }
                 }
 
@@ -186,7 +201,7 @@ public class IgxeCheck {
 
     }
 
-    protected void handleDataIgxe(Response<Igxe> response, double w,int tag) {
+    protected void handleDataIgxe(Response<Igxe> response, double w, int tag) {
         try {
             List<IgxeWeapon> weapons = response.body().getD_list();
             int size = weapons.size();
@@ -231,7 +246,7 @@ public class IgxeCheck {
 
     }
 
-    protected void send(IgxeWeapon weapon){
+    protected void send(IgxeWeapon weapon) {
         weapon.setTime(TimeUtil.timeString(System.currentTimeMillis()));
         Intent intent = new Intent(Constant.IGXE_WEAPON_ONE);
         intent.putExtra(Constant.IGXE_WEAPON_ONE, weapon);

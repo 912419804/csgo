@@ -289,11 +289,7 @@ public class IgxeWeapon implements Serializable {
     public boolean equals(Object obj) {
         if (obj != null && obj instanceof IgxeWeapon) {
             IgxeWeapon o = (IgxeWeapon) obj;
-            String exterior_wear = o.getExterior_wear();
-            if (!TextUtils.isEmpty(exterior_wear)){
-                return exterior_wear.equals(this.exterior_wear)
-                        && o.getId() == this.id;
-            }else return TextUtils.isEmpty(this.exterior_wear);
+            return o.getId() == this.id;
         }
         return false;
     }

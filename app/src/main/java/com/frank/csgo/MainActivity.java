@@ -114,8 +114,8 @@ public class MainActivity extends AppCompatActivity {
                         case 0:
                             igxeService = new Intent(MainActivity.this, IgxeService.class);
                             startService(igxeService);
-//                            c5Service = new Intent(MainActivity.this, C5Service.class);
-//                            startService(c5Service);
+                            c5Service = new Intent(MainActivity.this, C5Service.class);
+                            startService(c5Service);
                             break;
                         case 1:
                             Toast.makeText(MainActivity.this, "结束服务", Toast.LENGTH_SHORT).show();

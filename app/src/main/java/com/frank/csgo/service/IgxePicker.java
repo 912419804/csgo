@@ -50,9 +50,9 @@ public class IgxePicker extends IgxeCheck {
         IP_BQ.add("AUG");
         IP_BQ.add("法玛斯");
         IP_BQ.add("加利尔");
-        IP_BQ.add("SG");
-        IP_BQ.add("SCAR");
-        IP_BQ.add("G3S");
+//        IP_BQ.add("SG");
+//        IP_BQ.add("SCAR");
+//        IP_BQ.add("G3S");
 
         IP_SQ.add("沙漠之鹰");
         IP_SQ.add("USP");
@@ -64,7 +64,7 @@ public class IgxePicker extends IgxeCheck {
 
         IP_SQ.add("Tec-9");
         IP_SQ.add("R8");
-        IP_SQ.add("双持贝瑞塔");
+//        IP_SQ.add("双持贝瑞塔");
 
         IP_CFQ.add("MAC");
         IP_CFQ.add("MP");
@@ -231,10 +231,10 @@ public class IgxePicker extends IgxeCheck {
                 }
                 break;
             case Constant.PSBK:
-                getData(id, 0.46);
+                getData(id, 0.39);
                 break;
             case Constant.ZHLL:
-                getData(id, 0.39);
+                getData(id, 0.50);
                 break;
         }
     }
